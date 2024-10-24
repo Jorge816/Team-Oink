@@ -16,7 +16,8 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Helper {
-    //------------------------------------------------------------------------------------------------------InterestRateCalculator
+
+    //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
@@ -36,7 +37,7 @@ public class Helper {
     }
     
     //----------- // Validate the stripped input
-    public static boolean InterestRateCalculatorInputValidation(String input) {
+    public static boolean InputValidation(String input) {
     
         if (!input.isEmpty()) {
             // Check if the input contains only digits (this allows decimals as well)
@@ -217,7 +218,7 @@ public class Helper {
     }
 
     
-    //-------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator
     
     //-------------------------------------------------No
         public static double calculate_MaximizeContributionNo(double PI, double Ca, double r, int n) {
@@ -259,14 +260,59 @@ public class Helper {
         return balance;
     }
     
+    //-------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator 
+        
+               // Function to calculate affordable rent based on income
+    public static long[] calculateAffordableRent(double income, double debt, String option) {
+        double acceptableAggressive = 0;
+        double safeAcceptable = 0;
+        double affordableRent;
+
+        if (option.equals("monthly") && debt == 0) {
+            affordableRent = ((income * 12 * 30) / 1000) - debt;
+            if (affordableRent > 0) {
+                acceptableAggressive = affordableRent;
+                safeAcceptable = (affordableRent * (7.0 / 9.0));
+            } else {
+                return null;
+            }
+
+        } else if (option.equals("monthly") && debt > 0) {
+            affordableRent = ((income * 12 * 30) / 1000);
+            if (affordableRent-debt > 0) {
+                acceptableAggressive = affordableRent - debt;
+                safeAcceptable = (affordableRent * (7.0 / 9.0)) - debt;
+            }else{return null;}
+
+        } else if (option.equals("year") && debt == 0) {
+            affordableRent = ((income * 30) / 1000) - debt;
+            if (affordableRent -debt> 0) {
+                acceptableAggressive = affordableRent;
+                safeAcceptable = (affordableRent * (7.0 / 9.0));
+            } else {
+                return null;
+            }
+
+        } else {
+            affordableRent = ((income * 30) / 1000);
+            if (affordableRent -debt> 0) {
+                acceptableAggressive = affordableRent - debt;
+                safeAcceptable = (affordableRent * (7.0 / 9.0)) - debt;
+            } else {
+                return null;
+            }
+        }
+
+       return new long[]{Math.round(acceptableAggressive), Math.round(safeAcceptable)};
+    }
+
     
     
     
     
     
     
-    
-    //-------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
         try{
             double val = Double.parseDouble(num); // Convert string to a double.
