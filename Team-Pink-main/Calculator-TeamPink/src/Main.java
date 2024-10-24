@@ -401,16 +401,17 @@ String aboutMessage = "<html>"
         RentCalculator = new javax.swing.JPanel();
         jPanel26 = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        RentComboboxYearandMonth = new javax.swing.JComboBox<>();
         jLabel27 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        RentPretaxIncome = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        RentMonthlyDebt = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        RentCalculateBTN = new javax.swing.JButton();
+        RentClearBTN = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
+        RentOutput = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         InstructionsRentCalculator = new javax.swing.JTextPane();
         RefinanceCalculator = new javax.swing.JPanel();
@@ -1938,25 +1939,48 @@ String aboutMessage = "<html>"
 
         jPanel27.setBackground(new java.awt.Color(204, 255, 204));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "per year", "per month" }));
+        RentComboboxYearandMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "per year", "per month" }));
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel27.setText("Your pre-tax income");
 
-        jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField11.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        RentPretaxIncome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RentPretaxIncome.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        RentPretaxIncome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RentPretaxIncomeKeyReleased(evt);
+            }
+        });
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel28.setText("Your monthly debt payback");
 
-        jTextField12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RentMonthlyDebt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RentMonthlyDebt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RentMonthlyDebtKeyReleased(evt);
+            }
+        });
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel29.setText("car/student loan, credit cards, etc");
 
-        jButton5.setText("Calculate ");
+        RentCalculateBTN.setText("Calculate ");
+        RentCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RentCalculateBTNActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("Clear");
+        RentClearBTN.setText("Clear");
+        RentClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RentClearBTNActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel34.setText("$");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1966,17 +1990,19 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField11)
                     .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField12)
+                    .addComponent(RentMonthlyDebt)
                     .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RentCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(RentClearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RentPretaxIncome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RentComboboxYearandMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel27Layout.setVerticalGroup(
@@ -1985,41 +2011,42 @@ String aboutMessage = "<html>"
                 .addGap(26, 26, 26)
                 .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                .addGap(20, 20, 20)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RentComboboxYearandMonth, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(RentPretaxIncome, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
                 .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .addComponent(RentMonthlyDebt, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                .addGap(40, 40, 40)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(RentCalculateBTN)
+                    .addComponent(RentClearBTN))
                 .addGap(28, 28, 28))
         );
 
         jPanel28.setBackground(new java.awt.Color(204, 255, 204));
 
-        jLabel30.setText("Display output here");
+        RentOutput.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(RentOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(RentOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         InstructionsRentCalculator.setBackground(new java.awt.Color(255, 215, 255));
@@ -2030,13 +2057,13 @@ String aboutMessage = "<html>"
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel26Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(38, Short.MAX_VALUE)
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2056,16 +2083,16 @@ String aboutMessage = "<html>"
         RentCalculatorLayout.setHorizontalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         RentCalculatorLayout.setVerticalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Rent Calculator", RentCalculator);
@@ -2407,7 +2434,7 @@ String aboutMessage = "<html>"
                         .addContainerGap()
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel47Layout.createSequentialGroup()
@@ -2416,7 +2443,7 @@ String aboutMessage = "<html>"
                                 .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel47Layout.createSequentialGroup()
                                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                                     .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2925,11 +2952,11 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(390, Short.MAX_VALUE)
+                .addContainerGap(392, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2955,11 +2982,11 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(381, Short.MAX_VALUE)
+                .addContainerGap(383, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addContainerGap(296, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2985,11 +3012,11 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(357, Short.MAX_VALUE)
+                .addContainerGap(359, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addContainerGap(332, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4002,7 +4029,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         showAboutPopup();
     }//GEN-LAST:event_jMenu2MouseClicked
-
+//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator
     private void InterestRateCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateCalculatorClearBTNActionPerformed
         // TODO add your handling code here:
         InterestRateInitialInvestment.setText("");
@@ -4040,7 +4067,7 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateInitialInvestment.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_InterestRateInitialInvestmentKeyReleased
 
     private void InterestRateAnnualContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateAnnualContributionKeyReleased
@@ -4051,7 +4078,7 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateAnnualContribution.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_InterestRateAnnualContributionKeyReleased
 
     private void InterestRateMonthlyContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateMonthlyContributionKeyReleased
@@ -4061,7 +4088,7 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateMonthlyContribution.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_InterestRateMonthlyContributionKeyReleased
 
     private void InterestRateInterestKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateInterestKeyReleased
@@ -4071,14 +4098,14 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateInterest.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_InterestRateInterestKeyReleased
 
     private void InterestRateInvestmentLengthYearsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateInvestmentLengthYearsKeyReleased
         // TODO add your handling code here:
         if (!Helper.isWholeNumber(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""))){
             
-            Helper.InterestRateCalculatorInputValidation(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""));
+            Helper.InputValidation(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""));
         }
     }//GEN-LAST:event_InterestRateInvestmentLengthYearsKeyReleased
 
@@ -4087,12 +4114,12 @@ String aboutMessage = "<html>"
          // Retrieve the selected item from the InterestRateCompoundPeriods combo box
         String selectedOption = (String) InterestRateCompoundPeriods.getSelectedItem();
         
-        Helper.InterestRateCalculatorInputValidation(InterestRateInitialInvestment.getText());
-        Helper.InterestRateCalculatorInputValidation(InterestRateAnnualContribution.getText());
-        Helper.InterestRateCalculatorInputValidation(InterestRateMonthlyContribution.getText());
-        Helper.InterestRateCalculatorInputValidation(InterestRateInterest.getText());
-        Helper.InterestRateCalculatorInputValidation(InterestRateInterest.getText());
-        Helper.InterestRateCalculatorInputValidation(InterestRateInvestmentLengthYears.getText());
+        Helper.InputValidation(InterestRateInitialInvestment.getText());
+        Helper.InputValidation(InterestRateAnnualContribution.getText());
+        Helper.InputValidation(InterestRateMonthlyContribution.getText());
+        Helper.InputValidation(InterestRateInterest.getText());
+        Helper.InputValidation(InterestRateInterest.getText());
+        Helper.InputValidation(InterestRateInvestmentLengthYears.getText());
         
 
         double PI = Double.parseDouble(InterestRateInitialInvestment.getText());
@@ -4135,7 +4162,7 @@ String aboutMessage = "<html>"
         }
        
     }//GEN-LAST:event_InterestRateCalculatorCalculateBTNActionPerformed
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator
     private void RothIRACalculatorCurrentBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorCurrentBalanceKeyReleased
         // TODO add your handling code here:
        // Get the input from the text field
@@ -4144,7 +4171,7 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RothIRACalculatorCurrentBalance.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_RothIRACalculatorCurrentBalanceKeyReleased
 
     private void RothIRAAnualContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRAAnualContributionKeyReleased
@@ -4155,14 +4182,14 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RothIRAAnualContribution.setText(strippedInput);
-      Helper.InterestRateCalculatorInputValidation(strippedInput);
+      Helper.InputValidation(strippedInput);
     }//GEN-LAST:event_RothIRAAnualContributionKeyReleased
 
     private void RothIRACalculatorExpectedReturnRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorExpectedReturnRateKeyReleased
         // TODO add your handling code here:
           if (!Helper.isWholeNumber(RothIRACalculatorExpectedReturnRate.getText().replaceAll("\\s", ""))){
             
-            Helper.InterestRateCalculatorInputValidation(RothIRACalculatorExpectedReturnRate.getText().replaceAll("\\s", ""));
+            Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText().replaceAll("\\s", ""));
         }
     }//GEN-LAST:event_RothIRACalculatorExpectedReturnRateKeyReleased
 
@@ -4170,7 +4197,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
           if (!Helper.isWholeNumber(RothIRACurrentAge.getText().replaceAll("\\s", ""))){
             
-            Helper.InterestRateCalculatorInputValidation(RothIRACurrentAge.getText().replaceAll("\\s", ""));
+            Helper.InputValidation(RothIRACurrentAge.getText().replaceAll("\\s", ""));
         }
     }//GEN-LAST:event_RothIRACurrentAgeKeyReleased
 
@@ -4178,7 +4205,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         if (!Helper.isWholeNumber(RothIRaRetirementAge.getText().replaceAll("\\s", ""))){
             
-            Helper.InterestRateCalculatorInputValidation(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
+            Helper.InputValidation(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
     }//GEN-LAST:event_RothIRaRetirementAgeKeyReleased
 
     private void RothIRAMaximizeYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRAMaximizeYesActionPerformed
@@ -4217,11 +4244,11 @@ String aboutMessage = "<html>"
     private void RothIRACalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRACalculateBTNActionPerformed
         // TODO add your handling code here:
         try{
-        Helper.InterestRateCalculatorInputValidation(RothIRACalculatorCurrentBalance.getText());
-        Helper.InterestRateCalculatorInputValidation(RothIRAAnualContribution.getText());
-        Helper.InterestRateCalculatorInputValidation(RothIRACalculatorExpectedReturnRate.getText());
-        Helper.InterestRateCalculatorInputValidation(RothIRACurrentAge.getText());
-        Helper.InterestRateCalculatorInputValidation(RothIRaRetirementAge.getText());
+        Helper.InputValidation(RothIRACalculatorCurrentBalance.getText());
+        Helper.InputValidation(RothIRAAnualContribution.getText());
+        Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText());
+        Helper.InputValidation(RothIRACurrentAge.getText());
+        Helper.InputValidation(RothIRaRetirementAge.getText());
         
         double PI = Double.parseDouble(RothIRACalculatorCurrentBalance.getText());
         double Ca = Double.parseDouble(RothIRAAnualContribution.getText());
@@ -4253,6 +4280,86 @@ String aboutMessage = "<html>"
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_RothIRACalculateBTNActionPerformed
+//---------------------------------------------------------------------------------------------------------------------Rent Calculator 
+    private void RentPretaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentPretaxIncomeKeyReleased
+        // TODO add your handling code here:
+      String input = RentPretaxIncome.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      RentPretaxIncome.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+    }//GEN-LAST:event_RentPretaxIncomeKeyReleased
+
+    private void RentMonthlyDebtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentMonthlyDebtKeyReleased
+        // TODO add your handling code here:
+      String input = RentMonthlyDebt.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      RentMonthlyDebt.setText(strippedInput);
+      Helper.InputValidation(strippedInput); 
+    }//GEN-LAST:event_RentMonthlyDebtKeyReleased
+
+    private void RentClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentClearBTNActionPerformed
+        // TODO add your handling code here:
+       RentPretaxIncome.setText("");
+       RentMonthlyDebt.setText("");
+    }//GEN-LAST:event_RentClearBTNActionPerformed
+
+    private void RentCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentCalculateBTNActionPerformed
+        // TODO add your handling code here:
+        try{
+            String selectedOption = (String) RentComboboxYearandMonth.getSelectedItem();
+            Helper.InputValidation(RentPretaxIncome.getText());
+            Helper.InputValidation(RentMonthlyDebt.getText());
+            
+   
+            double incomeYearlyOrMonthly = Double.parseDouble(RentPretaxIncome.getText());
+            double monthlyDebt = Double.parseDouble(RentMonthlyDebt.getText());
+            
+            
+            String outputText = "";
+            
+   
+            
+            if ("per year".equals(selectedOption)) {
+                String optionSelected = "year";
+                long[] affordableRent = Helper.calculateAffordableRent(incomeYearlyOrMonthly, monthlyDebt, optionSelected);
+                if (affordableRent != null) {
+                    outputText = "<html>You can afford up to $" + affordableRent[0] 
+                                + " per month on a rental payment.<br>"
+                                + "It is recommended to keep your rental payment below $" 
+                                + affordableRent[1] + " per month</html>";
+                } else {
+                    outputText = "<html>Hard to meet payment requirement</html>";
+                }
+            }
+
+            if ("per month".equals(selectedOption)) {
+                String optionSelected = "monthly";
+                long[] affordableRent = Helper.calculateAffordableRent(incomeYearlyOrMonthly, monthlyDebt, optionSelected);
+                if (affordableRent != null) {
+                    outputText = "<html>You can afford up to $" + affordableRent[0] 
+                                + " per month on a rental payment.<br>"
+                                + "It is recommended to keep your rental payment below $" 
+                                + affordableRent[1] + " per month</html>";
+                } else {
+                    outputText = "<html>Hard to meet payment requirement</html>";
+                }
+            }
+
+            // Set the text in the RentOutput label using HTML
+            RentOutput.setText(outputText);
+
+
+
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Empty fields!");
+        }
+        
+    }//GEN-LAST:event_RentCalculateBTNActionPerformed
     
     
     
@@ -4747,7 +4854,13 @@ private void setMessage4() {
     private javax.swing.JPanel OtherCalculator;
     private javax.swing.JButton OtherCalculatorsBTN1;
     private javax.swing.JPanel RefinanceCalculator;
+    private javax.swing.JButton RentCalculateBTN;
     private javax.swing.JPanel RentCalculator;
+    private javax.swing.JButton RentClearBTN;
+    private javax.swing.JComboBox<String> RentComboboxYearandMonth;
+    private javax.swing.JTextField RentMonthlyDebt;
+    private javax.swing.JLabel RentOutput;
+    private javax.swing.JTextField RentPretaxIncome;
     private javax.swing.JButton RetirementCalculatorBTN2;
     private javax.swing.JTextField RothIRAAnualContribution;
     private javax.swing.JButton RothIRACalculateBTN;
@@ -4788,8 +4901,6 @@ private void setMessage4() {
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -4805,7 +4916,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox20;
     private javax.swing.JComboBox<String> jComboBox21;
     private javax.swing.JComboBox<String> jComboBox28;
@@ -4893,10 +5003,10 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -5039,13 +5149,11 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField105;
     private javax.swing.JTextField jTextField106;
     private javax.swing.JTextField jTextField107;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField115;
     private javax.swing.JTextField jTextField116;
     private javax.swing.JTextField jTextField117;
     private javax.swing.JTextField jTextField118;
     private javax.swing.JTextField jTextField119;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField120;
     private javax.swing.JTextField jTextField121;
     private javax.swing.JTextField jTextField2;
