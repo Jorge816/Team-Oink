@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 public class Helper {
 
-    //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator
+    //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
@@ -36,7 +36,7 @@ public class Helper {
         return false; // If input contains anything other than digits, return false
     }
     
-    //----------- // Validate the stripped input
+    //----------------------------------------------------------------------------------------- // Validate the stripped input -Pedro
     public static boolean InputValidation(String input) {
     
         if (!input.isEmpty()) {
@@ -107,7 +107,7 @@ public class Helper {
 
         return nValue;
     }
-    //Formula ---------------------------------------------------------------------------------
+    //Formula ------------------------------------------------------------------------------------------Pedro
        // Function to calculate the effective interest rate
     public static double effectiveInterestRate(double r, int n) {
         return Math.pow(1 + r / n, n) - 1;
@@ -117,7 +117,7 @@ public class Helper {
     public static double nominalInterestRate(double ER, int a) {
         return a * (Math.pow(1 + ER, 1.0 / a) - 1);
     }
-    //--------------------------------BeginningCompountInterestRate
+    //-------------------------------------------------------------------------------------------BeginningCompountInterestRate - Pedro
     
 
     // Function to calculate future value with nominal interest rate and contributions
@@ -168,7 +168,7 @@ public class Helper {
         return FV;
     }
     
-    //--------------------------------------------------------------------------------------------------formula for continuous 
+    //--------------------------------------------------------------------------------------------------formula for continuous - Pedro 
         // Function to calculate future value for end contributions
     public static double future_valueEnd(double PI, double Ca, double Cm, double r, double t) {
         // Continuous compounding for primary investment
@@ -218,7 +218,7 @@ public class Helper {
     }
 
     
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator - Pedro
     
     //-------------------------------------------------No
         public static double calculate_MaximizeContributionNo(double PI, double Ca, double r, int n) {
@@ -260,7 +260,7 @@ public class Helper {
         return balance;
     }
     
-    //-------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
         
                // Function to calculate affordable rent based on income
     public static long[] calculateAffordableRent(double income, double debt, String option) {
@@ -306,10 +306,49 @@ public class Helper {
        return new long[]{Math.round(acceptableAggressive), Math.round(safeAcceptable)};
     }
 
+    //----------------------------------------------------------------------------------------------------------------------------------------------DownPayment Calculator - Pedro 
     
     
-    
-    
+        // Function: No Closing Costs Included, Down Payment Percentage
+    public static double[] downpaymentNOClosingCostandPercent(double UpC, double DP, double rate, double loanTerm, double includeClosingCosts) {
+        double r = (rate / 100) / 12;  // Monthly interest rate
+        double n = loanTerm * 12;      // Total number of payments (months)
+        double top = Math.pow(1 + r, n) - 1;
+        double bottom = r * Math.pow(1 + r, n);
+        double k = top / bottom;
+
+        double Sp = 100 / (DP + includeClosingCosts);  // Loan to value ratio
+        double homePrice = UpC * Sp;                   // Home price based on upfront cash and percentage
+        double subtractingFromLoan = UpC - UpC * (includeClosingCosts / 100) * Sp;  // Subtracting closing costs
+        double loanAmount = homePrice - subtractingFromLoan;   // Final loan amount
+        double monthlyPayment = loanAmount / k;                // Monthly mortgage payment
+        
+        homePrice = Math.round(homePrice);
+        loanAmount = Math.round(loanAmount);
+        monthlyPayment = Math.round(monthlyPayment);
+
+        return new double[]{homePrice, loanAmount, monthlyPayment};
+    }
+
+    // Function: Yes Closing Costs Included, Down Payment in Money
+    public static double[] downpaymentYesClosingCostandMoney(double UpC, double DP, double rate, double loanTerm, double includeClosingCosts) {
+        double r = (rate / 100) / 12;  // Monthly interest rate
+        double n = loanTerm * 12;      // Total number of payments (months)
+        double top = Math.pow(1 + r, n) - 1;
+        double bottom = r * Math.pow(1 + r, n);
+        double k = top / bottom;
+
+        double Sp = 100 / DP;          // Loan to value ratio
+        UpC = UpC - includeClosingCosts;  // Subtracting closing costs from upfront cash
+        double homePrice = UpC * Sp;      // Home price after closing costs
+        double loanAmount = homePrice - UpC;  // Final loan amount
+        double monthlyPayment = loanAmount / k;  // Monthly mortgage payment
+        homePrice = Math.round(homePrice);
+        loanAmount = Math.round(loanAmount);
+        monthlyPayment = Math.round(monthlyPayment);
+
+        return new double[]{homePrice, loanAmount, monthlyPayment};
+    }
     
     
     //---------------------------------------------------------------------------------------------------------------------------------------------------Jorge
