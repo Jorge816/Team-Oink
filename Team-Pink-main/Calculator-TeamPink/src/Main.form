@@ -3438,18 +3438,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
                       <Component id="jPanel59" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace pref="56" max="32767" attributes="0"/>
                       <Component id="jPanel59" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3467,9 +3467,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace pref="17" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPanel60" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel61" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jPanel61" max="32767" attributes="0"/>
+                              <Component id="jPanel60" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="jScrollPane12" min="-2" pref="544" max="-2" attributes="0"/>
@@ -3506,10 +3506,10 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="56" max="32767" attributes="0"/>
-                              <Component id="jLabel128" min="-2" pref="319" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="DownPaymentOuput" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3517,16 +3517,18 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              <Component id="jLabel128" min="-2" pref="126" max="-2" attributes="0"/>
-                              <EmptySpace pref="30" max="32767" attributes="0"/>
+                              <Component id="DownPaymentOuput" min="-2" pref="131" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel128">
+                    <Component class="javax.swing.JLabel" name="DownPaymentOuput">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Output here"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -3553,27 +3555,29 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jTextField95" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextField99" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField45" alignment="0" pref="135" max="32767" attributes="0"/>
-                                          <Component id="jTextField46" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="DownPaymentLoanTerm" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="DownPaymentInterestRate" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="DownPaymentUpfrontCash" alignment="0" pref="135" max="32767" attributes="0"/>
+                                          <Component id="DownPaymentDownPayment" alignment="0" max="32767" attributes="0"/>
                                       </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel135" min="-2" pref="29" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="jButton21" min="-2" pref="133" max="-2" attributes="0"/>
+                                      <Component id="DownPaymentCalculateBTN" min="-2" pref="133" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                      <Component id="jButton22" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <Component id="DownPaymentClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jCheckBox3" min="-2" pref="153" max="-2" attributes="0"/>
+                                      <Component id="DownPaymnentCheckboxClosingCost" min="-2" pref="153" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextField94" min="-2" pref="135" max="-2" attributes="0"/>
+                                      <Component id="DownPaymentClosingCOst" min="-2" pref="135" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jComboBox20" min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Component id="DownPaymentComboBox" min="-2" pref="48" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="17" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3583,33 +3587,34 @@
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel133" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jTextField45" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentUpfrontCash" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel134" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jTextField46" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentDownPayment" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="jLabel135" alignment="3" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField94" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jComboBox20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="DownPaymnentCheckboxClosingCost" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="DownPaymentClosingCOst" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel138" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField99" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentInterestRate" alignment="3" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="23" max="32767" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel132" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField95" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentLoanTerm" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton21" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jButton22" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentCalculateBTN" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentClearBTN" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="8" max="32767" attributes="0"/>
                           </Group>
@@ -3617,52 +3622,73 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JTextField" name="jTextField45">
+                    <Component class="javax.swing.JTextField" name="DownPaymentUpfrontCash">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DownPaymentUpfrontCashKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField94">
+                    <Component class="javax.swing.JTextField" name="DownPaymentClosingCOst">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DownPaymentClosingCOstKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel132">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Loan Term"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField95">
+                    <Component class="javax.swing.JTextField" name="DownPaymentLoanTerm">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DownPaymentLoanTermKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel133">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Upfront Cahs Available "/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton21">
+                    <Component class="javax.swing.JButton" name="DownPaymentCalculateBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Calculate"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DownPaymentCalculateBTNActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton22">
+                    <Component class="javax.swing.JButton" name="DownPaymentClearBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Clear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DownPaymentClearBTNActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel134">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Down Payemtn"/>
+                        <Property name="text" type="java.lang.String" value="Down Payment"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField46">
+                    <Component class="javax.swing.JTextField" name="DownPaymentDownPayment">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DownPaymentDownPaymentKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel138">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Interest Rate"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField99">
+                    <Component class="javax.swing.JTextField" name="DownPaymentInterestRate">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DownPaymentInterestRateKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                    <Component class="javax.swing.JCheckBox" name="DownPaymnentCheckboxClosingCost">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Include Closing Cost"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox20">
+                    <Component class="javax.swing.JComboBox" name="DownPaymentComboBox">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="2">
@@ -3674,6 +3700,11 @@
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel135">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="%"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
