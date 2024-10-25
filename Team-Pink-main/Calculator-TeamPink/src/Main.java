@@ -471,21 +471,22 @@ String aboutMessage = "<html>"
         downpaymentCalculator = new javax.swing.JPanel();
         jPanel59 = new javax.swing.JPanel();
         jPanel60 = new javax.swing.JPanel();
-        jLabel128 = new javax.swing.JLabel();
+        DownPaymentOuput = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
-        jTextField45 = new javax.swing.JTextField();
-        jTextField94 = new javax.swing.JTextField();
+        DownPaymentUpfrontCash = new javax.swing.JTextField();
+        DownPaymentClosingCOst = new javax.swing.JTextField();
         jLabel132 = new javax.swing.JLabel();
-        jTextField95 = new javax.swing.JTextField();
+        DownPaymentLoanTerm = new javax.swing.JTextField();
         jLabel133 = new javax.swing.JLabel();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
+        DownPaymentCalculateBTN = new javax.swing.JButton();
+        DownPaymentClearBTN = new javax.swing.JButton();
         jLabel134 = new javax.swing.JLabel();
-        jTextField46 = new javax.swing.JTextField();
+        DownPaymentDownPayment = new javax.swing.JTextField();
         jLabel138 = new javax.swing.JLabel();
-        jTextField99 = new javax.swing.JTextField();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jComboBox20 = new javax.swing.JComboBox<>();
+        DownPaymentInterestRate = new javax.swing.JTextField();
+        DownPaymnentCheckboxClosingCost = new javax.swing.JCheckBox();
+        DownPaymentComboBox = new javax.swing.JComboBox<>();
+        jLabel135 = new javax.swing.JLabel();
         jScrollPane12 = new javax.swing.JScrollPane();
         InstructionsDownPaymentCalculator = new javax.swing.JTextPane();
         MortgagePayoffCalculator = new javax.swing.JPanel();
@@ -2578,42 +2579,84 @@ String aboutMessage = "<html>"
         jPanel60.setBackground(new java.awt.Color(204, 255, 204));
         jPanel60.setEnabled(false);
 
-        jLabel128.setText("Output here");
+        DownPaymentOuput.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
         jPanel60.setLayout(jPanel60Layout);
         jPanel60Layout.setHorizontalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel60Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
-                .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addGroup(jPanel60Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         jPanel61.setBackground(new java.awt.Color(204, 255, 204));
 
+        DownPaymentUpfrontCash.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DownPaymentUpfrontCashKeyReleased(evt);
+            }
+        });
+
+        DownPaymentClosingCOst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DownPaymentClosingCOstKeyReleased(evt);
+            }
+        });
+
         jLabel132.setText("Loan Term");
+
+        DownPaymentLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DownPaymentLoanTermKeyReleased(evt);
+            }
+        });
 
         jLabel133.setText("Upfront Cahs Available ");
 
-        jButton21.setText("Calculate");
+        DownPaymentCalculateBTN.setText("Calculate");
+        DownPaymentCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownPaymentCalculateBTNActionPerformed(evt);
+            }
+        });
 
-        jButton22.setText("Clear");
+        DownPaymentClearBTN.setText("Clear");
+        DownPaymentClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownPaymentClearBTNActionPerformed(evt);
+            }
+        });
 
-        jLabel134.setText("Down Payemtn");
+        jLabel134.setText("Down Payment");
+
+        DownPaymentDownPayment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DownPaymentDownPaymentKeyReleased(evt);
+            }
+        });
 
         jLabel138.setText("Interest Rate");
 
-        jCheckBox3.setText("Include Closing Cost");
+        DownPaymentInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                DownPaymentInterestRateKeyReleased(evt);
+            }
+        });
 
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        DownPaymnentCheckboxClosingCost.setText("Include Closing Cost");
+
+        DownPaymentComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+
+        jLabel135.setText("%");
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
@@ -2630,22 +2673,24 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel133, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField95)
-                            .addComponent(jTextField99, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField45, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                            .addComponent(jTextField46, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addComponent(DownPaymentLoanTerm)
+                            .addComponent(DownPaymentInterestRate, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DownPaymentUpfrontCash, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                            .addComponent(DownPaymentDownPayment, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel61Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
-                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(DownPaymentClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel61Layout.createSequentialGroup()
-                        .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DownPaymnentCheckboxClosingCost, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DownPaymentClosingCOst, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(DownPaymentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel61Layout.setVerticalGroup(
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2653,28 +2698,29 @@ String aboutMessage = "<html>"
                 .addGap(9, 9, 9)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel133, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField45))
+                    .addComponent(DownPaymentUpfrontCash))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel134, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField46))
+                    .addComponent(DownPaymentDownPayment)
+                    .addComponent(jLabel135, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jTextField94)
-                    .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DownPaymnentCheckboxClosingCost)
+                    .addComponent(DownPaymentClosingCOst)
+                    .addComponent(DownPaymentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel138)
-                    .addComponent(jTextField99))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                    .addComponent(DownPaymentInterestRate))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel132)
-                    .addComponent(jTextField95))
+                    .addComponent(DownPaymentLoanTerm))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DownPaymentClearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
@@ -2687,9 +2733,9 @@ String aboutMessage = "<html>"
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel59Layout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, 43)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -2712,16 +2758,16 @@ String aboutMessage = "<html>"
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(72, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
@@ -4360,6 +4406,106 @@ String aboutMessage = "<html>"
         }
         
     }//GEN-LAST:event_RentCalculateBTNActionPerformed
+
+    private void DownPaymentUpfrontCashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentUpfrontCashKeyReleased
+
+      String input = DownPaymentUpfrontCash.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      DownPaymentUpfrontCash.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+        
+    }//GEN-LAST:event_DownPaymentUpfrontCashKeyReleased
+
+    private void DownPaymentClosingCOstKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentClosingCOstKeyReleased
+       String input = DownPaymentClosingCOst.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      DownPaymentClosingCOst.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+    }//GEN-LAST:event_DownPaymentClosingCOstKeyReleased
+
+    private void DownPaymentInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentInterestRateKeyReleased
+      String input = DownPaymentInterestRate.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      DownPaymentInterestRate.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+    }//GEN-LAST:event_DownPaymentInterestRateKeyReleased
+
+    private void DownPaymentLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentLoanTermKeyReleased
+      String input = DownPaymentLoanTerm.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      DownPaymentLoanTerm.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+    }//GEN-LAST:event_DownPaymentLoanTermKeyReleased
+
+    private void DownPaymentClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentClearBTNActionPerformed
+       
+        DownPaymentUpfrontCash.setText("");
+        DownPaymentDownPayment.setText("");
+        DownPaymentClosingCOst.setText("");
+        DownPaymentInterestRate.setText("");
+        DownPaymentLoanTerm.setText("");
+    }//GEN-LAST:event_DownPaymentClearBTNActionPerformed
+
+    private void DownPaymentDownPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentDownPaymentKeyReleased
+      String input = DownPaymentDownPayment.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      DownPaymentDownPayment.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+    }//GEN-LAST:event_DownPaymentDownPaymentKeyReleased
+
+    private void DownPaymentCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentCalculateBTNActionPerformed
+                // Assuming DownPaymentCheckboxClosingCost is your JCheckBox
+        try{
+            
+        double upfrontCash = Double.parseDouble( DownPaymentUpfrontCash.getText());
+        double downpayment = Double.parseDouble(DownPaymentDownPayment.getText());
+        double includeClosingCosts = Double.parseDouble(DownPaymentClosingCOst.getText());
+        double interestRate = Double.parseDouble(DownPaymentInterestRate.getText());
+        double loanTerm = Double.parseDouble(DownPaymentLoanTerm.getText());
+        
+        String outputText="";
+
+        if (DownPaymnentCheckboxClosingCost.isSelected()) {
+            
+            String selectedOption = (String) DownPaymentComboBox.getSelectedItem();
+            if ("%".equals(selectedOption)) {
+                double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);     
+                outputText = "<html>You can afford up to $" + result1[0] + " for the home price.<br>"
+                          + "Your loan amount is $" + result1[1] + ".<br>"
+                          + "Your monthly payment will be $" + result1[2] + ".</html>";
+                
+                
+                
+                
+            } if ("$".equals(selectedOption)){
+                double[] result2 = Helper.downpaymentYesClosingCostandMoney(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);
+                outputText = "<html>You can afford up to $" + result2[0] + " for the home price.<br>"
+                           + "Your loan amount is $" + result2[1] + ".<br>"
+                           + "Your monthly payment will be $" + result2[2] + ".</html>";
+            }
+        } else {
+           double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts=0);     
+           outputText = "<html>You can afford up to $" + result1[0] + " for the home price.<br>"
+                          + "Your loan amount is $" + result1[1] + ".<br>"
+                          + "Your monthly payment will be $" + result1[2] + ".</html>";
+        }
+        DownPaymentOuput.setText(outputText);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Empty fields!");
+        }
+    }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
+    
     
     
     
@@ -4818,6 +4964,16 @@ private void setMessage4() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AutoLoan;
     private javax.swing.JPanel Currency;
+    private javax.swing.JButton DownPaymentCalculateBTN;
+    private javax.swing.JButton DownPaymentClearBTN;
+    private javax.swing.JTextField DownPaymentClosingCOst;
+    private javax.swing.JComboBox<String> DownPaymentComboBox;
+    private javax.swing.JTextField DownPaymentDownPayment;
+    private javax.swing.JTextField DownPaymentInterestRate;
+    private javax.swing.JTextField DownPaymentLoanTerm;
+    private javax.swing.JLabel DownPaymentOuput;
+    private javax.swing.JTextField DownPaymentUpfrontCash;
+    private javax.swing.JCheckBox DownPaymnentCheckboxClosingCost;
     private javax.swing.JPanel FCcontrolBtn;
     private javax.swing.JPanel FitnessAndHealthCalculator;
     private javax.swing.JPanel HouseAffordabilityCalculator;
@@ -4893,8 +5049,6 @@ private void setMessage4() {
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton27;
@@ -4903,7 +5057,6 @@ private void setMessage4() {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -4916,7 +5069,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox20;
     private javax.swing.JComboBox<String> jComboBox21;
     private javax.swing.JComboBox<String> jComboBox28;
     private javax.swing.JComboBox<String> jComboBox29;
@@ -4957,12 +5109,12 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel140;
@@ -5182,8 +5334,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField42;
     private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
@@ -5228,9 +5378,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField86;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField90;
-    private javax.swing.JTextField jTextField94;
-    private javax.swing.JTextField jTextField95;
-    private javax.swing.JTextField jTextField99;
     private javax.swing.JLabel jorge;
     private javax.swing.JLabel osvaldo;
     private javax.swing.JTabbedPane panelCalculator;
