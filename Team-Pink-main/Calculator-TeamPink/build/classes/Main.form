@@ -261,7 +261,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="InvestmentCalculatorBTN3" alignment="1" max="32767" attributes="0"/>
                                   <Component id="RetirementCalculatorBTN2" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="MortgageandRealEstateBTN" alignment="1" pref="152" max="32767" attributes="0"/>
+                                  <Component id="MortgageandRealEstateBTN" alignment="1" max="32767" attributes="0"/>
                                   <Component id="OtherCalculatorsBTN1" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -998,9 +998,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="380" max="32767" attributes="0"/>
+                          <EmptySpace pref="386" max="32767" attributes="0"/>
                           <Component id="jPanel40" min="-2" pref="274" max="-2" attributes="0"/>
-                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                          <EmptySpace pref="41" max="32767" attributes="0"/>
                           <Component id="jScrollPane8" min="-2" pref="353" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1744,7 +1744,7 @@
                                   <Component id="jButton12" alignment="3" max="32767" attributes="0"/>
                                   <Component id="jButton14" alignment="3" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="8" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1895,7 +1895,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel81" min="-2" pref="387" max="-2" attributes="0"/>
-                              <EmptySpace pref="14" max="32767" attributes="0"/>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2936,7 +2936,7 @@
                               <Component id="jLabel26" pref="17" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTextField9" pref="23" max="32767" attributes="0"/>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3154,7 +3154,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel71" pref="188" max="32767" attributes="0"/>
+                                              <Component id="jLabel71" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="RothIRACalculatorExpectedReturnRate" min="-2" pref="173" max="-2" attributes="0"/>
                                           </Group>
@@ -3165,7 +3165,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="LabelAnnualContribution" pref="172" max="32767" attributes="0"/>
+                                                  <Component id="LabelAnnualContribution" max="32767" attributes="0"/>
                                                   <Component id="jLabel70" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
@@ -3616,7 +3616,7 @@
                                   <Component id="DownPaymentCalculateBTN" alignment="3" max="32767" attributes="0"/>
                                   <Component id="DownPaymentClearBTN" alignment="3" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="8" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3934,7 +3934,7 @@
                                   <Component id="jButton19" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton20" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="9" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4619,9 +4619,9 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jButton23" min="-2" pref="133" max="-2" attributes="0"/>
+                                          <Component id="ALCalcButton" min="-2" pref="133" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jCheckBox4" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="ALCheckBox" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel145" max="32767" attributes="0"/>
                                               <Component id="jLabel141" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel146" alignment="0" max="32767" attributes="0"/>
@@ -4637,17 +4637,17 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jButton24" min="-2" pref="141" max="-2" attributes="0"/>
-                                      <Component id="jTextField104" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField48" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField47" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField103" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField101" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField106" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField105" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField102" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALClearButton" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <Component id="ALSalesTaxInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALLoanTermInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALPriceInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALInterestRateInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALCashIncentivesInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALDownPaymentInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALAmtOwnInput" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALTradeInValueInput" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jComboBox28" alignment="0" pref="167" max="32767" attributes="0"/>
-                                      <Component id="jTextField107" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ALOtherFeesInput" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
                               </Group>
@@ -4659,37 +4659,37 @@
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel144" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jTextField47" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALPriceInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel145" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jTextField48" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALLoanTermInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel141" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField103" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALInterestRateInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel142" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField101" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALCashIncentivesInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel149" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField106" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALDownPaymentInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField102" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALTradeInValueInput" alignment="3" max="32767" attributes="0"/>
                                       <Component id="jLabel143" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel146" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField105" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALAmtOwnInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -4699,19 +4699,19 @@
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel148" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField104" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALSalesTaxInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel150" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField107" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALOtherFeesInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ALCheckBox" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jButton23" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jButton24" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALCalcButton" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="ALClearButton" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="51" max="32767" attributes="0"/>
                               </Group>
@@ -4724,9 +4724,9 @@
                             <Property name="text" type="java.lang.String" value="Interest Rate"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField47">
+                        <Component class="javax.swing.JTextField" name="ALPriceInput">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField101">
+                        <Component class="javax.swing.JTextField" name="ALCashIncentivesInput">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel142">
                           <Properties>
@@ -4738,31 +4738,37 @@
                             <Property name="text" type="java.lang.String" value="Trade-in value"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField102">
+                        <Component class="javax.swing.JTextField" name="ALTradeInValueInput">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel144">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Auto Price "/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField103">
+                        <Component class="javax.swing.JTextField" name="ALInterestRateInput">
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton23">
+                        <Component class="javax.swing.JButton" name="ALCalcButton">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Calculate"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ALCalcButtonActionPerformed"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton24">
+                        <Component class="javax.swing.JButton" name="ALClearButton">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ALClearButtonActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel145">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Loan Term"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField48">
+                        <Component class="javax.swing.JTextField" name="ALLoanTermInput">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel146">
                           <Properties>
@@ -4774,9 +4780,9 @@
                             <Property name="text" type="java.lang.String" value="Your State"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField104">
+                        <Component class="javax.swing.JTextField" name="ALSalesTaxInput">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField105">
+                        <Component class="javax.swing.JTextField" name="ALAmtOwnInput">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel148">
                           <Properties>
@@ -4788,7 +4794,7 @@
                             <Property name="text" type="java.lang.String" value="Down Payment "/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField106">
+                        <Component class="javax.swing.JTextField" name="ALDownPaymentInput">
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox28">
                           <Properties>
@@ -4856,9 +4862,9 @@
                             <Property name="text" type="java.lang.String" value="Title, Registration and Other Fees"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField107">
+                        <Component class="javax.swing.JTextField" name="ALOtherFeesInput">
                         </Component>
-                        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                        <Component class="javax.swing.JCheckBox" name="ALCheckBox">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Include All Fees in Loan"/>
                           </Properties>
@@ -5218,7 +5224,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel140" pref="419" max="32767" attributes="0"/>
+                          <Component id="ALResultOutput" pref="419" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -5227,16 +5233,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel140" min="-2" pref="55" max="-2" attributes="0"/>
+                          <Component id="ALResultOutput" min="-2" pref="55" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel140">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Output here"/>
-                  </Properties>
+                <Component class="javax.swing.JLabel" name="ALResultOutput">
                 </Component>
               </SubComponents>
             </Container>
@@ -5614,7 +5617,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="9" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="InterestRateOutput" min="-2" pref="82" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -5714,7 +5717,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" pref="145" max="-2" attributes="0"/>
-                          <EmptySpace pref="105" max="32767" attributes="0"/>
+                          <EmptySpace pref="111" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
