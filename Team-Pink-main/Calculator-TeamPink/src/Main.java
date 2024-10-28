@@ -3311,7 +3311,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel146)
                     .addComponent(ALAmtOwnInput))
-                .addGap(44, 44, 44)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel148)
                     .addComponent(ALSalesTaxInput))
