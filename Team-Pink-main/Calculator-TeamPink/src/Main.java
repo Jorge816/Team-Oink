@@ -4515,18 +4515,6 @@ String aboutMessage = "<html>"
         String salesTaxValue = ALSalesTaxInput.getText();
         String otherFeesValue = ALOtherFeesInput.getText();
         
-        /*double autoPrice = Double.parseDouble(autoPriceValue);
-        double loanTerm = Double.parseDouble(loanTermValue);
-        double interestRate = Double.parseDouble(interestRateValue);
-        double cashIncentives = Double.parseDouble(cashIncentivesValue);
-        double downPayment = Double.parseDouble(downPaymentValue);
-        double tradeInValue = Double.parseDouble(tradeInValueValue);
-        double amtOwnedTradeIn = Double.parseDouble(amtOwnedTradeInValue);
-        double salesTax = Double.parseDouble(salesTaxValue);
-        double otherFees = Double.parseDouble(otherFeesValue);*/
-        
-        
-        
         double[] result = Helper.calcAutoLoan(autoPriceValue, loanTermValue, interestRateValue, cashIncentivesValue, downPaymentValue, tradeInValueValue, amtOwnedTradeInValue, salesTaxValue, otherFeesValue);
         if(result[0] == -1 || result[1] == -1){
             ALResultOutput.setText("");
