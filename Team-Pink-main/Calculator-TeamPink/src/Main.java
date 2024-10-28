@@ -559,13 +559,11 @@ String aboutMessage = "<html>"
         jLabel145 = new javax.swing.JLabel();
         ALLoanTermInput = new javax.swing.JTextField();
         jLabel146 = new javax.swing.JLabel();
-        jLabel147 = new javax.swing.JLabel();
         ALSalesTaxInput = new javax.swing.JTextField();
         ALAmtOwnInput = new javax.swing.JTextField();
         jLabel148 = new javax.swing.JLabel();
         jLabel149 = new javax.swing.JLabel();
         ALDownPaymentInput = new javax.swing.JTextField();
-        jComboBox28 = new javax.swing.JComboBox<>();
         jLabel150 = new javax.swing.JLabel();
         ALOtherFeesInput = new javax.swing.JTextField();
         ALCheckBox = new javax.swing.JCheckBox();
@@ -3240,13 +3238,9 @@ String aboutMessage = "<html>"
 
         jLabel146.setText("Amount Owed on Trade-in");
 
-        jLabel147.setText("Your State");
-
         jLabel148.setText("Sales Tax");
 
         jLabel149.setText("Down Payment ");
-
-        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming" }));
 
         jLabel150.setText("Title, Registration and Other Fees");
 
@@ -3266,7 +3260,6 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel145, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel141, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel146, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel147, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel148, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel150, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                             .addComponent(jLabel142, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3276,7 +3269,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ALClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ALSalesTaxInput)
+                    .addComponent(ALSalesTaxInput, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                     .addComponent(ALLoanTermInput)
                     .addComponent(ALPriceInput)
                     .addComponent(ALInterestRateInput)
@@ -3284,7 +3277,6 @@ String aboutMessage = "<html>"
                     .addComponent(ALDownPaymentInput)
                     .addComponent(ALAmtOwnInput)
                     .addComponent(ALTradeInValueInput)
-                    .addComponent(jComboBox28, 0, 167, Short.MAX_VALUE)
                     .addComponent(ALOtherFeesInput))
                 .addGap(0, 65, Short.MAX_VALUE))
         );
@@ -3319,11 +3311,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel146)
                     .addComponent(ALAmtOwnInput))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel147)
-                    .addComponent(jComboBox28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
+                .addGap(44, 44, 44)
                 .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel148)
                     .addComponent(ALSalesTaxInput))
@@ -5144,7 +5132,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox21;
-    private javax.swing.JComboBox<String> jComboBox28;
     private javax.swing.JComboBox<String> jComboBox29;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -5197,7 +5184,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel144;
     private javax.swing.JLabel jLabel145;
     private javax.swing.JLabel jLabel146;
-    private javax.swing.JLabel jLabel147;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
