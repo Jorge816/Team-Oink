@@ -437,7 +437,178 @@ public class Helper {
         
         return monthlyPayment; // Returns the calculated monthly payment
         }
-    
         
         
+        //-----------------------------AUTO-LOAN-CALCULATOR--------------------------------------------------------------------------
+        public static double[] calcAutoLoan(
+        String autoPriceStr,
+        String loanTermStr,
+        String interestRateStr,
+        String cashIncentivesStr,
+        String downPaymentStr,
+        String tradeInValueStr,
+        String amtOwnedTradeInStr,
+        String salesTaxStr,
+        String otherFeesStr){
+            
+         String msg = "";
+            
+            if (isEmptyInput(autoPriceStr) || isEmptyInput(loanTermStr) || isEmptyInput(interestRateStr) ||
+       isEmptyInput(cashIncentivesStr) || isEmptyInput(downPaymentStr) || isEmptyInput(tradeInValueStr) || 
+       isEmptyInput(amtOwnedTradeInStr) || isEmptyInput(salesTaxStr) || isEmptyInput(otherFeesStr)){
+                System.out.println("Input cannot be empty.");
+                msg += "All input fields are required. \n";
+            }
+            
+            double autoPrice, downPayment, tradeInValue, cashIncentives, amtOwnedTradeIn, interestRate, salesTax, otherFees;
+            int  loanTerm;
+            double maxValue = 999999999;
+            
+            // Attempt to parse the input strings into numeric values
+            try{
+                autoPrice = Double.parseDouble(autoPriceStr);
+                downPayment = Double.parseDouble(downPaymentStr);
+                tradeInValue = Double.parseDouble(tradeInValueStr);
+                salesTax = Double.parseDouble(salesTaxStr);
+                otherFees = Double.parseDouble(otherFeesStr);
+                cashIncentives = Double.parseDouble(cashIncentivesStr);
+                amtOwnedTradeIn = Double.parseDouble(amtOwnedTradeInStr);
+                interestRate = Double.parseDouble(interestRateStr);
+                loanTerm = Integer.parseInt(loanTermStr);
+            }catch (NumberFormatException e){
+                msg += "Invalid input format. Please enter numeric values. \n";
+                // Return an error if input cannot be parsed into a number
+                System.out.println("Invalid input format.");
+                return new double []{-1,-1};
+            }
+            
+            // Attempt to parse the input strings into numeric values and check for non-zero/non-negative where necessary.
+    try {
+        autoPrice = Double.parseDouble(autoPriceStr);
+        if (autoPrice <= 0) {
+            msg += "Auto price must be greater than 0.\n";
+        }
+        
+        loanTerm = Integer.parseInt(loanTermStr);
+        if (loanTerm <= 0) {
+            msg += "Loan term must be greater than 0.\n";
+        }
+
+        interestRate = Double.parseDouble(interestRateStr);
+        if (interestRate < 0) {
+            msg += "Interest rate cannot be negative.\n";
+        }
+
+        downPayment = Double.parseDouble(downPaymentStr);
+        if (downPayment < 0) {
+            msg += "Down payment cannot be negative.\n";
+        }
+
+        tradeInValue = Double.parseDouble(tradeInValueStr);
+        if (tradeInValue < 0) {
+            msg += "Trade-in value cannot be negative.\n";
+        }
+
+        cashIncentives = Double.parseDouble(cashIncentivesStr);
+        if (cashIncentives < 0) {
+            msg += "Cash incentives cannot be negative.\n";
+        }
+
+        amtOwnedTradeIn = Double.parseDouble(amtOwnedTradeInStr);
+        if (amtOwnedTradeIn < 0) {
+            msg += "Amount owed on trade-in cannot be negative.\n";
+        }
+
+        salesTax = Double.parseDouble(salesTaxStr);
+        if (salesTax < 0) {
+            msg += "Sales tax cannot be negative.\n";
+        }
+
+        otherFees = Double.parseDouble(otherFeesStr);
+        if (otherFees < 0) {
+            msg += "Other fees cannot be negative.\n";
+        }
+        
+        // Validate range limits
+        if (!inRange(autoPrice, maxValue)) {
+            msg += "Auto price exceeds the allowed maximum limit.\n";
+        }
+        if (!inRange(interestRate, maxValue)) {
+            msg += "Interest rate exceeds the allowed maximum limit.\n";
+        }
+        if (!inRange(loanTerm, maxValue)) {
+            msg += "Loan term exceeds the allowed maximum limit.\n";
+        }
+
+    } catch (NumberFormatException e) {
+        // Return an error if input cannot be parsed into a number
+        System.out.println("Invalid input format.");
+        return new double[] {-1, -1};
+    }
+            
+            
+            if (autoPrice <= 0) {
+                msg += "Auto price must be greater than 0.\n";
+            }
+            if (loanTerm <= 0) {
+                msg += "Loan term must be greater than 0.\n";
+            }
+            if (interestRate <= 0) {
+                msg += "Interest rate must be greater than 0.\n";
+            }
+            
+            // Validate range limits
+            if (!inRange(autoPrice, maxValue)) {
+                msg += "Auto price exceeds the allowed maximum limit.\n";
+            }
+            if (!inRange(interestRate, maxValue)) {
+                msg += "Interest rate exceeds the allowed maximum limit.\n";
+            }
+            if (!inRange(loanTerm, maxValue)) {
+                msg += "Loan term exceeds the allowed maximum limit.\n";
+            }
+            
+            // If there are validation errors, return [-1, -1]
+            if(!msg.isEmpty()){
+                System.out.println(msg);
+                return new double[]{-1,-1};
+            }
+          
+            // Proceed with calculation if input is valid
+            double autoLoanPayment = autoPrice - downPayment - tradeInValue + amtOwnedTradeIn - cashIncentives;
+            double salesTaxAmount = (autoPrice - tradeInValue) * (salesTax / 100);
+            double autoLoanPaymentFees = autoLoanPayment + salesTaxAmount + otherFees;
+            double monthlyInterestRate = (interestRate / 100) / 12;
+           
+            // Declare variables to store the monthly payments
+            double paymentWithoutFees;
+            double paymentWithFees;
+           
+            // Calculate the monthly payment without fees
+            if (monthlyInterestRate == 0) {
+                // If the interest rate is 0, the loan is divided evenly over the loan term
+                paymentWithoutFees = autoLoanPayment / loanTerm;
+            } else {
+                // Standard loan formula: P * r / (1 - (1 + r)^-n)
+                paymentWithoutFees = (autoLoanPayment * monthlyInterestRate) /
+                                     (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
+            }
+           
+            // Calculate the monthly payment with fees included
+            if (monthlyInterestRate == 0) {
+                // Same logic for 0 interest rate
+                paymentWithFees = autoLoanPaymentFees / loanTerm;
+            } else {
+                // Same formula but with the loan amount that includes fees
+                paymentWithFees = (autoLoanPaymentFees * monthlyInterestRate) /
+                                  (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
+            }
+           
+            // Round the results to two decimal places for better readability
+            paymentWithFees = Math.round(paymentWithFees * 100) / 100.0;
+            paymentWithoutFees = Math.round(paymentWithoutFees * 100) / 100.0;
+            
+            // Return both the payments (without fees and with fees) in an array
+            return new double[]{paymentWithoutFees, paymentWithFees};
+        }
 }
