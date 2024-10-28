@@ -462,8 +462,6 @@ String aboutMessage = "<html>"
         RothIRACurrentAge = new javax.swing.JTextField();
         jLabel83 = new javax.swing.JLabel();
         RothIRaRetirementAge = new javax.swing.JTextField();
-        jLabel84 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
         jPanel48 = new javax.swing.JPanel();
         RothIRAoutput = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -2411,9 +2409,6 @@ String aboutMessage = "<html>"
             }
         });
 
-        jLabel84.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel84.setText("Marginal tax rate");
-
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
@@ -2453,13 +2448,10 @@ String aboutMessage = "<html>"
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(RothIRAclearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField26, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                                    .addComponent(RothIRaRetirementAge)
+                                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
                                     .addComponent(RothIRACurrentAge))))))
                 .addContainerGap())
         );
@@ -2492,15 +2484,11 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel83)
                     .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel84)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RothIRACalculateBTN)
                     .addComponent(RothIRAclearBTN))
-                .addContainerGap())
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jPanel48.setBackground(new java.awt.Color(204, 255, 204));
@@ -2544,11 +2532,11 @@ String aboutMessage = "<html>"
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel46Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane6)
                     .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(39, 39, 39))
         );
@@ -5211,7 +5199,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
@@ -5313,7 +5300,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
