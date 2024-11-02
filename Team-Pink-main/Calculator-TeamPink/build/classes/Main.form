@@ -1052,7 +1052,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel72" min="-2" pref="255" max="-2" attributes="0"/>
+                              <Component id="MortgageCalculatorOUtput" min="-2" pref="255" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1061,14 +1061,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel72" pref="338" max="32767" attributes="0"/>
+                              <Component id="MortgageCalculatorOUtput" pref="338" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel72">
+                    <Component class="javax.swing.JLabel" name="MortgageCalculatorOUtput">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Output here"/>
                       </Properties>
@@ -1102,24 +1102,24 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField63" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorLoanTerm" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jTextField72" min="-2" pref="112" max="-2" attributes="0"/>
+                                              <Component id="MortgateCalculatorDownPayment" min="-2" pref="112" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox7" min="-2" pref="49" max="-2" attributes="0"/>
+                                              <Component id="MortgageCalculatorDownPaymentCBox" min="-2" pref="49" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jTextField29" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
+                                          <Component id="MorgageCalculatorHomePrice" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jComboBox8" min="-2" max="-2" attributes="0"/>
+                                              <Component id="MortgageCalculatorMonthCbox" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextField71" max="32767" attributes="0"/>
+                                              <Component id="MortgateCalculatorYear" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="jTextField80" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorInterestRate" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorIncudeTaxesandMOre" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -1130,9 +1130,9 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton11" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="MortgateCalculatorCaculateBTN" min="-2" pref="133" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton13" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="MortgateCalculatorClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1145,40 +1145,40 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel54" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jTextField29" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MorgageCalculatorHomePrice" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel53" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField72" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgateCalculatorDownPayment" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorDownPaymentCBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField63" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorLoanTerm" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField80" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorInterestRate" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField71" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorMonthCbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgateCalculatorYear" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                              <Component id="MortgageCalculatorIncudeTaxesandMOre" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jPanel41" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton11" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jButton13" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgateCalculatorCaculateBTN" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="MortgateCalculatorClearBTN" alignment="3" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <EmptySpace pref="37" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1197,9 +1197,15 @@
                         <Property name="text" type="java.lang.String" value="Down Payment"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField29">
+                    <Component class="javax.swing.JTextField" name="MorgageCalculatorHomePrice">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MorgageCalculatorHomePriceKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField63">
+                    <Component class="javax.swing.JTextField" name="MortgageCalculatorLoanTerm">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorLoanTermKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel87">
                       <Properties>
@@ -1216,16 +1222,22 @@
                         <Property name="text" type="java.lang.String" value="Start Date"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField71">
+                    <Component class="javax.swing.JTextField" name="MortgateCalculatorYear">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgateCalculatorYearKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel54">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Home Price"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField72">
+                    <Component class="javax.swing.JTextField" name="MortgateCalculatorDownPayment">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgateCalculatorDownPaymentKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox7">
+                    <Component class="javax.swing.JComboBox" name="MortgageCalculatorDownPaymentCBox">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="2">
@@ -1238,7 +1250,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox8">
+                    <Component class="javax.swing.JComboBox" name="MortgageCalculatorMonthCbox">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="12">
@@ -1261,12 +1273,18 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField80">
+                    <Component class="javax.swing.JTextField" name="MortgageCalculatorInterestRate">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorInterestRateKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                    <Component class="javax.swing.JCheckBox" name="MortgageCalculatorIncudeTaxesandMOre">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Include Taxes &amp; Cost Below"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgageCalculatorIncudeTaxesandMOreActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel41">
                       <Properties>
@@ -1281,38 +1299,32 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel88" alignment="0" pref="142" max="32767" attributes="0"/>
-                                      <Component id="jLabel89" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel90" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel91" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel92" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorPropertyTaxesLabel" alignment="0" pref="142" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorHomeInsuranceLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorHoaFeeLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorOtherCostLabel" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField68" pref="113" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorOtherCost" pref="113" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox13" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="MortgageCalculatorOtherCostCBox" min="-2" pref="49" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField67" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorHOAFee" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox12" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="MortgageCalculatorHoaFeeCBox" min="-2" pref="49" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField66" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorHomeInsurance" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox11" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="MortgageCalculatorHomeInsuranceCBox" min="-2" pref="49" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField65" max="32767" attributes="0"/>
+                                          <Component id="MortgageCalculatorPropertyTaxes" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox10" min="-2" pref="49" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField64" max="32767" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox9" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="MortgageCalculatorPropertyTaxesCbox" min="-2" pref="49" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1324,33 +1336,27 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel88" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField64" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorPropertyTaxesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorPropertyTaxes" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorPropertyTaxesCbox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel89" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField65" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorHomeInsuranceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorHomeInsurance" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorHomeInsuranceCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="MortgageCalculatorHoaFeeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorHOAFee" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorHoaFeeCBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel90" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField66" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel91" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField67" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel92" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField68" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorOtherCostLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MortgageCalculatorOtherCost" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="MortgageCalculatorOtherCostCBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               </Group>
@@ -1358,42 +1364,47 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel88">
+                        <Component class="javax.swing.JLabel" name="MortgageCalculatorPropertyTaxesLabel">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Property Taxes Increase"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField64">
+                        <Component class="javax.swing.JTextField" name="MortgageCalculatorPropertyTaxes">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorPropertyTaxesKeyReleased"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel89">
+                        <Component class="javax.swing.JLabel" name="MortgageCalculatorHomeInsuranceLabel">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Home Insurance"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField65">
+                        <Component class="javax.swing.JTextField" name="MortgageCalculatorHomeInsurance">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorHomeInsuranceKeyReleased"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel90">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="PMI Insurance"/>
-                          </Properties>
+                        <Component class="javax.swing.JTextField" name="MortgageCalculatorHOAFee">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorHOAFeeKeyReleased"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField66">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField67">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel91">
+                        <Component class="javax.swing.JLabel" name="MortgageCalculatorHoaFeeLabel">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="HOA Fee"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel92">
+                        <Component class="javax.swing.JLabel" name="MortgageCalculatorOtherCostLabel">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Other Costs"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField68">
+                        <Component class="javax.swing.JTextField" name="MortgageCalculatorOtherCost">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgageCalculatorOtherCostKeyReleased"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox9">
+                        <Component class="javax.swing.JComboBox" name="MortgageCalculatorPropertyTaxesCbox">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="2">
@@ -1406,7 +1417,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox10">
+                        <Component class="javax.swing.JComboBox" name="MortgageCalculatorHomeInsuranceCBox">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="2">
@@ -1419,7 +1430,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox11">
+                        <Component class="javax.swing.JComboBox" name="MortgageCalculatorHoaFeeCBox">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="2">
@@ -1432,20 +1443,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox12">
-                          <Properties>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="%"/>
-                                <StringItem index="1" value="$"/>
-                              </StringArray>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
-                        </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox13">
+                        <Component class="javax.swing.JComboBox" name="MortgageCalculatorOtherCostCBox">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="2">
@@ -1460,15 +1458,21 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="jButton11">
+                    <Component class="javax.swing.JButton" name="MortgateCalculatorCaculateBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Calculate"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgateCalculatorCaculateBTNActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton13">
+                    <Component class="javax.swing.JButton" name="MortgateCalculatorClearBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Clear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgateCalculatorClearBTNActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
