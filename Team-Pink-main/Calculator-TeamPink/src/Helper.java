@@ -15,6 +15,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
+
 public class Helper {
 
     //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
@@ -40,6 +41,9 @@ public class Helper {
     public static boolean InputValidation(String input) {
     
         if (!input.isEmpty()) {
+            if (input.isEmpty()) {
+               return false;
+            }
             // Check if the input contains only digits (this allows decimals as well)
             if (input.matches("[0-9.]+")) {
                 try {
@@ -59,9 +63,9 @@ public class Helper {
                     return false;  // Return false to indicate invalid input
                 }
             } else {
-                // If input contains non-numeric characters, display an error message
-                JOptionPane.showMessageDialog(null, "Only numeric values are allowed.");
+                JOptionPane.showMessageDialog(null, "Invalid number format.");         
                 return false;  // Return false to indicate invalid input
+                
             }
         }
         return false;
@@ -349,7 +353,75 @@ public class Helper {
 
         return new double[]{homePrice, loanAmount, monthlyPayment};
     }
+    //----------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
+    public static String validateInput(double input, double hp, String checker) {
+        try {
+            double value = input;
+            
+            if (checker.equals("$")) {
+                if (value < hp) {
+                    return "Valid dollar input: $" + value;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price ($" + hp + ")");
+                    return "Error: Dollar amount must be less than the house price ($" + hp + ")";
+                }
+            } else if (checker.equals("%")) {
+                if (value >= 0 && value <= 100) {
+                    return "Valid percentage input: " + value + "%";
+                } else {
+                    JOptionPane.showMessageDialog(null, "Percentage must be between 0 and 100");
+                    return "Error: Percentage must be between 0 and 100";
+                }
+            } else {
+                return "Error: Checker must be either '$' or '%'";
+            }
+        } catch (NumberFormatException e) {
+            return "Error: Invalid number format";
+        }
+    }
+
+    //----------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     
+    public static double[] mortgageCalculator(double hp, double dp, int loanTerm, double rate, int startDate, double pt, double hI, double hf, double oc) {
+        double r = (rate / 100) / 12;          // Monthly interest rate
+        double n = loanTerm * 12;              // Total number of payments (months)
+        double loanAmount = hp - dp;           // Loan principal after downpayment
+        
+        // Monthly mortgage payment calculation
+        double top = Math.pow(1 + r, n) - 1;
+        double bottom = r * Math.pow(1 + r, n);
+        double monthlyPayment = loanAmount * (r / (1 - 1 / Math.pow(1 + r, n)));
+        
+        // Monthly additional costs
+        double monthlyPropertyTaxes = pt / 12;
+        double monthlyHomeInsurance = hI / 12;
+        double monthlyHOAFee = hf / 12;
+        double monthlyOtherCost = oc / 12;
+        
+        // Total out-of-pocket monthly cost
+        double totalMonthlyOutOfPocket = monthlyPayment + monthlyPropertyTaxes + monthlyHomeInsurance + monthlyHOAFee + monthlyOtherCost;
+        
+        // Total payments and interest
+        double totalMortgagePayments = monthlyPayment * n;
+        double totalInterest = totalMortgagePayments - loanAmount;
+        
+        // Mortgage payoff date
+        int payoffDate = startDate + loanTerm;
+        
+        return new double[] {
+            Math.round(loanAmount * 100.0) / 100.0,
+            Math.round(monthlyPayment * 100.0) / 100.0,
+            Math.round(monthlyPropertyTaxes * 100.0) / 100.0,
+            Math.round(monthlyHomeInsurance * 100.0) / 100.0,
+            Math.round(monthlyHOAFee * 100.0) / 100.0,
+            Math.round(monthlyOtherCost * 100.0) / 100.0,
+            Math.round(totalMortgagePayments * 100.0) / 100.0,
+            Math.round(totalInterest * 100.0) / 100.0,
+            payoffDate,
+            Math.round(totalMonthlyOutOfPocket * 100.0) / 100.0
+                
+        };
+    }
     
     //---------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
