@@ -4063,7 +4063,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         showAboutPopup();
     }//GEN-LAST:event_jMenu2MouseClicked
-//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator
+//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator Pedro
     private void InterestRateCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateCalculatorClearBTNActionPerformed
         // TODO add your handling code here:
         InterestRateInitialInvestment.setText("");
@@ -4196,7 +4196,7 @@ String aboutMessage = "<html>"
         }
        
     }//GEN-LAST:event_InterestRateCalculatorCalculateBTNActionPerformed
-//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator
+//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator Pedro
     private void RothIRACalculatorCurrentBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorCurrentBalanceKeyReleased
         // TODO add your handling code here:
        // Get the input from the text field
@@ -4314,7 +4314,7 @@ String aboutMessage = "<html>"
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_RothIRACalculateBTNActionPerformed
-//---------------------------------------------------------------------------------------------------------------------Rent Calculator 
+//---------------------------------------------------------------------------------------------------------------------Rent Calculator Pedro
     private void RentPretaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentPretaxIncomeKeyReleased
         // TODO add your handling code here:
       String input = RentPretaxIncome.getText();
@@ -4394,7 +4394,7 @@ String aboutMessage = "<html>"
         }
         
     }//GEN-LAST:event_RentCalculateBTNActionPerformed
-
+//------------------------------------------------------------------------------------------------------------------------Down Payment Calculator Pedro
     private void DownPaymentUpfrontCashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentUpfrontCashKeyReleased
 
       String input = DownPaymentUpfrontCash.getText();
