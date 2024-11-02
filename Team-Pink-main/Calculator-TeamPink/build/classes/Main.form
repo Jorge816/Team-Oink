@@ -3731,18 +3731,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                       <Component id="jPanel56" max="32767" attributes="0"/>
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="37" max="32767" attributes="0"/>
-                      <Component id="jPanel56" min="-2" pref="516" max="-2" attributes="0"/>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <Component id="jPanel56" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3759,14 +3759,14 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace pref="40" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jPanel58" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel57" min="-2" pref="367" max="-2" attributes="0"/>
+                              <Component id="jPanel57" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="jScrollPane7" min="-2" pref="483" max="-2" attributes="0"/>
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3775,14 +3775,16 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane7" min="-2" pref="505" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jScrollPane7" min="-2" pref="505" max="-2" attributes="0"/>
+                                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jPanel57" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPanel58" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel58" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3803,9 +3805,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField40" min="-2" pref="199" max="-2" attributes="0"/>
+                                      <Component id="MorgagePayoffRePayementExtraMonthLabel12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel120" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MorgagePayoffRePayementExtraMonth" min="-2" pref="199" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="MorgagePayoffRePayementExtraMonthLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -3816,13 +3820,25 @@
                                           <Component id="jLabel126" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="MorgagePayoffRePayementExtraMonthLabel13" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField61" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextField28" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextField27" max="32767" attributes="0"/>
-                                          <Component id="jTextField34" max="32767" attributes="0"/>
+                                          <Component id="MorgagePayoffCalculatorInterestRate" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="MortgagePayoffOriginalLoanTerm" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="MortgagepayoffCalculatorOriginalLoanAmount" max="32767" attributes="0"/>
+                                          <Component id="MortGagePayoffRemainingTerm" max="32767" attributes="0"/>
+                                          <Component id="MortGagePayoffRemainingTermMonths" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="MorgagePayoffRePayementExtraMonthLabel16" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="MorgagePayoffRePayementExtraMonthLabel17" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="MorgagePayoffRePayementExtraMonthLabel18" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="MorgagePayoffRePayementExtraMonthLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -3830,36 +3846,44 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabel121" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jRadioButton3" min="-2" pref="173" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton4" min="-2" pref="218" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton6" min="-2" pref="148" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton5" min="-2" pref="148" max="-2" attributes="0"/>
+                                                          <Component id="MortgagePayoffPayAlltogether" min="-2" pref="173" max="-2" attributes="0"/>
+                                                          <Component id="MortgagePayoffRepaymentWithExtraPayments" min="-2" pref="218" max="-2" attributes="0"/>
+                                                          <Component id="MortgagePayoffCalculatorNormalPayment" min="-2" pref="148" max="-2" attributes="0"/>
+                                                          <Component id="MortgagePayoffBiweeklyRepayment" min="-2" pref="148" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField59" alignment="1" min="-2" pref="199" max="-2" attributes="0"/>
-                                                  <Component id="jTextField60" alignment="1" min="-2" pref="199" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="MorgagePayoffRePayementExtraOneTimeLabel2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="MorgagePayoffRePayementExtraOneTime" min="-2" pref="199" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="MorgagePayoffRePayementExtraYearlabel2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="MorgagePayoffRePayementExtraYear" min="-2" pref="199" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel127" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel129" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MorgagePayoffRePayementExtraYearlabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MorgagePayoffRePayementExtraOneTimeLabel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButton19" min="-2" pref="164" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton20" min="-2" pref="156" max="-2" attributes="0"/>
+                                      <Component id="MortgagePayoffCalculateBTN" min="-2" pref="164" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Component id="MortgagePayOffClearBTN" min="-2" pref="156" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3869,57 +3893,71 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgagepayoffCalculatorOriginalLoanAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel118" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgagePayoffOriginalLoanTerm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel125" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField61" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffCalculatorInterestRate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField34" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel126" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortGagePayoffRemainingTerm" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MortGagePayoffRemainingTermMonths" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                               <Component id="jLabel121" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="MortgagePayoffPayAlltogether" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+                              <Component id="MortgagePayoffRepaymentWithExtraPayments" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonth" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraMonthLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField59" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel127" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraYearlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraYearlabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel129" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField60" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MorgagePayoffRePayementExtraOneTimeLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="MorgagePayoffRePayementExtraOneTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MorgagePayoffRePayementExtraOneTimeLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                              <Component id="MortgagePayoffBiweeklyRepayment" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                              <Component id="MortgagePayoffCalculatorNormalPayment" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgagePayoffCalculateBTN" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MortgagePayOffClearBTN" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3933,17 +3971,26 @@
                         <Property name="text" type="java.lang.String" value="Original Loan Amount "/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField27">
+                    <Component class="javax.swing.JTextField" name="MortgagepayoffCalculatorOriginalLoanAmount">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgagepayoffCalculatorOriginalLoanAmountKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton19">
+                    <Component class="javax.swing.JButton" name="MortgagePayoffCalculateBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Calculate"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayoffCalculateBTNActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton20">
+                    <Component class="javax.swing.JButton" name="MortgagePayOffClearBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Clear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayOffClearBTNActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel118">
                       <Properties>
@@ -3953,19 +4000,28 @@
                         <Property name="text" type="java.lang.String" value="Original Loan Term"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField28">
+                    <Component class="javax.swing.JTextField" name="MortgagePayoffOriginalLoanTerm">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortgagePayoffOriginalLoanTermKeyReleased"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                    <Component class="javax.swing.JRadioButton" name="MortgagePayoffPayAlltogether">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Payback Altogether"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayoffPayAlltogetherActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                    <Component class="javax.swing.JRadioButton" name="MortgagePayoffRepaymentWithExtraPayments">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Repayment With Extra Payments"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayoffRepaymentWithExtraPaymentsActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel120">
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="14" style="0"/>
@@ -3973,7 +4029,10 @@
                         <Property name="text" type="java.lang.String" value="per month"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField34">
+                    <Component class="javax.swing.JTextField" name="MortGagePayoffRemainingTerm">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortGagePayoffRemainingTermKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel121">
                       <Properties>
@@ -3983,11 +4042,11 @@
                         <Property name="text" type="java.lang.String" value="Repayment Options "/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField40">
+                    <Component class="javax.swing.JTextField" name="MorgagePayoffRePayementExtraMonth">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField59">
+                    <Component class="javax.swing.JTextField" name="MorgagePayoffRePayementExtraYear">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField60">
+                    <Component class="javax.swing.JTextField" name="MorgagePayoffRePayementExtraOneTime">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel125">
                       <Properties>
@@ -3997,7 +4056,10 @@
                         <Property name="text" type="java.lang.String" value="Interest Rate"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField61">
+                    <Component class="javax.swing.JTextField" name="MorgagePayoffCalculatorInterestRate">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MorgagePayoffCalculatorInterestRateKeyReleased"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel126">
                       <Properties>
@@ -4007,7 +4069,7 @@
                         <Property name="text" type="java.lang.String" value="Remaining Term"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel127">
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraYearlabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="14" style="0"/>
@@ -4015,7 +4077,7 @@
                         <Property name="text" type="java.lang.String" value="per year"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel129">
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraOneTimeLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="14" style="0"/>
@@ -4023,14 +4085,89 @@
                         <Property name="text" type="java.lang.String" value="one time"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                    <Component class="javax.swing.JRadioButton" name="MortgagePayoffBiweeklyRepayment">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Biweekly repayment"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayoffBiweeklyRepaymentActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+                    <Component class="javax.swing.JRadioButton" name="MortgagePayoffCalculatorNormalPayment">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Normal Payment"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgagePayoffCalculatorNormalPaymentActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel12">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="$"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraYearlabel2">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="$"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraOneTimeLabel2">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="$"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel13">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="$"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel15">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="%"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel16">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="years"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel17">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="years"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="MortGagePayoffRemainingTermMonths">
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="MortGagePayoffRemainingTermMonthsKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MorgagePayoffRePayementExtraMonthLabel18">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="months"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -4047,8 +4184,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel124" min="-2" pref="423" max="-2" attributes="0"/>
-                              <EmptySpace pref="51" max="32767" attributes="0"/>
+                              <Component id="MortgagePayoffOutput" pref="468" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4056,17 +4193,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel124" min="-2" pref="42" max="-2" attributes="0"/>
-                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                              <Component id="MortgagePayoffOutput" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel124">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Display Output"/>
-                      </Properties>
+                    <Component class="javax.swing.JLabel" name="MortgagePayoffOutput">
                     </Component>
                   </SubComponents>
                 </Container>
