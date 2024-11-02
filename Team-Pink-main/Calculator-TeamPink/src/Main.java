@@ -106,22 +106,11 @@ public class Main extends javax.swing.JFrame {
         setMessage13();
      
       
-       //--------------------settingOPtionalMortgageFields Visible=false
-        MortgageCalculatorPropertyTaxes.setVisible(false);
-        MortgageCalculatorPropertyTaxesLabel.setVisible(false);
-        MortgageCalculatorPropertyTaxesCbox.setVisible(false);
+       //--------------------settingOPtionalMortgageFields Visible=false Hide Components for MorgageCalculator
+       hideComponentsMortgageCalculator();
         
-        MortgageCalculatorHomeInsurance.setVisible(false);
-        MortgageCalculatorHomeInsuranceLabel.setVisible(false);
-        MortgageCalculatorHomeInsuranceCBox.setVisible(false);
-        
-        MortgageCalculatorHOAFee.setVisible(false);
-        MortgageCalculatorHoaFeeLabel.setVisible(false);
-        MortgageCalculatorHoaFeeCBox.setVisible(false);
-        
-        MortgageCalculatorOtherCost.setVisible(false);
-        MortgageCalculatorOtherCostLabel.setVisible(false);
-        MortgageCalculatorOtherCostCBox.setVisible(false);  
+        //-----------------------------------Hide components for mortgagePayOFF
+        hideComponents();
    
     }
     
@@ -506,28 +495,37 @@ String aboutMessage = "<html>"
         jPanel56 = new javax.swing.JPanel();
         jPanel57 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        MortgagepayoffCalculatorOriginalLoanAmount = new javax.swing.JTextField();
+        MortgagePayoffCalculateBTN = new javax.swing.JButton();
+        MortgagePayOffClearBTN = new javax.swing.JButton();
         jLabel118 = new javax.swing.JLabel();
-        jTextField28 = new javax.swing.JTextField();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jLabel120 = new javax.swing.JLabel();
-        jTextField34 = new javax.swing.JTextField();
+        MortgagePayoffOriginalLoanTerm = new javax.swing.JTextField();
+        MortgagePayoffPayAlltogether = new javax.swing.JRadioButton();
+        MortgagePayoffRepaymentWithExtraPayments = new javax.swing.JRadioButton();
+        MorgagePayoffRePayementExtraMonthLabel = new javax.swing.JLabel();
+        MortGagePayoffRemainingTerm = new javax.swing.JTextField();
         jLabel121 = new javax.swing.JLabel();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField59 = new javax.swing.JTextField();
-        jTextField60 = new javax.swing.JTextField();
+        MorgagePayoffRePayementExtraMonth = new javax.swing.JTextField();
+        MorgagePayoffRePayementExtraYear = new javax.swing.JTextField();
+        MorgagePayoffRePayementExtraOneTime = new javax.swing.JTextField();
         jLabel125 = new javax.swing.JLabel();
-        jTextField61 = new javax.swing.JTextField();
+        MorgagePayoffCalculatorInterestRate = new javax.swing.JTextField();
         jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        MorgagePayoffRePayementExtraYearlabel = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraOneTimeLabel = new javax.swing.JLabel();
+        MortgagePayoffBiweeklyRepayment = new javax.swing.JRadioButton();
+        MortgagePayoffCalculatorNormalPayment = new javax.swing.JRadioButton();
+        MorgagePayoffRePayementExtraMonthLabel12 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraYearlabel2 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraOneTimeLabel2 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraMonthLabel13 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraMonthLabel15 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraMonthLabel16 = new javax.swing.JLabel();
+        MorgagePayoffRePayementExtraMonthLabel17 = new javax.swing.JLabel();
+        MortGagePayoffRemainingTermMonths = new javax.swing.JTextField();
+        MorgagePayoffRePayementExtraMonthLabel18 = new javax.swing.JLabel();
         jPanel58 = new javax.swing.JPanel();
-        jLabel124 = new javax.swing.JLabel();
+        MortgagePayoffOutput = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         InstructionsMortgagePayoffCalculator = new javax.swing.JTextPane();
         MathCalculator = new javax.swing.JPanel();
@@ -2837,19 +2835,57 @@ String aboutMessage = "<html>"
         jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel49.setText("Original Loan Amount ");
 
-        jButton19.setText("Calculate");
+        MortgagepayoffCalculatorOriginalLoanAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgagepayoffCalculatorOriginalLoanAmountKeyReleased(evt);
+            }
+        });
 
-        jButton20.setText("Clear");
+        MortgagePayoffCalculateBTN.setText("Calculate");
+        MortgagePayoffCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayoffCalculateBTNActionPerformed(evt);
+            }
+        });
+
+        MortgagePayOffClearBTN.setText("Clear");
+        MortgagePayOffClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayOffClearBTNActionPerformed(evt);
+            }
+        });
 
         jLabel118.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel118.setText("Original Loan Term");
 
-        jRadioButton3.setText("Payback Altogether");
+        MortgagePayoffOriginalLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgagePayoffOriginalLoanTermKeyReleased(evt);
+            }
+        });
 
-        jRadioButton4.setText("Repayment With Extra Payments");
+        MortgagePayoffPayAlltogether.setText("Payback Altogether");
+        MortgagePayoffPayAlltogether.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayoffPayAlltogetherActionPerformed(evt);
+            }
+        });
 
-        jLabel120.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel120.setText("per month");
+        MortgagePayoffRepaymentWithExtraPayments.setText("Repayment With Extra Payments");
+        MortgagePayoffRepaymentWithExtraPayments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayoffRepaymentWithExtraPaymentsActionPerformed(evt);
+            }
+        });
+
+        MorgagePayoffRePayementExtraMonthLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel.setText("per month");
+
+        MortGagePayoffRemainingTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortGagePayoffRemainingTermKeyReleased(evt);
+            }
+        });
 
         jLabel121.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel121.setText("Repayment Options ");
@@ -2857,18 +2893,64 @@ String aboutMessage = "<html>"
         jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel125.setText("Interest Rate");
 
+        MorgagePayoffCalculatorInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MorgagePayoffCalculatorInterestRateKeyReleased(evt);
+            }
+        });
+
         jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel126.setText("Remaining Term");
 
-        jLabel127.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel127.setText("per year");
+        MorgagePayoffRePayementExtraYearlabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraYearlabel.setText("per year");
 
-        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel129.setText("one time");
+        MorgagePayoffRePayementExtraOneTimeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraOneTimeLabel.setText("one time");
 
-        jRadioButton5.setText("Biweekly repayment");
+        MortgagePayoffBiweeklyRepayment.setText("Biweekly repayment");
+        MortgagePayoffBiweeklyRepayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayoffBiweeklyRepaymentActionPerformed(evt);
+            }
+        });
 
-        jRadioButton6.setText("Normal Payment");
+        MortgagePayoffCalculatorNormalPayment.setText("Normal Payment");
+        MortgagePayoffCalculatorNormalPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgagePayoffCalculatorNormalPaymentActionPerformed(evt);
+            }
+        });
+
+        MorgagePayoffRePayementExtraMonthLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel12.setText("$");
+
+        MorgagePayoffRePayementExtraYearlabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraYearlabel2.setText("$");
+
+        MorgagePayoffRePayementExtraOneTimeLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraOneTimeLabel2.setText("$");
+
+        MorgagePayoffRePayementExtraMonthLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel13.setText("$");
+
+        MorgagePayoffRePayementExtraMonthLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel15.setText("%");
+
+        MorgagePayoffRePayementExtraMonthLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel16.setText("years");
+
+        MorgagePayoffRePayementExtraMonthLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel17.setText("years");
+
+        MortGagePayoffRemainingTermMonths.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortGagePayoffRemainingTermMonthsKeyReleased(evt);
+            }
+        });
+
+        MorgagePayoffRePayementExtraMonthLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonthLabel18.setText("months");
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -2879,9 +2961,11 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MorgagePayoffRePayementExtraMonthLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel120)
+                        .addComponent(MorgagePayoffRePayementExtraMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MorgagePayoffRePayementExtraMonthLabel)
                         .addGap(102, 102, 102))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2890,12 +2974,22 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel125, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel126, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
+                        .addComponent(MorgagePayoffRePayementExtraMonthLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField61, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField28, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField27)
-                            .addComponent(jTextField34))
-                        .addGap(49, 49, 49))
+                            .addComponent(MorgagePayoffCalculatorInterestRate, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(MortgagePayoffOriginalLoanTerm, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(MortgagepayoffCalculatorOriginalLoanAmount)
+                            .addComponent(MortGagePayoffRemainingTerm)
+                            .addComponent(MortGagePayoffRemainingTermMonths))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(MorgagePayoffRePayementExtraMonthLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MorgagePayoffRePayementExtraMonthLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(MorgagePayoffRePayementExtraMonthLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MorgagePayoffRePayementExtraMonthLabel15))
+                        .addContainerGap())
                     .addGroup(jPanel57Layout.createSequentialGroup()
                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel57Layout.createSequentialGroup()
@@ -2904,78 +2998,94 @@ String aboutMessage = "<html>"
                                     .addGroup(jPanel57Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addComponent(MortgagePayoffPayAlltogether, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(MortgagePayoffRepaymentWithExtraPayments, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(MortgagePayoffCalculatorNormalPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(MortgagePayoffBiweeklyRepayment, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 5, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField59, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField60, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+                                        .addComponent(MorgagePayoffRePayementExtraOneTimeLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(MorgagePayoffRePayementExtraOneTime, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+                                        .addComponent(MorgagePayoffRePayementExtraYearlabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(MorgagePayoffRePayementExtraYear, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel127)
-                            .addComponent(jLabel129))
+                            .addComponent(MorgagePayoffRePayementExtraYearlabel)
+                            .addComponent(MorgagePayoffRePayementExtraOneTimeLabel))
                         .addGap(113, 113, 113))
                     .addGroup(jPanel57Layout.createSequentialGroup()
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MortgagePayoffCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(MortgagePayOffClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel57Layout.setVerticalGroup(
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel57Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
+                .addContainerGap()
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel49)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgagepayoffCalculatorOriginalLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel118)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgagePayoffOriginalLoanTerm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel16))
                 .addGap(1, 1, 1)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel125)
-                    .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(MorgagePayoffCalculatorInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel126))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel126)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel17)
+                    .addComponent(MortGagePayoffRemainingTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MortGagePayoffRemainingTermMonths, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel18))
+                .addGap(5, 5, 5)
                 .addComponent(jLabel121)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(MortgagePayoffPayAlltogether)
                 .addGap(3, 3, 3)
-                .addComponent(jRadioButton4)
+                .addComponent(MortgagePayoffRepaymentWithExtraPayments)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel120))
+                    .addComponent(MorgagePayoffRePayementExtraMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel)
+                    .addComponent(MorgagePayoffRePayementExtraMonthLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel127))
+                    .addComponent(MorgagePayoffRePayementExtraYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MorgagePayoffRePayementExtraYearlabel)
+                    .addComponent(MorgagePayoffRePayementExtraYearlabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel129)
-                    .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MorgagePayoffRePayementExtraOneTimeLabel)
+                    .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(MorgagePayoffRePayementExtraOneTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MorgagePayoffRePayementExtraOneTimeLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton5)
+                .addComponent(MortgagePayoffBiweeklyRepayment)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton6)
+                .addComponent(MortgagePayoffCalculatorNormalPayment)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton19)
-                    .addComponent(jButton20))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MortgagePayoffCalculateBTN)
+                    .addComponent(MortgagePayOffClearBTN))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jPanel58.setBackground(new java.awt.Color(204, 255, 204));
-
-        jLabel124.setText("Display Output");
 
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
         jPanel58.setLayout(jPanel58Layout);
@@ -2983,15 +3093,15 @@ String aboutMessage = "<html>"
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel58Layout.setVerticalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         InstructionsMortgagePayoffCalculator.setBackground(new java.awt.Color(255, 215, 255));
@@ -3002,25 +3112,26 @@ String aboutMessage = "<html>"
         jPanel56Layout.setHorizontalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel56Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(41, 41, 41))
         );
         jPanel56Layout.setVerticalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel56Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel56Layout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(jPanel56Layout.createSequentialGroup()
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout MortgagePayoffCalculatorLayout = new javax.swing.GroupLayout(MortgagePayoffCalculator);
@@ -3028,16 +3139,16 @@ String aboutMessage = "<html>"
         MortgagePayoffCalculatorLayout.setHorizontalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MortgagePayoffCalculatorLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addComponent(jPanel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MortgagePayoffCalculatorLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MortgagePayoffCalculatorLayout.createSequentialGroup()
                 .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
@@ -4599,6 +4710,25 @@ String aboutMessage = "<html>"
         ALResultOutput.setText("");
     }//GEN-LAST:event_ALClearButtonActionPerformed
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
+    private void hideComponentsMortgageCalculator() {
+        MortgageCalculatorPropertyTaxes.setVisible(false);
+        MortgageCalculatorPropertyTaxesLabel.setVisible(false);
+        MortgageCalculatorPropertyTaxesCbox.setVisible(false);
+        
+        MortgageCalculatorHomeInsurance.setVisible(false);
+        MortgageCalculatorHomeInsuranceLabel.setVisible(false);
+        MortgageCalculatorHomeInsuranceCBox.setVisible(false);
+        
+        MortgageCalculatorHOAFee.setVisible(false);
+        MortgageCalculatorHoaFeeLabel.setVisible(false);
+        MortgageCalculatorHoaFeeCBox.setVisible(false);
+        
+        MortgageCalculatorOtherCost.setVisible(false);
+        MortgageCalculatorOtherCostLabel.setVisible(false);
+        MortgageCalculatorOtherCostCBox.setVisible(false);}
+        
+        
+    
     private void MorgageCalculatorHomePriceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgageCalculatorHomePriceKeyReleased
       String input = MorgageCalculatorHomePrice.getText();
       // Strip all spaces from the input as the user types
@@ -4913,9 +5043,209 @@ String aboutMessage = "<html>"
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_MortgateCalculatorCaculateBTNActionPerformed
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Payoff Calculator Pedro 
+    private void MortgagepayoffCalculatorOriginalLoanAmountKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgagepayoffCalculatorOriginalLoanAmountKeyReleased
+       
+        String input = MortgagepayoffCalculatorOriginalLoanAmount.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortgagepayoffCalculatorOriginalLoanAmount.setText(strippedInput);
+        Helper.InputValidation(strippedInput);     
+    }//GEN-LAST:event_MortgagepayoffCalculatorOriginalLoanAmountKeyReleased
+
+    private void MortgagePayoffOriginalLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgagePayoffOriginalLoanTermKeyReleased
+
+        String input = MortgagePayoffOriginalLoanTerm.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortgagePayoffOriginalLoanTerm.setText(strippedInput);
+        if (!Helper.isWholeNumber(input)){
+            Helper.InputValidation(input);
+        }  
+    }//GEN-LAST:event_MortgagePayoffOriginalLoanTermKeyReleased
+
+    private void MorgagePayoffCalculatorInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgagePayoffCalculatorInterestRateKeyReleased
+        String input = MorgagePayoffCalculatorInterestRate.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MorgagePayoffCalculatorInterestRate.setText(strippedInput);
+        Helper.InputValidation(strippedInput);
+        
+        try {
+            String selectedOptionDownPayment = "%";
+           double hp=0.0;
+           double downpayment = Double.parseDouble(MorgagePayoffCalculatorInterestRate.getText());
+           Helper.validateInput(downpayment, hp=0, selectedOptionDownPayment);
+         
+        } catch (NumberFormatException e) {
+            // This block will execute if parsing fails, for example if input is "abc"
+        }    
+    }//GEN-LAST:event_MorgagePayoffCalculatorInterestRateKeyReleased
+
+    private void MortGagePayoffRemainingTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermKeyReleased
+        String input = MortGagePayoffRemainingTerm.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortGagePayoffRemainingTerm.setText(strippedInput);
+        if (!Helper.isWholeNumber(input)){
+            Helper.InputValidation(input);
+        }
+    }//GEN-LAST:event_MortGagePayoffRemainingTermKeyReleased
+
+    private void MortgagePayoffPayAlltogetherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffPayAlltogetherActionPerformed
+   
+        if (MortgagePayoffPayAlltogether.isSelected()) {
+        // If selected, uncheck InterestRateEnd
+            MortgagePayoffPayAlltogether.setSelected(true); 
+            MortgagePayoffRepaymentWithExtraPayments.setSelected(false);
+            MortgagePayoffBiweeklyRepayment.setSelected(false);
+            MortgagePayoffCalculatorNormalPayment.setSelected(false);
+            hideComponents();} 
+        
     
+
+    }//GEN-LAST:event_MortgagePayoffPayAlltogetherActionPerformed
+
+    private void MortgagePayoffRepaymentWithExtraPaymentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffRepaymentWithExtraPaymentsActionPerformed
+     if (MortgagePayoffRepaymentWithExtraPayments.isSelected()) {
+        MortgagePayoffPayAlltogether.setSelected(false); 
+        MortgagePayoffRepaymentWithExtraPayments.setEnabled(true);
+        MortgagePayoffBiweeklyRepayment.setSelected(false);
+        MortgagePayoffCalculatorNormalPayment.setSelected(false);
+
+        MorgagePayoffRePayementExtraMonth.setText("0");
+        MorgagePayoffRePayementExtraYear.setText("0");
+        MorgagePayoffRePayementExtraOneTime.setText("0");
+        setVisibilityTrue();} 
+
+    }//GEN-LAST:event_MortgagePayoffRepaymentWithExtraPaymentsActionPerformed
+
+    private void MortgagePayoffBiweeklyRepaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffBiweeklyRepaymentActionPerformed
+        if (MortgagePayoffBiweeklyRepayment.isSelected()) {
+            MortgagePayoffPayAlltogether.setSelected(false); 
+            MortgagePayoffRepaymentWithExtraPayments.setSelected(false);
+            MortgagePayoffBiweeklyRepayment.setSelected(true);
+            MortgagePayoffCalculatorNormalPayment.setSelected(false);
+            hideComponents();
+           } 
+        
+    }//GEN-LAST:event_MortgagePayoffBiweeklyRepaymentActionPerformed
+
+    private void MortgagePayoffCalculatorNormalPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculatorNormalPaymentActionPerformed
+        if (MortgagePayoffCalculatorNormalPayment.isSelected()) {
+            MortgagePayoffPayAlltogether.setSelected(false); 
+            MortgagePayoffRepaymentWithExtraPayments.setSelected(false);
+            MortgagePayoffBiweeklyRepayment.setSelected(false);
+            MortgagePayoffCalculatorNormalPayment.setSelected(true);
+            hideComponents();
+               } 
+
+    }//GEN-LAST:event_MortgagePayoffCalculatorNormalPaymentActionPerformed
+
+    private void MortgagePayOffClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayOffClearBTNActionPerformed
+        MortgagepayoffCalculatorOriginalLoanAmount.setText("");
+        MortgagePayoffOriginalLoanTerm.setText("");
+        MorgagePayoffCalculatorInterestRate.setText("");
+        MortGagePayoffRemainingTerm.setText("");
+        MortGagePayoffRemainingTermMonths.setText("");
+        hideComponents();
+    }//GEN-LAST:event_MortgagePayOffClearBTNActionPerformed
+
+    private void MortgagePayoffCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculateBTNActionPerformed
+
+        try{
+            double originalLoanAmount = Double.parseDouble(MortgagepayoffCalculatorOriginalLoanAmount.getText());
+            int originalLoanTerm = Integer.parseInt(MortgagePayoffOriginalLoanTerm.getText());
+            double interestRate =Double.parseDouble( MorgagePayoffCalculatorInterestRate.getText());
+            int remainingTerm = Integer.parseInt(MortGagePayoffRemainingTerm.getText());
+            int months =Integer.parseInt(MortGagePayoffRemainingTermMonths.getText());
+
+            String outputText="";
+            if (MortgagePayoffPayAlltogether.isSelected()) {
+
+                double[] mortgagePayoff = Helper.mortgagePayoffCalculator(originalLoanAmount, originalLoanTerm, interestRate, remainingTerm, months);
+
+                outputText = "<html>"
+                                  + "<b>If Payoff Together:</b><br>"
+                                  + "Total Payment: $" + mortgagePayoff[0] + "<br>"
+                                  + "Total Interest: $" + mortgagePayoff[1] + "<br><br>"
+                                  + "<b>Normal Repayment:</b><br>"
+                                  + "Monthly Pay: $" + mortgagePayoff[2] + "<br>"
+                                  + "Total Payment on Original Schedule: $" + mortgagePayoff[3] + "<br>"
+                                  + "Total Interest on Original Schedule: $" + mortgagePayoff[4] + "<br>"
+                                  + "Remaining Balance: $" + mortgagePayoff[5] + "<br>"
+                                  + "Remaining Interest Savings: $" + mortgagePayoff[6] + "<br>"
+                                  + "Remaining Balance to Pay Off Loan: $" + mortgagePayoff[7] + "<br>"
+                                  + "</html>";} 
+
+            if (MortgagePayoffCalculatorNormalPayment.isSelected()) {
+
+                double[] mortgagePayoff = Helper.mortgagePayoffCalculator(originalLoanAmount, originalLoanTerm, interestRate, remainingTerm, months);
+
+                outputText = "<html>"
+
+                                  + "<b>Normal Repayment:</b><br>"
+                                  + "Monthly Pay: $" + mortgagePayoff[2] + "<br>"
+                                  + "Total Payment on Original Schedule: $" + mortgagePayoff[3] + "<br>"
+                                  + "Total Interest on Original Schedule: $" + mortgagePayoff[4] + "<br>"
+                                  + "Remaining Balance: $" + mortgagePayoff[5] + "<br>"
+                                  + "Remaining Interest Savings: $" + mortgagePayoff[6] + "<br>"
+                                  + "Remaining Balance to Pay Off Loan: $" + mortgagePayoff[7] + "<br>"
+                                  + "</html>";} 
+            MortgagePayoffOutput.setText(outputText);}
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
+        
+
+
+        
+    }//GEN-LAST:event_MortgagePayoffCalculateBTNActionPerformed
+
+    private void MortGagePayoffRemainingTermMonthsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
     
+   private void hideComponents() {
+    MorgagePayoffRePayementExtraMonth.setText("0");
+    MorgagePayoffRePayementExtraYear.setText("0");
+    MorgagePayoffRePayementExtraOneTime.setText("0");
+    MortGagePayoffRemainingTermMonths.setText("0");
+    // Text boxes
+    MorgagePayoffRePayementExtraMonth.setVisible(false);
+    MorgagePayoffRePayementExtraYear.setVisible(false);
+    MorgagePayoffRePayementExtraOneTime.setVisible(false);
+
+    // Labels
+    MorgagePayoffRePayementExtraMonthLabel.setVisible(false);
+    MorgagePayoffRePayementExtraYearlabel.setVisible(false);
+    MorgagePayoffRePayementExtraOneTimeLabel.setVisible(false);
+    MorgagePayoffRePayementExtraMonthLabel12.setVisible(false);
+    MorgagePayoffRePayementExtraYearlabel2.setVisible(false);
+    MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(false);
+} 
+   
+   public void setVisibilityTrue() {
+    // Text boxes
+    MorgagePayoffRePayementExtraMonth.setVisible(true);
+    MorgagePayoffRePayementExtraYear.setVisible(true);
+    MorgagePayoffRePayementExtraOneTime.setVisible(true);
+
+    // Labels
+    MorgagePayoffRePayementExtraMonthLabel.setVisible(true);
+    MorgagePayoffRePayementExtraYearlabel.setVisible(true);
+    MorgagePayoffRePayementExtraOneTimeLabel.setVisible(true);
+    MorgagePayoffRePayementExtraMonthLabel12.setVisible(true);
+    MorgagePayoffRePayementExtraYearlabel2.setVisible(true);
+    MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(true);
+}
+   
+   
+   
     
+   
     
     
     
@@ -5429,6 +5759,23 @@ private void setMessage4() {
     private javax.swing.JLabel LabelAnnualContribution;
     private javax.swing.JPanel MathCalculator;
     private javax.swing.JTextField MorgageCalculatorHomePrice;
+    private javax.swing.JTextField MorgagePayoffCalculatorInterestRate;
+    private javax.swing.JTextField MorgagePayoffRePayementExtraMonth;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel12;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel13;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel15;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel16;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel17;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraMonthLabel18;
+    private javax.swing.JTextField MorgagePayoffRePayementExtraOneTime;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraOneTimeLabel;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraOneTimeLabel2;
+    private javax.swing.JTextField MorgagePayoffRePayementExtraYear;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraYearlabel;
+    private javax.swing.JLabel MorgagePayoffRePayementExtraYearlabel2;
+    private javax.swing.JTextField MortGagePayoffRemainingTerm;
+    private javax.swing.JTextField MortGagePayoffRemainingTermMonths;
     private javax.swing.JPanel MortgageCalculator2;
     private javax.swing.JComboBox<String> MortgageCalculatorDownPaymentCBox;
     private javax.swing.JTextField MortgageCalculatorHOAFee;
@@ -5448,8 +5795,17 @@ private void setMessage4() {
     private javax.swing.JTextField MortgageCalculatorPropertyTaxes;
     private javax.swing.JComboBox<String> MortgageCalculatorPropertyTaxesCbox;
     private javax.swing.JLabel MortgageCalculatorPropertyTaxesLabel;
+    private javax.swing.JButton MortgagePayOffClearBTN;
+    private javax.swing.JRadioButton MortgagePayoffBiweeklyRepayment;
+    private javax.swing.JButton MortgagePayoffCalculateBTN;
     private javax.swing.JPanel MortgagePayoffCalculator;
+    private javax.swing.JRadioButton MortgagePayoffCalculatorNormalPayment;
+    private javax.swing.JTextField MortgagePayoffOriginalLoanTerm;
+    private javax.swing.JLabel MortgagePayoffOutput;
+    private javax.swing.JRadioButton MortgagePayoffPayAlltogether;
+    private javax.swing.JRadioButton MortgagePayoffRepaymentWithExtraPayments;
     private javax.swing.JButton MortgageandRealEstateBTN;
+    private javax.swing.JTextField MortgagepayoffCalculatorOriginalLoanAmount;
     private javax.swing.JButton MortgateCalculatorCaculateBTN;
     private javax.swing.JButton MortgateCalculatorClearBTN;
     private javax.swing.JTextField MortgateCalculatorDownPayment;
@@ -5491,9 +5847,7 @@ private void setMessage4() {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton3;
@@ -5536,13 +5890,9 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel133;
@@ -5699,10 +6049,6 @@ private void setMessage4() {
     private javax.swing.JPanel jPanel68;
     private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -5730,21 +6076,17 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
     private javax.swing.JTextField jTextField43;
@@ -5758,10 +6100,7 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField54;
     private javax.swing.JTextField jTextField55;
     private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
     private javax.swing.JTextField jTextField62;
     private javax.swing.JTextField jTextField69;
     private javax.swing.JTextField jTextField7;
