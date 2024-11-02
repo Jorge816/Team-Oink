@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 public class Helper {
 
-    //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
+    //---------------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
@@ -37,7 +37,7 @@ public class Helper {
         return false; // If input contains anything other than digits, return false
     }
     
-    //----------------------------------------------------------------------------------------- // Validate the stripped input -Pedro
+    //------------------------------------------------------------------------------------------------------------------------- // Validate the stripped input -Pedro
     public static boolean InputValidation(String input) {
     
         if (!input.isEmpty()) {
@@ -121,7 +121,7 @@ public class Helper {
     public static double nominalInterestRate(double ER, int a) {
         return a * (Math.pow(1 + ER, 1.0 / a) - 1);
     }
-    //-------------------------------------------------------------------------------------------BeginningCompountInterestRate - Pedro
+    //----------------------------------------------------------------------------------------------------------------------------------BeginningCompountInterestRate - Pedro
     
 
     // Function to calculate future value with nominal interest rate and contributions
@@ -172,7 +172,7 @@ public class Helper {
         return FV;
     }
     
-    //--------------------------------------------------------------------------------------------------formula for continuous - Pedro 
+    //------------------------------------------------------------------------------------------------------------------------------------formula for continuous Interest RateCalculator - Pedro 
         // Function to calculate future value for end contributions
     public static double future_valueEnd(double PI, double Ca, double Cm, double r, double t) {
         // Continuous compounding for primary investment
@@ -264,7 +264,7 @@ public class Helper {
         return balance;
     }
     
-    //-------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
         
                // Function to calculate affordable rent based on income
     public static long[] calculateAffordableRent(double income, double debt, String option) {
@@ -310,7 +310,7 @@ public class Helper {
        return new long[]{Math.round(acceptableAggressive), Math.round(safeAcceptable)};
     }
 
-    //----------------------------------------------------------------------------------------------------------------------------------------------DownPayment Calculator - Pedro 
+    //---------------------------------------------------------------------------------------------------------------------------------------------------DownPayment Calculator - Pedro 
     
     
         // Function: No Closing Costs Included, Down Payment Percentage
@@ -353,7 +353,7 @@ public class Helper {
 
         return new double[]{homePrice, loanAmount, monthlyPayment};
     }
-    //----------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
+    //------------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
     public static String validateInput(double input, double hp, String checker) {
         try {
             double value = input;
@@ -380,7 +380,7 @@ public class Helper {
         }
     }
 
-    //----------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     
     public static double[] mortgageCalculator(double hp, double dp, int loanTerm, double rate, int startDate, double pt, double hI, double hf, double oc) {
         double r = (rate / 100) / 12;          // Monthly interest rate
@@ -423,7 +423,7 @@ public class Helper {
         };
     }
     
-    //---------------------------------------------------------------------------------------------------------------------------------------------------Jorge
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
         try{
             double val = Double.parseDouble(num); // Convert string to a double.
