@@ -423,6 +423,47 @@ public class Helper {
         };
     }
     
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator 
+        public static double[] mortgagePayoffCalculator(double ola, int olt, double r, int rt, int m) {
+        // Convert annual interest rate from percentage to decimal
+        r = r / 100;
+
+        // Calculate remaining months
+        int p = (olt * 12) - ((rt * 12) + m);
+
+        // Remaining balance calculation
+        double top = ola * (Math.pow(1 + (r / 12), olt * 12) - Math.pow(1 + (r / 12), p));
+        double bottom = Math.pow(1 + (r / 12), olt * 12) - 1;
+        double b = top / bottom;
+
+        // Monthly payment calculation
+        double pat = b * ((r / 12) * Math.pow(1 + (r / 12), (rt * 12) + m)) / (Math.pow(1 + (r / 12), (rt * 12) + m) - 1);
+
+        // Savings calculation
+        double savings = (pat * ((12 * rt) + m)) - b;
+
+        // Original payoff schedule
+        double rpmt = pat * ((12 * rt) + m); // Remaining balance
+        double tp = (ola * ((r / 12) * Math.pow(1 + (r / 12), olt * 12)) / (Math.pow(1 + (r / 12), olt * 12) - 1)) * 12 * olt; // Total payment
+        double totalInterest = tp - ola;
+
+        // If payoff altogether
+        double totalPayment = tp - savings;
+        double payoffTotalInterest = totalInterest - savings;
+
+        // Return values in an array, rounded to two decimal places
+        return new double[] {
+            Math.round(totalPayment * 100.0) / 100.0,          // Total Payment if Payoff Together
+            Math.round(payoffTotalInterest * 100.0) / 100.0,   // Total Interest if Payoff Together
+            Math.round(pat * 100.0) / 100.0,                   // Monthly Payment
+            Math.round(tp * 100.0) / 100.0,                    // Total Payment on Original Schedule
+            Math.round(totalInterest * 100.0) / 100.0,         // Total Interest on Original Schedule
+            Math.round(rpmt * 100.0) / 100.0,                  // Remaining Balance
+            Math.round(savings * 100.0) / 100.0,               // Remaining Interest Savings
+            Math.round(b * 100.0) / 100.0                      // Remaining Balance to Pay Off Loan
+        };
+    }
+    
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
         try{
