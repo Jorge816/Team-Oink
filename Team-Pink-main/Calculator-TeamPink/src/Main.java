@@ -66,6 +66,8 @@ public class Main extends javax.swing.JFrame {
          startAnimation(); // Call the method to start the animation.
         FCcontrolBtn.setVisible(false);
         
+    
+        
         
         //displaying Message Instruction for Currency Calculator
         setMessage1();
@@ -104,7 +106,22 @@ public class Main extends javax.swing.JFrame {
         setMessage13();
      
       
-       
+       //--------------------settingOPtionalMortgageFields Visible=false
+        MortgageCalculatorPropertyTaxes.setVisible(false);
+        MortgageCalculatorPropertyTaxesLabel.setVisible(false);
+        MortgageCalculatorPropertyTaxesCbox.setVisible(false);
+        
+        MortgageCalculatorHomeInsurance.setVisible(false);
+        MortgageCalculatorHomeInsuranceLabel.setVisible(false);
+        MortgageCalculatorHomeInsuranceCBox.setVisible(false);
+        
+        MortgageCalculatorHOAFee.setVisible(false);
+        MortgageCalculatorHoaFeeLabel.setVisible(false);
+        MortgageCalculatorHoaFeeCBox.setVisible(false);
+        
+        MortgageCalculatorOtherCost.setVisible(false);
+        MortgageCalculatorOtherCostLabel.setVisible(false);
+        MortgageCalculatorOtherCostCBox.setVisible(false);  
    
     }
     
@@ -294,40 +311,37 @@ String aboutMessage = "<html>"
         MortgageCalculator2 = new javax.swing.JPanel();
         jPanel39 = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
-        jLabel72 = new javax.swing.JLabel();
+        MortgageCalculatorOUtput = new javax.swing.JLabel();
         jPanel42 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField63 = new javax.swing.JTextField();
+        MorgageCalculatorHomePrice = new javax.swing.JTextField();
+        MortgageCalculatorLoanTerm = new javax.swing.JTextField();
         jLabel87 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
-        jTextField71 = new javax.swing.JTextField();
+        MortgateCalculatorYear = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jTextField72 = new javax.swing.JTextField();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jTextField80 = new javax.swing.JTextField();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        MortgateCalculatorDownPayment = new javax.swing.JTextField();
+        MortgageCalculatorDownPaymentCBox = new javax.swing.JComboBox<>();
+        MortgageCalculatorMonthCbox = new javax.swing.JComboBox<>();
+        MortgageCalculatorInterestRate = new javax.swing.JTextField();
+        MortgageCalculatorIncudeTaxesandMOre = new javax.swing.JCheckBox();
         jPanel41 = new javax.swing.JPanel();
-        jLabel88 = new javax.swing.JLabel();
-        jTextField64 = new javax.swing.JTextField();
-        jLabel89 = new javax.swing.JLabel();
-        jTextField65 = new javax.swing.JTextField();
-        jLabel90 = new javax.swing.JLabel();
-        jTextField66 = new javax.swing.JTextField();
-        jTextField67 = new javax.swing.JTextField();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jTextField68 = new javax.swing.JTextField();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jComboBox11 = new javax.swing.JComboBox<>();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jButton11 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        MortgageCalculatorPropertyTaxesLabel = new javax.swing.JLabel();
+        MortgageCalculatorPropertyTaxes = new javax.swing.JTextField();
+        MortgageCalculatorHomeInsuranceLabel = new javax.swing.JLabel();
+        MortgageCalculatorHomeInsurance = new javax.swing.JTextField();
+        MortgageCalculatorHOAFee = new javax.swing.JTextField();
+        MortgageCalculatorHoaFeeLabel = new javax.swing.JLabel();
+        MortgageCalculatorOtherCostLabel = new javax.swing.JLabel();
+        MortgageCalculatorOtherCost = new javax.swing.JTextField();
+        MortgageCalculatorPropertyTaxesCbox = new javax.swing.JComboBox<>();
+        MortgageCalculatorHomeInsuranceCBox = new javax.swing.JComboBox<>();
+        MortgageCalculatorHoaFeeCBox = new javax.swing.JComboBox<>();
+        MortgageCalculatorOtherCostCBox = new javax.swing.JComboBox<>();
+        MortgateCalculatorCaculateBTN = new javax.swing.JButton();
+        MortgateCalculatorClearBTN = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         InstructionsMortgageCalculator = new javax.swing.JTextPane();
         retirementCalculator3 = new javax.swing.JPanel();
@@ -1181,7 +1195,7 @@ String aboutMessage = "<html>"
         jPanel40.setBackground(new java.awt.Color(204, 255, 204));
         jPanel40.setEnabled(false);
 
-        jLabel72.setText("Output here");
+        MortgageCalculatorOUtput.setText("Output here");
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -1189,14 +1203,14 @@ String aboutMessage = "<html>"
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel72, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1207,41 +1221,96 @@ String aboutMessage = "<html>"
 
         jLabel53.setText("Down Payment");
 
+        MorgageCalculatorHomePrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MorgageCalculatorHomePriceKeyReleased(evt);
+            }
+        });
+
+        MortgageCalculatorLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorLoanTermKeyReleased(evt);
+            }
+        });
+
         jLabel87.setText("Loan Term");
 
         jLabel95.setText("Interest Rate");
 
         jLabel96.setText("Start Date");
 
+        MortgateCalculatorYear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgateCalculatorYearKeyReleased(evt);
+            }
+        });
+
         jLabel54.setText("Home Price");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgateCalculatorDownPayment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgateCalculatorDownPaymentKeyReleased(evt);
+            }
+        });
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }));
+        MortgageCalculatorDownPaymentCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
-        jCheckBox2.setText("Include Taxes & Cost Below");
+        MortgageCalculatorMonthCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }));
+
+        MortgageCalculatorInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorInterestRateKeyReleased(evt);
+            }
+        });
+
+        MortgageCalculatorIncudeTaxesandMOre.setText("Include Taxes & Cost Below");
+        MortgageCalculatorIncudeTaxesandMOre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgageCalculatorIncudeTaxesandMOreActionPerformed(evt);
+            }
+        });
 
         jPanel41.setBackground(new java.awt.Color(204, 255, 204));
 
-        jLabel88.setText("Property Taxes Increase");
+        MortgageCalculatorPropertyTaxesLabel.setText("Property Taxes Increase");
 
-        jLabel89.setText("Home Insurance");
+        MortgageCalculatorPropertyTaxes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorPropertyTaxesKeyReleased(evt);
+            }
+        });
 
-        jLabel90.setText("PMI Insurance");
+        MortgageCalculatorHomeInsuranceLabel.setText("Home Insurance");
 
-        jLabel91.setText("HOA Fee");
+        MortgageCalculatorHomeInsurance.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorHomeInsuranceKeyReleased(evt);
+            }
+        });
 
-        jLabel92.setText("Other Costs");
+        MortgageCalculatorHOAFee.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorHOAFeeKeyReleased(evt);
+            }
+        });
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgageCalculatorHoaFeeLabel.setText("HOA Fee");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgageCalculatorOtherCostLabel.setText("Other Costs");
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgageCalculatorOtherCost.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MortgageCalculatorOtherCostKeyReleased(evt);
+            }
+        });
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgageCalculatorPropertyTaxesCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        MortgageCalculatorHomeInsuranceCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+
+        MortgageCalculatorHoaFeeCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+
+        MortgageCalculatorOtherCostCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -1250,33 +1319,28 @@ String aboutMessage = "<html>"
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel88, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                    .addComponent(jLabel89, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel90, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel91, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(MortgageCalculatorPropertyTaxesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                    .addComponent(MortgageCalculatorHomeInsuranceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MortgageCalculatorHoaFeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MortgageCalculatorOtherCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jTextField68, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                        .addComponent(MortgageCalculatorOtherCost, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MortgageCalculatorOtherCostCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jTextField67)
+                        .addComponent(MortgageCalculatorHOAFee)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MortgageCalculatorHoaFeeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jTextField66)
+                        .addComponent(MortgageCalculatorHomeInsurance)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MortgageCalculatorHomeInsuranceCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jTextField65)
+                        .addComponent(MortgageCalculatorPropertyTaxes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jTextField64)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(MortgageCalculatorPropertyTaxesCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel41Layout.setVerticalGroup(
@@ -1284,35 +1348,40 @@ String aboutMessage = "<html>"
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel88)
-                    .addComponent(jTextField64)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgageCalculatorPropertyTaxesLabel)
+                    .addComponent(MortgageCalculatorPropertyTaxes)
+                    .addComponent(MortgageCalculatorPropertyTaxesCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel89)
-                    .addComponent(jTextField65)
-                    .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgageCalculatorHomeInsuranceLabel)
+                    .addComponent(MortgageCalculatorHomeInsurance)
+                    .addComponent(MortgageCalculatorHomeInsuranceCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel90)
-                    .addComponent(jTextField66)
-                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgageCalculatorHoaFeeLabel)
+                    .addComponent(MortgageCalculatorHOAFee)
+                    .addComponent(MortgageCalculatorHoaFeeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel91)
-                    .addComponent(jTextField67)
-                    .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel92)
-                    .addComponent(jTextField68)
-                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgageCalculatorOtherCostLabel)
+                    .addComponent(MortgageCalculatorOtherCost)
+                    .addComponent(MortgageCalculatorOtherCostCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
 
-        jButton11.setText("Calculate");
+        MortgateCalculatorCaculateBTN.setText("Calculate");
+        MortgateCalculatorCaculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgateCalculatorCaculateBTNActionPerformed(evt);
+            }
+        });
 
-        jButton13.setText("Clear");
+        MortgateCalculatorClearBTN.setText("Clear");
+        MortgateCalculatorClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MortgateCalculatorClearBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -1333,29 +1402,29 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel96, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField63)
+                            .addComponent(MortgageCalculatorLoanTerm)
                             .addGroup(jPanel42Layout.createSequentialGroup()
-                                .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MortgateCalculatorDownPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MortgageCalculatorDownPaymentCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(MorgageCalculatorHomePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel42Layout.createSequentialGroup()
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MortgageCalculatorMonthCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField71))
-                            .addComponent(jTextField80))
+                                .addComponent(MortgateCalculatorYear))
+                            .addComponent(MortgageCalculatorInterestRate))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
-                        .addComponent(jCheckBox2)
+                        .addComponent(MortgageCalculatorIncudeTaxesandMOre)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 11, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MortgateCalculatorCaculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MortgateCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
         );
         jPanel42Layout.setVerticalGroup(
@@ -1366,34 +1435,34 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField29))
+                    .addComponent(MorgageCalculatorHomePrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
-                    .addComponent(jTextField72)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MortgateCalculatorDownPayment)
+                    .addComponent(MortgageCalculatorDownPaymentCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel87)
-                    .addComponent(jTextField63))
+                    .addComponent(MortgageCalculatorLoanTerm))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel95)
-                    .addComponent(jTextField80))
+                    .addComponent(MortgageCalculatorInterestRate))
                 .addGap(1, 1, 1)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel96)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField71))
+                    .addComponent(MortgageCalculatorMonthCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MortgateCalculatorYear))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(MortgageCalculatorIncudeTaxesandMOre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+                    .addComponent(MortgateCalculatorCaculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MortgateCalculatorClearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         InstructionsMortgageCalculator.setBackground(new java.awt.Color(255, 215, 255));
@@ -4060,7 +4129,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         showAboutPopup();
     }//GEN-LAST:event_jMenu2MouseClicked
-//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator
+//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator Pedro
     private void InterestRateCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateCalculatorClearBTNActionPerformed
         // TODO add your handling code here:
         InterestRateInitialInvestment.setText("");
@@ -4161,10 +4230,6 @@ String aboutMessage = "<html>"
         int n = Helper.selectionPeriod(selectedOption);
         double t = Double.parseDouble(InterestRateInvestmentLengthYears.getText());
         
-        
-        
-        
-        
         double FV_year = 0;
 
         if (InterestRateBeggnning.isSelected()) {
@@ -4193,7 +4258,7 @@ String aboutMessage = "<html>"
         }
        
     }//GEN-LAST:event_InterestRateCalculatorCalculateBTNActionPerformed
-//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator
+//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator Pedro
     private void RothIRACalculatorCurrentBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorCurrentBalanceKeyReleased
         // TODO add your handling code here:
        // Get the input from the text field
@@ -4311,7 +4376,7 @@ String aboutMessage = "<html>"
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_RothIRACalculateBTNActionPerformed
-//---------------------------------------------------------------------------------------------------------------------Rent Calculator 
+//---------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator Pedro
     private void RentPretaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentPretaxIncomeKeyReleased
         // TODO add your handling code here:
       String input = RentPretaxIncome.getText();
@@ -4391,7 +4456,7 @@ String aboutMessage = "<html>"
         }
         
     }//GEN-LAST:event_RentCalculateBTNActionPerformed
-
+//---------------------------------------------------------------------------------------------------------------------------------------------------------Down Payment Calculator
     private void DownPaymentUpfrontCashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentUpfrontCashKeyReleased
 
       String input = DownPaymentUpfrontCash.getText();
@@ -4399,8 +4464,7 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentUpfrontCash.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
-        
+      Helper.InputValidation(strippedInput);    
     }//GEN-LAST:event_DownPaymentUpfrontCashKeyReleased
 
     private void DownPaymentClosingCOstKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentClosingCOstKeyReleased
@@ -4491,6 +4555,7 @@ String aboutMessage = "<html>"
         }
     }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
 
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------Auto Loan Calculator Jorge 
     private void ALCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALCalcButtonActionPerformed
         // TODO add your handling code here:
         String autoPriceValue = ALPriceInput.getText();
@@ -4533,6 +4598,324 @@ String aboutMessage = "<html>"
         // Clear the output field
         ALResultOutput.setText("");
     }//GEN-LAST:event_ALClearButtonActionPerformed
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
+    private void MorgageCalculatorHomePriceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgageCalculatorHomePriceKeyReleased
+      String input = MorgageCalculatorHomePrice.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      MorgageCalculatorHomePrice.setText(strippedInput);
+      Helper.InputValidation(strippedInput);  
+    }//GEN-LAST:event_MorgageCalculatorHomePriceKeyReleased
+
+    private void MortgateCalculatorDownPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgateCalculatorDownPaymentKeyReleased
+      String input = MortgateCalculatorDownPayment.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      MortgateCalculatorDownPayment.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+      
+      try {
+            String selectedOptionDownPayment = (String) MortgageCalculatorDownPaymentCBox.getSelectedItem();
+            double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+            double downpayment = Double.parseDouble( MortgateCalculatorDownPayment.getText());
+            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+ 
+
+
+    } catch (NumberFormatException e) {
+        // This block will execute if parsing fails, for example if input is "abc"
+        JOptionPane.showMessageDialog(null, "Please enter valid value for Downpayment or Home Price");
+}
+      
+   
+      
+    }//GEN-LAST:event_MortgateCalculatorDownPaymentKeyReleased
+
+    private void MortgageCalculatorLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorLoanTermKeyReleased
+        String input =  MortgageCalculatorLoanTerm.getText(); 
+        String strippedInput = input.replaceAll("\\s", "");
+        MortgageCalculatorLoanTerm.setText(strippedInput);
+ 
+        if (!Helper.isWholeNumber(input)){
+            Helper.InputValidation(input);
+        }
+    }//GEN-LAST:event_MortgageCalculatorLoanTermKeyReleased
+
+    private void MortgageCalculatorInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorInterestRateKeyReleased
+        String input = MortgageCalculatorInterestRate.getText();
+              // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+              // Set the text field with the stripped input (without spaces)
+        MortgageCalculatorInterestRate.setText(strippedInput);
+        Helper.InputValidation(strippedInput);  
+    }//GEN-LAST:event_MortgageCalculatorInterestRateKeyReleased
+
+    private void MortgateCalculatorYearKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgateCalculatorYearKeyReleased
+        String input = MortgateCalculatorYear.getText();
+        String strippedInput = input.replaceAll("\\s", "");    
+        MortgateCalculatorYear.setText(strippedInput);
+        if (!Helper.isWholeNumber(input)){
+            Helper.InputValidation(input);
+        }
+    }//GEN-LAST:event_MortgateCalculatorYearKeyReleased
+
+    private void MortgageCalculatorPropertyTaxesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorPropertyTaxesKeyReleased
+          String input = MortgageCalculatorPropertyTaxes.getText();
+          // Strip all spaces from the input as the user types
+          String strippedInput = input.replaceAll("\\s", "");
+          // Set the text field with the stripped input (without spaces)
+         MortgageCalculatorPropertyTaxes.setText(strippedInput);
+          Helper.InputValidation(strippedInput); 
+          
+        
+        try {
+            String selectedOptionDownPayment = (String) MortgageCalculatorPropertyTaxesCbox.getSelectedItem();
+            double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+            double downpayment = Double.parseDouble( MortgageCalculatorPropertyTaxes.getText());
+            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+
+
+        } catch (NumberFormatException e) {
+            // This block will execute if parsing fails, for example if input is "abc"
+            JOptionPane.showMessageDialog(null, "Please enter valid value for Property Tax or Home Price");
+}
+    }//GEN-LAST:event_MortgageCalculatorPropertyTaxesKeyReleased
+
+    private void MortgageCalculatorHomeInsuranceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorHomeInsuranceKeyReleased
+        String input = MortgageCalculatorHomeInsurance.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortgageCalculatorHomeInsurance.setText(strippedInput);
+        Helper.InputValidation(strippedInput);
+        
+        
+        try {
+            String selectedOptionDownPayment = (String)MortgageCalculatorHomeInsuranceCBox.getSelectedItem();
+            double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+            double downpayment = Double.parseDouble(MortgageCalculatorHomeInsurance.getText());
+            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+
+
+        } catch (NumberFormatException e) {
+            // This block will execute if parsing fails, for example if input is "abc"
+            JOptionPane.showMessageDialog(null, "Please enter valid value for Home Insurance or Home Price");
+}
+    }//GEN-LAST:event_MortgageCalculatorHomeInsuranceKeyReleased
+
+    private void MortgageCalculatorHOAFeeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorHOAFeeKeyReleased
+        String input = MortgageCalculatorHOAFee.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortgageCalculatorHOAFee.setText(strippedInput);
+        Helper.InputValidation(strippedInput);
+        
+       
+        try {
+            
+        String selectedOptionDownPayment = (String)MortgageCalculatorHoaFeeCBox.getSelectedItem();
+        double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+        double downpayment = Double.parseDouble(MortgageCalculatorHOAFee.getText());
+        Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+
+
+        } catch (NumberFormatException e) {
+            // This block will execute if parsing fails, for example if input is "abc"
+            JOptionPane.showMessageDialog(null, "Please enter valid value for HOA Fee or Home Price");
+}
+    }//GEN-LAST:event_MortgageCalculatorHOAFeeKeyReleased
+
+    private void MortgageCalculatorOtherCostKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorOtherCostKeyReleased
+        String input = MortgageCalculatorOtherCost.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortgageCalculatorOtherCost.setText(strippedInput);
+        Helper.InputValidation(strippedInput); 
+        
+       
+        try {
+            String selectedOptionDownPayment = (String) MortgageCalculatorOtherCostCBox.getSelectedItem();
+            double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+            double downpayment = Double.parseDouble(MortgageCalculatorOtherCost.getText());
+            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+
+
+        } catch (NumberFormatException e) {
+            // This block will execute if parsing fails, for example if input is "abc"
+            JOptionPane.showMessageDialog(null, "Please enter valid value for Other Cost or Home Price");
+}
+    }//GEN-LAST:event_MortgageCalculatorOtherCostKeyReleased
+
+    private void MortgateCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgateCalculatorClearBTNActionPerformed
+       String strippedInput ="";
+       MorgageCalculatorHomePrice.setText(strippedInput);
+       MortgateCalculatorDownPayment.setText(strippedInput);
+       MortgageCalculatorLoanTerm.setText(strippedInput);
+       MortgageCalculatorInterestRate.setText(strippedInput);
+       MortgateCalculatorYear.setText(strippedInput);
+       MortgageCalculatorPropertyTaxes.setText(strippedInput);
+       MortgageCalculatorHomeInsurance.setText(strippedInput);
+       MortgageCalculatorHOAFee.setText(strippedInput);
+       MortgageCalculatorOtherCost.setText(strippedInput);
+    }//GEN-LAST:event_MortgateCalculatorClearBTNActionPerformed
+
+    private void MortgageCalculatorIncudeTaxesandMOreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageCalculatorIncudeTaxesandMOreActionPerformed
+       if (MortgageCalculatorIncudeTaxesandMOre.isSelected()) {
+        MortgageCalculatorPropertyTaxes.setVisible(true);
+        MortgageCalculatorPropertyTaxesLabel.setVisible(true);
+        MortgageCalculatorPropertyTaxesCbox.setVisible(true);
+        
+        MortgageCalculatorHomeInsurance.setVisible(true);
+        MortgageCalculatorHomeInsuranceLabel.setVisible(true);
+        MortgageCalculatorHomeInsuranceCBox.setVisible(true);
+        
+        MortgageCalculatorHOAFee.setVisible(true);
+        MortgageCalculatorHoaFeeLabel.setVisible(true);
+        MortgageCalculatorHoaFeeCBox.setVisible(true);
+        
+        MortgageCalculatorOtherCost.setVisible(true);
+        MortgageCalculatorOtherCostLabel.setVisible(true);
+        MortgageCalculatorOtherCostCBox.setVisible(true);
+                
+                
+        } else {
+       MortgageCalculatorPropertyTaxes.setText("0");
+       MortgageCalculatorHomeInsurance.setText("0");
+       MortgageCalculatorHOAFee.setText("0");
+       MortgageCalculatorOtherCost.setText("0"); 
+           
+        MortgageCalculatorPropertyTaxes.setVisible(false);
+        MortgageCalculatorPropertyTaxesLabel.setVisible(false);
+        MortgageCalculatorPropertyTaxesCbox.setVisible(false);
+        
+        MortgageCalculatorHomeInsurance.setVisible(false);
+        MortgageCalculatorHomeInsuranceLabel.setVisible(false);
+        MortgageCalculatorHomeInsuranceCBox.setVisible(false);
+        
+        MortgageCalculatorHOAFee.setVisible(false);
+        MortgageCalculatorHoaFeeLabel.setVisible(false);
+        MortgageCalculatorHoaFeeCBox.setVisible(false);
+        
+        MortgageCalculatorOtherCost.setVisible(false);
+        MortgageCalculatorOtherCostLabel.setVisible(false);
+        MortgageCalculatorOtherCostCBox.setVisible(false);          
+        }
+    }//GEN-LAST:event_MortgageCalculatorIncudeTaxesandMOreActionPerformed
+
+    private void MortgateCalculatorCaculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgateCalculatorCaculateBTNActionPerformed
+      try{
+      
+            double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
+            double downpayment = Double.parseDouble( MortgateCalculatorDownPayment.getText());
+            double dp = 0;
+            int loanTerm = Integer.parseInt(MortgageCalculatorLoanTerm.getText());
+            double rate = Double.parseDouble(MortgageCalculatorInterestRate.getText());
+            String selectedOptionMonth = (String) MortgageCalculatorMonthCbox.getSelectedItem();  
+            int startDate = Integer.parseInt(MortgateCalculatorYear.getText());
+            double propertyTax = Double.parseDouble(MortgageCalculatorPropertyTaxes.getText());
+            double propertyTaxes = 0;
+            double homeInsuranceValue = Double.parseDouble(MortgageCalculatorHomeInsurance.getText());
+            double homeInsurance = 0;
+            double hoaFeeValue = Double.parseDouble( MortgageCalculatorHOAFee.getText());
+            double hoaFee = 0;
+            double otherCostAmount = Double.parseDouble(MortgageCalculatorOtherCost.getText());
+            double otherCost = 0;
+
+
+
+
+            String selectedOptionDownPayment = (String) MortgageCalculatorDownPaymentCBox.getSelectedItem();  
+            if ("%".equals(selectedOptionDownPayment)) {
+                dp = hp*(downpayment/100);             
+            } 
+            if ("$".equals(selectedOptionDownPayment)){
+                dp = downpayment;       
+             }
+
+            String selectedOptionPropertyTaxes = (String)  MortgageCalculatorPropertyTaxesCbox.getSelectedItem();  
+            if ("%".equals(selectedOptionPropertyTaxes)) {
+                propertyTaxes = hp*(propertyTax/100);             
+            } 
+            if ("$".equals(selectedOptionPropertyTaxes)){
+                propertyTaxes = propertyTax;       
+             }
+
+            String selectedOptionHomeInsurance = (String)   MortgageCalculatorHomeInsuranceCBox.getSelectedItem();  
+            if ("%".equals(selectedOptionHomeInsurance)) {
+                homeInsurance = hp*(homeInsuranceValue/100);             
+            } 
+            if ("$".equals(selectedOptionHomeInsurance)){
+                homeInsurance = homeInsuranceValue;       
+             }
+
+            String selectedOptionHoaFee = (String) MortgageCalculatorHoaFeeCBox.getSelectedItem();  
+            if ("%".equals(selectedOptionHoaFee)) {
+                hoaFee= hp*(hoaFeeValue/100);             
+            } 
+            if ("$".equals(selectedOptionHoaFee)){
+                hoaFee= hoaFeeValue;       
+             }
+
+            String selectedOptionOtherCost = (String) MortgageCalculatorOtherCostCBox.getSelectedItem();  
+            if ("%".equals(selectedOptionOtherCost)) {
+               otherCost= hp*(otherCostAmount/100);             
+            } 
+            if ("$".equals(selectedOptionOtherCost)){
+                otherCost= otherCostAmount;       
+             }
+
+
+
+            String outputText="";
+            if (MortgageCalculatorIncudeTaxesandMOre.isSelected()) {
+                double[] mortgageResult = Helper.mortgageCalculator(hp, dp, loanTerm, rate, startDate, propertyTaxes, homeInsurance, hoaFee, otherCost);
+                outputText = "<html>"
+                    +"<b>Monthly Payment:</b><br>"
+                    + "Your monthly payment will be $" + mortgageResult[1] + ".<br>"
+                    + "Monthly Property Tax: $" + mortgageResult[2] + "<br>"
+                    + "Monthly Home Insurance: $" + mortgageResult[3] + "<br>"
+                    + "Monthly HOA Fee: $" + mortgageResult[4] + "<br>"
+                    + "Monthly Other Cost: $" + mortgageResult[5] + "<br>"
+                    + "Total Out-of-Pocket: $" + mortgageResult[9] + "<br><br>"
+
+                    + "\"<b>House Price:</b> $" + hp + ".<br>"
+                    + "Your down payment is $" + dp + ".<br>"
+                    + "Your loan amount is $" + mortgageResult[0] + ".<br>"
+                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: $" + mortgageResult[6] + "<br>"
+                    + "Total Interest Paid: $" + mortgageResult[7] + "<br>"
+                    +  "Mortgage Payoff Date: " +selectedOptionMonth+" "+ (int) mortgageResult[8]
+                    + "</html>";
+            }   
+            else {
+                double[] mortgageResult = Helper.mortgageCalculator(hp, dp, loanTerm, rate, startDate, propertyTaxes=0, homeInsurance=0, hoaFee=0, otherCost=0);
+                outputText = "<html>"
+                    +"<b>Monthly Payment:</b><br>"
+                    + "Your monthly payment will be $" + mortgageResult[1] + ".<br>"
+                    + "Total Out-of-Pocket: $" + mortgageResult[9] + "<br><br>"
+
+                    + "\"<b>House Price:</b> $" + hp + ".<br>"
+                    + "Your down payment is $" + dp + ".<br>"
+                    + "Your loan amount is $" + mortgageResult[0] + ".<br>"
+                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: $" + mortgageResult[6] + "<br>"
+                    + "Total Interest Paid: $" + mortgageResult[7] + "<br>"
+                    +  "Mortgage Payoff Date: " +selectedOptionMonth+" "+ (int) mortgageResult[8]
+                    + "</html>";
+                    
+            }
+
+            MortgageCalculatorOUtput.setText(outputText);
+                }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Empty fields!");
+        }
+    }//GEN-LAST:event_MortgateCalculatorCaculateBTNActionPerformed
+    
+    
+    
     
     
     
@@ -5045,9 +5428,32 @@ private void setMessage4() {
     private javax.swing.JButton InvestmentCalculatorBTN3;
     private javax.swing.JLabel LabelAnnualContribution;
     private javax.swing.JPanel MathCalculator;
+    private javax.swing.JTextField MorgageCalculatorHomePrice;
     private javax.swing.JPanel MortgageCalculator2;
+    private javax.swing.JComboBox<String> MortgageCalculatorDownPaymentCBox;
+    private javax.swing.JTextField MortgageCalculatorHOAFee;
+    private javax.swing.JComboBox<String> MortgageCalculatorHoaFeeCBox;
+    private javax.swing.JLabel MortgageCalculatorHoaFeeLabel;
+    private javax.swing.JTextField MortgageCalculatorHomeInsurance;
+    private javax.swing.JComboBox<String> MortgageCalculatorHomeInsuranceCBox;
+    private javax.swing.JLabel MortgageCalculatorHomeInsuranceLabel;
+    private javax.swing.JCheckBox MortgageCalculatorIncudeTaxesandMOre;
+    private javax.swing.JTextField MortgageCalculatorInterestRate;
+    private javax.swing.JTextField MortgageCalculatorLoanTerm;
+    private javax.swing.JComboBox<String> MortgageCalculatorMonthCbox;
+    private javax.swing.JLabel MortgageCalculatorOUtput;
+    private javax.swing.JTextField MortgageCalculatorOtherCost;
+    private javax.swing.JComboBox<String> MortgageCalculatorOtherCostCBox;
+    private javax.swing.JLabel MortgageCalculatorOtherCostLabel;
+    private javax.swing.JTextField MortgageCalculatorPropertyTaxes;
+    private javax.swing.JComboBox<String> MortgageCalculatorPropertyTaxesCbox;
+    private javax.swing.JLabel MortgageCalculatorPropertyTaxesLabel;
     private javax.swing.JPanel MortgagePayoffCalculator;
     private javax.swing.JButton MortgageandRealEstateBTN;
+    private javax.swing.JButton MortgateCalculatorCaculateBTN;
+    private javax.swing.JButton MortgateCalculatorClearBTN;
+    private javax.swing.JTextField MortgateCalculatorDownPayment;
+    private javax.swing.JTextField MortgateCalculatorYear;
     private javax.swing.JPanel OtherCalculator;
     private javax.swing.JButton OtherCalculatorsBTN1;
     private javax.swing.JPanel RefinanceCalculator;
@@ -5081,9 +5487,7 @@ private void setMessage4() {
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -5095,13 +5499,8 @@ private void setMessage4() {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
     private javax.swing.JComboBox<String> jComboBox15;
     private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBox17;
@@ -5113,9 +5512,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -5233,7 +5629,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
@@ -5249,12 +5644,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
@@ -5342,7 +5732,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
@@ -5374,17 +5763,9 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField60;
     private javax.swing.JTextField jTextField61;
     private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField63;
-    private javax.swing.JTextField jTextField64;
-    private javax.swing.JTextField jTextField65;
-    private javax.swing.JTextField jTextField66;
-    private javax.swing.JTextField jTextField67;
-    private javax.swing.JTextField jTextField68;
     private javax.swing.JTextField jTextField69;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField71;
-    private javax.swing.JTextField jTextField72;
     private javax.swing.JTextField jTextField73;
     private javax.swing.JTextField jTextField74;
     private javax.swing.JTextField jTextField75;
@@ -5393,7 +5774,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField80;
     private javax.swing.JTextField jTextField81;
     private javax.swing.JTextField jTextField82;
     private javax.swing.JTextField jTextField83;
