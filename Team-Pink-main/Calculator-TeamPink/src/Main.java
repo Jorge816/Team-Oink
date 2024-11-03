@@ -105,12 +105,16 @@ public class Main extends javax.swing.JFrame {
         //display message rent and buy calculator
         setMessage13();
      
-      
+        //----------------------------------------------------------------Interest Rate Calculator fileds 
+        interestRateFields();
        //--------------------settingOPtionalMortgageFields Visible=false Hide Components for MorgageCalculator
        hideComponentsMortgageCalculator();
         
         //-----------------------------------Hide components for mortgagePayOFF
         hideComponents();
+        RothIRAAnualContribution.setText("0");
+        RothIRAMaximizeNO.setSelected(true);
+        
    
     }
     
@@ -466,6 +470,7 @@ String aboutMessage = "<html>"
         RothIRACurrentAge = new javax.swing.JTextField();
         jLabel83 = new javax.swing.JLabel();
         RothIRaRetirementAge = new javax.swing.JTextField();
+        jLabel84 = new javax.swing.JLabel();
         jPanel48 = new javax.swing.JPanel();
         RothIRAoutput = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -628,6 +633,7 @@ String aboutMessage = "<html>"
         InterestRateInterest = new javax.swing.JTextField();
         InterestRateInvestmentLengthYears = new javax.swing.JTextField();
         jLabel119 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         InterestRateOutput = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -781,7 +787,7 @@ String aboutMessage = "<html>"
                         .addGroup(FCcontrolBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InvestmentCalculatorBTN3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(RetirementCalculatorBTN2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                             .addComponent(OtherCalculatorsBTN1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(autoCalculatorBTN4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -1164,7 +1170,7 @@ String aboutMessage = "<html>"
                             .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout rentandbuyLayout = new javax.swing.GroupLayout(rentandbuy);
@@ -1172,16 +1178,16 @@ String aboutMessage = "<html>"
         rentandbuyLayout.setHorizontalGroup(
             rentandbuyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rentandbuyLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         rentandbuyLayout.setVerticalGroup(
             rentandbuyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rentandbuyLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Rent vs Buy Calculator", rentandbuy);
@@ -1507,14 +1513,14 @@ String aboutMessage = "<html>"
             .addGroup(MortgageCalculator2Layout.createSequentialGroup()
                 .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         MortgageCalculator2Layout.setVerticalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MortgageCalculator2Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(62, Short.MAX_VALUE)
                 .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Mortgage Calculator", MortgageCalculator2);
@@ -1751,9 +1757,9 @@ String aboutMessage = "<html>"
         retirementCalculator3Layout.setHorizontalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(retirementCalculator3Layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         retirementCalculator3Layout.setVerticalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1984,16 +1990,16 @@ String aboutMessage = "<html>"
         HouseAffordabilityCalculatorLayout.setHorizontalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HouseAffordabilityCalculatorLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         HouseAffordabilityCalculatorLayout.setVerticalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HouseAffordabilityCalculatorLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(52, Short.MAX_VALUE)
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
@@ -2148,16 +2154,16 @@ String aboutMessage = "<html>"
         RentCalculatorLayout.setHorizontalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         RentCalculatorLayout.setVerticalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Rent Calculator", RentCalculator);
@@ -2379,16 +2385,16 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLayout.setHorizontalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
-                .addContainerGap(94, Short.MAX_VALUE)
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         RefinanceCalculatorLayout.setVerticalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(62, Short.MAX_VALUE)
                 .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Refinance Calculator", RefinanceCalculator);
@@ -2449,7 +2455,7 @@ String aboutMessage = "<html>"
         });
 
         jLabel71.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel71.setText("Expected rate of return        %");
+        jLabel71.setText("Expected rate of return        ");
 
         RothIRACalculatorExpectedReturnRate.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -2475,6 +2481,9 @@ String aboutMessage = "<html>"
             }
         });
 
+        jLabel84.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel84.setText("%");
+
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
@@ -2495,30 +2504,39 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel47Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(RothIRACalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RothIRAclearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel47Layout.createSequentialGroup()
+                                        .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addComponent(RothIRACalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RothIRAclearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel47Layout.createSequentialGroup()
+                                        .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                                    .addComponent(RothIRACurrentAge))))))
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
+                                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
+                                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(14, 14, 14)))))
                 .addContainerGap())
         );
         jPanel47Layout.setVerticalGroup(
@@ -2541,7 +2559,8 @@ String aboutMessage = "<html>"
                 .addGap(21, 21, 21)
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel71)
-                    .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel84))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel82)
@@ -2559,8 +2578,6 @@ String aboutMessage = "<html>"
 
         jPanel48.setBackground(new java.awt.Color(204, 255, 204));
 
-        RothIRAoutput.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
@@ -2572,10 +2589,10 @@ String aboutMessage = "<html>"
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(RothIRAoutput, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(jPanel48Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RothIRAoutput, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         InstructionsRothIRACalculator.setBackground(new java.awt.Color(255, 215, 255));
@@ -2588,7 +2605,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel46Layout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 377, Short.MAX_VALUE)
                     .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(87, 87, 87)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2612,16 +2629,16 @@ String aboutMessage = "<html>"
         RothIRACalculatorLayout.setHorizontalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RothIRACalculatorLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         RothIRACalculatorLayout.setVerticalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RothIRACalculatorLayout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
+                .addContainerGap(72, Short.MAX_VALUE)
                 .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Roth IRA Calculator", RothIRACalculator);
@@ -2812,16 +2829,16 @@ String aboutMessage = "<html>"
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
@@ -3126,8 +3143,8 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel56Layout.createSequentialGroup()
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(24, Short.MAX_VALUE))
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(jPanel56Layout.createSequentialGroup()
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3141,14 +3158,14 @@ String aboutMessage = "<html>"
             .addGroup(MortgagePayoffCalculatorLayout.createSequentialGroup()
                 .addContainerGap(39, Short.MAX_VALUE)
                 .addComponent(jPanel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MortgagePayoffCalculatorLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(jPanel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
@@ -3165,20 +3182,20 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(392, Short.MAX_VALUE)
+                .addContainerGap(393, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(159, Short.MAX_VALUE)
+                .addContainerGap(168, Short.MAX_VALUE)
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Math Calculator", MathCalculator);
@@ -3195,20 +3212,20 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(383, Short.MAX_VALUE)
+                .addContainerGap(384, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(134, Short.MAX_VALUE)
+                .addContainerGap(152, Short.MAX_VALUE)
                 .addGroup(FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
@@ -3225,20 +3242,20 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(359, Short.MAX_VALUE)
+                .addContainerGap(360, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(136, Short.MAX_VALUE)
+                .addContainerGap(153, Short.MAX_VALUE)
                 .addGroup(OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Other Calculators", OtherCalculator);
@@ -3352,7 +3369,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 60, Short.MAX_VALUE))
+                .addGap(0, 73, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout CurrencyLayout = new javax.swing.GroupLayout(Currency);
@@ -3367,7 +3384,7 @@ String aboutMessage = "<html>"
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CurrencyLayout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addContainerGap(67, Short.MAX_VALUE)
                 .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -3699,13 +3716,13 @@ String aboutMessage = "<html>"
         AutoLoanLayout.setHorizontalGroup(
             AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AutoLoanLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AutoLoanLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         AutoLoanLayout.setVerticalGroup(
             AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3714,7 +3731,7 @@ String aboutMessage = "<html>"
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Auto Loan Calculator", AutoLoan);
@@ -3787,7 +3804,7 @@ String aboutMessage = "<html>"
         });
 
         jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel35.setText("Interest Rate                  %");
+        jLabel35.setText("Interest Rate                  ");
 
         jLabel50.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel50.setText("Compound");
@@ -3815,6 +3832,9 @@ String aboutMessage = "<html>"
 
         jLabel119.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel119.setText("Years");
+
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel51.setText("%");
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -3855,11 +3875,13 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel33Layout.createSequentialGroup()
                         .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(InterestRateInvestmentLengthYears, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                        .addComponent(InterestRateInvestmentLengthYears, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
-                .addGap(17, 17, 17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel51)
+                .addContainerGap())
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3883,8 +3905,9 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InterestRateInterest, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                    .addComponent(InterestRateInterest, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(InterestRateCompoundPeriods, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3902,21 +3925,20 @@ String aboutMessage = "<html>"
 
         jPanel34.setBackground(new java.awt.Color(204, 255, 204));
 
-        InterestRateOutput.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel34Layout.createSequentialGroup()
-                .addComponent(InterestRateOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(InterestRateOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3928,24 +3950,24 @@ String aboutMessage = "<html>"
         jPanel32Layout.setHorizontalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addComponent(jScrollPane4)
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel32Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4))
                 .addContainerGap())
         );
 
@@ -3954,16 +3976,16 @@ String aboutMessage = "<html>"
         InterestRateLayout.setHorizontalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InterestRateLayout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
                 .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(72, 72, 72))
         );
         InterestRateLayout.setVerticalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InterestRateLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+            .addGroup(InterestRateLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Interest Rate Calculator", InterestRate);
@@ -4022,20 +4044,20 @@ String aboutMessage = "<html>"
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
                 .addGap(34, 34, 34))
         );
         jPanel5Layout.setVerticalGroup(
@@ -4044,7 +4066,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                     .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4085,7 +4107,7 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(164, 164, 164))
         );
@@ -4127,7 +4149,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCalculator)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)))
         );
 
         panelCalculator.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -4219,6 +4241,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         removeAllTabs();
         restoreTab("Interest Rate Calculator");
+        interestRateFields();
     }//GEN-LAST:event_InvestmentCalculatorBTN3ActionPerformed
 
     private void autoCalculatorBTN4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoCalculatorBTN4ActionPerformed
@@ -4246,14 +4269,19 @@ String aboutMessage = "<html>"
         InterestRateInitialInvestment.setText("");
         InterestRateAnnualContribution.setText("");
         InterestRateMonthlyContribution.setText("");
-        InterestRateBeggnning.setSelected(false);
+        InterestRateBeggnning.setSelected(true);
         InterestRateEnd.setSelected(false);
         InterestRateInterest.setText("");
         InterestRateInvestmentLengthYears.setText("");
-        
-        
+        InterestRateOutput.setText("");
     }//GEN-LAST:event_InterestRateCalculatorClearBTNActionPerformed
 
+    private void interestRateFields(){
+        InterestRateAnnualContribution.setText("0");
+        InterestRateMonthlyContribution.setText("0");
+        InterestRateInvestmentLengthYears.setText("1");
+        InterestRateBeggnning.setSelected(true);
+    }
     private void InterestRateBeggnningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateBeggnningActionPerformed
         // TODO add your handling code here:
        if (InterestRateBeggnning.isSelected()) {
@@ -4314,6 +4342,11 @@ String aboutMessage = "<html>"
 
     private void InterestRateInvestmentLengthYearsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateInvestmentLengthYearsKeyReleased
         // TODO add your handling code here:
+          String input = InterestRateInvestmentLengthYears.getText();
+          // Strip all spaces from the input as the user types
+          String strippedInput = input.replaceAll("\\s", "");
+          // Set the text field with the stripped input (without spaces)
+          InterestRateInvestmentLengthYears.setText(strippedInput);
         if (!Helper.isWholeNumber(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""))){
             
             Helper.InputValidation(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""));
@@ -4342,25 +4375,59 @@ String aboutMessage = "<html>"
         double t = Double.parseDouble(InterestRateInvestmentLengthYears.getText());
         
         double FV_year = 0;
+        String outputText="";
 
         if (InterestRateBeggnning.isSelected()) {
             if ("Continuously".equals(selectedOption)){
-                FV_year +=Helper.future_valueBeginning(PI, Ca, Cm, r, t);
+                FV_year =Helper.future_valueBeginning(PI, Ca, Cm, r, t);
+                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                outputText = "<html>"
+                          + "<b>Investment Calculations:</b><br>"
+                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
+                          + "Total Principal: $" + extraCalculations[0] + "<br>"
+                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
+                          + "Total Interest: $" + extraCalculations[2] + "<br>"
+                          + "</html>";
             }else{
-            FV_year += Helper.interestRateBegining(PI, Ca, Cm, r, a, n, t);}
+                FV_year = Helper.interestRateBegining(PI, Ca, Cm, r, a, n, t);}
+                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                outputText = "<html>"
+                          + "<b>Investment Calculations:</b><br>"
+                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
+                          + "Total Principal: $" + extraCalculations[0] + "<br>"
+                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
+                          + "Total Interest: $" + extraCalculations[2] + "<br>"
+                          + "</html>";
         }
 
         // Check if InterestRateEnd is selected
         if (InterestRateEnd.isSelected()) {
              if ("Continuously".equals(selectedOption)){
-                 FV_year +=Helper.future_valueEnd(PI, Ca, Cm, r, t);
+                 FV_year =Helper.future_valueEnd(PI, Ca, Cm, r, t);
+                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                outputText = "<html>"
+                          + "<b>Investment Calculations:</b><br>"
+                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
+                          + "Total Principal: $" + extraCalculations[0] + "<br>"
+                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
+                          + "Total Interest: $" + extraCalculations[2] + "<br>"
+                          + "</html>";
              }
              else{
              // Calculate future value using nominal interest rate and contributions
-                FV_year += Helper.interestrateEND(PI, Ca, Cm, r, a, n, t);}
+                FV_year = Helper.interestrateEND(PI, Ca, Cm, r, a, n, t);
+                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                outputText = "<html>"
+                          + "<b>Investment Calculations:</b><br>"
+                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
+                          + "Total Principal: $" + extraCalculations[0] + "<br>"
+                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
+                          + "Total Interest: $" + extraCalculations[2] + "<br>"
+                          + "</html>";
+             }
         }
         
-        InterestRateOutput.setText("Ending Balance " + String.format("%.2f", FV_year));
+        InterestRateOutput.setText(outputText);
 
    
         }
@@ -4393,26 +4460,51 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_RothIRAAnualContributionKeyReleased
 
     private void RothIRACalculatorExpectedReturnRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorExpectedReturnRateKeyReleased
-        // TODO add your handling code here:
-          if (!Helper.isWholeNumber(RothIRACalculatorExpectedReturnRate.getText().replaceAll("\\s", ""))){
-            
-            Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText().replaceAll("\\s", ""));
-        }
+        String input = RothIRACalculatorExpectedReturnRate.getText();
+      String strippedInput = input.replaceAll("\\s", "");
+      RothIRACalculatorExpectedReturnRate.setText(strippedInput);
+      Helper.InputValidation(strippedInput);
+            int input2 = Integer.valueOf(input);
+            double hp = 0;
+            String selectedOptionDownPayment = "%";
+            Helper.validateInput(input2, hp, selectedOptionDownPayment);
+          
     }//GEN-LAST:event_RothIRACalculatorExpectedReturnRateKeyReleased
 
     private void RothIRACurrentAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACurrentAgeKeyReleased
         // TODO add your handling code here:
+      String input = RothIRACurrentAge.getText();
+      // Strip all spaces from the input as the user types
+      String strippedInput = input.replaceAll("\\s", "");
+      // Set the text field with the stripped input (without spaces)
+      RothIRACurrentAge.setText(strippedInput);
+     
           if (!Helper.isWholeNumber(RothIRACurrentAge.getText().replaceAll("\\s", ""))){
             
             Helper.InputValidation(RothIRACurrentAge.getText().replaceAll("\\s", ""));
+            
         }
+          
+          if (RothIRACurrentAge.getText().isEmpty()){
+          }
+          else{Helper.checkAge(RothIRACurrentAge.getText().replaceAll("\\s", ""));}
+  
     }//GEN-LAST:event_RothIRACurrentAgeKeyReleased
 
     private void RothIRaRetirementAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRaRetirementAgeKeyReleased
         // TODO add your handling code here:
+          // TODO add your handling code here:
+        String input = RothIRaRetirementAge.getText();
+        // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        RothIRaRetirementAge.setText(strippedInput);
         if (!Helper.isWholeNumber(RothIRaRetirementAge.getText().replaceAll("\\s", ""))){
-            
-            Helper.InputValidation(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
+
+            Helper.InputValidation(RothIRaRetirementAge.getText().replaceAll("\\s", ""));
+        }
+
+         if (RothIRaRetirementAge.getText().isEmpty()){}
+         else{Helper.checkAge(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
     }//GEN-LAST:event_RothIRaRetirementAgeKeyReleased
 
     private void RothIRAMaximizeYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRAMaximizeYesActionPerformed
@@ -4431,7 +4523,7 @@ String aboutMessage = "<html>"
         if (RothIRAMaximizeNO.isSelected()) {
         // If selected, uncheck InterestRateEnd
         RothIRAMaximizeYes.setSelected(false);
-         RothIRAAnualContribution.setText("");
+         RothIRAAnualContribution.setText("0");
         RothIRAAnualContribution.setVisible(true);
         LabelAnnualContribution.setText("Anual Contribution           $");
         }
@@ -4451,37 +4543,74 @@ String aboutMessage = "<html>"
     private void RothIRACalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRACalculateBTNActionPerformed
         // TODO add your handling code here:
         try{
-        Helper.InputValidation(RothIRACalculatorCurrentBalance.getText());
-        Helper.InputValidation(RothIRAAnualContribution.getText());
-        Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText());
-        Helper.InputValidation(RothIRACurrentAge.getText());
-        Helper.InputValidation(RothIRaRetirementAge.getText());
+        double rate = Double.parseDouble(RothIRACalculatorExpectedReturnRate.getText());
         
-        double PI = Double.parseDouble(RothIRACalculatorCurrentBalance.getText());
-        double Ca = Double.parseDouble(RothIRAAnualContribution.getText());
-        double r = Double.parseDouble(RothIRACalculatorExpectedReturnRate.getText())/100;
-        int C_age = Integer.parseInt(RothIRACurrentAge.getText());
-        int R_age = Integer.parseInt(RothIRaRetirementAge.getText());
-        
-        double balance = 0;
-        
-         if (RothIRAMaximizeNO.isSelected()) {
-             int n = R_age - C_age;
-             balance +=Helper.calculate_MaximizeContributionNo(PI, Ca, r, n);
-             
-            
-        }
+        if (
+            Helper.InputValidation(RothIRACalculatorCurrentBalance.getText()) &&
+            Helper.InputValidation(RothIRAAnualContribution.getText()) &&
+            Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText()) &&
+            Helper.InputValidation(RothIRACurrentAge.getText()) &&
+            Helper.InputValidation(RothIRaRetirementAge.getText()) &&
+            Helper.validateInput(rate, 0.0, "%") &&
+            Helper.validateAges(RothIRACurrentAge.getText(), RothIRaRetirementAge.getText())
+        ) {
+                double PI = Double.parseDouble(RothIRACalculatorCurrentBalance.getText());
+                double Ca = Double.parseDouble(RothIRAAnualContribution.getText());
+                double r = Double.parseDouble(RothIRACalculatorExpectedReturnRate.getText())/100;
 
-        // Check if InterestRateEnd is selected
-        if (RothIRAMaximizeYes.isSelected()) {
-           Ca = 7000;
-           balance += Helper.calculate_MaximizeContributionYes(PI, Ca, r, C_age, R_age);
+                int C_age = Integer.parseInt(RothIRACurrentAge.getText());
+                int R_age = Integer.parseInt(RothIRaRetirementAge.getText());
+
+                double balance = 0;
+                double totalPrinciple=0;
+                double totalInterest = 0;
+
+                 if (RothIRAMaximizeNO.isSelected()) {
+                    if (Ca > 7000) {
+                         JOptionPane.showMessageDialog(null,  "<html><body style='width: 300px;'><p style='font-size:12px;'>"
+                        + "The annual contribution is higher than the limit imposed by the IRS for the age, "
+                        + "which is $7000. As a result, the calculator used the adjusted contribution amount "
+                        + "to meet the IRS requirement."
+                        + "</p></body></html>");
+                        Ca = 7000; // Adjust contribution to IRS limit
+                        int n = R_age - C_age;
+                        balance =Helper.calculate_MaximizeContributionNo(PI, Ca, r, n);
+                        totalPrinciple = PI +(Ca*(R_age-C_age));
+                        totalInterest = (balance-totalPrinciple)+Ca;
+                     }
+
+                     int n = R_age - C_age;
+                     balance =Helper.calculate_MaximizeContributionNo(PI, Ca, r, n);
+                     totalPrinciple = PI +(Ca*(R_age-C_age));
+                     totalInterest = (balance-totalPrinciple)+Ca;
+
+                }
+
+                // Check if InterestRateEnd is selected
+                if (RothIRAMaximizeYes.isSelected()) {
+                     Ca = 7000;
+
+                    balance = Helper.calculate_MaximizeContributionYes(PI, Ca, r, C_age, R_age);
+                    double[] extraCalculations = Helper.extraCalculationsRothIRACalculatorYES(PI, Ca, C_age, R_age, balance);
+                    totalPrinciple = extraCalculations[0];
+                    totalInterest = extraCalculations[1];
+
+                }
+
+                String outputText = "<html><body style='width: 300px;'>"
+                                  + "Roth IRA Calculation Results"
+                                  + "<p><b>Your balance at age " + R_age + ":</b> $" + String.format("%.2f", balance) + "</p>"
+                                  + "<p><b>Total principal:</b> $" + String.format("%.2f", totalPrinciple) + "</p>"
+                                  + "<p><b>Total Interest:</b> $" + String.format("%.2f", totalInterest) + "</p>"
+                                  + "</body></html>";
+
+
+
+                RothIRAoutput.setText(outputText);
+        } else {
+            JOptionPane.showMessageDialog(null, "One or more inputs are invalid. Please check your entries.", "Validation Error", JOptionPane.WARNING_MESSAGE);
         }
-       
   
-        RothIRAoutput.setText("Ending Balance " + String.format("%.2f", balance));
-     
-            
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Empty fields!");
@@ -4602,7 +4731,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentLoanTerm.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      if (Helper.isWholeNumber(DownPaymentLoanTerm.getText())){
+      Helper.InputValidation(DownPaymentLoanTerm.getText());}
     }//GEN-LAST:event_DownPaymentLoanTermKeyReleased
 
     private void DownPaymentClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentClearBTNActionPerformed
@@ -4625,6 +4755,7 @@ String aboutMessage = "<html>"
 
     private void DownPaymentCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentCalculateBTNActionPerformed
                 // Assuming DownPaymentCheckboxClosingCost is your JCheckBox
+                
         try{
             
         double upfrontCash = Double.parseDouble( DownPaymentUpfrontCash.getText());
@@ -4634,24 +4765,34 @@ String aboutMessage = "<html>"
         double loanTerm = Double.parseDouble(DownPaymentLoanTerm.getText());
         
         String outputText="";
+       
+       
 
         if (DownPaymnentCheckboxClosingCost.isSelected()) {
             
             String selectedOption = (String) DownPaymentComboBox.getSelectedItem();
             if ("%".equals(selectedOption)) {
+                 if (includeClosingCosts+1>100){
+                    JOptionPane.showMessageDialog(null, "Closing costs percentage should not be so high.");
+                     }
+                 else{
                 double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);     
                 outputText = "<html>You can afford up to $" + result1[0] + " for the home price.<br>"
                           + "Your loan amount is $" + result1[1] + ".<br>"
                           + "Your monthly payment will be $" + result1[2] + ".</html>";
-                
+                }
                 
                 
                 
             } if ("$".equals(selectedOption)){
+                 if (includeClosingCosts>upfrontCash){
+                        JOptionPane.showMessageDialog(null, "Closing costs should not be more than the cash amount you plan to put in.");
+                    }
+                 else{
                 double[] result2 = Helper.downpaymentYesClosingCostandMoney(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);
                 outputText = "<html>You can afford up to $" + result2[0] + " for the home price.<br>"
                            + "Your loan amount is $" + result2[1] + ".<br>"
-                           + "Your monthly payment will be $" + result2[2] + ".</html>";
+                           + "Your monthly payment will be $" + result2[2] + ".</html>";}
             }
         } else {
            double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts=0);     
@@ -5958,6 +6099,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
@@ -5991,6 +6133,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
