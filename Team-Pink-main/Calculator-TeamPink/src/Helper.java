@@ -17,13 +17,50 @@ import javax.swing.JOptionPane;
 
 
 public class Helper {
+    //----------------------------------------------------------------------------------------------------------------------------------General 
+    //-------------------------------Checking age 
+    public static void checkAge(String ageInput) {
+        try {
+            
+            int age = Integer.parseInt(ageInput); // Convert input to integer
+            
+            if (age >= 1 && age <= 120) {
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid age. Please enter an age between 1 and 120.", "Age Validation Error", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid number.", "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //Validation of age fileds 
+      public static boolean validateAges(String currentAgeInput, String retirementAgeInput) {
+        try {
+            int currentAge = Integer.parseInt(currentAgeInput);       // Convert current age to integer
+            int retirementAge = Integer.parseInt(retirementAgeInput); // Convert retirement age to integer
+
+            if (currentAge <= retirementAge) {
+                return true; // Valid if current age is less than or equal to retirement age
+            } else {
+                JOptionPane.showMessageDialog(null, 
+                    "Invalid input: Current age cannot be greater than retirement age.", 
+                    "Age Validation Error", JOptionPane.WARNING_MESSAGE);
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, 
+                "Invalid input. Please enter valid numbers for both ages.", 
+                "Input Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+    }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
         if (input == null || input.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Enter a whole number.");
+            
             return false;
             
         }
@@ -220,24 +257,46 @@ public class Helper {
 
         return (continuousP) + beginningFVAnnual + beginningFVMonthly;
     }
+    
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------Extra Calculation for Interest Rate Calculator 
+    public static double[] interestRateCalculatorExtraCalculations(double FV_year, double PI, double Ca, double Cm, double t) {
+        // Calculate total principal
+        double totalPrinciple = PI + (Ca * t) + (Cm * 12 * t);
+        
+        // Calculate total contributions
+        double totalContributions = totalPrinciple - PI;
+        
+        // Calculate total interest
+        double totalInterest = FV_year - totalPrinciple;
+
+        // Return values in an array, rounded to two decimal places
+        return new double[] {
+            Math.round(totalPrinciple * 100.0) / 100.0,    // Total Principal
+            Math.round(totalContributions * 100.0) / 100.0, // Total Contributions
+            Math.round(totalInterest * 100.0) / 100.0,       // Total Interest
+            Math.round(FV_year * 100.0) / 100.0       // Total Interest
+        };
+    }
 
     
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator - Pedro
     
     //-------------------------------------------------No
         public static double calculate_MaximizeContributionNo(double PI, double Ca, double r, int n) {
-        // Calculate FVcurrentBalance
-        double FVcurrentBalance = PI * Math.pow((1 + r), n);
-        System.out.println("NO- current: " + FVcurrentBalance);
+            
+            
+            // Calculate FVcurrentBalance
+            double FVcurrentBalance = PI * Math.pow((1 + r), n);
+            System.out.println("NO- current: " + FVcurrentBalance);
 
-        // Calculate FVanualcontribution
-        double FVanualcontribution = Ca * (Math.pow((1 + r), n) - 1) / r;
-        System.out.println("NO annual: " + FVanualcontribution);
+            // Calculate FVanualcontribution
+            double FVanualcontribution = Ca * (Math.pow((1 + r), n) - 1) / r;
+            System.out.println("NO annual: " + FVanualcontribution);
 
-        // Calculate total future value
-        double futureValue = FVanualcontribution + FVcurrentBalance;
-        System.out.println("Total future value: " + futureValue);
-        return futureValue;
+            // Calculate total future value
+            double futureValue = FVanualcontribution + FVcurrentBalance;
+            System.out.println("Total future value: " + futureValue);
+            return futureValue;
     }
         //------------------------------------------Yes
         public static double calculate_MaximizeContributionYes(double PI, double Ca, double r, int C_age, int R_age) {
@@ -262,6 +321,32 @@ public class Helper {
         System.out.println("Balance: " + balance);
 
         return balance;
+    }
+        //----------------------------------------------------------------------------------------------------------------------------Extra Calculation for RothIRAYEs
+        public static double[] extraCalculationsRothIRACalculatorYES(double PI, double Ca, int C_age, int R_age, double result) {
+        double balance = 0;
+        double totalInterest = 0;
+
+        if (R_age <= 50 || (C_age >= 50 && R_age >= 50)) {
+            // Case where age at retirement is 50 or younger, or both current and retirement age are above 50
+            int Under50 = R_age - C_age;
+            balance = PI + (Ca * Under50);
+            totalInterest = (result - balance) + Ca;
+        } else {
+            // Case where retirement age is over 50
+            int Under50 = 50 - C_age;
+            int Over50 = R_age - 50;
+            balance = PI + (Ca * Under50);
+            Ca = 8000; // Update annual contribution for over 50
+            balance += Ca * Over50;
+            totalInterest = (result - balance)+Ca;
+        }
+
+        // Return balance and total interest as an array
+        return new double[] {
+            Math.round(balance * 100.0) / 100.0,       // Rounded balance
+            Math.round(totalInterest * 100.0) / 100.0  // Rounded total interest
+        };
     }
     
     //--------------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
@@ -354,29 +439,37 @@ public class Helper {
         return new double[]{homePrice, loanAmount, monthlyPayment};
     }
     //------------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
-    public static String validateInput(double input, double hp, String checker) {
+public static boolean validateInput(double input, double hp, String checker) {
         try {
             double value = input;
-            
+
             if (checker.equals("$")) {
                 if (value < hp) {
-                    return "Valid dollar input: $" + value;
+                    // Valid dollar input
+                    return true;
                 } else {
-                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price ($" + hp + ")");
-                    return "Error: Dollar amount must be less than the house price ($" + hp + ")";
+                    // Show error message for dollar amount
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price ($" + hp + ")", "Input Error", JOptionPane.WARNING_MESSAGE);
+                    return false;
                 }
             } else if (checker.equals("%")) {
                 if (value >= 0 && value <= 100) {
-                    return "Valid percentage input: " + value + "%";
+                    // Valid percentage input
+                    return true;
                 } else {
-                    JOptionPane.showMessageDialog(null, "Percentage must be between 0 and 100");
-                    return "Error: Percentage must be between 0 and 100";
+                    // Show error message for percentage range
+                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 100", "Input Error", JOptionPane.WARNING_MESSAGE);
+                    return false;
                 }
             } else {
-                return "Error: Checker must be either '$' or '%'";
+                // Show error message for invalid checker
+                JOptionPane.showMessageDialog(null, "Error: Checker must be either '$' or '%'", "Input Error", JOptionPane.ERROR_MESSAGE);
+                return false;
             }
         } catch (NumberFormatException e) {
-            return "Error: Invalid number format";
+            // Show error message for invalid number format
+            JOptionPane.showMessageDialog(null, "Error: Invalid number format", "Input Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
     }
 
