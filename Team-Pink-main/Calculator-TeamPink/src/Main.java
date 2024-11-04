@@ -15,6 +15,12 @@ import java.awt.Image;
 import java.text.DecimalFormat;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JTextField;        // For the JTextField components
+import javax.swing.JOptionPane;       // For displaying error messages
+import java.awt.event.FocusEvent;     // For handling focus events
+import java.awt.event.FocusListener;  // For handling focus gained/lost events
+import java.text.NumberFormat;        // For formatting numbers as currency
+import java.text.DecimalFormat;   
 
 
 public class Main extends javax.swing.JFrame {
@@ -30,6 +36,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.setMinimumSize(new Dimension(1400, 350)); 
+        
      
   
         //--------------------------------------------------------------------------------------------------------------------
@@ -4502,7 +4509,7 @@ String aboutMessage = "<html>"
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
-
+  //-----------------------------------------------------------------------------------------------------------------------------------------------AUTO LOAN CALCULATOR
     private void ALCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALCalcButtonActionPerformed
         // TODO add your handling code here:
         String autoPriceValue = ALPriceInput.getText();
@@ -4515,17 +4522,30 @@ String aboutMessage = "<html>"
         String salesTaxValue = ALSalesTaxInput.getText();
         String otherFeesValue = ALOtherFeesInput.getText();
         
-        double[] result = Helper.calcAutoLoan(autoPriceValue, loanTermValue, interestRateValue, cashIncentivesValue, downPaymentValue, tradeInValueValue, amtOwnedTradeInValue, salesTaxValue, otherFeesValue);
+        // Calculate the monthly payment using Helper's calcAutoLoan function
+        double[] result = Helper.calcAutoLoan(
+        autoPriceValue, loanTermValue, interestRateValue,
+        cashIncentivesValue, downPaymentValue, tradeInValueValue,
+        amtOwnedTradeInValue, salesTaxValue, otherFeesValue
+        );
+        
+        // Check for any validation errors
         if(result[0] == -1 || result[1] == -1){
-            ALResultOutput.setText("");
+            // Clear the result output if there's an error
+            ALResultOutput.setText("Error: Please check your input values.");
             return;
         }
         
+        // Format the result as currency
         DecimalFormat resultFormat = new DecimalFormat("$#,###.00");
+        
+        // Display the result based on checkbox selection
         if(ALCheckBox.isSelected()){
-            ALResultOutput.setText(resultFormat.format(result[1]));
-        }else{
-            ALResultOutput.setText(resultFormat.format(result[0]));
+            // If the checkbox is selected, show the monthly payment with fees
+            ALResultOutput.setText("Monthly Payment (with fees): " + resultFormat.format(result[1]));
+        } else{
+            // Otherwise, show the monthly payment without fees
+            ALResultOutput.setText("Monthly Payment (without fees): " + resultFormat.format(result[0]));
         }
     }//GEN-LAST:event_ALCalcButtonActionPerformed
 
