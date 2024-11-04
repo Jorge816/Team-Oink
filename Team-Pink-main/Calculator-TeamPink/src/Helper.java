@@ -498,7 +498,7 @@ public class Helper {
             }
             
             // Proceed with loan calculation
-        return calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue,
+        return calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue, 
             cashIncentives, amtOwnedTradeIn, salesTax, otherFees);
         }
         
