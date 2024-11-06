@@ -501,6 +501,45 @@ public class Helper {
         return calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue, 
             cashIncentives, amtOwnedTradeIn, salesTax, otherFees);
         }
+        /*public static int[] calcAutoLoan(String autoPriceStr, String loanTermStr, String interestRateStr,
+    String cashIncentivesStr, String downPaymentStr, String tradeInValueStr,
+    String amtOwnedTradeInStr, String salesTaxStr, String otherFeesStr, double[] result, StringBuilder msg) {
+
+    int[] errorFields = new int[9]; // To store error indices
+
+    if (!isValidLoanTerm(loanTermStr)) {
+        msg.append("Invalid input: Loan term must be a positive number.\n");
+        errorFields[1] = 1; // Index for loan term field
+    }
+
+    double autoPrice = parseWithValidation(autoPriceStr, "auto price", msg);
+    double loanTerm = parseWithValidationDouble(loanTermStr, "loan term", msg);
+    double interestRate = parseWithValidation(interestRateStr, "interest rate", msg);
+    double downPayment = parseWithValidation(downPaymentStr, "down payment", msg);
+    double tradeInValue = parseWithValidation(tradeInValueStr, "trade-in value", msg);
+    double cashIncentives = parseWithValidation(cashIncentivesStr, "cash incentives", msg);
+    double amtOwnedTradeIn = parseWithValidation(amtOwnedTradeInStr, "amount owed on trade-in", msg);
+    double salesTax = parseWithValidation(salesTaxStr, "sales tax", msg);
+    double otherFees = parseWithValidation(otherFeesStr, "other fees", msg);
+
+    if (downPayment == autoPrice) {
+        msg.append("Down payment should not be the same as auto price.\n");
+        errorFields[4] = 1; // Index for down payment field
+    }
+
+    // If any validation errors, return error fields
+    if (msg.length() > 0) {
+        return errorFields;
+    }
+
+    // Proceed with loan calculation
+    double[] calculatedResult = calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue,
+            cashIncentives, amtOwnedTradeIn, salesTax, otherFees);
+    System.arraycopy(calculatedResult, 0, result, 0, calculatedResult.length);
+
+    return null; // No error
+}*/
+
         
         // Calculation method
         private static double[] calculateAutoLoan(double autoPrice, double loanTerm, double interestRate, 
@@ -529,20 +568,21 @@ public class Helper {
         }
         
         // Helper method to parse and validate double values
-        private static double parseWithValidation(String value, String fieldName, StringBuilder msg){
-            try {
-                //
-                double parsedValue = Double.parseDouble(value);
-                if (parsedValue < 0 || !inRange(parsedValue, MAX_VALUE)) {
-                    msg.append("Invalid ").append(fieldName).append(". Must be positive and within range.\n");
-                    return -1;
-                }
-                return parsedValue;
-            } catch (NumberFormatException e) {
-                msg.append("Invalid input format for ").append(fieldName).append(".\n");
-                return -1;
-            }
+        // Helper method to parse and validate double values
+public static double parseWithValidation(String value, String fieldName, StringBuilder msg) {
+    try {
+        double parsedValue = Double.parseDouble(value);
+        if (parsedValue < 0 || !inRange(parsedValue, MAX_VALUE)) {
+            msg.append("Invalid ").append(fieldName).append(". Must be positive and within range.\n");
+            return -1;
         }
+        return parsedValue;
+    } catch (NumberFormatException e) {
+        msg.append("Invalid input format for ").append(fieldName).append(".\n");
+        return -1;
+    }
+}
+
         
         // Helper method for loan term as a positive integer
         private static double parseWithValidationDouble(String value, String fieldName, StringBuilder msg){
@@ -559,4 +599,5 @@ public class Helper {
     
         }
         }
+        
 }
