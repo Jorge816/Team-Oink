@@ -1180,7 +1180,7 @@ String aboutMessage = "<html>"
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)))
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1188,9 +1188,8 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
-                    .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(142, Short.MAX_VALUE))
@@ -2600,7 +2599,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel46Layout.createSequentialGroup()
                 .addContainerGap(43, Short.MAX_VALUE)
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 377, Short.MAX_VALUE)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3058,10 +3057,11 @@ String aboutMessage = "<html>"
                     .addComponent(MorgagePayoffCalculatorInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MorgagePayoffRePayementExtraMonthLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel126)
-                    .addComponent(MorgagePayoffRePayementExtraMonthLabel17)
-                    .addComponent(MortGagePayoffRemainingTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MortGagePayoffRemainingTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel126)
+                        .addComponent(MorgagePayoffRePayementExtraMonthLabel17)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MortGagePayoffRemainingTermMonths, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3357,7 +3357,7 @@ String aboutMessage = "<html>"
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel29Layout.createSequentialGroup()
@@ -3607,7 +3607,7 @@ String aboutMessage = "<html>"
                     .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4148,7 +4148,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCalculator)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)))
         );
 
         panelCalculator.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -4807,6 +4807,11 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------Auto Loan Calculator Jorge 
+    private void highlightErrorField(JTextField field) {
+    field.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+}
+
+    
     private void ALCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALCalcButtonActionPerformed
         // TODO add your handling code here:
         String autoPriceValue = ALPriceInput.getText();
@@ -4819,7 +4824,91 @@ String aboutMessage = "<html>"
         String salesTaxValue = ALSalesTaxInput.getText();
         String otherFeesValue = ALOtherFeesInput.getText();
         
-        double[] result = Helper.calcAutoLoan(autoPriceValue, loanTermValue, interestRateValue, cashIncentivesValue, downPaymentValue, tradeInValueValue, amtOwnedTradeInValue, salesTaxValue, otherFeesValue);
+            clearErrorHighlights();
+
+        // Initialize a flag to track if there are any errors
+        boolean hasErrors = false;
+
+        // Validate each input field and highlight errors
+        if (Helper.isValidLoanTerm(loanTermValue)) {
+            // Valid loan term
+        } else {
+            highlightErrorField(ALLoanTermInput);
+            hasErrors = true;
+        }
+
+        double autoPrice = Helper.parseWithValidation(autoPriceValue, "auto price", new StringBuilder());
+        if (autoPrice == -1) {
+            highlightErrorField(ALPriceInput);
+            hasErrors = true;
+        }
+
+        double interestRate = Helper.parseWithValidation(interestRateValue, "interest rate", new StringBuilder());
+        if (interestRate == -1) {
+            highlightErrorField(ALInterestRateInput);
+            hasErrors = true;
+        }
+
+        double cashIncentives = Helper.parseWithValidation(cashIncentivesValue, "cash incentives", new StringBuilder());
+        if (cashIncentives == -1) {
+            highlightErrorField(ALCashIncentivesInput);
+            hasErrors = true;
+        }
+
+        double downPayment = Helper.parseWithValidation(downPaymentValue, "down payment", new StringBuilder());
+        if (downPayment == -1) {
+            highlightErrorField(ALDownPaymentInput);
+            hasErrors = true;
+        }
+
+        double tradeInValue = Helper.parseWithValidation(tradeInValueValue, "trade-in value", new StringBuilder());
+        if (tradeInValue == -1) {
+            highlightErrorField(ALTradeInValueInput);
+            hasErrors = true;
+        }
+
+        double amtOwnedTradeIn = Helper.parseWithValidation(amtOwnedTradeInValue, "amount owed on trade-in", new StringBuilder());
+        if (amtOwnedTradeIn == -1) {
+            highlightErrorField(ALAmtOwnInput);
+            hasErrors = true;
+        }
+
+        double salesTax = Helper.parseWithValidation(salesTaxValue, "sales tax", new StringBuilder());
+        if (salesTax == -1) {
+            highlightErrorField(ALSalesTaxInput);
+            hasErrors = true;
+        }
+
+        double otherFees = Helper.parseWithValidation(otherFeesValue, "other fees", new StringBuilder());
+        if (otherFees == -1) {
+            highlightErrorField(ALOtherFeesInput);
+            hasErrors = true;
+        }
+
+        // If there are any validation errors, display a message and return
+        if (hasErrors) {
+            ALResultOutput.setText("Error: Please check your input values.");
+            return;
+        }
+
+        // Proceed with loan calculation if no errors
+        double[] result = Helper.calcAutoLoan(
+            autoPriceValue, loanTermValue, interestRateValue,
+            cashIncentivesValue, downPaymentValue, tradeInValueValue,
+            amtOwnedTradeInValue, salesTaxValue, otherFeesValue
+        );
+
+        // Format the result as currency
+        DecimalFormat resultFormat = new DecimalFormat("$#,###.00");
+
+        // Display the result based on checkbox selection
+        if (ALCheckBox.isSelected()) {
+            ALResultOutput.setText("Monthly Payment (with fees): " + resultFormat.format(result[1]));
+        } else {
+            ALResultOutput.setText("Monthly Payment (without fees): " + resultFormat.format(result[0]));
+        }
+        
+        /*double[] result = Helper.calcAutoLoan(autoPriceValue, loanTermValue, interestRateValue, cashIncentivesValue, downPaymentValue, tradeInValueValue, amtOwnedTradeInValue, salesTaxValue, otherFeesValue);
         if(result[0] == -1 || result[1] == -1){
             ALResultOutput.setText("");
             return;
@@ -4830,9 +4919,21 @@ String aboutMessage = "<html>"
             ALResultOutput.setText(resultFormat.format(result[1]));
         }else{
             ALResultOutput.setText(resultFormat.format(result[0]));
-        }
+        }*/
     }//GEN-LAST:event_ALCalcButtonActionPerformed
 
+    private void clearErrorHighlights() {
+        ALPriceInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALLoanTermInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALInterestRateInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALCashIncentivesInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALDownPaymentInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALTradeInValueInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALAmtOwnInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALSalesTaxInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        ALOtherFeesInput.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+}
+    
     private void ALClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALClearButtonActionPerformed
         // TODO add your handling code here:
         // Clear all input fields
@@ -4848,6 +4949,7 @@ String aboutMessage = "<html>"
 
         // Clear the output field
         ALResultOutput.setText("");
+        clearErrorHighlights();
     }//GEN-LAST:event_ALClearButtonActionPerformed
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     private void hideComponentsMortgageCalculator() {

@@ -13,7 +13,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
+import java.lang.StringBuilder;
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Helper {
@@ -561,9 +565,18 @@ public static boolean validateInput(double input, double hp, String checker) {
     public static boolean isPositiveNumber(String num){
         try{
             double val = Double.parseDouble(num); // Convert string to a double.
-            return val > 0; // Return true if the value is positive.
+            return val >= 0; // Return true if the value is positive.
         }catch (NumberFormatException e){
             return false; // Return false if the string is not a valid number.
+        }
+    }
+    
+    public static boolean isPositiveInteger(String num) {
+        try {
+            int val = Integer.parseInt(num);
+            return val > 0; // Loan term should be strictly positive
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
     
@@ -646,175 +659,151 @@ public static boolean validateInput(double input, double hp, String checker) {
         
         
         //-----------------------------AUTO-LOAN-CALCULATOR--------------------------------------------------------------------------
-        public static double[] calcAutoLoan(
-        String autoPriceStr,
-        String loanTermStr,
-        String interestRateStr,
-        String cashIncentivesStr,
-        String downPaymentStr,
-        String tradeInValueStr,
-        String amtOwnedTradeInStr,
-        String salesTaxStr,
-        String otherFeesStr){
-            
-         String msg = "";
-            
-            if (isEmptyInput(autoPriceStr) || isEmptyInput(loanTermStr) || isEmptyInput(interestRateStr) ||
-       isEmptyInput(cashIncentivesStr) || isEmptyInput(downPaymentStr) || isEmptyInput(tradeInValueStr) || 
-       isEmptyInput(amtOwnedTradeInStr) || isEmptyInput(salesTaxStr) || isEmptyInput(otherFeesStr)){
-                System.out.println("Input cannot be empty.");
-                msg += "All input fields are required. \n";
+        private static final int MAX_VALUE = 999_999_999;
+        
+        public static boolean isValidLoanTerm(String loanTermValue){
+            try {
+                double loanTerm = Double.parseDouble(loanTermValue.trim()); // Parse as double
+                return loanTerm > 0; // Check if it's positive
+            } catch (NumberFormatException e) {
+                return false; // Return false if not a double
             }
-            
-            double autoPrice, downPayment, tradeInValue, cashIncentives, amtOwnedTradeIn, interestRate, salesTax, otherFees;
-            int  loanTerm;
-            double maxValue = 999999999;
-            
-            // Attempt to parse the input strings into numeric values
-            try{
-                autoPrice = Double.parseDouble(autoPriceStr);
-                downPayment = Double.parseDouble(downPaymentStr);
-                tradeInValue = Double.parseDouble(tradeInValueStr);
-                salesTax = Double.parseDouble(salesTaxStr);
-                otherFees = Double.parseDouble(otherFeesStr);
-                cashIncentives = Double.parseDouble(cashIncentivesStr);
-                amtOwnedTradeIn = Double.parseDouble(amtOwnedTradeInStr);
-                interestRate = Double.parseDouble(interestRateStr);
-                loanTerm = Integer.parseInt(loanTermStr);
-            }catch (NumberFormatException e){
-                msg += "Invalid input format. Please enter numeric values. \n";
-                // Return an error if input cannot be parsed into a number
-                System.out.println("Invalid input format.");
-                return new double []{-1,-1};
-            }
-            
-            // Attempt to parse the input strings into numeric values and check for non-zero/non-negative where necessary.
-    try {
-        autoPrice = Double.parseDouble(autoPriceStr);
-        if (autoPrice <= 0) {
-            msg += "Auto price must be greater than 0.\n";
         }
         
-        loanTerm = Integer.parseInt(loanTermStr);
-        if (loanTerm <= 0) {
-            msg += "Loan term must be greater than 0.\n";
-        }
-
-        interestRate = Double.parseDouble(interestRateStr);
-        if (interestRate < 0) {
-            msg += "Interest rate cannot be negative.\n";
-        }
-
-        downPayment = Double.parseDouble(downPaymentStr);
-        if (downPayment < 0) {
-            msg += "Down payment cannot be negative.\n";
-        }
-
-        tradeInValue = Double.parseDouble(tradeInValueStr);
-        if (tradeInValue < 0) {
-            msg += "Trade-in value cannot be negative.\n";
-        }
-
-        cashIncentives = Double.parseDouble(cashIncentivesStr);
-        if (cashIncentives < 0) {
-            msg += "Cash incentives cannot be negative.\n";
-        }
-
-        amtOwnedTradeIn = Double.parseDouble(amtOwnedTradeInStr);
-        if (amtOwnedTradeIn < 0) {
-            msg += "Amount owed on trade-in cannot be negative.\n";
-        }
-
-        salesTax = Double.parseDouble(salesTaxStr);
-        if (salesTax < 0) {
-            msg += "Sales tax cannot be negative.\n";
-        }
-
-        otherFees = Double.parseDouble(otherFeesStr);
-        if (otherFees < 0) {
-            msg += "Other fees cannot be negative.\n";
-        }
-        
-        // Validate range limits
-        if (!inRange(autoPrice, maxValue)) {
-            msg += "Auto price exceeds the allowed maximum limit.\n";
-        }
-        if (!inRange(interestRate, maxValue)) {
-            msg += "Interest rate exceeds the allowed maximum limit.\n";
-        }
-        if (!inRange(loanTerm, maxValue)) {
-            msg += "Loan term exceeds the allowed maximum limit.\n";
-        }
-
-    } catch (NumberFormatException e) {
-        // Return an error if input cannot be parsed into a number
-        System.out.println("Invalid input format.");
-        return new double[] {-1, -1};
-    }
+        public static double[] calcAutoLoan(String autoPriceStr, String loanTermStr, String interestRateStr,
+        String cashIncentivesStr, String downPaymentStr, String tradeInValueStr,
+        String amtOwnedTradeInStr, String salesTaxStr, String otherFeesStr){
             
-            
-            if (autoPrice <= 0) {
-                msg += "Auto price must be greater than 0.\n";
-            }
-            if (loanTerm <= 0) {
-                msg += "Loan term must be greater than 0.\n";
-            }
-            if (interestRate <= 0) {
-                msg += "Interest rate must be greater than 0.\n";
+            // Validate loan term as an integer
+            if (!isValidLoanTerm(loanTermStr)) {
+                System.out.println("Invalid input: Loan term must be a positive number.");
+                return new double[]{-1, -1};
             }
             
-            // Validate range limits
-            if (!inRange(autoPrice, maxValue)) {
-                msg += "Auto price exceeds the allowed maximum limit.\n";
-            }
-            if (!inRange(interestRate, maxValue)) {
-                msg += "Interest rate exceeds the allowed maximum limit.\n";
-            }
-            if (!inRange(loanTerm, maxValue)) {
-                msg += "Loan term exceeds the allowed maximum limit.\n";
+            StringBuilder msg = new StringBuilder();
+            
+            // Parse and validate each input
+            double autoPrice = parseWithValidation(autoPriceStr, "auto price", msg);
+            double loanTerm = parseWithValidationDouble(loanTermStr, "loan term", msg);
+            double interestRate = parseWithValidation(interestRateStr, "interest rate", msg);
+            double downPayment = parseWithValidation(downPaymentStr, "down payment", msg);
+            double tradeInValue = parseWithValidation(tradeInValueStr, "trade-in value", msg);
+            double cashIncentives = parseWithValidation(cashIncentivesStr, "cash incentives", msg);
+            double amtOwnedTradeIn = parseWithValidation(amtOwnedTradeInStr, "amount owed on trade-in", msg);
+            double salesTax = parseWithValidation(salesTaxStr, "sales tax", msg);
+            double otherFees = parseWithValidation(otherFeesStr, "other fees", msg);
+            
+            if(downPayment == autoPrice){
+                msg.append("Down payment should not be the same as auto price.");
             }
             
-            // If there are validation errors, return [-1, -1]
-            if(!msg.isEmpty()){
+            // If any validation errors, print message and return error code
+            if (msg.length() > 0) {
                 System.out.println(msg);
-                return new double[]{-1,-1};
+                return new double[]{-1, -1};
             }
-          
-            // Proceed with calculation if input is valid
+            
+            // Proceed with loan calculation
+        return calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue, 
+            cashIncentives, amtOwnedTradeIn, salesTax, otherFees);
+        }
+        /*public static int[] calcAutoLoan(String autoPriceStr, String loanTermStr, String interestRateStr,
+    String cashIncentivesStr, String downPaymentStr, String tradeInValueStr,
+    String amtOwnedTradeInStr, String salesTaxStr, String otherFeesStr, double[] result, StringBuilder msg) {
+
+    int[] errorFields = new int[9]; // To store error indices
+
+    if (!isValidLoanTerm(loanTermStr)) {
+        msg.append("Invalid input: Loan term must be a positive number.\n");
+        errorFields[1] = 1; // Index for loan term field
+    }
+
+    double autoPrice = parseWithValidation(autoPriceStr, "auto price", msg);
+    double loanTerm = parseWithValidationDouble(loanTermStr, "loan term", msg);
+    double interestRate = parseWithValidation(interestRateStr, "interest rate", msg);
+    double downPayment = parseWithValidation(downPaymentStr, "down payment", msg);
+    double tradeInValue = parseWithValidation(tradeInValueStr, "trade-in value", msg);
+    double cashIncentives = parseWithValidation(cashIncentivesStr, "cash incentives", msg);
+    double amtOwnedTradeIn = parseWithValidation(amtOwnedTradeInStr, "amount owed on trade-in", msg);
+    double salesTax = parseWithValidation(salesTaxStr, "sales tax", msg);
+    double otherFees = parseWithValidation(otherFeesStr, "other fees", msg);
+
+    if (downPayment == autoPrice) {
+        msg.append("Down payment should not be the same as auto price.\n");
+        errorFields[4] = 1; // Index for down payment field
+    }
+
+    // If any validation errors, return error fields
+    if (msg.length() > 0) {
+        return errorFields;
+    }
+
+    // Proceed with loan calculation
+    double[] calculatedResult = calculateAutoLoan(autoPrice, loanTerm, interestRate, downPayment, tradeInValue,
+            cashIncentives, amtOwnedTradeIn, salesTax, otherFees);
+    System.arraycopy(calculatedResult, 0, result, 0, calculatedResult.length);
+
+    return null; // No error
+}*/
+
+        
+        // Calculation method
+        private static double[] calculateAutoLoan(double autoPrice, double loanTerm, double interestRate, 
+                                              double downPayment, double tradeInValue, 
+                                              double cashIncentives, double amtOwnedTradeIn, 
+                                              double salesTax, double otherFees){
             double autoLoanPayment = autoPrice - downPayment - tradeInValue + amtOwnedTradeIn - cashIncentives;
             double salesTaxAmount = (autoPrice - tradeInValue) * (salesTax / 100);
             double autoLoanPaymentFees = autoLoanPayment + salesTaxAmount + otherFees;
             double monthlyInterestRate = (interestRate / 100) / 12;
-           
-            // Declare variables to store the monthly payments
-            double paymentWithoutFees;
-            double paymentWithFees;
-           
-            // Calculate the monthly payment without fees
-            if (monthlyInterestRate == 0) {
-                // If the interest rate is 0, the loan is divided evenly over the loan term
-                paymentWithoutFees = autoLoanPayment / loanTerm;
-            } else {
-                // Standard loan formula: P * r / (1 - (1 + r)^-n)
-                paymentWithoutFees = (autoLoanPayment * monthlyInterestRate) /
-                                     (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
-            }
-           
-            // Calculate the monthly payment with fees included
-            if (monthlyInterestRate == 0) {
-                // Same logic for 0 interest rate
-                paymentWithFees = autoLoanPaymentFees / loanTerm;
-            } else {
-                // Same formula but with the loan amount that includes fees
-                paymentWithFees = (autoLoanPaymentFees * monthlyInterestRate) /
-                                  (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
-            }
-           
-            // Round the results to two decimal places for better readability
-            paymentWithFees = Math.round(paymentWithFees * 100) / 100.0;
-            paymentWithoutFees = Math.round(paymentWithoutFees * 100) / 100.0;
             
-            // Return both the payments (without fees and with fees) in an array
+            // Monthly payments with and without fees
+            double paymentWithoutFees = monthlyInterestRate == 0
+                    ? autoLoanPayment / loanTerm
+                    : (autoLoanPayment * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
+            
+            double paymentWithFees = monthlyInterestRate == 0
+                ? autoLoanPaymentFees / loanTerm
+                : (autoLoanPaymentFees * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
+            
+            // Round results to two decimal places
+            paymentWithoutFees = Math.round(paymentWithoutFees * 100) / 100.0;
+            paymentWithFees = Math.round(paymentWithFees * 100) / 100.0;
+            
             return new double[]{paymentWithoutFees, paymentWithFees};
         }
+        
+        // Helper method to parse and validate double values
+        // Helper method to parse and validate double values
+public static double parseWithValidation(String value, String fieldName, StringBuilder msg) {
+    try {
+        double parsedValue = Double.parseDouble(value);
+        if (parsedValue < 0 || !inRange(parsedValue, MAX_VALUE)) {
+            msg.append("Invalid ").append(fieldName).append(". Must be positive and within range.\n");
+            return -1;
+        }
+        return parsedValue;
+    } catch (NumberFormatException e) {
+        msg.append("Invalid input format for ").append(fieldName).append(".\n");
+        return -1;
+    }
+}
+
+        
+        // Helper method for loan term as a positive integer
+        private static double parseWithValidationDouble(String value, String fieldName, StringBuilder msg){
+            try {
+        double parsedValue = Double.parseDouble(value);
+            if (parsedValue <= 0 || parsedValue > MAX_VALUE) {
+                msg.append("Invalid ").append(fieldName).append(". Must be a positive number within range.\n");
+                return -1;
+            }
+            return parsedValue;
+        } catch (NumberFormatException e) {
+            msg.append("Invalid input format for ").append(fieldName).append(".\n");
+            return -1;
+    
+        }
+        }
+        
 }
