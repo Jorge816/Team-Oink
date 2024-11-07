@@ -19,14 +19,52 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Helper {
 
-    //--------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
+public class Helper {
+    //----------------------------------------------------------------------------------------------------------------------------------General 
+    //-------------------------------Checking age 
+    public static void checkAge(String ageInput) {
+        try {
+            
+            int age = Integer.parseInt(ageInput); // Convert input to integer
+            
+            if (age >= 1 && age <= 120) {
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid age. Please enter an age between 1 and 120.", "Age Validation Error", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid number.", "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //Validation of age fileds 
+      public static boolean validateAges(String currentAgeInput, String retirementAgeInput) {
+        try {
+            int currentAge = Integer.parseInt(currentAgeInput);       // Convert current age to integer
+            int retirementAge = Integer.parseInt(retirementAgeInput); // Convert retirement age to integer
+
+            if (currentAge <= retirementAge) {
+                return true; // Valid if current age is less than or equal to retirement age
+            } else {
+                JOptionPane.showMessageDialog(null, 
+                    "Invalid input: Current age cannot be greater than retirement age.", 
+                    "Age Validation Error", JOptionPane.WARNING_MESSAGE);
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, 
+                "Invalid input. Please enter valid numbers for both ages.", 
+                "Input Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+    }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
         if (input == null || input.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Enter a whole number.");
+            
             return false;
             
         }
@@ -40,10 +78,13 @@ public class Helper {
         return false; // If input contains anything other than digits, return false
     }
     
-    //----------------------------------------------------------------------------------------- // Validate the stripped input -Pedro
+    //------------------------------------------------------------------------------------------------------------------------- // Validate the stripped input -Pedro
     public static boolean InputValidation(String input) {
     
         if (!input.isEmpty()) {
+            if (input.isEmpty()) {
+               return false;
+            }
             // Check if the input contains only digits (this allows decimals as well)
             if (input.matches("[0-9.]+")) {
                 try {
@@ -63,9 +104,9 @@ public class Helper {
                     return false;  // Return false to indicate invalid input
                 }
             } else {
-                // If input contains non-numeric characters, display an error message
-                JOptionPane.showMessageDialog(null, "Only numeric values are allowed.");
+                JOptionPane.showMessageDialog(null, "Invalid number format.");         
                 return false;  // Return false to indicate invalid input
+                
             }
         }
         return false;
@@ -121,7 +162,7 @@ public class Helper {
     public static double nominalInterestRate(double ER, int a) {
         return a * (Math.pow(1 + ER, 1.0 / a) - 1);
     }
-    //-------------------------------------------------------------------------------------------BeginningCompountInterestRate - Pedro
+    //----------------------------------------------------------------------------------------------------------------------------------BeginningCompountInterestRate - Pedro
     
 
     // Function to calculate future value with nominal interest rate and contributions
@@ -172,7 +213,7 @@ public class Helper {
         return FV;
     }
     
-    //--------------------------------------------------------------------------------------------------formula for continuous - Pedro 
+    //------------------------------------------------------------------------------------------------------------------------------------formula for continuous Interest RateCalculator - Pedro 
         // Function to calculate future value for end contributions
     public static double future_valueEnd(double PI, double Ca, double Cm, double r, double t) {
         // Continuous compounding for primary investment
@@ -220,24 +261,46 @@ public class Helper {
 
         return (continuousP) + beginningFVAnnual + beginningFVMonthly;
     }
+    
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------Extra Calculation for Interest Rate Calculator 
+    public static double[] interestRateCalculatorExtraCalculations(double FV_year, double PI, double Ca, double Cm, double t) {
+        // Calculate total principal
+        double totalPrinciple = PI + (Ca * t) + (Cm * 12 * t);
+        
+        // Calculate total contributions
+        double totalContributions = totalPrinciple - PI;
+        
+        // Calculate total interest
+        double totalInterest = FV_year - totalPrinciple;
+
+        // Return values in an array, rounded to two decimal places
+        return new double[] {
+            Math.round(totalPrinciple * 100.0) / 100.0,    // Total Principal
+            Math.round(totalContributions * 100.0) / 100.0, // Total Contributions
+            Math.round(totalInterest * 100.0) / 100.0,       // Total Interest
+            Math.round(FV_year * 100.0) / 100.0       // Total Interest
+        };
+    }
 
     
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator - Pedro
     
     //-------------------------------------------------No
         public static double calculate_MaximizeContributionNo(double PI, double Ca, double r, int n) {
-        // Calculate FVcurrentBalance
-        double FVcurrentBalance = PI * Math.pow((1 + r), n);
-        System.out.println("NO- current: " + FVcurrentBalance);
+            
+            
+            // Calculate FVcurrentBalance
+            double FVcurrentBalance = PI * Math.pow((1 + r), n);
+            System.out.println("NO- current: " + FVcurrentBalance);
 
-        // Calculate FVanualcontribution
-        double FVanualcontribution = Ca * (Math.pow((1 + r), n) - 1) / r;
-        System.out.println("NO annual: " + FVanualcontribution);
+            // Calculate FVanualcontribution
+            double FVanualcontribution = Ca * (Math.pow((1 + r), n) - 1) / r;
+            System.out.println("NO annual: " + FVanualcontribution);
 
-        // Calculate total future value
-        double futureValue = FVanualcontribution + FVcurrentBalance;
-        System.out.println("Total future value: " + futureValue);
-        return futureValue;
+            // Calculate total future value
+            double futureValue = FVanualcontribution + FVcurrentBalance;
+            System.out.println("Total future value: " + futureValue);
+            return futureValue;
     }
         //------------------------------------------Yes
         public static double calculate_MaximizeContributionYes(double PI, double Ca, double r, int C_age, int R_age) {
@@ -263,8 +326,34 @@ public class Helper {
 
         return balance;
     }
+        //----------------------------------------------------------------------------------------------------------------------------Extra Calculation for RothIRAYEs
+        public static double[] extraCalculationsRothIRACalculatorYES(double PI, double Ca, int C_age, int R_age, double result) {
+        double balance = 0;
+        double totalInterest = 0;
+
+        if (R_age <= 50 || (C_age >= 50 && R_age >= 50)) {
+            // Case where age at retirement is 50 or younger, or both current and retirement age are above 50
+            int Under50 = R_age - C_age;
+            balance = PI + (Ca * Under50);
+            totalInterest = (result - balance) + Ca;
+        } else {
+            // Case where retirement age is over 50
+            int Under50 = 50 - C_age;
+            int Over50 = R_age - 50;
+            balance = PI + (Ca * Under50);
+            Ca = 8000; // Update annual contribution for over 50
+            balance += Ca * Over50;
+            totalInterest = (result - balance)+Ca;
+        }
+
+        // Return balance and total interest as an array
+        return new double[] {
+            Math.round(balance * 100.0) / 100.0,       // Rounded balance
+            Math.round(totalInterest * 100.0) / 100.0  // Rounded total interest
+        };
+    }
     
-    //-------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator - Pedro
         
                // Function to calculate affordable rent based on income
     public static long[] calculateAffordableRent(double income, double debt, String option) {
@@ -310,7 +399,7 @@ public class Helper {
        return new long[]{Math.round(acceptableAggressive), Math.round(safeAcceptable)};
     }
 
-    //----------------------------------------------------------------------------------------------------------------------------------------------DownPayment Calculator - Pedro 
+    //---------------------------------------------------------------------------------------------------------------------------------------------------DownPayment Calculator - Pedro 
     
     
         // Function: No Closing Costs Included, Down Payment Percentage
@@ -353,9 +442,126 @@ public class Helper {
 
         return new double[]{homePrice, loanAmount, monthlyPayment};
     }
+    //------------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
+public static boolean validateInput(double input, double hp, String checker) {
+        try {
+            double value = input;
+
+            if (checker.equals("$")) {
+                if (value < hp) {
+                    // Valid dollar input
+                    return true;
+                } else {
+                    // Show error message for dollar amount
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price ($" + hp + ")", "Input Error", JOptionPane.WARNING_MESSAGE);
+                    return false;
+                }
+            } else if (checker.equals("%")) {
+                if (value >= 0 && value <= 100) {
+                    // Valid percentage input
+                    return true;
+                } else {
+                    // Show error message for percentage range
+                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 100", "Input Error", JOptionPane.WARNING_MESSAGE);
+                    return false;
+                }
+            } else {
+                // Show error message for invalid checker
+                JOptionPane.showMessageDialog(null, "Error: Checker must be either '$' or '%'", "Input Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            // Show error message for invalid number format
+            JOptionPane.showMessageDialog(null, "Error: Invalid number format", "Input Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+    }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     
+    public static double[] mortgageCalculator(double hp, double dp, int loanTerm, double rate, int startDate, double pt, double hI, double hf, double oc) {
+        double r = (rate / 100) / 12;          // Monthly interest rate
+        double n = loanTerm * 12;              // Total number of payments (months)
+        double loanAmount = hp - dp;           // Loan principal after downpayment
+        
+        // Monthly mortgage payment calculation
+        double top = Math.pow(1 + r, n) - 1;
+        double bottom = r * Math.pow(1 + r, n);
+        double monthlyPayment = loanAmount * (r / (1 - 1 / Math.pow(1 + r, n)));
+        
+        // Monthly additional costs
+        double monthlyPropertyTaxes = pt / 12;
+        double monthlyHomeInsurance = hI / 12;
+        double monthlyHOAFee = hf / 12;
+        double monthlyOtherCost = oc / 12;
+        
+        // Total out-of-pocket monthly cost
+        double totalMonthlyOutOfPocket = monthlyPayment + monthlyPropertyTaxes + monthlyHomeInsurance + monthlyHOAFee + monthlyOtherCost;
+        
+        // Total payments and interest
+        double totalMortgagePayments = monthlyPayment * n;
+        double totalInterest = totalMortgagePayments - loanAmount;
+        
+        // Mortgage payoff date
+        int payoffDate = startDate + loanTerm;
+        
+        return new double[] {
+            Math.round(loanAmount * 100.0) / 100.0,
+            Math.round(monthlyPayment * 100.0) / 100.0,
+            Math.round(monthlyPropertyTaxes * 100.0) / 100.0,
+            Math.round(monthlyHomeInsurance * 100.0) / 100.0,
+            Math.round(monthlyHOAFee * 100.0) / 100.0,
+            Math.round(monthlyOtherCost * 100.0) / 100.0,
+            Math.round(totalMortgagePayments * 100.0) / 100.0,
+            Math.round(totalInterest * 100.0) / 100.0,
+            payoffDate,
+            Math.round(totalMonthlyOutOfPocket * 100.0) / 100.0
+                
+        };
+    }
     
-    //---------------------------------------------------------------------------------------------------------------------------------------------------Jorge
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator 
+        public static double[] mortgagePayoffCalculator(double ola, int olt, double r, int rt, int m) {
+        // Convert annual interest rate from percentage to decimal
+        r = r / 100;
+
+        // Calculate remaining months
+        int p = (olt * 12) - ((rt * 12) + m);
+
+        // Remaining balance calculation
+        double top = ola * (Math.pow(1 + (r / 12), olt * 12) - Math.pow(1 + (r / 12), p));
+        double bottom = Math.pow(1 + (r / 12), olt * 12) - 1;
+        double b = top / bottom;
+
+        // Monthly payment calculation
+        double pat = b * ((r / 12) * Math.pow(1 + (r / 12), (rt * 12) + m)) / (Math.pow(1 + (r / 12), (rt * 12) + m) - 1);
+
+        // Savings calculation
+        double savings = (pat * ((12 * rt) + m)) - b;
+
+        // Original payoff schedule
+        double rpmt = pat * ((12 * rt) + m); // Remaining balance
+        double tp = (ola * ((r / 12) * Math.pow(1 + (r / 12), olt * 12)) / (Math.pow(1 + (r / 12), olt * 12) - 1)) * 12 * olt; // Total payment
+        double totalInterest = tp - ola;
+
+        // If payoff altogether
+        double totalPayment = tp - savings;
+        double payoffTotalInterest = totalInterest - savings;
+
+        // Return values in an array, rounded to two decimal places
+        return new double[] {
+            Math.round(totalPayment * 100.0) / 100.0,          // Total Payment if Payoff Together
+            Math.round(payoffTotalInterest * 100.0) / 100.0,   // Total Interest if Payoff Together
+            Math.round(pat * 100.0) / 100.0,                   // Monthly Payment
+            Math.round(tp * 100.0) / 100.0,                    // Total Payment on Original Schedule
+            Math.round(totalInterest * 100.0) / 100.0,         // Total Interest on Original Schedule
+            Math.round(rpmt * 100.0) / 100.0,                  // Remaining Balance
+            Math.round(savings * 100.0) / 100.0,               // Remaining Interest Savings
+            Math.round(b * 100.0) / 100.0                      // Remaining Balance to Pay Off Loan
+        };
+    }
+    
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
         try{
             double val = Double.parseDouble(num); // Convert string to a double.
