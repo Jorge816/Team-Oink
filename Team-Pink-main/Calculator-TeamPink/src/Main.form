@@ -2160,7 +2160,7 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jLabel113" pref="197" max="32767" attributes="0"/>
+                                                              <Component id="jLabel113" max="32767" attributes="0"/>
                                                               <Component id="jLabel114" max="32767" attributes="0"/>
                                                               <Component id="jLabel115" alignment="0" pref="0" max="32767" attributes="0"/>
                                                               <Group type="102" attributes="0">
