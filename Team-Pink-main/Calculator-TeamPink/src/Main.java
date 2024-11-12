@@ -345,29 +345,29 @@ String aboutMessage = "<html>"
         jPanel43 = new javax.swing.JPanel();
         jPanel45 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField69 = new javax.swing.JTextField();
+        RetirementCalculatorCurrentAge = new javax.swing.JTextField();
+        RetirementCalculatorPreTaxIncome = new javax.swing.JTextField();
         jLabel93 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
         jTextField73 = new javax.swing.JTextField();
         jLabel68 = new javax.swing.JLabel();
-        jTextField74 = new javax.swing.JTextField();
-        jButton12 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        RetirementCalculatorLifeExpectancy = new javax.swing.JTextField();
+        RetirementCalculatorCalculateBTN = new javax.swing.JButton();
+        RetirementCalculatorClearBTN = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
+        RetirementCalculatorRetirementAge = new javax.swing.JTextField();
         jLabel94 = new javax.swing.JLabel();
         jLabel99 = new javax.swing.JLabel();
-        jTextField75 = new javax.swing.JTextField();
-        jTextField79 = new javax.swing.JTextField();
+        RetirementCalculatorAverageInvestmentReturn = new javax.swing.JTextField();
+        RetirementCalculatorIncomeNeededAfterRetirement = new javax.swing.JTextField();
         jLabel103 = new javax.swing.JLabel();
         jTextField81 = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
-        jTextField82 = new javax.swing.JTextField();
+        RetirementCalculatorOtherIncomeAfterRetirement = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
-        jTextField83 = new javax.swing.JTextField();
+        RetirementCalculatorYourCurrentRetirementSavings = new javax.swing.JTextField();
         jLabel107 = new javax.swing.JLabel();
         jTextField84 = new javax.swing.JTextField();
         jComboBox6 = new javax.swing.JComboBox<>();
@@ -1539,9 +1539,19 @@ String aboutMessage = "<html>"
 
         jLabel68.setText("Your Current Age");
 
-        jButton12.setText("Calculate");
+        RetirementCalculatorCalculateBTN.setText("Calculate");
+        RetirementCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetirementCalculatorCalculateBTNActionPerformed(evt);
+            }
+        });
 
-        jButton14.setText("Clear");
+        RetirementCalculatorClearBTN.setText("Clear");
+        RetirementCalculatorClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetirementCalculatorClearBTNActionPerformed(evt);
+            }
+        });
 
         jLabel69.setText("Your plan retirement age");
 
@@ -1576,17 +1586,17 @@ String aboutMessage = "<html>"
                             .addGroup(jPanel45Layout.createSequentialGroup()
                                 .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(RetirementCalculatorYourCurrentRetirementSavings, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel45Layout.createSequentialGroup()
                                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGap(36, 36, 36)
-                                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGap(5, 5, 5)
-                                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jTextField84)))))
@@ -1605,7 +1615,7 @@ String aboutMessage = "<html>"
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField82, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(RetirementCalculatorOtherIncomeAfterRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1614,10 +1624,10 @@ String aboutMessage = "<html>"
                                             .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorLifeExpectancy, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(jLabel103, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1625,8 +1635,8 @@ String aboutMessage = "<html>"
                                             .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
                                         .addGap(1, 1, 1)
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField79, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                            .addComponent(jTextField75)
+                                            .addComponent(RetirementCalculatorIncomeNeededAfterRetirement, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                                            .addComponent(RetirementCalculatorAverageInvestmentReturn)
                                             .addComponent(jTextField81)
                                             .addComponent(jTextField73))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1644,16 +1654,16 @@ String aboutMessage = "<html>"
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addComponent(jTextField30, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                        .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                         .addGap(3, 3, 3)
-                        .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
+                        .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
-                    .addComponent(jTextField74))
+                    .addComponent(RetirementCalculatorLifeExpectancy))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField69, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                    .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                     .addComponent(jLabel93))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel97)
@@ -1664,12 +1674,12 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel94)
-                    .addComponent(jTextField79)
+                    .addComponent(RetirementCalculatorIncomeNeededAfterRetirement)
                     .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
-                    .addComponent(jTextField75))
+                    .addComponent(RetirementCalculatorAverageInvestmentReturn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel103)
@@ -1679,11 +1689,11 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel105)
-                    .addComponent(jTextField82))
+                    .addComponent(RetirementCalculatorOtherIncomeAfterRetirement))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel106)
-                    .addComponent(jTextField83))
+                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel107)
@@ -1692,8 +1702,8 @@ String aboutMessage = "<html>"
                         .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -5446,45 +5456,104 @@ String aboutMessage = "<html>"
         
     }//GEN-LAST:event_MortgagePayoffCalculateBTNActionPerformed
 
+        
+   private void hideComponents() {
+        MorgagePayoffRePayementExtraMonth.setText("0");
+        MorgagePayoffRePayementExtraYear.setText("0");
+        MorgagePayoffRePayementExtraOneTime.setText("0");
+        MortGagePayoffRemainingTermMonths.setText("0");
+        // Text boxes
+        MorgagePayoffRePayementExtraMonth.setVisible(false);
+        MorgagePayoffRePayementExtraYear.setVisible(false);
+        MorgagePayoffRePayementExtraOneTime.setVisible(false);
+
+        // Labels
+        MorgagePayoffRePayementExtraMonthLabel.setVisible(false);
+        MorgagePayoffRePayementExtraYearlabel.setVisible(false);
+        MorgagePayoffRePayementExtraOneTimeLabel.setVisible(false);
+        MorgagePayoffRePayementExtraMonthLabel12.setVisible(false);
+        MorgagePayoffRePayementExtraYearlabel2.setVisible(false);
+        MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(false);
+    } 
+   
+   public void setVisibilityTrue() {
+        // Text boxes
+        MorgagePayoffRePayementExtraMonth.setVisible(true);
+        MorgagePayoffRePayementExtraYear.setVisible(true);
+        MorgagePayoffRePayementExtraOneTime.setVisible(true);
+
+        // Labels
+        MorgagePayoffRePayementExtraMonthLabel.setVisible(true);
+        MorgagePayoffRePayementExtraYearlabel.setVisible(true);
+        MorgagePayoffRePayementExtraOneTimeLabel.setVisible(true);
+        MorgagePayoffRePayementExtraMonthLabel12.setVisible(true);
+        MorgagePayoffRePayementExtraYearlabel2.setVisible(true);
+        MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(true);
+    }
+   
+   //-------------------------------------------------------------------------------------------------------------------------------Retirement Calculator Pedro
+    
+    
+    
     private void MortGagePayoffRemainingTermMonthsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermMonthsKeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+
+    private void RetirementCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorClearBTNActionPerformed
+        RetirementCalculatorCurrentAge.setText("");
+        RetirementCalculatorRetirementAge.setText("");
+        RetirementCalculatorLifeExpectancy.setText("");
+        RetirementCalculatorPreTaxIncome.setText("");
+        RetirementCalculatorIncomeNeededAfterRetirement.setText("");
+        RetirementCalculatorAverageInvestmentReturn.setText("0");
+        RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
+        RetirementCalculatorYourCurrentRetirementSavings.setText("0");
+    }//GEN-LAST:event_RetirementCalculatorClearBTNActionPerformed
+
+    private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
+              try{
+            
+        int cAge = 35;
+        int rAge = 67;
+        int lifeExpectancy = 85;
+        double preTaxIncome = 70000;
+
+        double incomeNeededAfterRetirement = 2800;
+        double returnInvestmentRate = 0;
+
+        double otherIncomeAfterRetirement = 0;
+        double currentIncomeSaving = 0;
+
+        if (otherIncomeAfterRetirement == 0) {
+            incomeNeededAfterRetirement = incomeNeededAfterRetirement;
+        } else {
+            incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
+        }
+
+        if (returnInvestmentRate > 0) {
+            Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+        } else {
+            Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+        }
     
-   private void hideComponents() {
-    MorgagePayoffRePayementExtraMonth.setText("0");
-    MorgagePayoffRePayementExtraYear.setText("0");
-    MorgagePayoffRePayementExtraOneTime.setText("0");
-    MortGagePayoffRemainingTermMonths.setText("0");
-    // Text boxes
-    MorgagePayoffRePayementExtraMonth.setVisible(false);
-    MorgagePayoffRePayementExtraYear.setVisible(false);
-    MorgagePayoffRePayementExtraOneTime.setVisible(false);
+        
+        
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
+                                                                   
 
-    // Labels
-    MorgagePayoffRePayementExtraMonthLabel.setVisible(false);
-    MorgagePayoffRePayementExtraYearlabel.setVisible(false);
-    MorgagePayoffRePayementExtraOneTimeLabel.setVisible(false);
-    MorgagePayoffRePayementExtraMonthLabel12.setVisible(false);
-    MorgagePayoffRePayementExtraYearlabel2.setVisible(false);
-    MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(false);
-} 
-   
-   public void setVisibilityTrue() {
-    // Text boxes
-    MorgagePayoffRePayementExtraMonth.setVisible(true);
-    MorgagePayoffRePayementExtraYear.setVisible(true);
-    MorgagePayoffRePayementExtraOneTime.setVisible(true);
+    }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
 
-    // Labels
-    MorgagePayoffRePayementExtraMonthLabel.setVisible(true);
-    MorgagePayoffRePayementExtraYearlabel.setVisible(true);
-    MorgagePayoffRePayementExtraOneTimeLabel.setVisible(true);
-    MorgagePayoffRePayementExtraMonthLabel12.setVisible(true);
-    MorgagePayoffRePayementExtraYearlabel2.setVisible(true);
-    MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(true);
-}
-   
-   
+    public void DefaultRetirementCalculator(){
+
+        RetirementCalculatorAverageInvestmentReturn.setText("0");
+        RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
+        RetirementCalculatorYourCurrentRetirementSavings.setText("0");
+    
+    }
+
+    
+
    
     
    
@@ -6062,7 +6131,17 @@ private void setMessage4() {
     private javax.swing.JTextField RentMonthlyDebt;
     private javax.swing.JLabel RentOutput;
     private javax.swing.JTextField RentPretaxIncome;
+    private javax.swing.JTextField RetirementCalculatorAverageInvestmentReturn;
     private javax.swing.JButton RetirementCalculatorBTN2;
+    private javax.swing.JButton RetirementCalculatorCalculateBTN;
+    private javax.swing.JButton RetirementCalculatorClearBTN;
+    private javax.swing.JTextField RetirementCalculatorCurrentAge;
+    private javax.swing.JTextField RetirementCalculatorIncomeNeededAfterRetirement;
+    private javax.swing.JTextField RetirementCalculatorLifeExpectancy;
+    private javax.swing.JTextField RetirementCalculatorOtherIncomeAfterRetirement;
+    private javax.swing.JTextField RetirementCalculatorPreTaxIncome;
+    private javax.swing.JTextField RetirementCalculatorRetirementAge;
+    private javax.swing.JTextField RetirementCalculatorYourCurrentRetirementSavings;
     private javax.swing.JTextField RothIRAAnualContribution;
     private javax.swing.JButton RothIRACalculateBTN;
     private javax.swing.JPanel RothIRACalculator;
@@ -6085,8 +6164,6 @@ private void setMessage4() {
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
@@ -6323,8 +6400,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField35;
@@ -6348,20 +6423,14 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField56;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField69;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField70;
     private javax.swing.JTextField jTextField73;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
     private javax.swing.JTextField jTextField76;
     private javax.swing.JTextField jTextField77;
     private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField81;
-    private javax.swing.JTextField jTextField82;
-    private javax.swing.JTextField jTextField83;
     private javax.swing.JTextField jTextField84;
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
