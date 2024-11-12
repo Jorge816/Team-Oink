@@ -1624,13 +1624,13 @@
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel106" min="-2" pref="181" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextField83" min="-2" pref="152" max="-2" attributes="0"/>
+                                              <Component id="RetirementCalculatorYourCurrentRetirementSavings" min="-2" pref="152" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                               <Component id="RetirementCalculatorCalculateBTN" min="-2" pref="133" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                              <Component id="jButton14" min="-2" pref="141" max="-2" attributes="0"/>
+                                              <Component id="RetirementCalculatorClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1644,7 +1644,7 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel105" min="-2" pref="181" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jTextField82" min="-2" pref="152" max="-2" attributes="0"/>
+                                                      <Component id="RetirementCalculatorOtherIncomeAfterRetirement" min="-2" pref="152" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1655,10 +1655,10 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jTextField30" min="-2" pref="167" max="-2" attributes="0"/>
-                                                          <Component id="jTextField31" min="-2" pref="167" max="-2" attributes="0"/>
-                                                          <Component id="jTextField74" min="-2" pref="167" max="-2" attributes="0"/>
-                                                          <Component id="jTextField69" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorCurrentAge" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorRetirementAge" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorLifeExpectancy" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorPreTaxIncome" min="-2" pref="167" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
@@ -1668,8 +1668,8 @@
                                                       </Group>
                                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jTextField79" pref="166" max="32767" attributes="0"/>
-                                                          <Component id="jTextField75" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="RetirementCalculatorIncomeNeededAfterRetirement" pref="166" max="32767" attributes="0"/>
+                                                          <Component id="RetirementCalculatorAverageInvestmentReturn" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jComboBox6" min="-2" pref="45" max="-2" attributes="0"/>
@@ -1695,19 +1695,19 @@
                                       <Component id="jLabel69" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="jTextField30" pref="23" max="32767" attributes="0"/>
+                                      <Component id="RetirementCalculatorCurrentAge" pref="23" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="jTextField31" pref="23" max="32767" attributes="0"/>
+                                      <Component id="RetirementCalculatorRetirementAge" pref="23" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel56" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField74" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorLifeExpectancy" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField69" pref="24" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorPreTaxIncome" pref="24" max="32767" attributes="0"/>
                                   <Component id="jLabel93" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1715,30 +1715,30 @@
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel94" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField79" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorIncomeNeededAfterRetirement" alignment="3" max="32767" attributes="0"/>
                                   <Component id="jComboBox6" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField75" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorAverageInvestmentReturn" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jLabel104" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel105" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField82" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorOtherIncomeAfterRetirement" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField83" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorYourCurrentRetirementSavings" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="RetirementCalculatorCalculateBTN" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jButton14" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorClearBTN" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -1751,9 +1751,9 @@
                         <Property name="text" type="java.lang.String" value="Your life expentency"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField30">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorCurrentAge">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField69">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorPreTaxIncome">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel93">
                       <Properties>
@@ -1773,7 +1773,7 @@
                         <Property name="text" type="java.lang.String" value="Your Current Age"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField74">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorLifeExpectancy">
                     </Component>
                     <Component class="javax.swing.JButton" name="RetirementCalculatorCalculateBTN">
                       <Properties>
@@ -1783,17 +1783,20 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RetirementCalculatorCalculateBTNActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton14">
+                    <Component class="javax.swing.JButton" name="RetirementCalculatorClearBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Clear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RetirementCalculatorClearBTNActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel69">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Your plan retirement age"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField31">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorRetirementAge">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel94">
                       <Properties>
@@ -1805,9 +1808,9 @@
                         <Property name="text" type="java.lang.String" value="Average Investment return"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField75">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorAverageInvestmentReturn">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField79">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorIncomeNeededAfterRetirement">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel104">
                       <Properties>
@@ -1822,14 +1825,14 @@
                         <Property name="text" type="java.lang.String" value="Other income after retirement"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField82">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorOtherIncomeAfterRetirement">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel106">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Your current retirement savings"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField83">
+                    <Component class="javax.swing.JTextField" name="RetirementCalculatorYourCurrentRetirementSavings">
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBox6">
                       <Properties>
