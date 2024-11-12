@@ -582,7 +582,7 @@ public static boolean validateInput(double input, double hp, String checker) {
         return top / bottom;
     }
 
-    public static void retirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double returnInvestmentRate, double currentIncomeSaving) {
+    public static  double[] retirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double returnInvestmentRate, double currentIncomeSaving) {
         int yearsAfterRetirement = lifeExpectancy - rAge;
         double m = 12;
 
@@ -604,9 +604,17 @@ public static boolean validateInput(double input, double hp, String checker) {
         } else {
             System.out.println("Based on your current retirement savings, you will have about $" + retirementSavings + " at age " + rAge + " which exceeds what you need for retirement.");
         }
+        return new double[]{
+            Math.round(result * 100.0) / 100.0,
+            Math.round(mContributions * 100.0) / 100.0,
+            Math.round(yContributions * 100.0) / 100.0,
+            Math.round(proportionContribution * 100.0) / 100.0,
+            Math.round(retirementSavings * 100.0) / 100.0, 
+        
+        };
     }
 
-    public static void fixedRetirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double currentIncomeSaving) {
+    public static  double[] fixedRetirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double currentIncomeSaving) {
         int yearsAfterRetirement = lifeExpectancy - rAge;
         double result = incomeNeededAfterRetirement * yearsAfterRetirement;
 
@@ -620,6 +628,8 @@ public static boolean validateInput(double input, double hp, String checker) {
         double ySaveToRetirement = (result / yContributions) - deduction;
         double mSaveToRetirement = (result / mContribution) - (deduction / 12);
         double proportionSaveToRetirement = Math.round((ySaveToRetirement / preTaxIncome) * 10000) / 100.0;
+        
+    
 
         System.out.println();
         System.out.println("You will need about $" + result + " at age " + rAge + " to retire");
@@ -627,6 +637,14 @@ public static boolean validateInput(double input, double hp, String checker) {
 
         System.out.println("How can you save $" + result + " at age " + rAge);
         System.out.println("To save $" + result + " at " + rAge + " you can either save $" + mSaveToRetirement + " per month or save $" + ySaveToRetirement + " per year or save " + proportionSaveToRetirement + "% of your income every year");
+        
+        return new double[]{
+            Math.round(result * 100.0) / 100.0,
+            Math.round(wMonthly * 100.0) / 100.0,
+            Math.round(mSaveToRetirement * 100.0) / 100.0,
+            Math.round(ySaveToRetirement * 100.0) / 100.0,
+            Math.round(proportionSaveToRetirement * 100.0) / 100.0,     
+            };
     }
 
         

@@ -370,10 +370,10 @@ String aboutMessage = "<html>"
         RetirementCalculatorYourCurrentRetirementSavings = new javax.swing.JTextField();
         jLabel107 = new javax.swing.JLabel();
         jTextField84 = new javax.swing.JTextField();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        RetirementCalculatorNeededAfterRetirementCbox = new javax.swing.JComboBox<>();
         jComboBox21 = new javax.swing.JComboBox<>();
         jPanel44 = new javax.swing.JPanel();
-        jLabel81 = new javax.swing.JLabel();
+        RetirementCalculatorOutput = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         InstructionsRetirementCalculator = new javax.swing.JTextPane();
         HouseAffordabilityCalculator = new javax.swing.JPanel();
@@ -1570,7 +1570,7 @@ String aboutMessage = "<html>"
 
         jLabel107.setText("Future retirement Savings");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        RetirementCalculatorNeededAfterRetirementCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
         jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
@@ -1640,7 +1640,7 @@ String aboutMessage = "<html>"
                                             .addComponent(jTextField81)
                                             .addComponent(jTextField73))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(RetirementCalculatorNeededAfterRetirementCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
@@ -1675,7 +1675,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel94)
                     .addComponent(RetirementCalculatorIncomeNeededAfterRetirement)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RetirementCalculatorNeededAfterRetirementCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
@@ -1710,7 +1710,7 @@ String aboutMessage = "<html>"
         jPanel44.setBackground(new java.awt.Color(204, 255, 204));
         jPanel44.setEnabled(false);
 
-        jLabel81.setText("Output here");
+        RetirementCalculatorOutput.setText("Output here");
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
@@ -1718,14 +1718,14 @@ String aboutMessage = "<html>"
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel81, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel81, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -5513,9 +5513,7 @@ String aboutMessage = "<html>"
     private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
         try{
 
-            
-            
-            
+        
             
             int cAge = Integer.parseInt(RetirementCalculatorCurrentAge.getText());
             int rAge = Integer.parseInt(RetirementCalculatorRetirementAge.getText());
@@ -5526,20 +5524,73 @@ String aboutMessage = "<html>"
 
             double otherIncomeAfterRetirement = Double.parseDouble(RetirementCalculatorOtherIncomeAfterRetirement.getText());
             double currentIncomeSaving = Double.parseDouble(RetirementCalculatorYourCurrentRetirementSavings.getText());
-
+          
+            
+            String selectedOptionRetirementCalculator = (String) RetirementCalculatorNeededAfterRetirementCbox.getSelectedItem();  
+            if ("%".equals(selectedOptionRetirementCalculator)) {
+                incomeNeededAfterRetirement = preTaxIncome * (returnInvestmentRate/100);         
+            } 
+            if ("$".equals(selectedOptionRetirementCalculator)){
+                incomeNeededAfterRetirement = incomeNeededAfterRetirement;    
+             }
+            
+            
             if (otherIncomeAfterRetirement == 0) {
                 incomeNeededAfterRetirement = incomeNeededAfterRetirement;
             } else {
                 incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
             }
+            
+            
+            String outputText = "";
 
             if (returnInvestmentRate > 0) {
-                Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+                double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+                String retirement_savingMsg = "";
+                if (retirementCalculator1[4] < retirementCalculator1[0]) {
+                    retirement_savingMsg += "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
+                                + " at age " + rAge + ", which is less than what you need for your retirement.<br>";
+                } else {
+                   retirement_savingMsg += "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
+                                + " at age " + rAge + ", which exceeds what you need for your retirement.<br>";
+                }
+                
+                outputText = "<html>"
+                                  + "To save $" + retirementCalculator1[0] + " at age " + rAge + ", you can either:<br>"
+                                  + "- Save $" + retirementCalculator1[1]+ " per month<br>"
+                                  + "- Save $" + retirementCalculator1[2] + " per year<br>"
+                                  + "- Save " + retirementCalculator1[3] + "% of your income every year.<br>"
+                                  + retirement_savingMsg
+                                  + "</html>";
+                  
             } else {
-                Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                outputText = "<html>"
+                    + "You will need about $" + retirementCalculator1[0]+ " at age " + rAge + " to retire.<br>"
+                    + "If you save $" + retirementCalculator1[0] + ", you can withdraw $" + retirementCalculator1[1] + " per month.<br><br>"
+                    + "How can you save $" + retirementCalculator1[0] + " at age " + rAge + "?<br>"
+                    + "To save $" + retirementCalculator1[0] + " at age " + rAge + ", you can either:<br>"
+                    + "- Save $" + retirementCalculator1[2]+ " per month<br>"
+                    + "- Save $" + retirementCalculator1[3] + " per year<br>"
+                    + "- Save " + retirementCalculator1[4] + "% of your income every year.<br>"
+                    + "</html>";
+                
             }
+            
+            RetirementCalculatorOutput.setText(outputText);
+                   
+                
+                
+                
+                
+                
+             
 
-        
+// Print the HTML output
+System.out.println(outputText);
+
+
+
         
         }
         catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
@@ -6141,7 +6192,9 @@ private void setMessage4() {
     private javax.swing.JTextField RetirementCalculatorCurrentAge;
     private javax.swing.JTextField RetirementCalculatorIncomeNeededAfterRetirement;
     private javax.swing.JTextField RetirementCalculatorLifeExpectancy;
+    private javax.swing.JComboBox<String> RetirementCalculatorNeededAfterRetirementCbox;
     private javax.swing.JTextField RetirementCalculatorOtherIncomeAfterRetirement;
+    private javax.swing.JLabel RetirementCalculatorOutput;
     private javax.swing.JTextField RetirementCalculatorPreTaxIncome;
     private javax.swing.JTextField RetirementCalculatorRetirementAge;
     private javax.swing.JTextField RetirementCalculatorYourCurrentRetirementSavings;
@@ -6187,7 +6240,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -6311,7 +6363,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
