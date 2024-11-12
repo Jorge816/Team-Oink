@@ -560,6 +560,9 @@ public static boolean validateInput(double input, double hp, String checker) {
             Math.round(b * 100.0) / 100.0                      // Remaining Balance to Pay Off Loan
         };
     }
+   
+        //-----------------------------------------------------------------------------------------------------------------------------------------Retirement Calculator 
+        
     
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
