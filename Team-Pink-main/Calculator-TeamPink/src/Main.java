@@ -5511,31 +5511,34 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_RetirementCalculatorClearBTNActionPerformed
 
     private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
-              try{
+        try{
+
             
-        int cAge = 35;
-        int rAge = 67;
-        int lifeExpectancy = 85;
-        double preTaxIncome = 70000;
+            
+            
+            
+            int cAge = Integer.parseInt(RetirementCalculatorCurrentAge.getText());
+            int rAge = Integer.parseInt(RetirementCalculatorRetirementAge.getText());
+            int lifeExpectancy = Integer.parseInt(RetirementCalculatorLifeExpectancy.getText());
+            double preTaxIncome =Double.parseDouble(RetirementCalculatorPreTaxIncome.getText());
+            double incomeNeededAfterRetirement =Double.parseDouble(RetirementCalculatorIncomeNeededAfterRetirement.getText());
+            double returnInvestmentRate = Double.parseDouble(RetirementCalculatorAverageInvestmentReturn.getText());
 
-        double incomeNeededAfterRetirement = 2800;
-        double returnInvestmentRate = 0;
+            double otherIncomeAfterRetirement = Double.parseDouble(RetirementCalculatorOtherIncomeAfterRetirement.getText());
+            double currentIncomeSaving = Double.parseDouble(RetirementCalculatorYourCurrentRetirementSavings.getText());
 
-        double otherIncomeAfterRetirement = 0;
-        double currentIncomeSaving = 0;
+            if (otherIncomeAfterRetirement == 0) {
+                incomeNeededAfterRetirement = incomeNeededAfterRetirement;
+            } else {
+                incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
+            }
 
-        if (otherIncomeAfterRetirement == 0) {
-            incomeNeededAfterRetirement = incomeNeededAfterRetirement;
-        } else {
-            incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
-        }
+            if (returnInvestmentRate > 0) {
+                Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+            } else {
+                Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+            }
 
-        if (returnInvestmentRate > 0) {
-            Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
-        } else {
-            Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
-        }
-    
         
         
         }
