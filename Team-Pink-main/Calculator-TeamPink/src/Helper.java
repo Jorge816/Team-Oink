@@ -562,6 +562,73 @@ public static boolean validateInput(double input, double hp, String checker) {
     }
    
         //-----------------------------------------------------------------------------------------------------------------------------------------Retirement Calculator 
+        public static double effectiveInterestRateRetirement(double m, double r) {
+        r = r / 100;
+        return m * (Math.pow((1 + r), (1 / m)) - 1);
+    }
+
+    public static double averageReturnInvestment(double incomeNeededAfterRetirement, double m, double returnInvestmentRate, double n) {
+        double er = effectiveInterestRateRetirement(m, returnInvestmentRate);
+        double incomeAfterRetirementMonthly = incomeNeededAfterRetirement / m;
+        double top = (1 - Math.pow(1 + (er / m), -(n * m))) * incomeAfterRetirementMonthly;
+        double bottom = er / m;
+        return top / bottom;
+    }
+
+    public static double yearlyContribution(double result, double n, double r) {
+        r = r / 100;
+        double top = result * r;
+        double bottom = Math.pow(1 + r, n) - 1;
+        return top / bottom;
+    }
+
+    public static void retirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double returnInvestmentRate, double currentIncomeSaving) {
+        int yearsAfterRetirement = lifeExpectancy - rAge;
+        double m = 12;
+
+        double result = averageReturnInvestment(incomeNeededAfterRetirement, m, returnInvestmentRate, yearsAfterRetirement);
+        System.out.println("You will need about $" + result + " after " + rAge);
+
+        int yearsOfContribution = rAge - cAge;
+
+        double retirementSavings = currentIncomeSaving * Math.pow(1 + (returnInvestmentRate / 100), yearsOfContribution);
+
+        double yContributions = yearlyContribution(result - retirementSavings, yearsOfContribution, returnInvestmentRate);
+        double mContributions = yContributions / 12;
+        double proportionContribution = Math.round((yContributions / preTaxIncome) * 10000) / 100.0;
+
+        System.out.println("To save $" + result + " at " + rAge + " you can either save $" + mContributions + " per month or save $" + yContributions + " per year or save " + proportionContribution + "% of your income every year");
+
+        if (retirementSavings < result) {
+            System.out.println("Based on your current retirement savings, you will have about $" + retirementSavings + " at age " + rAge + " which is less than what you need for your retirement.");
+        } else {
+            System.out.println("Based on your current retirement savings, you will have about $" + retirementSavings + " at age " + rAge + " which exceeds what you need for retirement.");
+        }
+    }
+
+    public static void fixedRetirementCalculator(int cAge, int rAge, int lifeExpectancy, double preTaxIncome, double incomeNeededAfterRetirement, double currentIncomeSaving) {
+        int yearsAfterRetirement = lifeExpectancy - rAge;
+        double result = incomeNeededAfterRetirement * yearsAfterRetirement;
+
+        double wYearly = result / yearsAfterRetirement;
+        double wMonthly = wYearly / 12;
+
+        double deduction = currentIncomeSaving / (rAge - cAge);
+
+        int yContributions = rAge - cAge;
+        double mContribution = yContributions * 12;
+        double ySaveToRetirement = (result / yContributions) - deduction;
+        double mSaveToRetirement = (result / mContribution) - (deduction / 12);
+        double proportionSaveToRetirement = Math.round((ySaveToRetirement / preTaxIncome) * 10000) / 100.0;
+
+        System.out.println();
+        System.out.println("You will need about $" + result + " at age " + rAge + " to retire");
+        System.out.println("If you save $" + result + " you can withdraw $" + wMonthly + " per month");
+
+        System.out.println("How can you save $" + result + " at age " + rAge);
+        System.out.println("To save $" + result + " at " + rAge + " you can either save $" + mSaveToRetirement + " per month or save $" + ySaveToRetirement + " per year or save " + proportionSaveToRetirement + "% of your income every year");
+    }
+
         
     
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
