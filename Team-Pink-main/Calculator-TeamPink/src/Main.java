@@ -349,11 +349,9 @@ String aboutMessage = "<html>"
         jTextField69 = new javax.swing.JTextField();
         jLabel93 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jTextField73 = new javax.swing.JTextField();
         jLabel68 = new javax.swing.JLabel();
         jTextField74 = new javax.swing.JTextField();
-        jButton12 = new javax.swing.JButton();
+        RetirementCalculatorCalculateBTN = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         jTextField31 = new javax.swing.JTextField();
@@ -361,17 +359,12 @@ String aboutMessage = "<html>"
         jLabel99 = new javax.swing.JLabel();
         jTextField75 = new javax.swing.JTextField();
         jTextField79 = new javax.swing.JTextField();
-        jLabel103 = new javax.swing.JLabel();
-        jTextField81 = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
         jTextField82 = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
         jTextField83 = new javax.swing.JTextField();
-        jLabel107 = new javax.swing.JLabel();
-        jTextField84 = new javax.swing.JTextField();
         jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox21 = new javax.swing.JComboBox<>();
         jPanel44 = new javax.swing.JPanel();
         jLabel81 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -1535,11 +1528,14 @@ String aboutMessage = "<html>"
         jLabel97.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel97.setText("Assumptions");
 
-        jLabel98.setText("Your current income increase");
-
         jLabel68.setText("Your Current Age");
 
-        jButton12.setText("Calculate");
+        RetirementCalculatorCalculateBTN.setText("Calculate");
+        RetirementCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetirementCalculatorCalculateBTNActionPerformed(evt);
+            }
+        });
 
         jButton14.setText("Clear");
 
@@ -1549,8 +1545,6 @@ String aboutMessage = "<html>"
 
         jLabel99.setText("Average Investment return");
 
-        jLabel103.setText("Inflation rate");
-
         jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel104.setText("Optional");
 
@@ -1558,11 +1552,7 @@ String aboutMessage = "<html>"
 
         jLabel106.setText("Your current retirement savings");
 
-        jLabel107.setText("Future retirement Savings");
-
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
-
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -1572,33 +1562,20 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel45Layout.createSequentialGroup()
                                 .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(36, 36, 36)
-                                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField84)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 17, Short.MAX_VALUE))
+                                .addGap(36, 36, 36)
+                                .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)
+                                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel45Layout.createSequentialGroup()
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(173, 173, 173))
                             .addGroup(jPanel45Layout.createSequentialGroup()
                                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1620,18 +1597,15 @@ String aboutMessage = "<html>"
                                             .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel45Layout.createSequentialGroup()
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jLabel103, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
                                         .addGap(1, 1, 1)
                                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jTextField79, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                            .addComponent(jTextField75)
-                                            .addComponent(jTextField81)
-                                            .addComponent(jTextField73))
+                                            .addComponent(jTextField75))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 6, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel45Layout.setVerticalGroup(
@@ -1657,11 +1631,7 @@ String aboutMessage = "<html>"
                     .addComponent(jLabel93))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel97)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel98)
-                    .addComponent(jTextField73))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel94)
                     .addComponent(jTextField79)
@@ -1670,11 +1640,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
                     .addComponent(jTextField75))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel103)
-                    .addComponent(jTextField81))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel104)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1684,15 +1650,9 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel106)
                     .addComponent(jTextField83))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel107)
-                    .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(46, 46, 46)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -5446,11 +5406,7 @@ String aboutMessage = "<html>"
         
     }//GEN-LAST:event_MortgagePayoffCalculateBTNActionPerformed
 
-    private void MortGagePayoffRemainingTermMonthsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermMonthsKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
-    
-   private void hideComponents() {
+    private void hideComponents() {
     MorgagePayoffRePayementExtraMonth.setText("0");
     MorgagePayoffRePayementExtraYear.setText("0");
     MorgagePayoffRePayementExtraOneTime.setText("0");
@@ -5483,6 +5439,44 @@ String aboutMessage = "<html>"
     MorgagePayoffRePayementExtraYearlabel2.setVisible(true);
     MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(true);
 }
+   
+    private void MortGagePayoffRemainingTermMonthsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+
+    private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
+        try{
+            
+        int cAge = 35;
+        int rAge = 67;
+        int lifeExpectancy = 85;
+        double preTaxIncome = 70000;
+
+        double incomeNeededAfterRetirement = 2800;
+        double returnInvestmentRate = 0;
+
+        double otherIncomeAfterRetirement = 0;
+        double currentIncomeSaving = 0;
+
+        if (otherIncomeAfterRetirement == 0) {
+            incomeNeededAfterRetirement = incomeNeededAfterRetirement;
+        } else {
+            incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
+        }
+
+        if (returnInvestmentRate > 0) {
+            Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+        } else {
+            Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+        }
+    
+        
+        
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
+    }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
+    
+
    
    
    
@@ -6063,6 +6057,7 @@ private void setMessage4() {
     private javax.swing.JLabel RentOutput;
     private javax.swing.JTextField RentPretaxIncome;
     private javax.swing.JButton RetirementCalculatorBTN2;
+    private javax.swing.JButton RetirementCalculatorCalculateBTN;
     private javax.swing.JTextField RothIRAAnualContribution;
     private javax.swing.JButton RothIRACalculateBTN;
     private javax.swing.JPanel RothIRACalculator;
@@ -6085,7 +6080,6 @@ private void setMessage4() {
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -6102,7 +6096,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox21;
     private javax.swing.JComboBox<String> jComboBox29;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -6113,11 +6106,9 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
@@ -6244,7 +6235,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -6351,7 +6341,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField69;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField73;
     private javax.swing.JTextField jTextField74;
     private javax.swing.JTextField jTextField75;
     private javax.swing.JTextField jTextField76;
@@ -6359,10 +6348,8 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField81;
     private javax.swing.JTextField jTextField82;
     private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
     private javax.swing.JTextField jTextField9;
