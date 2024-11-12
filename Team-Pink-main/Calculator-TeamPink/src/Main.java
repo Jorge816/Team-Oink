@@ -3285,6 +3285,11 @@ String aboutMessage = "<html>"
         jButton1.setText("Calculate");
 
         jButton2.setText("Clear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -5597,6 +5602,11 @@ System.out.println(outputText);
                                                                    
 
     }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jTextField2.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void DefaultRetirementCalculator(){
 
