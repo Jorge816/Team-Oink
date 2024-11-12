@@ -749,8 +749,6 @@ public static double parseWithValidation(String value, String fieldName, StringB
         return -1;
     }
 }
-
-        
         // Helper method for loan term as a positive integer
         private static double parseWithValidationDouble(String value, String fieldName, StringBuilder msg){
             try {
