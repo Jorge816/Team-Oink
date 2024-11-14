@@ -129,8 +129,11 @@ String aboutMessage = "<html>"
         + "<h2><b>This Application</b></h2>"
         + "<p>This application is a suite of calculators designed to help users make informed decisions about <b>mortgages, rent, and more.</b></p>"
         + "<p>Developed by a dedicated team of students from the Software Development class,<b>Team Pink</b>, under the guidance of <b>Dr. Johnson</b>.</p>"
+        + "<p>Moreover, we thank <b>Dr. Delozier</b> for her invaluable assistance during the development of the <b>Roth IRA Calculator</b> and <b>Interest Rate Calculator</b>.</p>"
+        + ""
         + "<p>We hope you find this tool helpful in your <b>financial planning</b>!</p>"
         + "</html>";
+
 
         
         // Display the message in a dialog box
@@ -203,6 +206,8 @@ String aboutMessage = "<html>"
                 // Remove the tab
                 panelCalculator.removeTabAt(i);
             }
+            
+            jTabbedPane1.remove(jPanel68);
         }
         
                     // Restores a specific tab based on the tab title.
@@ -233,6 +238,7 @@ String aboutMessage = "<html>"
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         pinkIcon = new javax.swing.JLabel();
+        CalculatorNameLBL = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         btnmathCalculator = new javax.swing.JButton();
         btnfitnessCalculator = new javax.swing.JButton();
@@ -306,9 +312,11 @@ String aboutMessage = "<html>"
         jScrollPane13 = new javax.swing.JScrollPane();
         InstructionsRentAndBuyCalculator = new javax.swing.JTextPane();
         MortgageCalculator2 = new javax.swing.JPanel();
+        jScrollPane17 = new javax.swing.JScrollPane();
         jPanel39 = new javax.swing.JPanel();
         jPanel40 = new javax.swing.JPanel();
         MortgageCalculatorOUtput = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jPanel42 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
@@ -342,6 +350,7 @@ String aboutMessage = "<html>"
         jScrollPane8 = new javax.swing.JScrollPane();
         InstructionsMortgageCalculator = new javax.swing.JTextPane();
         retirementCalculator3 = new javax.swing.JPanel();
+        jScrollPane16 = new javax.swing.JScrollPane();
         jPanel43 = new javax.swing.JPanel();
         jPanel45 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
@@ -349,8 +358,6 @@ String aboutMessage = "<html>"
         RetirementCalculatorPreTaxIncome = new javax.swing.JTextField();
         jLabel93 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jTextField73 = new javax.swing.JTextField();
         jLabel68 = new javax.swing.JLabel();
         RetirementCalculatorLifeExpectancy = new javax.swing.JTextField();
         RetirementCalculatorCalculateBTN = new javax.swing.JButton();
@@ -361,25 +368,24 @@ String aboutMessage = "<html>"
         jLabel99 = new javax.swing.JLabel();
         RetirementCalculatorAverageInvestmentReturn = new javax.swing.JTextField();
         RetirementCalculatorIncomeNeededAfterRetirement = new javax.swing.JTextField();
-        jLabel103 = new javax.swing.JLabel();
-        jTextField81 = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
         RetirementCalculatorOtherIncomeAfterRetirement = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
         RetirementCalculatorYourCurrentRetirementSavings = new javax.swing.JTextField();
-        jLabel107 = new javax.swing.JLabel();
-        jTextField84 = new javax.swing.JTextField();
         RetirementCalculatorNeededAfterRetirementCbox = new javax.swing.JComboBox<>();
         jComboBox21 = new javax.swing.JComboBox<>();
         jPanel44 = new javax.swing.JPanel();
         RetirementCalculatorOutput = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         InstructionsRetirementCalculator = new javax.swing.JTextPane();
         HouseAffordabilityCalculator = new javax.swing.JPanel();
+        jScrollPane18 = new javax.swing.JScrollPane();
         jPanel49 = new javax.swing.JPanel();
         jPanel50 = new javax.swing.JPanel();
         jLabel85 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
         jPanel51 = new javax.swing.JPanel();
         jLabel86 = new javax.swing.JLabel();
         jTextField32 = new javax.swing.JTextField();
@@ -411,6 +417,7 @@ String aboutMessage = "<html>"
         jScrollPane9 = new javax.swing.JScrollPane();
         InstructionsHouseAffordabilityCalculator = new javax.swing.JTextPane();
         RentCalculator = new javax.swing.JPanel();
+        jScrollPane19 = new javax.swing.JScrollPane();
         jPanel26 = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
         RentComboboxYearandMonth = new javax.swing.JComboBox<>();
@@ -424,6 +431,7 @@ String aboutMessage = "<html>"
         jLabel34 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         RentOutput = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         InstructionsRentCalculator = new javax.swing.JTextPane();
         RefinanceCalculator = new javax.swing.JPanel();
@@ -455,35 +463,15 @@ String aboutMessage = "<html>"
         jButton4 = new javax.swing.JButton();
         jPanel38 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
         InstructionsRefinanceCalculator = new javax.swing.JTextPane();
-        RothIRACalculator = new javax.swing.JPanel();
-        jPanel46 = new javax.swing.JPanel();
-        jPanel47 = new javax.swing.JPanel();
-        jLabel48 = new javax.swing.JLabel();
-        RothIRACalculatorCurrentBalance = new javax.swing.JTextField();
-        RothIRACalculateBTN = new javax.swing.JButton();
-        RothIRAclearBTN = new javax.swing.JButton();
-        LabelAnnualContribution = new javax.swing.JLabel();
-        RothIRAAnualContribution = new javax.swing.JTextField();
-        jLabel70 = new javax.swing.JLabel();
-        RothIRAMaximizeYes = new javax.swing.JRadioButton();
-        RothIRAMaximizeNO = new javax.swing.JRadioButton();
-        jLabel71 = new javax.swing.JLabel();
-        RothIRACalculatorExpectedReturnRate = new javax.swing.JTextField();
-        jLabel82 = new javax.swing.JLabel();
-        RothIRACurrentAge = new javax.swing.JTextField();
-        jLabel83 = new javax.swing.JLabel();
-        RothIRaRetirementAge = new javax.swing.JTextField();
-        jLabel84 = new javax.swing.JLabel();
-        jPanel48 = new javax.swing.JPanel();
-        RothIRAoutput = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        InstructionsRothIRACalculator = new javax.swing.JTextPane();
         downpaymentCalculator = new javax.swing.JPanel();
+        jScrollPane20 = new javax.swing.JScrollPane();
         jPanel59 = new javax.swing.JPanel();
         jPanel60 = new javax.swing.JPanel();
         DownPaymentOuput = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
         DownPaymentUpfrontCash = new javax.swing.JTextField();
         DownPaymentClosingCOst = new javax.swing.JTextField();
@@ -537,6 +525,7 @@ String aboutMessage = "<html>"
         MorgagePayoffRePayementExtraMonthLabel18 = new javax.swing.JLabel();
         jPanel58 = new javax.swing.JPanel();
         MortgagePayoffOutput = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         InstructionsMortgagePayoffCalculator = new javax.swing.JTextPane();
         MathCalculator = new javax.swing.JPanel();
@@ -549,6 +538,7 @@ String aboutMessage = "<html>"
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         Currency = new javax.swing.JPanel();
+        jScrollPane21 = new javax.swing.JScrollPane();
         jPanel29 = new javax.swing.JPanel();
         jPanel30 = new javax.swing.JPanel();
         jComboBox3 = new javax.swing.JComboBox<>();
@@ -561,9 +551,11 @@ String aboutMessage = "<html>"
         jButton2 = new javax.swing.JButton();
         jPanel31 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         instructionCurrencyCalculator = new javax.swing.JTextPane();
         InterestRate = new javax.swing.JPanel();
+        jScrollPane22 = new javax.swing.JScrollPane();
         jPanel32 = new javax.swing.JPanel();
         jPanel33 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -586,6 +578,7 @@ String aboutMessage = "<html>"
         jLabel51 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         InterestRateOutput = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         InstructionsRateCalculator = new javax.swing.JTextPane();
         jPanel19 = new javax.swing.JPanel();
@@ -658,6 +651,32 @@ String aboutMessage = "<html>"
         InstructionsAutoLoan2Calculator = new javax.swing.JTextPane();
         jPanel63 = new javax.swing.JPanel();
         ALResultOutput = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        RothIRACalculator = new javax.swing.JPanel();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        jPanel46 = new javax.swing.JPanel();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        RothIRACalculatorCurrentBalance = new javax.swing.JTextField();
+        RothIRACalculateBTN = new javax.swing.JButton();
+        RothIRAclearBTN = new javax.swing.JButton();
+        LabelAnnualContribution = new javax.swing.JLabel();
+        RothIRAAnualContribution = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        RothIRAMaximizeYes = new javax.swing.JRadioButton();
+        RothIRAMaximizeNO = new javax.swing.JRadioButton();
+        jLabel71 = new javax.swing.JLabel();
+        RothIRACalculatorExpectedReturnRate = new javax.swing.JTextField();
+        jLabel82 = new javax.swing.JLabel();
+        RothIRACurrentAge = new javax.swing.JTextField();
+        jLabel83 = new javax.swing.JLabel();
+        RothIRaRetirementAge = new javax.swing.JTextField();
+        jLabel84 = new javax.swing.JLabel();
+        jPanel48 = new javax.swing.JPanel();
+        RothIRAoutput = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        InstructionsRothIRACalculator = new javax.swing.JTextPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         quitBnt = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -669,7 +688,10 @@ String aboutMessage = "<html>"
         jPanel1.setBackground(new java.awt.Color(255, 215, 255));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Team Pink ,  Software Development");
+
+        CalculatorNameLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -679,15 +701,20 @@ String aboutMessage = "<html>"
                 .addGap(31, 31, 31)
                 .addComponent(pinkIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1161, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 435, Short.MAX_VALUE)
+                .addComponent(CalculatorNameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(339, 339, 339))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(CalculatorNameLBL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel3)
                     .addComponent(pinkIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -849,7 +876,7 @@ String aboutMessage = "<html>"
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -895,11 +922,20 @@ String aboutMessage = "<html>"
         rentandbuy.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
         rentandbuy.setAutoscrolls(true);
         rentandbuy.setFocusCycleRoot(true);
+        rentandbuy.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                rentandbuyAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         rentandbuy.setLayout(new javax.swing.OverlayLayout(rentandbuy));
 
-        jPanel35.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel35.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel36.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel36.setBackground(new java.awt.Color(255, 224, 255));
         jPanel36.setEnabled(false);
 
         jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -926,8 +962,10 @@ String aboutMessage = "<html>"
 
         jLabel64.setText("Tax Filing Status");
 
+        jButton9.setBackground(new java.awt.Color(179, 246, 179));
         jButton9.setText("Calculate");
 
+        jButton10.setBackground(new java.awt.Color(179, 246, 179));
         jButton10.setText("Clear");
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married filing jointly", "Married filing separately", "Head of household", "qualified widow" }));
@@ -1036,11 +1074,12 @@ String aboutMessage = "<html>"
                 .addGap(11, 11, 11))
         );
 
-        jPanel37.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel37.setBackground(new java.awt.Color(255, 224, 255));
 
-        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel41.setText("Home Purchace");
 
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel44.setText("Down Payment");
 
         jLabel65.setText("Interest Rate");
@@ -1049,6 +1088,7 @@ String aboutMessage = "<html>"
 
         jLabel67.setText("Buying Closing Cost");
 
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel45.setText("Home Price");
 
         jLabel73.setText("Property Taxes");
@@ -1171,7 +1211,7 @@ String aboutMessage = "<html>"
 
         jLabel5.setText("Output here");
 
-        InstructionsRentAndBuyCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRentAndBuyCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane13.setViewportView(InstructionsRentAndBuyCalculator);
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
@@ -1180,17 +1220,15 @@ String aboutMessage = "<html>"
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel35Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)))
+                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
@@ -1201,22 +1239,35 @@ String aboutMessage = "<html>"
                     .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
                     .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
 
         rentandbuy.add(jPanel35);
 
         panelCalculator.addTab("Rent vs Buy Calculator", rentandbuy);
 
-        MortgageCalculator2.setBackground(new java.awt.Color(255, 237, 255));
+        MortgageCalculator2.setBackground(new java.awt.Color(255, 143, 255));
         MortgageCalculator2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
+        MortgageCalculator2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                MortgageCalculator2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel39.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel39.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel40.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel40.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel40.setEnabled(false);
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel30.setText("Results");
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -1226,64 +1277,82 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
+            .addGroup(jPanel40Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel42.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel42.setBackground(new java.awt.Color(255, 224, 255));
 
-        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel52.setText("Home Purchace");
 
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel53.setText("Down Payment");
 
+        MorgageCalculatorHomePrice.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MorgageCalculatorHomePrice.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MorgageCalculatorHomePriceKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorLoanTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorLoanTermKeyReleased(evt);
             }
         });
 
+        jLabel87.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel87.setText("Loan Term");
 
+        jLabel95.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel95.setText("Interest Rate");
 
+        jLabel96.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel96.setText("Start Date");
 
+        MortgateCalculatorYear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgateCalculatorYear.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgateCalculatorYearKeyReleased(evt);
             }
         });
 
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel54.setText("Home Price");
 
+        MortgateCalculatorDownPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgateCalculatorDownPayment.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgateCalculatorDownPaymentKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorDownPaymentCBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorDownPaymentCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        MortgageCalculatorMonthCbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorMonthCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }));
 
+        MortgageCalculatorInterestRate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorInterestRateKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorIncudeTaxesandMOre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         MortgageCalculatorIncudeTaxesandMOre.setText("Include Taxes & Cost Below");
         MortgageCalculatorIncudeTaxesandMOre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1291,46 +1360,59 @@ String aboutMessage = "<html>"
             }
         });
 
-        jPanel41.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel41.setBackground(new java.awt.Color(255, 224, 255));
 
+        MortgageCalculatorPropertyTaxesLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorPropertyTaxesLabel.setText("Property Taxes Increase");
 
+        MortgageCalculatorPropertyTaxes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorPropertyTaxes.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorPropertyTaxesKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorHomeInsuranceLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHomeInsuranceLabel.setText("Home Insurance");
 
+        MortgageCalculatorHomeInsurance.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHomeInsurance.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorHomeInsuranceKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorHOAFee.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHOAFee.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorHOAFeeKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorHoaFeeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHoaFeeLabel.setText("HOA Fee");
 
+        MortgageCalculatorOtherCostLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorOtherCostLabel.setText("Other Costs");
 
+        MortgageCalculatorOtherCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorOtherCost.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgageCalculatorOtherCostKeyReleased(evt);
             }
         });
 
+        MortgageCalculatorPropertyTaxesCbox.setEditable(true);
+        MortgageCalculatorPropertyTaxesCbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorPropertyTaxesCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        MortgageCalculatorHomeInsuranceCBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHomeInsuranceCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        MortgageCalculatorHoaFeeCBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorHoaFeeCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        MortgageCalculatorOtherCostCBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgageCalculatorOtherCostCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
@@ -1340,7 +1422,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MortgageCalculatorPropertyTaxesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                    .addComponent(MortgageCalculatorPropertyTaxesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorHomeInsuranceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorHoaFeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorOtherCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1349,20 +1431,19 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel41Layout.createSequentialGroup()
                         .addComponent(MortgageCalculatorOtherCost, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MortgageCalculatorOtherCostCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(MortgageCalculatorHOAFee)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MortgageCalculatorHoaFeeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(MortgageCalculatorHomeInsurance)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MortgageCalculatorHomeInsuranceCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MortgageCalculatorOtherCostCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel41Layout.createSequentialGroup()
                         .addComponent(MortgageCalculatorPropertyTaxes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MortgageCalculatorPropertyTaxesCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(MortgageCalculatorPropertyTaxesCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel41Layout.createSequentialGroup()
+                        .addComponent(MortgageCalculatorHomeInsurance)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MortgageCalculatorHomeInsuranceCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel41Layout.createSequentialGroup()
+                        .addComponent(MortgageCalculatorHOAFee)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MortgageCalculatorHoaFeeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1390,6 +1471,8 @@ String aboutMessage = "<html>"
                 .addGap(21, 21, 21))
         );
 
+        MortgateCalculatorCaculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        MortgateCalculatorCaculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgateCalculatorCaculateBTN.setText("Calculate");
         MortgateCalculatorCaculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1397,6 +1480,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        MortgateCalculatorClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        MortgateCalculatorClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgateCalculatorClearBTN.setText("Clear");
         MortgateCalculatorClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1486,7 +1571,7 @@ String aboutMessage = "<html>"
                 .addGap(74, 74, 74))
         );
 
-        InstructionsMortgageCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsMortgageCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane8.setViewportView(InstructionsMortgageCalculator);
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
@@ -1505,51 +1590,66 @@ String aboutMessage = "<html>"
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(77, Short.MAX_VALUE)
                 .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(75, 75, 75))
+                .addGap(153, 153, 153))
         );
+
+        jScrollPane17.setViewportView(jPanel39);
 
         javax.swing.GroupLayout MortgageCalculator2Layout = new javax.swing.GroupLayout(MortgageCalculator2);
         MortgageCalculator2.setLayout(MortgageCalculator2Layout);
         MortgageCalculator2Layout.setHorizontalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MortgageCalculator2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         MortgageCalculator2Layout.setVerticalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MortgageCalculator2Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+            .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Mortgage Calculator", MortgageCalculator2);
 
-        retirementCalculator3.setBackground(new java.awt.Color(255, 237, 255));
+        retirementCalculator3.setBackground(new java.awt.Color(255, 143, 255));
         retirementCalculator3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
+        retirementCalculator3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                retirementCalculator3AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel43.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel43.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel45.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel45.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel56.setText("Your life expentency");
 
+        RetirementCalculatorCurrentAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        RetirementCalculatorPreTaxIncome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel93.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel93.setText("Your current pre-tax income");
 
-        jLabel97.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel97.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel97.setText("Assumptions");
 
-        jLabel98.setText("Your current income increase");
-
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel68.setText("Your Current Age");
 
+        RetirementCalculatorLifeExpectancy.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        RetirementCalculatorCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RetirementCalculatorCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RetirementCalculatorCalculateBTN.setText("Calculate");
         RetirementCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1557,6 +1657,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        RetirementCalculatorClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RetirementCalculatorClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RetirementCalculatorClearBTN.setText("Clear");
         RetirementCalculatorClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1564,23 +1666,32 @@ String aboutMessage = "<html>"
             }
         });
 
+        jLabel69.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel69.setText("Your plan retirement age");
 
-        jLabel94.setText("Income Needed after retirement");
+        RetirementCalculatorRetirementAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jLabel94.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel94.setText("Income Needed after retirement");
+        jLabel94.setToolTipText("");
+
+        jLabel99.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel99.setText("Average Investment return");
 
-        jLabel103.setText("Inflation rate");
+        RetirementCalculatorAverageInvestmentReturn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RetirementCalculatorIncomeNeededAfterRetirement.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel104.setText("Optional");
 
+        jLabel105.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel105.setText("Other income after retirement");
 
+        jLabel106.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel106.setText("Your current retirement savings");
 
-        jLabel107.setText("Future retirement Savings");
-
+        RetirementCalculatorNeededAfterRetirementCbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RetirementCalculatorNeededAfterRetirementCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
         jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
@@ -1593,66 +1704,46 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel45Layout.createSequentialGroup()
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(1, 1, 1)
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RetirementCalculatorYourCurrentRetirementSavings, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(36, 36, 36)
-                                        .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField84)))))
+                            .addComponent(RetirementCalculatorIncomeNeededAfterRetirement, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(RetirementCalculatorAverageInvestmentReturn))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 17, Short.MAX_VALUE))
+                        .addComponent(RetirementCalculatorNeededAfterRetirementCbox, 0, 1, Short.MAX_VALUE))
                     .addGroup(jPanel45Layout.createSequentialGroup()
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(173, 173, 173))
+                                .addGap(36, 36, 36)
+                                .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)
+                                .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel45Layout.createSequentialGroup()
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RetirementCalculatorOtherIncomeAfterRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(RetirementCalculatorLifeExpectancy, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel45Layout.createSequentialGroup()
-                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jLabel103, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
-                                        .addGap(1, 1, 1)
-                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(RetirementCalculatorIncomeNeededAfterRetirement, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                            .addComponent(RetirementCalculatorAverageInvestmentReturn)
-                                            .addComponent(jTextField81)
-                                            .addComponent(jTextField73))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RetirementCalculatorNeededAfterRetirementCbox, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RetirementCalculatorLifeExpectancy, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel45Layout.createSequentialGroup()
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel105, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                                    .addComponent(RetirementCalculatorOtherIncomeAfterRetirement))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
         );
         jPanel45Layout.setVerticalGroup(
@@ -1665,24 +1756,20 @@ String aboutMessage = "<html>"
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                        .addComponent(RetirementCalculatorCurrentAge)
                         .addGap(3, 3, 3)
-                        .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)))
+                        .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
                     .addComponent(RetirementCalculatorLifeExpectancy))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                    .addComponent(RetirementCalculatorPreTaxIncome)
                     .addComponent(jLabel93))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel97)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel98)
-                    .addComponent(jTextField73))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel94)
                     .addComponent(RetirementCalculatorIncomeNeededAfterRetirement)
@@ -1691,11 +1778,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
                     .addComponent(RetirementCalculatorAverageInvestmentReturn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel103)
-                    .addComponent(jTextField81))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel104)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1704,24 +1787,23 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel106)
-                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel107)
-                    .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings)
+                    .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel44.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel44.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel44.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 3, true));
         jPanel44.setEnabled(false);
 
-        RetirementCalculatorOutput.setText("Output here");
+        RetirementCalculatorOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel55.setText("Results");
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
@@ -1729,18 +1811,24 @@ String aboutMessage = "<html>"
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel55)
+                .addGap(185, 185, 185))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel44Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        InstructionsRetirementCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRetirementCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane5.setViewportView(InstructionsRetirementCalculator);
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
@@ -1750,8 +1838,8 @@ String aboutMessage = "<html>"
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
@@ -1769,91 +1857,144 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jScrollPane16.setViewportView(jPanel43);
+
         javax.swing.GroupLayout retirementCalculator3Layout = new javax.swing.GroupLayout(retirementCalculator3);
         retirementCalculator3.setLayout(retirementCalculator3Layout);
         retirementCalculator3Layout.setHorizontalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(retirementCalculator3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         retirementCalculator3Layout.setVerticalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(retirementCalculator3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Retirement Calculator", retirementCalculator3);
 
-        HouseAffordabilityCalculator.setBackground(new java.awt.Color(255, 237, 255));
+        HouseAffordabilityCalculator.setBackground(new java.awt.Color(255, 143, 255));
         HouseAffordabilityCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
         HouseAffordabilityCalculator.setAutoscrolls(true);
+        HouseAffordabilityCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                HouseAffordabilityCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel49.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel49.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel50.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel50.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel50.setEnabled(false);
 
-        jLabel85.setText("Output here");
+        jLabel85.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel72.setText("Results");
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
         jPanel50Layout.setHorizontalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addGroup(jPanel50Layout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addComponent(jLabel72)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel50Layout.createSequentialGroup()
+                .addComponent(jLabel85, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel50Layout.setVerticalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel50Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel72)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel85, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jPanel51.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel51.setBackground(new java.awt.Color(255, 224, 255));
 
+        jLabel86.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel86.setText("Interest rate");
 
+        jTextField32.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jTextField70.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel100.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel100.setText("Monthly debt payback");
 
+        jLabel102.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel102.setText("Property Tax ");
 
+        jTextField76.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel108.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel108.setText("Annual Household Income");
 
+        jTextField77.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jButton17.setBackground(new java.awt.Color(179, 246, 179));
+        jButton17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton17.setText("Calculate");
 
+        jButton18.setBackground(new java.awt.Color(179, 246, 179));
+        jButton18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton18.setText("Clear");
 
+        jLabel109.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel109.setText("Mortgage loan term");
 
+        jTextField33.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel110.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel110.setText("HOA or co-op fee");
 
+        jLabel111.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel111.setText("Insurance ");
 
+        jTextField78.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jTextField85.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel112.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel112.setText("Debt-to-income (DTI) ratio");
 
+        jLabel101.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel101.setText("Down Payment ");
 
+        jTextField90.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel113.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel113.setText("salary + other income (before tax)");
 
+        jLabel114.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel114.setText("years");
 
+        jLabel115.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel115.setText("long-term debs, car, student loan, etc");
 
+        jComboBox15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        jComboBox16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
+        jComboBox17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
+        jComboBox18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
+        jComboBox19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conventional loan (28/36 rule)", "FHA loan (31% front-end", "43% back-end)", "VA loan (41%)", "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%" }));
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
@@ -1876,13 +2017,13 @@ String aboutMessage = "<html>"
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabel109, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel86, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel100, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel102, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel101, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel111, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
+                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1911,7 +2052,6 @@ String aboutMessage = "<html>"
                                             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                                                 .addGroup(jPanel51Layout.createSequentialGroup()
                                                     .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1920,7 +2060,8 @@ String aboutMessage = "<html>"
                                             .addGap(18, 18, 18))
                                         .addGroup(jPanel51Layout.createSequentialGroup()
                                             .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))))
+                                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1975,7 +2116,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        InstructionsHouseAffordabilityCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsHouseAffordabilityCalculator.setBackground(new java.awt.Color(255, 224, 255));
         InstructionsHouseAffordabilityCalculator.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         InstructionsHouseAffordabilityCalculator.setDoubleBuffered(true);
         InstructionsHouseAffordabilityCalculator.setDragEnabled(true);
@@ -2007,33 +2148,39 @@ String aboutMessage = "<html>"
                 .addGap(85, 85, 85))
         );
 
+        jScrollPane18.setViewportView(jPanel49);
+
         javax.swing.GroupLayout HouseAffordabilityCalculatorLayout = new javax.swing.GroupLayout(HouseAffordabilityCalculator);
         HouseAffordabilityCalculator.setLayout(HouseAffordabilityCalculatorLayout);
         HouseAffordabilityCalculatorLayout.setHorizontalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HouseAffordabilityCalculatorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         HouseAffordabilityCalculatorLayout.setVerticalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HouseAffordabilityCalculatorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
 
-        RentCalculator.setBackground(new java.awt.Color(255, 237, 255));
+        RentCalculator.setBackground(new java.awt.Color(255, 143, 255));
         RentCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
-        RentCalculator.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        RentCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                RentCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel26.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel26.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel27.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel27.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        RentComboboxYearandMonth.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RentComboboxYearandMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "per year", "per month" }));
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -2057,9 +2204,11 @@ String aboutMessage = "<html>"
             }
         });
 
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel29.setText("car/student loan, credit cards, etc");
 
+        RentCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RentCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RentCalculateBTN.setText("Calculate ");
         RentCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2067,6 +2216,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        RentClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RentClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RentClearBTN.setText("Clear");
         RentClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2086,7 +2237,6 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RentMonthlyDebt)
                     .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel27Layout.createSequentialGroup()
                         .addComponent(RentCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2097,35 +2247,40 @@ String aboutMessage = "<html>"
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(RentPretaxIncome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RentComboboxYearandMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(RentComboboxYearandMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RentMonthlyDebt))
                 .addContainerGap())
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RentComboboxYearandMonth, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(RentComboboxYearandMonth)
                     .addComponent(RentPretaxIncome, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
-                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RentMonthlyDebt, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .addComponent(RentMonthlyDebt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                .addGap(50, 50, 50)
+                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RentCalculateBTN)
                     .addComponent(RentClearBTN))
-                .addGap(28, 28, 28))
+                .addGap(14, 14, 14))
         );
 
-        jPanel28.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel28.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
 
-        RentOutput.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RentOutput.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        jLabel81.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel81.setText("Results");
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -2135,16 +2290,26 @@ String aboutMessage = "<html>"
                 .addGap(15, 15, 15)
                 .addComponent(RentOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
+            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel28Layout.createSequentialGroup()
+                    .addGap(166, 166, 166)
+                    .addComponent(jLabel81)
+                    .addContainerGap(167, Short.MAX_VALUE)))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(RentOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(RentOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel28Layout.createSequentialGroup()
+                    .addGap(18, 18, 18)
+                    .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(189, Short.MAX_VALUE)))
         );
 
-        InstructionsRentCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRentCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane10.setViewportView(InstructionsRentCalculator);
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
@@ -2157,8 +2322,8 @@ String aboutMessage = "<html>"
                     .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2167,40 +2332,71 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane10)
                     .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 88, Short.MAX_VALUE)
+                        .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)))
                 .addGap(19, 19, 19))
         );
 
-        RentCalculator.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 105, -1, -1));
+        jScrollPane19.setViewportView(jPanel26);
+
+        javax.swing.GroupLayout RentCalculatorLayout = new javax.swing.GroupLayout(RentCalculator);
+        RentCalculator.setLayout(RentCalculatorLayout);
+        RentCalculatorLayout.setHorizontalGroup(
+            RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+        );
+        RentCalculatorLayout.setVerticalGroup(
+            RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+        );
 
         panelCalculator.addTab("Rent Calculator", RentCalculator);
 
-        RefinanceCalculator.setBackground(new java.awt.Color(255, 237, 255));
+        RefinanceCalculator.setBackground(new java.awt.Color(255, 143, 255));
         RefinanceCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
+        RefinanceCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                RefinanceCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel25.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel25.setBackground(new java.awt.Color(255, 143, 255));
         jPanel25.setAutoscrolls(true);
 
-        jPanel18.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel18.setBackground(new java.awt.Color(255, 224, 255));
 
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "I know my remaining balance", "I know the orginal loan amount" }));
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Current Loan");
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setText("Remaining Balance");
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setText("Monthly Payment");
 
+        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel15.setText("Interest Rate");
 
+        jTextField10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField10ActionPerformed(evt);
@@ -2215,14 +2411,14 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField3)
                     .addComponent(jTextField4)
                     .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jComboBox1, 0, 0, Short.MAX_VALUE))
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
@@ -2249,25 +2445,40 @@ String aboutMessage = "<html>"
                 .addGap(34, 34, 34))
         );
 
-        jPanel24.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel24.setBackground(new java.awt.Color(255, 224, 255));
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel17.setText("New Loan");
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel18.setText("New Loan Term");
 
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel22.setText("Interest Rate");
 
+        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel24.setText("Points");
 
+        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel25.setText("Costs and Fees");
 
+        jTextField8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel26.setText("Cashout");
+
+        jTextField9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -2296,62 +2507,76 @@ String aboutMessage = "<html>"
                         .addGap(10, 10, 10))
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(91, Short.MAX_VALUE))))
+                        .addContainerGap(115, Short.MAX_VALUE))))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jTextField5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(3, 3, 3)
-                .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                .addGap(18, 24, Short.MAX_VALUE)
-                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jTextField6)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jTextField7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jTextField8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jTextField9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButton3.setBackground(new java.awt.Color(179, 246, 179));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton3.setText("Calculate");
 
+        jButton4.setBackground(new java.awt.Color(179, 246, 179));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton4.setText("Clear");
 
-        jPanel38.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel38.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
 
-        jLabel36.setText("Display Output here");
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel88.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel88.setText("Results");
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
         jPanel38Layout.setHorizontalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel88)
+                .addGap(206, 206, 206))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel38Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        InstructionsRefinanceCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRefinanceCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane11.setViewportView(InstructionsRefinanceCalculator);
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
@@ -2361,6 +2586,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel25Layout.createSequentialGroup()
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2368,9 +2594,8 @@ String aboutMessage = "<html>"
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
         );
@@ -2400,273 +2625,41 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLayout.setHorizontalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RefinanceCalculatorLayout.createSequentialGroup()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
                 .addContainerGap())
         );
         RefinanceCalculatorLayout.setVerticalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         panelCalculator.addTab("Refinance Calculator", RefinanceCalculator);
 
-        RothIRACalculator.setBackground(new java.awt.Color(255, 237, 158));
-        RothIRACalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
-
-        jPanel46.setBackground(new java.awt.Color(255, 237, 158));
-
-        jPanel47.setBackground(new java.awt.Color(204, 255, 204));
-
-        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel48.setText("Currenct Balance               $");
-
-        RothIRACalculatorCurrentBalance.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                RothIRACalculatorCurrentBalanceKeyReleased(evt);
-            }
-        });
-
-        RothIRACalculateBTN.setText("Calculate");
-        RothIRACalculateBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RothIRACalculateBTNActionPerformed(evt);
-            }
-        });
-
-        RothIRAclearBTN.setText("Clear");
-        RothIRAclearBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RothIRAclearBTNActionPerformed(evt);
-            }
-        });
-
-        LabelAnnualContribution.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LabelAnnualContribution.setText("Anual Contribution           $");
-
-        RothIRAAnualContribution.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                RothIRAAnualContributionKeyReleased(evt);
-            }
-        });
-
-        jLabel70.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel70.setText("Maximize Contribution?");
-
-        RothIRAMaximizeYes.setText("Yes");
-        RothIRAMaximizeYes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RothIRAMaximizeYesActionPerformed(evt);
-            }
-        });
-
-        RothIRAMaximizeNO.setText("No");
-        RothIRAMaximizeNO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RothIRAMaximizeNOActionPerformed(evt);
-            }
-        });
-
-        jLabel71.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel71.setText("Expected rate of return        ");
-
-        RothIRACalculatorExpectedReturnRate.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                RothIRACalculatorExpectedReturnRateKeyReleased(evt);
-            }
-        });
-
-        jLabel82.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel82.setText("Current age");
-
-        RothIRACurrentAge.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                RothIRACurrentAgeKeyReleased(evt);
-            }
-        });
-
-        jLabel83.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel83.setText("Retirement Age ");
-
-        RothIRaRetirementAge.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                RothIRaRetirementAgeKeyReleased(evt);
-            }
-        });
-
-        jLabel84.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel84.setText("%");
-
-        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
-        jPanel47.setLayout(jPanel47Layout);
-        jPanel47Layout.setHorizontalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel47Layout.createSequentialGroup()
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(RothIRAMaximizeYes, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RothIRAMaximizeNO, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel82)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel47Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(RothIRACalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RothIRAclearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(25, 25, 25))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel47Layout.createSequentialGroup()
-                                        .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel47Layout.createSequentialGroup()
-                                        .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
-                                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
-                                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(14, 14, 14)))))
-                .addContainerGap())
-        );
-        jPanel47Layout.setVerticalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel47Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel48)
-                    .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelAnnualContribution)
-                    .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel70)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RothIRAMaximizeYes)
-                    .addComponent(RothIRAMaximizeNO))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel71)
-                    .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel84))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel82)
-                    .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel83)
-                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RothIRACalculateBTN)
-                    .addComponent(RothIRAclearBTN))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-
-        jPanel48.setBackground(new java.awt.Color(204, 255, 204));
-
-        javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
-        jPanel48.setLayout(jPanel48Layout);
-        jPanel48Layout.setHorizontalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel48Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(RothIRAoutput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel48Layout.setVerticalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel48Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(RothIRAoutput, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        InstructionsRothIRACalculator.setBackground(new java.awt.Color(255, 139, 145));
-        jScrollPane6.setViewportView(InstructionsRothIRACalculator);
-
-        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
-        jPanel46.setLayout(jPanel46Layout);
-        jPanel46Layout.setHorizontalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(54, 54, 54)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        jPanel46Layout.setVerticalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6)
-                    .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39))
-        );
-
-        javax.swing.GroupLayout RothIRACalculatorLayout = new javax.swing.GroupLayout(RothIRACalculator);
-        RothIRACalculator.setLayout(RothIRACalculatorLayout);
-        RothIRACalculatorLayout.setHorizontalGroup(
-            RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RothIRACalculatorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        RothIRACalculatorLayout.setVerticalGroup(
-            RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RothIRACalculatorLayout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
-                .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
-
-        panelCalculator.addTab("Roth IRA Calculator", RothIRACalculator);
-
-        downpaymentCalculator.setBackground(new java.awt.Color(255, 237, 255));
+        downpaymentCalculator.setBackground(new java.awt.Color(255, 143, 255));
         downpaymentCalculator.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255)));
+        downpaymentCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                downpaymentCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel59.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel59.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel60.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel60.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel60.setEnabled(false);
 
         DownPaymentOuput.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        jLabel89.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel89.setText("Results");
 
         javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
         jPanel60.setLayout(jPanel60Layout);
@@ -2674,41 +2667,58 @@ String aboutMessage = "<html>"
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel60Layout.createSequentialGroup()
+                    .addGap(158, 158, 158)
+                    .addComponent(jLabel89)
+                    .addContainerGap(159, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel60Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel60Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel60Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(131, Short.MAX_VALUE)))
         );
 
-        jPanel61.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel61.setBackground(new java.awt.Color(255, 224, 255));
 
+        DownPaymentUpfrontCash.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentUpfrontCash.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 DownPaymentUpfrontCashKeyReleased(evt);
             }
         });
 
+        DownPaymentClosingCOst.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentClosingCOst.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 DownPaymentClosingCOstKeyReleased(evt);
             }
         });
 
+        jLabel132.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel132.setText("Loan Term");
 
+        DownPaymentLoanTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 DownPaymentLoanTermKeyReleased(evt);
             }
         });
 
+        jLabel133.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel133.setText("Upfront Cahs Available ");
 
+        DownPaymentCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        DownPaymentCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentCalculateBTN.setText("Calculate");
         DownPaymentCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2716,6 +2726,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        DownPaymentClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        DownPaymentClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentClearBTN.setText("Clear");
         DownPaymentClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2723,26 +2735,33 @@ String aboutMessage = "<html>"
             }
         });
 
+        jLabel134.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel134.setText("Down Payment");
 
+        DownPaymentDownPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentDownPayment.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 DownPaymentDownPaymentKeyReleased(evt);
             }
         });
 
+        jLabel138.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel138.setText("Interest Rate");
 
+        DownPaymentInterestRate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 DownPaymentInterestRateKeyReleased(evt);
             }
         });
 
+        DownPaymnentCheckboxClosingCost.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DownPaymnentCheckboxClosingCost.setText("Include Closing Cost");
 
+        DownPaymentComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         DownPaymentComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
+        jLabel135.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel135.setText("%");
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
@@ -2753,31 +2772,33 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel61Layout.createSequentialGroup()
-                        .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel132, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel138, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel134, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel133, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(DownPaymentLoanTerm)
-                            .addComponent(DownPaymentInterestRate, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DownPaymentUpfrontCash, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                            .addComponent(DownPaymentDownPayment, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel61Layout.createSequentialGroup()
+                                .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel132, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel138, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel134, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel133, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(DownPaymentLoanTerm)
+                                    .addComponent(DownPaymentInterestRate, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(DownPaymentUpfrontCash, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                                    .addComponent(DownPaymentDownPayment, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel61Layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)
+                                .addComponent(DownPaymentClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(25, Short.MAX_VALUE))
                     .addGroup(jPanel61Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(DownPaymentClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel61Layout.createSequentialGroup()
-                        .addComponent(DownPaymnentCheckboxClosingCost, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(DownPaymentClosingCOst, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DownPaymnentCheckboxClosingCost, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DownPaymentClosingCOst, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DownPaymentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(DownPaymentComboBox, 0, 1, Short.MAX_VALUE))))
         );
         jPanel61Layout.setVerticalGroup(
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2811,7 +2832,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        InstructionsDownPaymentCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsDownPaymentCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane12.setViewportView(InstructionsDownPaymentCalculator);
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
@@ -2837,34 +2858,39 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
+
+        jScrollPane20.setViewportView(jPanel59);
 
         javax.swing.GroupLayout downpaymentCalculatorLayout = new javax.swing.GroupLayout(downpaymentCalculator);
         downpaymentCalculator.setLayout(downpaymentCalculatorLayout);
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(104, Short.MAX_VALUE)
-                .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
 
         MortgagePayoffCalculator.setBackground(new java.awt.Color(255, 237, 255));
         MortgagePayoffCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
+        MortgagePayoffCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                MortgagePayoffCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jPanel56.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel56.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel57.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel57.setBackground(new java.awt.Color(255, 224, 255));
 
         jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel49.setText("Original Loan Amount ");
@@ -2875,6 +2901,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        MortgagePayoffCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        MortgagePayoffCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffCalculateBTN.setText("Calculate");
         MortgagePayoffCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2882,6 +2910,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        MortgagePayOffClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        MortgagePayOffClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayOffClearBTN.setText("Clear");
         MortgagePayOffClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2892,12 +2922,14 @@ String aboutMessage = "<html>"
         jLabel118.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel118.setText("Original Loan Term");
 
+        MortgagePayoffOriginalLoanTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffOriginalLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortgagePayoffOriginalLoanTermKeyReleased(evt);
             }
         });
 
+        MortgagePayoffPayAlltogether.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffPayAlltogether.setText("Payback Altogether");
         MortgagePayoffPayAlltogether.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2905,6 +2937,7 @@ String aboutMessage = "<html>"
             }
         });
 
+        MortgagePayoffRepaymentWithExtraPayments.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffRepaymentWithExtraPayments.setText("Repayment With Extra Payments");
         MortgagePayoffRepaymentWithExtraPayments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2915,6 +2948,7 @@ String aboutMessage = "<html>"
         MorgagePayoffRePayementExtraMonthLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MorgagePayoffRePayementExtraMonthLabel.setText("per month");
 
+        MortGagePayoffRemainingTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortGagePayoffRemainingTerm.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MortGagePayoffRemainingTermKeyReleased(evt);
@@ -2924,9 +2958,16 @@ String aboutMessage = "<html>"
         jLabel121.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel121.setText("Repayment Options ");
 
+        MorgagePayoffRePayementExtraMonth.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        MorgagePayoffRePayementExtraYear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        MorgagePayoffRePayementExtraOneTime.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel125.setText("Interest Rate");
 
+        MorgagePayoffCalculatorInterestRate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MorgagePayoffCalculatorInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MorgagePayoffCalculatorInterestRateKeyReleased(evt);
@@ -2942,6 +2983,7 @@ String aboutMessage = "<html>"
         MorgagePayoffRePayementExtraOneTimeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MorgagePayoffRePayementExtraOneTimeLabel.setText("one time");
 
+        MortgagePayoffBiweeklyRepayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffBiweeklyRepayment.setText("Biweekly repayment");
         MortgagePayoffBiweeklyRepayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2949,6 +2991,7 @@ String aboutMessage = "<html>"
             }
         });
 
+        MortgagePayoffCalculatorNormalPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgagePayoffCalculatorNormalPayment.setText("Normal Payment");
         MortgagePayoffCalculatorNormalPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3026,17 +3069,13 @@ String aboutMessage = "<html>"
                         .addContainerGap())
                     .addGroup(jPanel57Layout.createSequentialGroup()
                         .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel121)
                             .addGroup(jPanel57Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
                                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel121)
-                                    .addGroup(jPanel57Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(MortgagePayoffPayAlltogether, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(MortgagePayoffRepaymentWithExtraPayments, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(MortgagePayoffCalculatorNormalPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(MortgagePayoffBiweeklyRepayment, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 8, Short.MAX_VALUE))
+                                    .addComponent(MortgagePayoffPayAlltogether, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(MortgagePayoffCalculatorNormalPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(MortgagePayoffRepaymentWithExtraPayments, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3054,7 +3093,9 @@ String aboutMessage = "<html>"
                             .addComponent(MorgagePayoffRePayementExtraOneTimeLabel))
                         .addGap(113, 113, 113))
                     .addGroup(jPanel57Layout.createSequentialGroup()
-                        .addComponent(MortgagePayoffCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(MortgagePayoffBiweeklyRepayment, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MortgagePayoffCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(33, 33, 33)
                         .addComponent(MortgagePayOffClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -3120,24 +3161,40 @@ String aboutMessage = "<html>"
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel58.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel58.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+
+        jLabel90.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel90.setText("Results");
 
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
         jPanel58.setLayout(jPanel58Layout);
         jPanel58Layout.setHorizontalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
-                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel58Layout.createSequentialGroup()
+                    .addGap(191, 191, 191)
+                    .addComponent(jLabel90)
+                    .addContainerGap(191, Short.MAX_VALUE)))
         );
         jPanel58Layout.setVerticalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel58Layout.createSequentialGroup()
-                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 21, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel58Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel58Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(160, Short.MAX_VALUE)))
         );
 
-        InstructionsMortgagePayoffCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsMortgagePayoffCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane7.setViewportView(InstructionsMortgagePayoffCalculator);
 
         javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
@@ -3163,7 +3220,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 70, Short.MAX_VALUE))
+                .addGap(0, 111, Short.MAX_VALUE))
         );
 
         jScrollPane14.setViewportView(jPanel56);
@@ -3172,11 +3229,11 @@ String aboutMessage = "<html>"
         MortgagePayoffCalculator.setLayout(MortgagePayoffCalculatorLayout);
         MortgagePayoffCalculatorLayout.setHorizontalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
@@ -3194,20 +3251,20 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(301, Short.MAX_VALUE)
+                .addContainerGap(296, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(197, Short.MAX_VALUE)
+                .addContainerGap(227, Short.MAX_VALUE)
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(207, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Math Calculator", MathCalculator);
@@ -3225,20 +3282,20 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(292, Short.MAX_VALUE)
+                .addContainerGap(287, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(224, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(187, Short.MAX_VALUE)
+                .addContainerGap(217, Short.MAX_VALUE)
                 .addGroup(FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
@@ -3256,46 +3313,60 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+                .addContainerGap(263, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(260, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(187, Short.MAX_VALUE)
+                .addContainerGap(217, Short.MAX_VALUE)
                 .addGroup(OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Other Calculators", OtherCalculator);
 
-        Currency.setBackground(new java.awt.Color(255, 237, 255));
+        Currency.setBackground(new java.awt.Color(255, 143, 255));
         Currency.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
 
-        jPanel29.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel29.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel30.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel30.setBackground(new java.awt.Color(255, 224, 255));
 
+        jComboBox3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
 
+        jComboBox4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("Amount");
 
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("From");
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setText("To");
 
+        jButton1.setBackground(new java.awt.Color(179, 246, 179));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Calculate");
 
+        jButton2.setBackground(new java.awt.Color(179, 246, 179));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Clear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -3338,9 +3409,14 @@ String aboutMessage = "<html>"
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        jPanel31.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel31.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel31.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 3, true));
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel11.setText("Display Output");
+
+        jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel91.setText("Results");
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -3348,18 +3424,24 @@ String aboutMessage = "<html>"
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
+                .addContainerGap(169, Short.MAX_VALUE)
+                .addComponent(jLabel91)
+                .addGap(167, 167, 167))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel31Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        instructionCurrencyCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        instructionCurrencyCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane2.setViewportView(instructionCurrencyCalculator);
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
@@ -3368,51 +3450,47 @@ String aboutMessage = "<html>"
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanel29Layout.createSequentialGroup()
                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 70, Short.MAX_VALUE))
+                .addGap(0, 193, Short.MAX_VALUE))
         );
+
+        jScrollPane21.setViewportView(jPanel29);
 
         javax.swing.GroupLayout CurrencyLayout = new javax.swing.GroupLayout(Currency);
         Currency.setLayout(CurrencyLayout);
         CurrencyLayout.setHorizontalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CurrencyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CurrencyLayout.createSequentialGroup()
-                .addContainerGap(82, Short.MAX_VALUE)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Currency Calculator", Currency);
 
-        InterestRate.setBackground(new java.awt.Color(255, 237, 255));
+        InterestRate.setBackground(new java.awt.Color(255, 143, 255));
         InterestRate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
 
-        jPanel32.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel32.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel33.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel33.setBackground(new java.awt.Color(255, 224, 255));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel31.setText("Initial Investment         $");
@@ -3428,6 +3506,8 @@ String aboutMessage = "<html>"
         jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel32.setText("Annual Contribution    $");
 
+        InterestRateCalculatorCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        InterestRateCalculatorCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         InterestRateCalculatorCalculateBTN.setText("Calculate ");
         InterestRateCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3435,6 +3515,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        InterestRateCalculatorClearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        InterestRateCalculatorClearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         InterestRateCalculatorClearBTN.setText("Clear");
         InterestRateCalculatorClearBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3461,6 +3543,7 @@ String aboutMessage = "<html>"
             }
         });
 
+        InterestRateBeggnning.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         InterestRateBeggnning.setText("Contribute at the beggining of each compound period");
         InterestRateBeggnning.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3468,6 +3551,7 @@ String aboutMessage = "<html>"
             }
         });
 
+        InterestRateEnd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         InterestRateEnd.setText("Contribute at the end of each compound period");
         InterestRateEnd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3481,6 +3565,7 @@ String aboutMessage = "<html>"
         jLabel50.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel50.setText("Compound");
 
+        InterestRateCompoundPeriods.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         InterestRateCompoundPeriods.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Annually", "Semiannually", "Quarterly", "Monthly", "Semimonthly", "Biweekly", "Weekly", "Daily", "Continuously" }));
 
         jLabel117.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -3532,7 +3617,7 @@ String aboutMessage = "<html>"
                                     .addComponent(InterestRateAnnualContribution)
                                     .addComponent(InterestRateInitialInvestment)
                                     .addComponent(InterestRateMonthlyContribution, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
-                            .addComponent(InterestRateBeggnning, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(InterestRateBeggnning, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -3595,26 +3680,41 @@ String aboutMessage = "<html>"
                 .addContainerGap())
         );
 
-        jPanel34.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel34.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+
+        InterestRateOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel92.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel92.setText("Results");
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
+            .addGroup(jPanel34Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel34Layout.createSequentialGroup()
+                    .addGap(200, 200, 200)
+                    .addComponent(jLabel92)
+                    .addContainerGap(201, Short.MAX_VALUE)))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 39, Short.MAX_VALUE)
+                .addComponent(InterestRateOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel34Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(198, Short.MAX_VALUE)))
         );
 
-        InstructionsRateCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRateCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane4.setViewportView(InstructionsRateCalculator);
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
@@ -3633,31 +3733,27 @@ String aboutMessage = "<html>"
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
-                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel32Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane4))
-                .addContainerGap())
+                        .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 118, Short.MAX_VALUE))
         );
+
+        jScrollPane22.setViewportView(jPanel32);
 
         javax.swing.GroupLayout InterestRateLayout = new javax.swing.GroupLayout(InterestRate);
         InterestRate.setLayout(InterestRateLayout);
         InterestRateLayout.setHorizontalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InterestRateLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(72, 72, 72))
+            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
         );
         InterestRateLayout.setVerticalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InterestRateLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         panelCalculator.addTab("Interest Rate Calculator", InterestRate);
@@ -3739,7 +3835,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3780,7 +3876,7 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(164, 164, 164))
         );
@@ -3801,6 +3897,7 @@ String aboutMessage = "<html>"
 
         jLabel144.setText("Auto Price ");
 
+        ALCalcButton.setBackground(new java.awt.Color(179, 246, 179));
         ALCalcButton.setText("Calculate");
         ALCalcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3808,6 +3905,7 @@ String aboutMessage = "<html>"
             }
         });
 
+        ALClearButton.setBackground(new java.awt.Color(179, 246, 179));
         ALClearButton.setText("Clear");
         ALClearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3920,8 +4018,8 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(137, Short.MAX_VALUE))
         );
         jPanel62Layout.setVerticalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4090,24 +4188,39 @@ String aboutMessage = "<html>"
         jTabbedPane1.addTab("Monthly Payment", jPanel68);
 
         jPanel63.setBackground(new java.awt.Color(255, 224, 255));
-        jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 2));
+        jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel63.setEnabled(false);
+
+        ALResultOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel98.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel98.setText("Results");
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
         jPanel63Layout.setHorizontalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel63Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(ALResultOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ALResultOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel63Layout.createSequentialGroup()
+                    .addGap(228, 228, 228)
+                    .addComponent(jLabel98)
+                    .addContainerGap(229, Short.MAX_VALUE)))
         );
         jPanel63Layout.setVerticalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(ALResultOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(ALResultOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel63Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(113, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout AutoLoanLayout = new javax.swing.GroupLayout(AutoLoan);
@@ -4126,16 +4239,288 @@ String aboutMessage = "<html>"
         AutoLoanLayout.setVerticalGroup(
             AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AutoLoanLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Auto Loan Calculator", AutoLoan);
 
+        RothIRACalculator.setBackground(new java.awt.Color(255, 143, 255));
+        RothIRACalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
+        RothIRACalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                RothIRACalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jPanel46.setBackground(new java.awt.Color(255, 143, 255));
+
+        jPanel47.setBackground(new java.awt.Color(255, 224, 255));
+
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel48.setText("Currenct Balance               $");
+
+        RothIRACalculatorCurrentBalance.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RothIRACalculatorCurrentBalanceKeyReleased(evt);
+            }
+        });
+
+        RothIRACalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RothIRACalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RothIRACalculateBTN.setText("Calculate");
+        RothIRACalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RothIRACalculateBTNActionPerformed(evt);
+            }
+        });
+
+        RothIRAclearBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RothIRAclearBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RothIRAclearBTN.setText("Clear");
+        RothIRAclearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RothIRAclearBTNActionPerformed(evt);
+            }
+        });
+
+        LabelAnnualContribution.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelAnnualContribution.setText("Anual Contribution           $");
+
+        RothIRAAnualContribution.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RothIRAAnualContributionKeyReleased(evt);
+            }
+        });
+
+        jLabel70.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel70.setText("Maximize Contribution?");
+
+        RothIRAMaximizeYes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RothIRAMaximizeYes.setText("Yes");
+        RothIRAMaximizeYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RothIRAMaximizeYesActionPerformed(evt);
+            }
+        });
+
+        RothIRAMaximizeNO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RothIRAMaximizeNO.setText("No");
+        RothIRAMaximizeNO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RothIRAMaximizeNOActionPerformed(evt);
+            }
+        });
+
+        jLabel71.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel71.setText("Expected rate of return        ");
+
+        RothIRACalculatorExpectedReturnRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RothIRACalculatorExpectedReturnRateKeyReleased(evt);
+            }
+        });
+
+        jLabel82.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel82.setText("Current age");
+
+        RothIRACurrentAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RothIRACurrentAgeKeyReleased(evt);
+            }
+        });
+
+        jLabel83.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel83.setText("Retirement Age ");
+
+        RothIRaRetirementAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RothIRaRetirementAgeKeyReleased(evt);
+            }
+        });
+
+        jLabel84.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel84.setText("%");
+
+        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
+        jPanel47.setLayout(jPanel47Layout);
+        jPanel47Layout.setHorizontalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createSequentialGroup()
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel47Layout.createSequentialGroup()
+                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(RothIRAMaximizeYes, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RothIRAMaximizeNO, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel82)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel47Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(RothIRACalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RothIRAclearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addGroup(jPanel47Layout.createSequentialGroup()
+                                        .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel47Layout.createSequentialGroup()
+                                        .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
+                                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
+                                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(14, 14, 14)))))
+                .addContainerGap())
+        );
+        jPanel47Layout.setVerticalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel48)
+                    .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelAnnualContribution)
+                    .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel70)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RothIRAMaximizeYes)
+                    .addComponent(RothIRAMaximizeNO))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel71)
+                    .addComponent(RothIRACalculatorExpectedReturnRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel84))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel82)
+                    .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel83)
+                    .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RothIRACalculateBTN)
+                    .addComponent(RothIRAclearBTN))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        jPanel48.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+
+        jLabel103.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel103.setText("Results");
+
+        javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
+        jPanel48.setLayout(jPanel48Layout);
+        jPanel48Layout.setHorizontalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel48Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RothIRAoutput, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel48Layout.createSequentialGroup()
+                    .addGap(159, 159, 159)
+                    .addComponent(jLabel103)
+                    .addContainerGap(159, Short.MAX_VALUE)))
+        );
+        jPanel48Layout.setVerticalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE)
+                .addComponent(RothIRAoutput, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel48Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(145, Short.MAX_VALUE)))
+        );
+
+        InstructionsRothIRACalculator.setEditable(false);
+        InstructionsRothIRACalculator.setBackground(new java.awt.Color(255, 224, 255));
+        jScrollPane6.setViewportView(InstructionsRothIRACalculator);
+
+        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
+        jPanel46.setLayout(jPanel46Layout);
+        jPanel46Layout.setHorizontalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel46Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        jPanel46Layout.setVerticalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel46Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel46Layout.createSequentialGroup()
+                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+
+        jScrollPane23.setViewportView(jPanel46);
+
+        javax.swing.GroupLayout RothIRACalculatorLayout = new javax.swing.GroupLayout(RothIRACalculator);
+        RothIRACalculator.setLayout(RothIRACalculatorLayout);
+        RothIRACalculatorLayout.setHorizontalGroup(
+            RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane23)
+        );
+        RothIRACalculatorLayout.setVerticalGroup(
+            RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane23)
+        );
+
+        panelCalculator.addTab("Roth IRA Calculator", RothIRACalculator);
+
         quitBnt.setText("Quit");
+        quitBnt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         quitBnt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 quitBntMouseClicked(evt);
@@ -4144,6 +4529,8 @@ String aboutMessage = "<html>"
         jMenuBar1.add(quitBnt);
 
         jMenu2.setText("About");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenu2.setHideActionText(true);
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu2MouseClicked(evt);
@@ -4170,7 +4557,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCalculator)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE)))
         );
 
         panelCalculator.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -4181,7 +4568,8 @@ String aboutMessage = "<html>"
     private void btnmathCalculatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmathCalculatorActionPerformed
         // TODO add your handling code here:
         removeAllTabs();
-         restoreTab("Math Calculator");//needs to be change according to the name of the tab   
+         restoreTab("Math Calculator");//needs to be change according to the name of the tab 
+         CalculatorNameLBL.setText("Math Calculator");
     }//GEN-LAST:event_btnmathCalculatorActionPerformed
 
     private void btnfitnessCalculatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfitnessCalculatorActionPerformed
@@ -4189,12 +4577,14 @@ String aboutMessage = "<html>"
         removeAllTabs();
        
        restoreTab("Fitness & Health Calculator");
+       CalculatorNameLBL.setText("Fitness & Health Calculator");       
     }//GEN-LAST:event_btnfitnessCalculatorActionPerformed
 
     private void btnOtherCalculatorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOtherCalculatorsActionPerformed
         // TODO add your handling code here:
         removeAllTabs();
         restoreTab("Other Calculators");
+        CalculatorNameLBL.setText("Other Calculator");
 
     }//GEN-LAST:event_btnOtherCalculatorsActionPerformed
 
@@ -4202,6 +4592,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         removeAllTabs();
         restoreTab("+");
+        CalculatorNameLBL.setText("Welcome...");
    
     }//GEN-LAST:event_dashboardActionPerformed
 
@@ -4247,6 +4638,7 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
             removeAllTabs();
             restoreTab("Currency Calculator");//needs to be change according to the name of the tab
+            CalculatorNameLBL.setText("Currency Calculator");
 
     }//GEN-LAST:event_OtherCalculatorsBTN1ActionPerformed
 
@@ -4261,7 +4653,9 @@ String aboutMessage = "<html>"
     private void InvestmentCalculatorBTN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvestmentCalculatorBTN3ActionPerformed
         // TODO add your handling code here:
         removeAllTabs();
+        CalculatorNameLBL.setText("Interest Rate Calculator");
         restoreTab("Interest Rate Calculator");
+        
         interestRateFields();
     }//GEN-LAST:event_InvestmentCalculatorBTN3ActionPerformed
 
@@ -4269,6 +4663,8 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         removeAllTabs();
         restoreTab("Auto Loan Calculator");
+        
+        CalculatorNameLBL.setText("Auto Loan Calculator");
     }//GEN-LAST:event_autoCalculatorBTN4ActionPerformed
 
     private void quitBntMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quitBntMouseClicked
@@ -5596,13 +5992,57 @@ String aboutMessage = "<html>"
 
     }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
 
-    public void DefaultRetirementCalculator(){
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jTextField2.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+        public void DefaultRetirementCalculator(){
 
         RetirementCalculatorAverageInvestmentReturn.setText("0");
         RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
         RetirementCalculatorYourCurrentRetirementSavings.setText("0");
     
     }
+        
+        //----------------------------------------------------------------------------------------------------------------------------Label- Display Name of the Calculator when is click 
+    private void MortgagePayoffCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculatorAncestorAdded
+        CalculatorNameLBL.setText("Mortgage Payoff Calculator");
+    }//GEN-LAST:event_MortgagePayoffCalculatorAncestorAdded
+
+    private void MortgageCalculator2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_MortgageCalculator2AncestorAdded
+        CalculatorNameLBL.setText("Mortgage Calculator");
+    }//GEN-LAST:event_MortgageCalculator2AncestorAdded
+
+    private void HouseAffordabilityCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_HouseAffordabilityCalculatorAncestorAdded
+        CalculatorNameLBL.setText("House Affordability Calculator");
+    }//GEN-LAST:event_HouseAffordabilityCalculatorAncestorAdded
+
+    private void RentCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_RentCalculatorAncestorAdded
+        CalculatorNameLBL.setText("Rent Calculator");
+    }//GEN-LAST:event_RentCalculatorAncestorAdded
+
+    private void RefinanceCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_RefinanceCalculatorAncestorAdded
+        CalculatorNameLBL.setText("Refinance Calculator");
+    }//GEN-LAST:event_RefinanceCalculatorAncestorAdded
+
+    private void downpaymentCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_downpaymentCalculatorAncestorAdded
+        CalculatorNameLBL.setText("Down Payment Calculator");
+    }//GEN-LAST:event_downpaymentCalculatorAncestorAdded
+
+    private void rentandbuyAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_rentandbuyAncestorAdded
+        CalculatorNameLBL.setText("Rent vs Buy Calculator");
+    }//GEN-LAST:event_rentandbuyAncestorAdded
+
+    private void RothIRACalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_RothIRACalculatorAncestorAdded
+        CalculatorNameLBL.setText("Roth IRA Calculator");
+    }//GEN-LAST:event_RothIRACalculatorAncestorAdded
+
+    private void retirementCalculator3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_retirementCalculator3AncestorAdded
+        CalculatorNameLBL.setText("Retirement Calculator");
+    }//GEN-LAST:event_retirementCalculator3AncestorAdded
+
+
 
     
 
@@ -6080,6 +6520,7 @@ private void setMessage4() {
     private javax.swing.JTextField ALSalesTaxInput;
     private javax.swing.JTextField ALTradeInValueInput;
     private javax.swing.JPanel AutoLoan;
+    private javax.swing.JLabel CalculatorNameLBL;
     private javax.swing.JPanel Currency;
     private javax.swing.JButton DownPaymentCalculateBTN;
     private javax.swing.JButton DownPaymentClearBTN;
@@ -6247,7 +6688,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
@@ -6308,6 +6748,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -6334,6 +6775,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
@@ -6352,6 +6794,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
@@ -6361,13 +6804,19 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
@@ -6429,7 +6878,15 @@ private void setMessage4() {
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -6477,13 +6934,10 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField62;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField73;
     private javax.swing.JTextField jTextField76;
     private javax.swing.JTextField jTextField77;
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField81;
-    private javax.swing.JTextField jTextField84;
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
     private javax.swing.JTextField jTextField9;
