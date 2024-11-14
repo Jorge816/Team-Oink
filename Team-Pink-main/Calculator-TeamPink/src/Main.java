@@ -50,7 +50,7 @@ public class Main extends javax.swing.JFrame {
          pedro.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
          osvaldo.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
          
-         pinkPanterCbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("Images/pinkPanterCBtn.gif")));
+         pinkPanterCbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("Images/gifgit.gif")));
 
          
         
@@ -698,6 +698,8 @@ String aboutMessage = "<html>"
         jPanel7.setMinimumSize(new java.awt.Dimension(130, 0));
         jPanel7.setPreferredSize(new java.awt.Dimension(100, 0));
 
+        btnmathCalculator.setBackground(new java.awt.Color(179, 246, 179));
+        btnmathCalculator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnmathCalculator.setText("Math Calculators");
         btnmathCalculator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -705,6 +707,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        btnfitnessCalculator.setBackground(new java.awt.Color(179, 246, 179));
+        btnfitnessCalculator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnfitnessCalculator.setText("Fitness & Health Calculators");
         btnfitnessCalculator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -712,6 +716,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        btnOtherCalculators.setBackground(new java.awt.Color(179, 246, 179));
+        btnOtherCalculators.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnOtherCalculators.setText("Other Calculators");
         btnOtherCalculators.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -719,6 +725,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        dashboard.setBackground(new java.awt.Color(179, 246, 179));
+        dashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         dashboard.setText("Dashboard");
         dashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -726,6 +734,8 @@ String aboutMessage = "<html>"
             }
         });
 
+        btnfinancialCalculator.setBackground(new java.awt.Color(179, 246, 179));
+        btnfinancialCalculator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnfinancialCalculator.setText("Financial Calculators ");
         btnfinancialCalculator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -739,7 +749,7 @@ String aboutMessage = "<html>"
 
         FCcontrolBtn.setBackground(new java.awt.Color(255, 237, 255));
 
-        MortgageandRealEstateBTN.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        MortgageandRealEstateBTN.setBackground(new java.awt.Color(204, 255, 204));
         MortgageandRealEstateBTN.setText("Mortgage and Real Estate");
         MortgageandRealEstateBTN.setActionCommand("Currency Calculatro");
         MortgageandRealEstateBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -748,8 +758,8 @@ String aboutMessage = "<html>"
             }
         });
 
-        OtherCalculatorsBTN1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        OtherCalculatorsBTN1.setText("Other");
+        OtherCalculatorsBTN1.setBackground(new java.awt.Color(204, 255, 204));
+        OtherCalculatorsBTN1.setText("Currency");
         OtherCalculatorsBTN1.setActionCommand("Currency Calculatro");
         OtherCalculatorsBTN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -757,7 +767,7 @@ String aboutMessage = "<html>"
             }
         });
 
-        RetirementCalculatorBTN2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        RetirementCalculatorBTN2.setBackground(new java.awt.Color(204, 255, 204));
         RetirementCalculatorBTN2.setText("Retirement");
         RetirementCalculatorBTN2.setActionCommand("Currency Calculatro");
         RetirementCalculatorBTN2.addActionListener(new java.awt.event.ActionListener() {
@@ -766,7 +776,7 @@ String aboutMessage = "<html>"
             }
         });
 
-        InvestmentCalculatorBTN3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        InvestmentCalculatorBTN3.setBackground(new java.awt.Color(204, 255, 204));
         InvestmentCalculatorBTN3.setText("Investment");
         InvestmentCalculatorBTN3.setActionCommand("Currency Calculatro");
         InvestmentCalculatorBTN3.addActionListener(new java.awt.event.ActionListener() {
@@ -775,7 +785,7 @@ String aboutMessage = "<html>"
             }
         });
 
-        autoCalculatorBTN4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        autoCalculatorBTN4.setBackground(new java.awt.Color(204, 255, 204));
         autoCalculatorBTN4.setText("Auto");
         autoCalculatorBTN4.setActionCommand("Currency Calculatro");
         autoCalculatorBTN4.addActionListener(new java.awt.event.ActionListener() {
@@ -839,7 +849,7 @@ String aboutMessage = "<html>"
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -870,7 +880,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        panelCalculator.setBackground(new java.awt.Color(253, 178, 253));
         panelCalculator.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255)));
         panelCalculator.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         panelCalculator.setTabPlacement(javax.swing.JTabbedPane.LEFT);
@@ -878,6 +888,7 @@ String aboutMessage = "<html>"
         panelCalculator.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         panelCalculator.setDoubleBuffered(true);
         panelCalculator.setFocusCycleRoot(true);
+        panelCalculator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         panelCalculator.setOpaque(true);
 
         rentandbuy.setBackground(new java.awt.Color(255, 237, 255));
@@ -1192,7 +1203,7 @@ String aboutMessage = "<html>"
                     .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         rentandbuy.add(jPanel35);
@@ -1516,7 +1527,7 @@ String aboutMessage = "<html>"
             .addGroup(MortgageCalculator2Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Mortgage Calculator", MortgageCalculator2);
@@ -1765,7 +1776,7 @@ String aboutMessage = "<html>"
             .addGroup(retirementCalculator3Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         retirementCalculator3Layout.setVerticalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2389,23 +2400,23 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLayout.setHorizontalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RefinanceCalculatorLayout.createSequentialGroup()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 1048, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
                 .addContainerGap())
         );
         RefinanceCalculatorLayout.setVerticalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         panelCalculator.addTab("Refinance Calculator", RefinanceCalculator);
 
-        RothIRACalculator.setBackground(new java.awt.Color(255, 237, 255));
+        RothIRACalculator.setBackground(new java.awt.Color(255, 237, 158));
         RothIRACalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
 
-        jPanel46.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel46.setBackground(new java.awt.Color(255, 237, 158));
 
         jPanel47.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -2599,7 +2610,7 @@ String aboutMessage = "<html>"
                 .addContainerGap())
         );
 
-        InstructionsRothIRACalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsRothIRACalculator.setBackground(new java.awt.Color(255, 139, 145));
         jScrollPane6.setViewportView(InstructionsRothIRACalculator);
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
@@ -2607,13 +2618,13 @@ String aboutMessage = "<html>"
         jPanel46Layout.setHorizontalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel46Layout.setVerticalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2633,9 +2644,9 @@ String aboutMessage = "<html>"
         RothIRACalculatorLayout.setHorizontalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RothIRACalculatorLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         RothIRACalculatorLayout.setVerticalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2834,16 +2845,16 @@ String aboutMessage = "<html>"
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, downpaymentCalculatorLayout.createSequentialGroup()
-                .addContainerGap(88, Short.MAX_VALUE)
+                .addContainerGap(104, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
@@ -3152,7 +3163,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 48, Short.MAX_VALUE))
+                .addGap(0, 70, Short.MAX_VALUE))
         );
 
         jScrollPane14.setViewportView(jPanel56);
@@ -3161,7 +3172,7 @@ String aboutMessage = "<html>"
         MortgagePayoffCalculator.setLayout(MortgagePayoffCalculatorLayout);
         MortgagePayoffCalculatorLayout.setHorizontalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3183,20 +3194,20 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(331, Short.MAX_VALUE)
+                .addContainerGap(301, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(181, Short.MAX_VALUE)
+                .addContainerGap(197, Short.MAX_VALUE)
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Math Calculator", MathCalculator);
@@ -3214,20 +3225,20 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(322, Short.MAX_VALUE)
+                .addContainerGap(292, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(187, Short.MAX_VALUE)
                 .addGroup(FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
@@ -3245,20 +3256,20 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
+                .addContainerGap(268, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(187, Short.MAX_VALUE)
                 .addGroup(OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Other Calculators", OtherCalculator);
@@ -3384,12 +3395,12 @@ String aboutMessage = "<html>"
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CurrencyLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CurrencyLayout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -3646,7 +3657,7 @@ String aboutMessage = "<html>"
             .addGroup(InterestRateLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Interest Rate Calculator", InterestRate);
@@ -3728,7 +3739,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                     .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3769,18 +3780,18 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(164, 164, 164))
         );
 
         panelCalculator.addTab("+", jPanel19);
 
-        AutoLoan.setBackground(new java.awt.Color(255, 237, 255));
+        AutoLoan.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel62.setBackground(new java.awt.Color(255, 237, 255));
+        jPanel62.setBackground(new java.awt.Color(255, 143, 255));
 
-        jPanel64.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel64.setBackground(new java.awt.Color(255, 224, 255));
 
         jLabel141.setText("Interest Rate");
 
@@ -3898,7 +3909,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        InstructionsAutoLoanCalculator.setBackground(new java.awt.Color(255, 215, 255));
+        InstructionsAutoLoanCalculator.setBackground(new java.awt.Color(255, 224, 255));
         jScrollPane1.setViewportView(InstructionsAutoLoanCalculator);
 
         javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
@@ -4078,7 +4089,8 @@ String aboutMessage = "<html>"
 
         jTabbedPane1.addTab("Monthly Payment", jPanel68);
 
-        jPanel63.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel63.setBackground(new java.awt.Color(255, 224, 255));
+        jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 2));
         jPanel63.setEnabled(false);
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
@@ -4118,7 +4130,7 @@ String aboutMessage = "<html>"
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Auto Loan Calculator", AutoLoan);
@@ -4147,7 +4159,7 @@ String aboutMessage = "<html>"
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelCalculator, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
@@ -5512,9 +5524,6 @@ String aboutMessage = "<html>"
 
     private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
         try{
-
-        
-            
             int cAge = Integer.parseInt(RetirementCalculatorCurrentAge.getText());
             int rAge = Integer.parseInt(RetirementCalculatorRetirementAge.getText());
             int lifeExpectancy = Integer.parseInt(RetirementCalculatorLifeExpectancy.getText());
@@ -5548,10 +5557,10 @@ String aboutMessage = "<html>"
                 double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
                 String retirement_savingMsg = "";
                 if (retirementCalculator1[4] < retirementCalculator1[0]) {
-                    retirement_savingMsg += "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
+                    retirement_savingMsg = "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
                                 + " at age " + rAge + ", which is less than what you need for your retirement.<br>";
                 } else {
-                   retirement_savingMsg += "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
+                   retirement_savingMsg = "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
                                 + " at age " + rAge + ", which exceeds what you need for your retirement.<br>";
                 }
                 
@@ -5579,17 +5588,6 @@ String aboutMessage = "<html>"
             
             RetirementCalculatorOutput.setText(outputText);
                    
-                
-                
-                
-                
-                
-             
-
-// Print the HTML output
-System.out.println(outputText);
-
-
 
         
         }
