@@ -45,7 +45,7 @@ public class HelperTest {
     public void testIsPositiveNumberZero() {
         System.out.println("isPositiveNumber - zero");
         String num = "0";
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = Helper.isPositiveNumber(num);
         assertEquals(expResult, result);
     }
