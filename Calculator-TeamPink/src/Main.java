@@ -6182,100 +6182,111 @@ String aboutMessage = "<html>"
             
             
             String outputText = "";
-
-            if (returnInvestmentRate > 0) {
-                double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
-                double[] retirementCalculator2 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
-                String retirement_savingMsg = "";
-                if(currentIncomeSaving ==0){
-                    retirement_savingMsg = "";
-                }
-                else{
-                    if (retirementCalculator1[4] < retirementCalculator1[0]) {
-                        retirement_savingMsg = "<html>"
-                                +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
-                                    + " at age " + rAge + ", which is less than what you need for your retirement.<br>"
-                                        + "</html>";
-                    } else {
-                       retirement_savingMsg = "<html>"
-                               +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
-                                    + " at age " + rAge + ", which exceeds what you need for your retirement.<br>"
-                               + "</html>";
-                    }
-                }
-                
-                String otherIncomeMsg = "";
-                if (otherIncomeAfterRetirement>0){
-                   otherIncomeMsg =  "<html>"
-
-                        
-                        + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
-                        + currencyFormat.format(retirementCalculator2[1]) 
-                        + " per month after your retirement. Together with your other income of " + currencyFormat.format(otherIncomeAfterRetirement)+" per month,<br>"
-                        + "you will have an income " + currencyFormat.format(retirementCalculator2[1]+ otherIncomeAfterRetirement) +" per month after your retirement"
-                        + "</html>";
-                }else{
-                    otherIncomeMsg =  "<html>"
-                        + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
-                        + currencyFormat.format(retirementCalculator2[1]) 
-                        + " per month after your retirement."
-                        + "</html>";
-
-                }
-                  
-                
-                if (retirementCalculator1[0]>= retirementCalculator1[4]){
-
-
-                    outputText = "<html>"
-                        + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
-                        +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
-                        + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
-                        + "<ul>"
-                        + "    <li>Save " + currencyFormat.format(retirementCalculator1[1]) + " per month</li>"
-                        + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per year</li>"
-                        + "    <li>Save " + retirementCalculator1[3] + "% of your income every year</li>"
-                        + "</ul>"
-                        + "<br>"
-                        + retirement_savingMsg + "<br><br>"
-                        + otherIncomeMsg
-                        + "</html>";
-                }
-                else{
-                  
-                    outputText = "<html>"
-                        + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
-                        +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
-               
-                        + "<br>"
-                        + retirement_savingMsg + "<br><br>"
-                    
-                        + "</html>";}
-                
-                
-
-                
-
-            } else {
-                double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
-                outputText = "<html>"
-                        + "You will need about " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + " to retire.<br>"
-                        + "If you save " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " + currencyFormat.format(retirementCalculator1[1]) + " per month after your retirement.<br><br>"
-                        + "How can you save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + "?<br>"
-                        + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
-                        + "<ul>"
-                        + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per month</li>"
-                        + "    <li>Save " + currencyFormat.format(retirementCalculator1[3]) + " per year</li>"
-                        + "    <li>Save " + retirementCalculator1[4] + "% of your income every year</li>"
-                        + "</ul>"
-                        + "</html>";
-
-                
-            }
             
-            RetirementCalculatorOutput.setText(outputText);
-                   
+            if (incomeNeededAfterRetirement2>otherIncomeAfterRetirement){
+                if (returnInvestmentRate > 0) {
+                    double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+                    double[] retirementCalculator2 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                    String retirement_savingMsg = "";
+                    if(currentIncomeSaving ==0){
+                        retirement_savingMsg = "";
+                    }
+                    else{
+                        if (retirementCalculator1[4] < retirementCalculator1[0]) {
+                            retirement_savingMsg = "<html>"
+                                    +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
+                                        + " at age " + rAge + ", which is less than what you need for your retirement.<br>"
+                                            + "</html>";
+                        } else {
+                           retirement_savingMsg = "<html>"
+                                   +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
+                                        + " at age " + rAge + ", which exceeds what you need for your retirement.<br>"
+                                   + "</html>";
+                        }
+                    }
 
+                    String otherIncomeMsg = "";
+                    if (otherIncomeAfterRetirement>0){
+                       otherIncomeMsg =  "<html>"
+
+
+                            + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
+                            + currencyFormat.format(retirementCalculator2[1]) 
+                            + " per month after your retirement. Together with your other income of " + currencyFormat.format(otherIncomeAfterRetirement)+" per month,<br>"
+                            + "you will have an income " + currencyFormat.format(retirementCalculator2[1]+ otherIncomeAfterRetirement) +" per month after your retirement"
+                            + "</html>";
+                    }else{
+                        otherIncomeMsg =  "<html>"
+                            + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
+                            + currencyFormat.format(retirementCalculator2[1]) 
+                            + " per month after your retirement."
+                            + "</html>";
+
+                    }
+
+
+                    if (retirementCalculator1[0]>= retirementCalculator1[4]){
+
+
+                        outputText = "<html>"
+                            + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
+                            +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
+                            + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
+                            + "<ul>"
+                            + "    <li>Save " + currencyFormat.format(retirementCalculator1[1]) + " per month</li>"
+                            + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per year</li>"
+                            + "    <li>Save " + retirementCalculator1[3] + "% of your income every year</li>"
+                            + "</ul>"
+                            + "<br>"
+                            + retirement_savingMsg + "<br><br>"
+                            + otherIncomeMsg
+                            + "</html>";
+                    }
+                    else{
+
+                        outputText = "<html>"
+                            + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
+                            +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
+
+                            + "<br>"
+                            + retirement_savingMsg + "<br><br>"
+
+                            + "</html>";}
+
+
+
+
+
+                } else {
+                    double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                    outputText = "<html>"
+                            + "You will need about " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + " to retire.<br>"
+                            + "If you save " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " + currencyFormat.format(retirementCalculator1[1]) + " per month after your retirement.<br><br>"
+                            + "How can you save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + "?<br>"
+                            + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
+                            + "<ul>"
+                            + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per month</li>"
+                            + "    <li>Save " + currencyFormat.format(retirementCalculator1[3]) + " per year</li>"
+                            + "    <li>Save " + retirementCalculator1[4] + "% of your income every year</li>"
+                            + "</ul>"
+                            + "</html>";
+
+
+                }
+
+                
+            }else {
+                outputText = "<html>"
+                            + "You do not need to save for you retirement!<br>"
+                            + "Your other income after retirement is sufficient to <br>"
+                            + "support you desired lifestyle after retirement.<br>"
+                           
+                            + "</html>";
+                
+            
+            }
+                   
+            RetirementCalculatorOutput.setText(outputText);
         
         }
         catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");RetirementCalculatorOutput.setText("Error404");}
