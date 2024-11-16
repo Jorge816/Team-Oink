@@ -62,8 +62,8 @@
           <Component id="jPanel1" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Component id="jPanel7" min="-2" pref="217" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="panelCalculator" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="panelCalculator" min="-2" pref="1177" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -74,7 +74,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="panelCalculator" max="32767" attributes="0"/>
-                  <Component id="jPanel7" pref="749" max="32767" attributes="0"/>
+                  <Component id="jPanel7" pref="773" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -96,7 +96,7 @@
                   <Component id="pinkIcon" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" pref="242" max="-2" attributes="0"/>
-                  <EmptySpace pref="435" max="32767" attributes="0"/>
+                  <EmptySpace pref="414" max="32767" attributes="0"/>
                   <Component id="CalculatorNameLBL" min="-2" pref="344" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="339" max="-2" attributes="0"/>
               </Group>
@@ -185,7 +185,7 @@
                               <Component id="btnOtherCalculators" alignment="0" max="32767" attributes="0"/>
                               <Component id="dashboard" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnfinancialCalculator" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btnfitnessCalculator" alignment="1" max="32767" attributes="0"/>
+                              <Component id="btnfitnessCalculator" alignment="1" pref="205" max="32767" attributes="0"/>
                               <Component id="btnmathCalculator" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -323,7 +323,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="InvestmentCalculatorBTN3" alignment="1" max="32767" attributes="0"/>
                                   <Component id="RetirementCalculatorBTN2" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="MortgageandRealEstateBTN" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="MortgageandRealEstateBTN" alignment="1" pref="168" max="32767" attributes="0"/>
                                   <Component id="OtherCalculatorsBTN1" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -515,7 +515,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace pref="216" max="32767" attributes="0"/>
+                          <EmptySpace pref="240" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1086,12 +1086,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane17" alignment="1" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane17" alignment="1" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane17" alignment="0" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane17" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1111,10 +1111,10 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="14" max="32767" attributes="0"/>
+                              <EmptySpace pref="86" max="32767" attributes="0"/>
                               <Component id="jPanel42" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jPanel40" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Component id="jPanel40" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane8" min="-2" pref="353" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -1124,11 +1124,11 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="77" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace pref="87" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jScrollPane8" alignment="0" min="-2" pref="459" max="-2" attributes="0"/>
-                                  <Component id="jPanel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel42" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel42" max="32767" attributes="0"/>
+                                  <Component id="jPanel40" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
                           </Group>
@@ -1148,21 +1148,22 @@
                             </LineBorder>
                           </Border>
                         </Property>
+                        <Property name="autoscrolls" type="boolean" value="true"/>
                         <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="MortgageCalculatorOUtput" min="-2" pref="271" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                                   <Component id="jLabel30" min="-2" pref="106" max="-2" attributes="0"/>
+                                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorOUtput" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1171,14 +1172,20 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="MortgageCalculatorOUtput" min="-2" pref="429" max="-2" attributes="0"/>
-                                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                                  <Component id="MortgageCalculatorOUtput" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="MortgageCalculatorOUtput">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="autoscrolls" type="boolean" value="true"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel30">
                           <Properties>
@@ -1230,6 +1237,7 @@
                                                   <Component id="MortgateCalculatorYear" max="32767" attributes="0"/>
                                               </Group>
                                               <Component id="MortgageCalculatorInterestRate" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel107" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -1284,6 +1292,8 @@
                                       <Component id="MortgageCalculatorMonthCbox" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="MortgateCalculatorYear" alignment="3" max="32767" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                  <Component id="jLabel107" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="MortgageCalculatorIncudeTaxesandMOre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1340,7 +1350,7 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Loan Term"/>
+                            <Property name="text" type="java.lang.String" value="Loan Term (years)"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel95">
@@ -1694,6 +1704,14 @@
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MortgateCalculatorClearBTNActionPerformed"/>
                           </Events>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel107">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Month          Year"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane8">
@@ -1745,14 +1763,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane16" alignment="0" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane16" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane16" pref="739" max="32767" attributes="0"/>
+                      <Component id="jScrollPane16" pref="763" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1773,14 +1791,14 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="28" max="32767" attributes="0"/>
+                              <EmptySpace pref="79" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel44" max="32767" attributes="0"/>
-                                  <Component id="jPanel45" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel45" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                               <Component id="jScrollPane5" min="-2" pref="487" max="-2" attributes="0"/>
-                              <EmptySpace pref="32" max="32767" attributes="0"/>
+                              <EmptySpace pref="83" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1821,7 +1839,7 @@
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jLabel99" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel94" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel94" alignment="0" pref="202" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1829,45 +1847,57 @@
                                               <Component id="RetirementCalculatorAverageInvestmentReturn" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="RetirementCalculatorNeededAfterRetirementCbox" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                                  <Component id="jLabel120" min="-2" pref="24" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="RetirementCalculatorNeededAfterRetirementCbox" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel104" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                                  <Component id="RetirementCalculatorCalculateBTN" min="-2" pref="133" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                                  <Component id="RetirementCalculatorClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="jLabel97" min="-2" pref="260" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jLabel56" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jLabel68" max="32767" attributes="0"/>
-                                                      <Component id="jLabel69" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jLabel93" alignment="0" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="RetirementCalculatorCurrentAge" min="-2" pref="167" max="-2" attributes="0"/>
-                                                      <Component id="RetirementCalculatorRetirementAge" min="-2" pref="167" max="-2" attributes="0"/>
-                                                      <Component id="RetirementCalculatorLifeExpectancy" min="-2" pref="167" max="-2" attributes="0"/>
-                                                      <Component id="RetirementCalculatorPreTaxIncome" min="-2" pref="167" max="-2" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorCalculateBTN" min="-2" pref="133" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                                          <Component id="RetirementCalculatorClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="jLabel97" min="-2" pref="260" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Component id="jLabel56" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabel68" max="32767" attributes="0"/>
+                                                                  <Component id="jLabel69" alignment="0" pref="185" max="32767" attributes="0"/>
+                                                              </Group>
+                                                              <Component id="jLabel93" min="-2" pref="201" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="RetirementCalculatorCurrentAge" min="-2" pref="167" max="-2" attributes="0"/>
+                                                              <Component id="RetirementCalculatorRetirementAge" min="-2" pref="167" max="-2" attributes="0"/>
+                                                              <Component id="RetirementCalculatorLifeExpectancy" min="-2" pref="167" max="-2" attributes="0"/>
+                                                              <Component id="RetirementCalculatorPreTaxIncome" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                              <Component id="jLabel105" max="32767" attributes="0"/>
+                                                              <Component id="jLabel106" pref="201" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                              <Component id="RetirementCalculatorYourCurrentRetirementSavings" pref="161" max="32767" attributes="0"/>
+                                                              <Component id="RetirementCalculatorOtherIncomeAfterRetirement" max="32767" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
                                                   </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jLabel105" max="32767" attributes="0"/>
-                                                      <Component id="jLabel106" pref="201" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="RetirementCalculatorYourCurrentRetirementSavings" pref="161" max="32767" attributes="0"/>
-                                                      <Component id="RetirementCalculatorOtherIncomeAfterRetirement" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jComboBox21" min="-2" pref="45" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1914,6 +1944,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="RetirementCalculatorAverageInvestmentReturn" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="jLabel104" min="-2" max="-2" attributes="0"/>
@@ -1926,7 +1957,6 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="RetirementCalculatorYourCurrentRetirementSavings" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox21" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1953,6 +1983,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorCurrentAgeKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="RetirementCalculatorPreTaxIncome">
                           <Properties>
@@ -1960,13 +1993,16 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorPreTaxIncomeKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel93">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Your current pre-tax income"/>
+                            <Property name="text" type="java.lang.String" value="Your current pre-tax income $"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel97">
@@ -1991,6 +2027,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorLifeExpectancyKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="RetirementCalculatorCalculateBTN">
                           <Properties>
@@ -2034,6 +2073,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorRetirementAgeKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel94">
                           <Properties>
@@ -2058,6 +2100,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorAverageInvestmentReturnKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="RetirementCalculatorIncomeNeededAfterRetirement">
                           <Properties>
@@ -2065,6 +2110,9 @@
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorIncomeNeededAfterRetirementKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel104">
                           <Properties>
@@ -2079,10 +2127,13 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Other income after retirement"/>
+                            <Property name="text" type="java.lang.String" value="Other income after retirement $"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="RetirementCalculatorOtherIncomeAfterRetirement">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorOtherIncomeAfterRetirementKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel106">
                           <Properties>
@@ -2093,6 +2144,9 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="RetirementCalculatorYourCurrentRetirementSavings">
+                          <Events>
+                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="RetirementCalculatorYourCurrentRetirementSavingsKeyReleased"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="RetirementCalculatorNeededAfterRetirementCbox">
                           <Properties>
@@ -2110,18 +2164,13 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox21">
+                        <Component class="javax.swing.JLabel" name="jLabel120">
                           <Properties>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="%"/>
-                                <StringItem index="1" value="$"/>
-                              </StringArray>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
+                            <Property name="text" type="java.lang.String" value="%"/>
                           </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -2137,6 +2186,7 @@
                             </LineBorder>
                           </Border>
                         </Property>
+                        <Property name="autoscrolls" type="boolean" value="true"/>
                         <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
 
@@ -2145,7 +2195,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="RetirementCalculatorOutput" pref="411" max="32767" attributes="0"/>
+                                  <Component id="RetirementCalculatorOutput" pref="417" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -2173,6 +2223,7 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
+                            <Property name="autoscrolls" type="boolean" value="true"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel55">
@@ -2235,12 +2286,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane18" alignment="0" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane18" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane18" alignment="1" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane18" alignment="1" pref="769" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2260,7 +2311,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <EmptySpace pref="66" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel51" min="-2" max="-2" attributes="0"/>
                                   <Component id="jPanel50" max="32767" attributes="0"/>
@@ -2376,14 +2427,14 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                                   <Component id="jLabel109" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jLabel108" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jLabel108" alignment="0" pref="169" max="32767" attributes="0"/>
                                                   <Component id="jLabel86" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel100" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel102" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel101" max="32767" attributes="0"/>
                                               </Group>
                                               <Component id="jLabel111" max="32767" attributes="0"/>
-                                              <Component id="jLabel112" max="32767" attributes="0"/>
+                                              <Component id="jLabel112" pref="169" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -2829,12 +2880,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane19" alignment="0" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane19" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane19" alignment="1" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane19" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2854,14 +2905,14 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="25" max="32767" attributes="0"/>
+                              <EmptySpace pref="63" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel28" max="32767" attributes="0"/>
                                   <Component id="jPanel27" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jScrollPane10" min="-2" pref="554" max="-2" attributes="0"/>
-                              <EmptySpace pref="63" max="32767" attributes="0"/>
+                              <EmptySpace pref="100" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2872,11 +2923,11 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jScrollPane10" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="88" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
                                       <Component id="jPanel27" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jPanel28" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="86" max="32767" attributes="0"/>
+                                      <EmptySpace pref="98" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -3101,7 +3152,7 @@
                         <Component class="javax.swing.JLabel" name="RentOutput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="14" style="1"/>
+                              <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3165,7 +3216,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jScrollPane15" pref="982" max="32767" attributes="0"/>
+                      <Component id="jScrollPane15" pref="956" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -3174,7 +3225,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane15" pref="733" max="32767" attributes="0"/>
+                      <Component id="jScrollPane15" pref="757" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -3214,7 +3265,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane11" min="-2" pref="543" max="-2" attributes="0"/>
-                              <EmptySpace pref="50" max="32767" attributes="0"/>
+                              <EmptySpace pref="59" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3670,12 +3721,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane20" alignment="0" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane20" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane20" alignment="1" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane20" alignment="1" pref="769" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -3695,14 +3746,14 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="17" max="32767" attributes="0"/>
+                              <EmptySpace pref="69" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel61" max="32767" attributes="0"/>
                                   <Component id="jPanel60" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Component id="jScrollPane12" min="-2" pref="544" max="-2" attributes="0"/>
-                              <EmptySpace pref="33" max="32767" attributes="0"/>
+                              <EmptySpace pref="85" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3718,7 +3769,7 @@
                                       <Component id="jPanel60" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="266" max="32767" attributes="0"/>
+                              <EmptySpace pref="270" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3744,7 +3795,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="DownPaymentOuput" pref="354" max="32767" attributes="0"/>
+                                  <Component id="DownPaymentOuput" pref="355" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -3777,7 +3828,7 @@
                         <Component class="javax.swing.JLabel" name="DownPaymentOuput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Segoe UI" size="12" style="1"/>
+                              <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3821,7 +3872,11 @@
                                                       <Component id="DownPaymentDownPayment" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel135" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel135" min="-2" pref="29" max="-2" attributes="0"/>
+                                                      <Component id="jLabel137" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel136" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -3830,7 +3885,7 @@
                                                   <Component id="DownPaymentClearBTN" min="-2" pref="141" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                                          <EmptySpace pref="22" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="DownPaymnentCheckboxClosingCost" min="-2" pref="170" max="-2" attributes="0"/>
@@ -3855,7 +3910,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel134" alignment="3" max="32767" attributes="0"/>
                                       <Component id="DownPaymentDownPayment" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jLabel135" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jLabel136" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -3867,11 +3922,13 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel138" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="DownPaymentInterestRate" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jLabel135" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="13" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel132" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="DownPaymentLoanTerm" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jLabel137" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -4026,6 +4083,22 @@
                             <Property name="text" type="java.lang.String" value="%"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel136">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="%"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel137">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="years"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane12">
@@ -4077,12 +4150,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane14" alignment="1" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane14" alignment="1" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane14" alignment="0" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane14" alignment="0" pref="769" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4102,7 +4175,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="77" max="32767" attributes="0"/>
+                              <EmptySpace pref="112" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel58" max="32767" attributes="0"/>
                                   <Component id="jPanel57" max="32767" attributes="0"/>
@@ -4122,7 +4195,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="jPanel57" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel58" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel58" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="111" max="32767" attributes="0"/>
@@ -4251,11 +4324,11 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="MortGagePayoffRemainingTerm" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel126" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="MorgagePayoffRePayementExtraMonthLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="MortGagePayoffRemainingTerm" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -4578,6 +4651,7 @@
                             </LineBorder>
                           </Border>
                         </Property>
+                        <Property name="autoscrolls" type="boolean" value="true"/>
                       </Properties>
 
                       <Layout>
@@ -4599,10 +4673,10 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="36" max="32767" attributes="0"/>
-                                  <Component id="MortgagePayoffOutput" min="-2" pref="154" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="MortgagePayoffOutput" pref="121" max="32767" attributes="0"/>
+                                  <EmptySpace pref="31" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -4616,6 +4690,12 @@
                       </Layout>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="MortgagePayoffOutput">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                            <Property name="autoscrolls" type="boolean" value="true"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel90">
                           <Properties>
@@ -4674,23 +4754,23 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="296" max="32767" attributes="0"/>
+                      <EmptySpace pref="282" max="32767" attributes="0"/>
                       <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel38" min="-2" pref="290" max="-2" attributes="0"/>
-                      <EmptySpace pref="227" max="32767" attributes="0"/>
+                      <EmptySpace pref="218" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="227" max="32767" attributes="0"/>
+                      <EmptySpace pref="239" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel39" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="207" max="32767" attributes="0"/>
+                      <EmptySpace pref="219" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4738,23 +4818,23 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="287" max="32767" attributes="0"/>
+                      <EmptySpace pref="273" max="32767" attributes="0"/>
                       <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel33" min="-2" pref="302" max="-2" attributes="0"/>
-                      <EmptySpace pref="224" max="32767" attributes="0"/>
+                      <EmptySpace pref="215" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel37" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4802,23 +4882,23 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="263" max="32767" attributes="0"/>
+                      <EmptySpace pref="250" max="32767" attributes="0"/>
                       <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel47" min="-2" pref="290" max="-2" attributes="0"/>
-                      <EmptySpace pref="260" max="32767" attributes="0"/>
+                      <EmptySpace pref="250" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel46" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4865,12 +4945,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane21" alignment="0" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane21" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane21" alignment="0" pref="745" max="32767" attributes="0"/>
+                  <Component id="jScrollPane21" alignment="0" pref="769" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4913,7 +4993,7 @@
                                       <Component id="jPanel31" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="193" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -5168,7 +5248,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane22" alignment="1" pref="988" max="32767" attributes="0"/>
+                  <Component id="jScrollPane22" alignment="1" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -5216,7 +5296,7 @@
                                   </Group>
                                   <Component id="jScrollPane4" min="-2" pref="611" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="142" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -5277,7 +5357,7 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="jLabel117" min="-2" pref="163" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="InterestRateInvestmentLengthYears" pref="128" max="32767" attributes="0"/>
+                                          <Component id="InterestRateInvestmentLengthYears" pref="130" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel119" min="-2" pref="49" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
@@ -5552,7 +5632,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="InterestRateOutput" pref="438" max="32767" attributes="0"/>
+                                  <Component id="InterestRateOutput" pref="440" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -5669,7 +5749,7 @@
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="jPanel5" max="32767" attributes="0"/>
-                      <EmptySpace pref="150" max="32767" attributes="0"/>
+                      <EmptySpace pref="162" max="32767" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
                   </Group>
@@ -5778,7 +5858,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="azusena" alignment="3" max="32767" attributes="0"/>
-                              <Component id="osvaldo" alignment="3" pref="197" max="32767" attributes="0"/>
+                              <Component id="osvaldo" alignment="3" pref="209" max="32767" attributes="0"/>
                               <Component id="pedro" alignment="3" max="32767" attributes="0"/>
                               <Component id="jorge" alignment="3" max="32767" attributes="0"/>
                           </Group>
@@ -5872,11 +5952,11 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="7" max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="jTabbedPane1" min="-2" pref="487" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel63" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="87" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -6566,7 +6646,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane23" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane23" alignment="0" pref="962" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -6591,14 +6671,14 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="39" max="32767" attributes="0"/>
+                              <EmptySpace pref="98" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel47" max="32767" attributes="0"/>
                                   <Component id="jPanel48" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                               <Component id="jScrollPane6" min="-2" pref="480" max="-2" attributes="0"/>
-                              <EmptySpace pref="40" max="32767" attributes="0"/>
+                              <EmptySpace pref="99" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6614,7 +6694,7 @@
                                       <Component id="jPanel48" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="174" max="32767" attributes="0"/>
+                              <EmptySpace pref="188" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6659,13 +6739,10 @@
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel71" pref="0" max="32767" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel83" min="-2" pref="115" max="-2" attributes="0"/>
-                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                      </Group>
+                                                      <Component id="jLabel83" min="-2" pref="115" max="-2" attributes="0"/>
+                                                      <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="RothIRaRetirementAge" min="-2" pref="173" max="-2" attributes="0"/>
                                                       <Component id="RothIRACurrentAge" min="-2" pref="173" max="-2" attributes="0"/>
@@ -6679,13 +6756,13 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel48" pref="179" max="32767" attributes="0"/>
+                                                          <Component id="jLabel48" max="32767" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="RothIRACalculatorCurrentBalance" min="-2" pref="162" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                              <Component id="LabelAnnualContribution" max="32767" attributes="0"/>
+                                                              <Component id="LabelAnnualContribution" pref="172" max="32767" attributes="0"/>
                                                               <Component id="jLabel70" max="32767" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace max="32767" attributes="0"/>
@@ -6900,7 +6977,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="RothIRAoutput" pref="355" max="32767" attributes="0"/>
+                                  <Component id="RothIRAoutput" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -6931,6 +7008,11 @@
                       </Layout>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="RothIRAoutput">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel103">
                           <Properties>
