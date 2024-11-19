@@ -15,7 +15,13 @@ import java.awt.Image;
 import java.text.DecimalFormat;
 import java.util.Timer;
 import java.util.TimerTask;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import javax.swing.DefaultComboBoxModel;
+import java.io.IOException;
+import java.util.Map;
+import java.util.Dictionary;
+import java.util.Hashtable;
 
 public class Main extends javax.swing.JFrame {
 
@@ -29,6 +35,7 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        populateComboBoxes();
         this.setMinimumSize(new Dimension(1400, 350)); 
      
   
@@ -559,8 +566,10 @@ String aboutMessage = "<html>"
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         instructionCurrencyCalculator = new javax.swing.JTextPane();
         InterestRate = new javax.swing.JPanel();
@@ -3283,6 +3292,11 @@ String aboutMessage = "<html>"
         jLabel10.setText("To");
 
         jButton1.setText("Calculate");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Clear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -3290,6 +3304,8 @@ String aboutMessage = "<html>"
                 jButton2ActionPerformed(evt);
             }
         });
+
+        jLabel55.setText("jLabel55");
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -3300,14 +3316,21 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel30Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel30Layout.createSequentialGroup()
+                        .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel30Layout.setVerticalGroup(
@@ -3316,7 +3339,9 @@ String aboutMessage = "<html>"
                 .addGap(36, 36, 36)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel55))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addGap(2, 2, 2)
@@ -3336,20 +3361,26 @@ String aboutMessage = "<html>"
 
         jLabel11.setText("Display Output");
 
+        jLabel30.setText("jLabel30");
+
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                    .addComponent(jLabel30))
                 .addContainerGap())
         );
 
@@ -3389,7 +3420,7 @@ String aboutMessage = "<html>"
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CurrencyLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5602,11 +5633,125 @@ System.out.println(outputText);
                                                                    
 
     }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
+private String decimalSeparator;
+private String currencySymbol2;
+private Map<String, String> decimalSeparatorMap = new HashMap<>();
+private Map<String, CurrencyInfo> currencyMap = new HashMap<>();
+private Map<String, CurrencyInfo> currencyDataMap = new HashMap<>();
+private class CurrencyInfo {
+    String currencySymbol;
+    String decimalSeparator;
+    String symbolPosition;
+    double exchangeRate;
 
+    CurrencyInfo(String symbol, String separator, String position, double rate) {
+        this.currencySymbol = symbol;
+        this.decimalSeparator = separator;
+        this.symbolPosition = position;
+        this.exchangeRate = rate;
+    }
+}
+private void populateComboBoxes() {
+        DefaultComboBoxModel<String> model1 = new DefaultComboBoxModel<>();
+        DefaultComboBoxModel<String> model2 = new DefaultComboBoxModel<>();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(
+            getClass().getClassLoader().getResourceAsStream("currency_dictionary.txt")))) {
+        jLabel55.setText("$");
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(", ");
+            if (parts.length >= 6) {
+                String country = parts[0];
+                String currencyName = parts[1];
+                String currencySymbol = parts[2];
+                double exchangeRate = Double.parseDouble(parts[3]);
+                String decimalSeparator = parts[4];
+                String symbolPosition = parts[5];
+               // currencySymbolMap.put(currencySymbol, symbolPosition);
+                String displayName = country + " " + currencySymbol+" " + exchangeRate;
+                String currencyKey = country + " " + currencyName;
+                decimalSeparatorMap.put(currencyKey, decimalSeparator);
+                decimalSeparatorMap.put(currencyKey + " thousand", decimalSeparator);
+                decimalSeparatorMap.put(currencyKey + " symbol", symbolPosition);
+                currencyDataMap.put(displayName, new CurrencyInfo(currencySymbol, decimalSeparator, symbolPosition, exchangeRate));
+                model1.addElement(country + " " + currencySymbol + " " + exchangeRate);
+                model2.addElement(country + " " + currencySymbol + " " + exchangeRate);
+                //model1.addElement(country + " " + currencyName);
+                //model2.addElement(country + " " + currencyName);
+            }
+        }
+        jComboBox4.setModel(model1);
+        jComboBox3.setModel(model2);
+        } catch (IOException e) {
+        e.printStackTrace(); // Print the error for debugging purposes
+    }
+    }
+private double extractRate(String currencyString) {
+    String[] parts = currencyString.split(" ");
+    return Double.parseDouble(parts[parts.length - 1]);
+}
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+       String selectedCurrency = (String) jComboBox4.getSelectedItem();
+    if (selectedCurrency != null && currencyDataMap.containsKey(selectedCurrency)) {
+        CurrencyInfo info = currencyDataMap.get(selectedCurrency);
+        jLabel55.setText(info.currencySymbol);
+        // Additional processing using info as needed
+    }
+        // Additional processing using info as needed  
+    }                                          
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextField2.setText("");
+        jLabel30.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                    String amountText = jTextField2.getText();
+    // Validate the input
+    double amount;
+    try {
+        amount = Double.parseDouble(amountText);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(null, "Please enter numbers only!",  "Invalid Input", JOptionPane.WARNING_MESSAGE);
+        jTextField2.setText("");
+        return;
+    }
+
+    // Get the selected items from the combo boxes
+    String selectedCurrency1 = (String) jComboBox4.getSelectedItem();
+    String selectedCurrency2 = (String) jComboBox3.getSelectedItem();
+    
+    // Extract rates from the selected currency strings
+    double rate1 = extractRate(selectedCurrency1);
+    double rate2 = extractRate(selectedCurrency2);
+
+    // Calculate the conversion
+    double convertedAmount = amount * (rate2 / rate1);
+    String[] parts = selectedCurrency2.split(" ");
+    String currencyKey = parts[0] + " " + parts[1];
+    String decimalSeparator = decimalSeparatorMap.getOrDefault(currencyKey, "dot");
+    String thousandSeparator = decimalSeparatorMap.getOrDefault(currencyKey + " thousand", ",");
+    String symbolPosition = decimalSeparatorMap.getOrDefault(currencyKey + " symbol", "left");
+    String currencySymbol = parts[1];
+    // Format the result accordingly
+    CurrencyInfo info1 = currencyDataMap.get(selectedCurrency1);
+    CurrencyInfo info2 = currencyDataMap.get(selectedCurrency2);
+    //System.out.println(CurrencyInfo);
+
+    String formattedAmount = String.format("%,.2f", convertedAmount);
+    if ("comma".equals(info2.decimalSeparator)) {
+        formattedAmount = formattedAmount.replace(",", "#").replace(".", ",").replace("#", ".");
+    }
+    if ("left".equalsIgnoreCase(info2.symbolPosition)) {
+            //formattedAmount = currencySymbol + " " + formattedAmount;
+            jLabel30.setText(info2.currencySymbol+ formattedAmount);
+
+        } else if ("right".equalsIgnoreCase(info2.symbolPosition)) {
+            //formattedAmount = formattedAmount + " " + currencySymbol;
+            jLabel30.setText(formattedAmount +  info2.currencySymbol);
+       }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void DefaultRetirementCalculator(){
 
@@ -6320,6 +6465,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -6346,6 +6492,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
