@@ -21,23 +21,26 @@ import java.util.Map;
 
 
 public class Helper {
-    //----------------------------------------------------------------------------------------------------------------------------------General 
-    //-------------------------------Checking age 
-    public static void checkAge(String ageInput) {
+    //----------------------------------------------------------------------------------------------------------------------------------General Input Validation 
+    //-------------------------------------------------------------------------------Checking age 
+    public static boolean checkAge(String ageInput) {
         try {
             
             int age = Integer.parseInt(ageInput); // Convert input to integer
             
             if (age >= 1 && age <= 120) {
+                return true;
                 
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid age. Please enter an age between 1 and 120.", "Age Validation Error", JOptionPane.WARNING_MESSAGE);
+                return false;
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid number.", "Input Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
     }
-    //Validation of age fileds 
+    //---------------------------------------------------------------------------------------------------------------------------------Validation of age fileds 
       public static boolean validateAges(String currentAgeInput, String retirementAgeInput) {
         try {
             int currentAge = Integer.parseInt(currentAgeInput);       // Convert current age to integer
@@ -58,8 +61,82 @@ public class Helper {
             return false;
         }
     }
+    //---------------------------------------------------------------------------------only numbers
+    public static String extractNumbers(String input) {
+        // Use a StringBuilder to store the resulting numbers
+            StringBuilder result = new StringBuilder();
 
-    //---------------------------------------------------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
+            // Flag to check if a period has already been added to avoid multiple decimals
+            boolean hasDecimalPoint = false;
+
+            // Iterate through each character in the input string
+            for (char ch : input.toCharArray()) {
+                if (Character.isDigit(ch)) {
+                    // Append digits to the result
+                    result.append(ch);
+                } else if (ch == '.' && !hasDecimalPoint) {
+                    // Append a single decimal point
+                    result.append(ch);
+                    hasDecimalPoint = true;
+                }
+            }
+
+            // Return the extracted numbers as a string
+            return result.toString();
+    }
+    
+    public static String extractWholePositiveNumbers(String input) {
+        // Use a StringBuilder to store the resulting whole positive numbers
+        StringBuilder result = new StringBuilder();
+
+        // Iterate through each character in the input string
+        for (char ch : input.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                // Append digits to the result
+                result.append(ch);
+            }
+        }
+
+        // Return the extracted whole positive numbers as a string
+        return result.toString();
+    }
+        //------------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
+    public static boolean validateInput(double input, double hp, String checker) {
+            try {
+                double value = input;
+
+                if (checker.equals("$")) {
+                    if (value < hp) {
+                        // Valid dollar input
+                        return true;
+                    } else {
+                        // Show error message for dollar amount
+                     
+                        return false;
+                    }
+                } else if (checker.equals("%")) {
+                    if (value >= 0 && value <= 100) {
+                        // Valid percentage input
+                        return true;
+                    } else {
+                        // Show error message for percentage range
+                 
+                        return false;
+                    }
+                } else {
+                    // Show error message for invalid checker
+                    JOptionPane.showMessageDialog(null, "Error: Checker must be either '$' or '%'", "Input Error", JOptionPane.ERROR_MESSAGE);
+                    return false;
+                }
+            } catch (NumberFormatException e) {
+                // Show error message for invalid number format
+                JOptionPane.showMessageDialog(null, "Error: Invalid number format", "Input Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+        }
+
+
+    //-----------------------------------------------------------------------------------------------------------InterestRateCalculator ----Pedro
     //-----------// isWHoleNumber
     public static boolean isWholeNumber(String input) {
     // Check if the input is null or empty
@@ -74,7 +151,7 @@ public class Helper {
             return true;
         }
         
-        JOptionPane.showMessageDialog(null, "Enter a whole number.");
+        
         return false; // If input contains anything other than digits, return false
     }
     
@@ -100,17 +177,84 @@ public class Helper {
                     return true;  // Return true to indicate valid input        
                 } catch (NumberFormatException e) {
                     // Handle case where input isn't a valid double (e.g., multiple dots)
-                    JOptionPane.showMessageDialog(null, "Invalid number format.");
+                   
                     return false;  // Return false to indicate invalid input
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Invalid number format.");         
+                       
                 return false;  // Return false to indicate invalid input
                 
             }
         }
         return false;
     }
+    
+    //----------------------------------------------------------------------------------------------------------------------------Input Validation for INteresetRate Calculator
+    public static boolean interesRateValidationInput(String InitialInvestment, String AnualContribution, String MonthlyContribution, String InterestRate, String InvestmentLenght){
+        try{
+                boolean isInitialInvestmentValid = InputValidation(InitialInvestment);
+                boolean isAnualContributionValid = InputValidation(AnualContribution);
+                boolean isMonthlyContributionValid = InputValidation(MonthlyContribution);
+                boolean isInterestRateValid = InputValidation(InterestRate);
+                boolean isInvestmentLenghtValid = InputValidation(InvestmentLenght);
+                boolean isInvestmentLenghtValid2 = isWholeNumber(InvestmentLenght);
+
+
+                if (!isInitialInvestmentValid) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Initial Investment field!");
+                    return false; // Stop if InitialInvestment is invalid
+                }
+
+                if (!isAnualContributionValid) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Annual Contribution field!");
+                    return false; // Stop if AnualContribution is invalid
+                }
+                
+                if (!isMonthlyContributionValid) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Monthly Contribution field!");
+                    return false; // Stop if AnualContribution is invalid
+                }
+                if (!isInterestRateValid) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Monthly Contribution field!");
+                    return false; // Stop if AnualContribution is invalid
+                }
+                
+                if (!isInvestmentLenghtValid2) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Investment Lenght field! It must be a whole number");
+                    return false; // Stop if AnualContribution is invalid
+                }
+                
+                if (!isInvestmentLenghtValid) {
+                    JOptionPane.showMessageDialog(null, "Invalid number format in the Investment Lenght field! It must be a whole number");
+                    return false; // Stop if AnualContribution is invalid
+                }
+                
+                
+                
+                
+                // Both fields are valid
+                return true;
+            
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Invalid number format somewhere!.");        
+            
+            return false;}
+    
+    
+    }
+    
+        public static boolean interesRateValidationInput2(String II, String AC ){
+        try{
+            return true;
+        }
+        catch(Exception e){
+            
+            return false;}
+    
+    
+    }
+    
     
     //handling selection periond------
     public static int selectionPeriod(String input) {
@@ -281,6 +425,8 @@ public class Helper {
             Math.round(FV_year * 100.0) / 100.0       // Total Interest
         };
     }
+    
+    
 
     
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA Calculator - Pedro
@@ -442,40 +588,7 @@ public class Helper {
 
         return new double[]{homePrice, loanAmount, monthlyPayment};
     }
-    //------------------------------------------------------------------------------------------------------------------------------------------------Percentage Validation Pedro
-public static boolean validateInput(double input, double hp, String checker) {
-        try {
-            double value = input;
 
-            if (checker.equals("$")) {
-                if (value < hp) {
-                    // Valid dollar input
-                    return true;
-                } else {
-                    // Show error message for dollar amount
-                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price ($" + hp + ")", "Input Error", JOptionPane.WARNING_MESSAGE);
-                    return false;
-                }
-            } else if (checker.equals("%")) {
-                if (value >= 0 && value <= 100) {
-                    // Valid percentage input
-                    return true;
-                } else {
-                    // Show error message for percentage range
-                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 100", "Input Error", JOptionPane.WARNING_MESSAGE);
-                    return false;
-                }
-            } else {
-                // Show error message for invalid checker
-                JOptionPane.showMessageDialog(null, "Error: Checker must be either '$' or '%'", "Input Error", JOptionPane.ERROR_MESSAGE);
-                return false;
-            }
-        } catch (NumberFormatException e) {
-            // Show error message for invalid number format
-            JOptionPane.showMessageDialog(null, "Error: Invalid number format", "Input Error", JOptionPane.ERROR_MESSAGE);
-            return false;
-        }
-    }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     

@@ -15,6 +15,8 @@ import java.awt.Image;
 import java.text.DecimalFormat;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.text.NumberFormat;
+
 
 
 public class Main extends javax.swing.JFrame {
@@ -25,6 +27,7 @@ public class Main extends javax.swing.JFrame {
     private HashMap<String, Component> storedTabs = new HashMap<>(); // To store removed tabs
     private int currentIndex = 0;
     private int currentIndexLabel3 = 0;
+    private String RothIRAAnualContributionSpace = "";
  
 
     public Main() {
@@ -107,10 +110,12 @@ public class Main extends javax.swing.JFrame {
      
         //----------------------------------------------------------------Interest Rate Calculator fileds 
         interestRateFields();
+        //---------------------------------------------------------------Rent Calculator
+        RentMonthlyDebt.setText("0");
        //--------------------settingOPtionalMortgageFields Visible=false Hide Components for MorgageCalculator
        hideComponentsMortgageCalculator();
         
-        //-----------------------------------Hide components for mortgagePayOFF
+        //-----------------------------------Hide components forROTHIRA
         hideComponents();
         RothIRAAnualContribution.setText("0");
         RothIRAMaximizeNO.setSelected(true);
@@ -119,6 +124,12 @@ public class Main extends javax.swing.JFrame {
        MortgageCalculatorHomeInsurance.setText("0");
        MortgageCalculatorHOAFee.setText("0");
        MortgageCalculatorOtherCost.setText("0");
+       //------------------------------------------------Mortgage Payoff 
+       MortgagePayoffCalculatorNormalPayment.setSelected(true);
+       //--------------------------------------------------------Retirement Calculator 
+        RetirementCalculatorAverageInvestmentReturn.setText("0");
+        RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
+        RetirementCalculatorYourCurrentRetirementSavings.setText("0");
    
     }
     
@@ -347,6 +358,7 @@ String aboutMessage = "<html>"
         MortgageCalculatorOtherCostCBox = new javax.swing.JComboBox<>();
         MortgateCalculatorCaculateBTN = new javax.swing.JButton();
         MortgateCalculatorClearBTN = new javax.swing.JButton();
+        jLabel107 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         InstructionsMortgageCalculator = new javax.swing.JTextPane();
         retirementCalculator3 = new javax.swing.JPanel();
@@ -374,7 +386,7 @@ String aboutMessage = "<html>"
         jLabel106 = new javax.swing.JLabel();
         RetirementCalculatorYourCurrentRetirementSavings = new javax.swing.JTextField();
         RetirementCalculatorNeededAfterRetirementCbox = new javax.swing.JComboBox<>();
-        jComboBox21 = new javax.swing.JComboBox<>();
+        jLabel120 = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         RetirementCalculatorOutput = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
@@ -487,6 +499,8 @@ String aboutMessage = "<html>"
         DownPaymnentCheckboxClosingCost = new javax.swing.JCheckBox();
         DownPaymentComboBox = new javax.swing.JComboBox<>();
         jLabel135 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
         jScrollPane12 = new javax.swing.JScrollPane();
         InstructionsDownPaymentCalculator = new javax.swing.JTextPane();
         MortgagePayoffCalculator = new javax.swing.JPanel();
@@ -833,7 +847,7 @@ String aboutMessage = "<html>"
                         .addGroup(FCcontrolBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InvestmentCalculatorBTN3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(RetirementCalculatorBTN2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
                             .addComponent(OtherCalculatorsBTN1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(autoCalculatorBTN4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -852,7 +866,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pinkPanterCbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pinkPanterCBtn.gif"))); // NOI18N
+        pinkPanterCbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/gifgit.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -869,19 +883,19 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(pinkPanterCbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(FCcontrolBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pinkPanterCbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1241,7 +1255,7 @@ String aboutMessage = "<html>"
                     .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
 
         rentandbuy.add(jPanel35);
@@ -1264,7 +1278,11 @@ String aboutMessage = "<html>"
 
         jPanel40.setBackground(new java.awt.Color(255, 224, 255));
         jPanel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+        jPanel40.setAutoscrolls(true);
         jPanel40.setEnabled(false);
+
+        MortgageCalculatorOUtput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MortgageCalculatorOUtput.setAutoscrolls(true);
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel30.setText("Results");
@@ -1273,22 +1291,22 @@ String aboutMessage = "<html>"
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addComponent(jLabel30)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addComponent(MortgageCalculatorOUtput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel42.setBackground(new java.awt.Color(255, 224, 255));
@@ -1314,7 +1332,7 @@ String aboutMessage = "<html>"
         });
 
         jLabel87.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel87.setText("Loan Term");
+        jLabel87.setText("Loan Term (years)");
 
         jLabel95.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel95.setText("Interest Rate");
@@ -1330,7 +1348,7 @@ String aboutMessage = "<html>"
         });
 
         jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel54.setText("Home Price");
+        jLabel54.setText("Home Price                 $");
 
         MortgateCalculatorDownPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         MortgateCalculatorDownPayment.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1489,6 +1507,9 @@ String aboutMessage = "<html>"
             }
         });
 
+        jLabel107.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel107.setText("Month          Year");
+
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
         jPanel42Layout.setHorizontalGroup(
@@ -1502,7 +1523,7 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel87, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel95, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel96, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1518,7 +1539,8 @@ String aboutMessage = "<html>"
                                 .addComponent(MortgageCalculatorMonthCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(MortgateCalculatorYear))
-                            .addComponent(MortgageCalculatorInterestRate))
+                            .addComponent(MortgageCalculatorInterestRate)
+                            .addComponent(jLabel107, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
                         .addComponent(MortgageCalculatorIncudeTaxesandMOre)
@@ -1560,6 +1582,8 @@ String aboutMessage = "<html>"
                     .addComponent(jLabel96)
                     .addComponent(MortgageCalculatorMonthCbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MortgateCalculatorYear))
+                .addGap(0, 0, 0)
+                .addComponent(jLabel107)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MortgageCalculatorIncudeTaxesandMOre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1579,10 +1603,10 @@ String aboutMessage = "<html>"
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(86, Short.MAX_VALUE)
                 .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
@@ -1590,11 +1614,11 @@ String aboutMessage = "<html>"
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
-                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(87, Short.MAX_VALUE)
+                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(153, 153, 153))
         );
 
@@ -1604,11 +1628,11 @@ String aboutMessage = "<html>"
         MortgageCalculator2.setLayout(MortgageCalculator2Layout);
         MortgageCalculator2Layout.setHorizontalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         MortgageCalculator2Layout.setVerticalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane17, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane17)
         );
 
         panelCalculator.addTab("Mortgage Calculator", MortgageCalculator2);
@@ -1634,11 +1658,21 @@ String aboutMessage = "<html>"
         jLabel56.setText("Your life expentency");
 
         RetirementCalculatorCurrentAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorCurrentAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorCurrentAgeKeyReleased(evt);
+            }
+        });
 
         RetirementCalculatorPreTaxIncome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorPreTaxIncome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorPreTaxIncomeKeyReleased(evt);
+            }
+        });
 
         jLabel93.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel93.setText("Your current pre-tax income");
+        jLabel93.setText("Your current pre-tax income $");
 
         jLabel97.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel97.setText("Assumptions");
@@ -1647,6 +1681,11 @@ String aboutMessage = "<html>"
         jLabel68.setText("Your Current Age");
 
         RetirementCalculatorLifeExpectancy.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorLifeExpectancy.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorLifeExpectancyKeyReleased(evt);
+            }
+        });
 
         RetirementCalculatorCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
         RetirementCalculatorCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -1670,6 +1709,11 @@ String aboutMessage = "<html>"
         jLabel69.setText("Your plan retirement age");
 
         RetirementCalculatorRetirementAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorRetirementAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorRetirementAgeKeyReleased(evt);
+            }
+        });
 
         jLabel94.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel94.setText("Income Needed after retirement");
@@ -1679,22 +1723,45 @@ String aboutMessage = "<html>"
         jLabel99.setText("Average Investment return");
 
         RetirementCalculatorAverageInvestmentReturn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorAverageInvestmentReturn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorAverageInvestmentReturnKeyReleased(evt);
+            }
+        });
 
         RetirementCalculatorIncomeNeededAfterRetirement.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorIncomeNeededAfterRetirement.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorIncomeNeededAfterRetirementKeyReleased(evt);
+            }
+        });
 
         jLabel104.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel104.setText("Optional");
 
         jLabel105.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel105.setText("Other income after retirement");
+        jLabel105.setText("Other income after retirement $");
+
+        RetirementCalculatorOtherIncomeAfterRetirement.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorOtherIncomeAfterRetirementKeyReleased(evt);
+            }
+        });
 
         jLabel106.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel106.setText("Your current retirement savings");
 
+        RetirementCalculatorYourCurrentRetirementSavings.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RetirementCalculatorYourCurrentRetirementSavingsKeyReleased(evt);
+            }
+        });
+
         RetirementCalculatorNeededAfterRetirementCbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RetirementCalculatorNeededAfterRetirementCbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        jLabel120.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel120.setText("%");
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -1706,44 +1773,51 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel45Layout.createSequentialGroup()
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))
                         .addGap(1, 1, 1)
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(RetirementCalculatorIncomeNeededAfterRetirement, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                             .addComponent(RetirementCalculatorAverageInvestmentReturn))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RetirementCalculatorNeededAfterRetirementCbox, 0, 1, Short.MAX_VALUE))
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel45Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(RetirementCalculatorNeededAfterRetirementCbox, 0, 1, Short.MAX_VALUE)))
                     .addGroup(jPanel45Layout.createSequentialGroup()
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(5, 5, 5)
-                                .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RetirementCalculatorLifeExpectancy, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel45Layout.createSequentialGroup()
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel105, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                                    .addComponent(RetirementCalculatorOtherIncomeAfterRetirement))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel45Layout.createSequentialGroup()
+                                        .addGap(36, 36, 36)
+                                        .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(5, 5, 5)
+                                        .addComponent(RetirementCalculatorClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel45Layout.createSequentialGroup()
+                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
+                                            .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RetirementCalculatorCurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorLifeExpectancy, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RetirementCalculatorPreTaxIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel45Layout.createSequentialGroup()
+                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel105, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(RetirementCalculatorYourCurrentRetirementSavings, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                                            .addComponent(RetirementCalculatorOtherIncomeAfterRetirement))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel45Layout.setVerticalGroup(
@@ -1777,7 +1851,8 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel99)
-                    .addComponent(RetirementCalculatorAverageInvestmentReturn))
+                    .addComponent(RetirementCalculatorAverageInvestmentReturn)
+                    .addComponent(jLabel120))
                 .addGap(28, 28, 28)
                 .addComponent(jLabel104)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1787,8 +1862,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel106)
-                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings)
-                    .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RetirementCalculatorYourCurrentRetirementSavings))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RetirementCalculatorCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1798,9 +1872,11 @@ String aboutMessage = "<html>"
 
         jPanel44.setBackground(new java.awt.Color(255, 224, 255));
         jPanel44.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 3, true));
+        jPanel44.setAutoscrolls(true);
         jPanel44.setEnabled(false);
 
         RetirementCalculatorOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RetirementCalculatorOutput.setAutoscrolls(true);
 
         jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel55.setText("Results");
@@ -1811,7 +1887,7 @@ String aboutMessage = "<html>"
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+                .addComponent(RetirementCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1836,13 +1912,13 @@ String aboutMessage = "<html>"
         jPanel43Layout.setHorizontalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel43Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(79, Short.MAX_VALUE)
                 .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1863,13 +1939,13 @@ String aboutMessage = "<html>"
         retirementCalculator3.setLayout(retirementCalculator3Layout);
         retirementCalculator3Layout.setHorizontalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         retirementCalculator3Layout.setVerticalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(retirementCalculator3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE))
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Retirement Calculator", retirementCalculator3);
@@ -2017,13 +2093,13 @@ String aboutMessage = "<html>"
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabel109, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                                 .addComponent(jLabel86, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel100, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel102, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel101, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel111, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2127,7 +2203,7 @@ String aboutMessage = "<html>"
         jPanel49Layout.setHorizontalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel49Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2154,11 +2230,11 @@ String aboutMessage = "<html>"
         HouseAffordabilityCalculator.setLayout(HouseAffordabilityCalculatorLayout);
         HouseAffordabilityCalculatorLayout.setHorizontalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         HouseAffordabilityCalculatorLayout.setVerticalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
@@ -2277,7 +2353,7 @@ String aboutMessage = "<html>"
         jPanel28.setBackground(new java.awt.Color(255, 224, 255));
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
 
-        RentOutput.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RentOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel81.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel81.setText("Results");
@@ -2317,13 +2393,13 @@ String aboutMessage = "<html>"
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel26Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2332,11 +2408,11 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane10)
                     .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGap(0, 88, Short.MAX_VALUE)
+                        .addGap(0, 100, Short.MAX_VALUE)
                         .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)))
                 .addGap(19, 19, 19))
         );
 
@@ -2346,11 +2422,11 @@ String aboutMessage = "<html>"
         RentCalculator.setLayout(RentCalculatorLayout);
         RentCalculatorLayout.setHorizontalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         RentCalculatorLayout.setVerticalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         panelCalculator.addTab("Rent Calculator", RentCalculator);
@@ -2597,7 +2673,7 @@ String aboutMessage = "<html>"
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2625,14 +2701,14 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLayout.setHorizontalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RefinanceCalculatorLayout.createSequentialGroup()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
                 .addContainerGap())
         );
         RefinanceCalculatorLayout.setVerticalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2656,7 +2732,7 @@ String aboutMessage = "<html>"
         jPanel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel60.setEnabled(false);
 
-        DownPaymentOuput.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        DownPaymentOuput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel89.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel89.setText("Results");
@@ -2667,7 +2743,7 @@ String aboutMessage = "<html>"
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel60Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addComponent(DownPaymentOuput, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel60Layout.createSequentialGroup()
@@ -2764,6 +2840,12 @@ String aboutMessage = "<html>"
         jLabel135.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel135.setText("%");
 
+        jLabel136.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel136.setText("%");
+
+        jLabel137.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel137.setText("years");
+
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
         jPanel61Layout.setHorizontalGroup(
@@ -2786,13 +2868,16 @@ String aboutMessage = "<html>"
                                     .addComponent(DownPaymentUpfrontCash, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                                     .addComponent(DownPaymentDownPayment, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel135, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel137)
+                                    .addComponent(jLabel136, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel61Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
                                 .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(5, 5, 5)
                                 .addComponent(DownPaymentClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(25, Short.MAX_VALUE))
+                        .addContainerGap(22, Short.MAX_VALUE))
                     .addGroup(jPanel61Layout.createSequentialGroup()
                         .addComponent(DownPaymnentCheckboxClosingCost, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2811,7 +2896,7 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel134, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DownPaymentDownPayment)
-                    .addComponent(jLabel135, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel136))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DownPaymnentCheckboxClosingCost)
@@ -2820,11 +2905,13 @@ String aboutMessage = "<html>"
                 .addGap(22, 22, 22)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel138)
-                    .addComponent(DownPaymentInterestRate))
+                    .addComponent(DownPaymentInterestRate)
+                    .addComponent(jLabel135, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel132)
-                    .addComponent(DownPaymentLoanTerm))
+                    .addComponent(DownPaymentLoanTerm)
+                    .addComponent(jLabel137, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DownPaymentCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2840,13 +2927,13 @@ String aboutMessage = "<html>"
         jPanel59Layout.setHorizontalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel59Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(69, Short.MAX_VALUE)
                 .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, 43)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel59Layout.setVerticalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2858,7 +2945,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         jScrollPane20.setViewportView(jPanel59);
@@ -2867,11 +2954,11 @@ String aboutMessage = "<html>"
         downpaymentCalculator.setLayout(downpaymentCalculatorLayout);
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
@@ -3120,10 +3207,10 @@ String aboutMessage = "<html>"
                     .addComponent(MorgagePayoffRePayementExtraMonthLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MortGagePayoffRemainingTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel126)
-                        .addComponent(MorgagePayoffRePayementExtraMonthLabel17)))
+                        .addComponent(MorgagePayoffRePayementExtraMonthLabel17))
+                    .addComponent(MortGagePayoffRemainingTerm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MortGagePayoffRemainingTermMonths, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3163,6 +3250,10 @@ String aboutMessage = "<html>"
 
         jPanel58.setBackground(new java.awt.Color(255, 224, 255));
         jPanel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
+        jPanel58.setAutoscrolls(true);
+
+        MortgagePayoffOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MortgagePayoffOutput.setAutoscrolls(true);
 
         jLabel90.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel90.setText("Results");
@@ -3183,10 +3274,10 @@ String aboutMessage = "<html>"
         );
         jPanel58Layout.setVerticalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel58Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE))
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
                     .addContainerGap()
@@ -3202,7 +3293,7 @@ String aboutMessage = "<html>"
         jPanel56Layout.setHorizontalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel56Layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
+                .addContainerGap(112, Short.MAX_VALUE)
                 .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -3219,7 +3310,7 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel56Layout.createSequentialGroup()
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(0, 111, Short.MAX_VALUE))
         );
 
@@ -3229,11 +3320,11 @@ String aboutMessage = "<html>"
         MortgagePayoffCalculator.setLayout(MortgagePayoffCalculatorLayout);
         MortgagePayoffCalculatorLayout.setHorizontalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
@@ -3251,20 +3342,20 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(296, Short.MAX_VALUE)
+                .addContainerGap(298, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(227, Short.MAX_VALUE)
+                .addContainerGap(239, Short.MAX_VALUE)
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Math Calculator", MathCalculator);
@@ -3282,20 +3373,20 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(287, Short.MAX_VALUE)
+                .addContainerGap(289, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(217, Short.MAX_VALUE)
+                .addContainerGap(229, Short.MAX_VALUE)
                 .addGroup(FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
@@ -3313,20 +3404,20 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(263, Short.MAX_VALUE)
+                .addContainerGap(266, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(217, Short.MAX_VALUE)
+                .addContainerGap(229, Short.MAX_VALUE)
                 .addGroup(OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Other Calculators", OtherCalculator);
@@ -3467,7 +3558,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 193, Short.MAX_VALUE))
+                .addGap(0, 217, Short.MAX_VALUE))
         );
 
         jScrollPane21.setViewportView(jPanel29);
@@ -3476,11 +3567,11 @@ String aboutMessage = "<html>"
         Currency.setLayout(CurrencyLayout);
         CurrencyLayout.setHorizontalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         panelCalculator.addTab("Currency Calculator", Currency);
@@ -3632,7 +3723,7 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel33Layout.createSequentialGroup()
                         .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(InterestRateInvestmentLengthYears, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                        .addComponent(InterestRateInvestmentLengthYears, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
@@ -3694,7 +3785,7 @@ String aboutMessage = "<html>"
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel34Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
+                .addComponent(InterestRateOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
@@ -3740,7 +3831,7 @@ String aboutMessage = "<html>"
                         .addGap(34, 34, 34)
                         .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 118, Short.MAX_VALUE))
+                .addGap(0, 142, Short.MAX_VALUE))
         );
 
         jScrollPane22.setViewportView(jPanel32);
@@ -3749,7 +3840,7 @@ String aboutMessage = "<html>"
         InterestRate.setLayout(InterestRateLayout);
         InterestRateLayout.setHorizontalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         InterestRateLayout.setVerticalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3835,7 +3926,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
                     .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3876,7 +3967,7 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(164, 164, 164))
         );
@@ -4239,11 +4330,11 @@ String aboutMessage = "<html>"
         AutoLoanLayout.setVerticalGroup(
             AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AutoLoanLayout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         panelCalculator.addTab("Auto Loan Calculator", AutoLoan);
@@ -4377,11 +4468,9 @@ String aboutMessage = "<html>"
                                 .addGap(25, 25, 25))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
                                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addGroup(jPanel47Layout.createSequentialGroup()
-                                        .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel71))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(RothIRaRetirementAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(RothIRACurrentAge, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4392,12 +4481,12 @@ String aboutMessage = "<html>"
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
                                 .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
-                                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                        .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(RothIRACalculatorCurrentBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel47Layout.createSequentialGroup()
                                         .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(LabelAnnualContribution, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                                             .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(RothIRAAnualContribution, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -4444,6 +4533,8 @@ String aboutMessage = "<html>"
         jPanel48.setBackground(new java.awt.Color(255, 224, 255));
         jPanel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
 
+        RothIRAoutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         jLabel103.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel103.setText("Results");
 
@@ -4453,7 +4544,7 @@ String aboutMessage = "<html>"
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel48Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(RothIRAoutput, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
+                .addComponent(RothIRAoutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
@@ -4483,13 +4574,13 @@ String aboutMessage = "<html>"
         jPanel46Layout.setHorizontalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addContainerGap(98, Short.MAX_VALUE)
                 .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         jPanel46Layout.setVerticalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4501,7 +4592,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         jScrollPane23.setViewportView(jPanel46);
@@ -4510,7 +4601,7 @@ String aboutMessage = "<html>"
         RothIRACalculator.setLayout(RothIRACalculatorLayout);
         RothIRACalculatorLayout.setHorizontalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane23)
+            .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
         );
         RothIRACalculatorLayout.setVerticalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4557,7 +4648,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelCalculator)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)))
         );
 
         panelCalculator.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -4680,16 +4771,19 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         showAboutPopup();
     }//GEN-LAST:event_jMenu2MouseClicked
-//------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator Pedro
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------MOney FOrmat 
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Interest Rate Calculator Pedro
     private void InterestRateCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateCalculatorClearBTNActionPerformed
         // TODO add your handling code here:
         InterestRateInitialInvestment.setText("");
-        InterestRateAnnualContribution.setText("");
-        InterestRateMonthlyContribution.setText("");
+        InterestRateAnnualContribution.setText("0");
+        InterestRateMonthlyContribution.setText("0");
         InterestRateBeggnning.setSelected(true);
         InterestRateEnd.setSelected(false);
         InterestRateInterest.setText("");
-        InterestRateInvestmentLengthYears.setText("");
+        InterestRateInvestmentLengthYears.setText("1");
         InterestRateOutput.setText("");
     }//GEN-LAST:event_InterestRateCalculatorClearBTNActionPerformed
 
@@ -4723,7 +4817,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateInitialInvestment.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      InterestRateInitialInvestment.setText(Number);
     }//GEN-LAST:event_InterestRateInitialInvestmentKeyReleased
 
     private void InterestRateAnnualContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateAnnualContributionKeyReleased
@@ -4734,7 +4829,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateAnnualContribution.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      InterestRateAnnualContribution.setText(Number);
     }//GEN-LAST:event_InterestRateAnnualContributionKeyReleased
 
     private void InterestRateMonthlyContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateMonthlyContributionKeyReleased
@@ -4744,7 +4840,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateMonthlyContribution.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      InterestRateMonthlyContribution.setText(Number);
     }//GEN-LAST:event_InterestRateMonthlyContributionKeyReleased
 
     private void InterestRateInterestKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateInterestKeyReleased
@@ -4754,7 +4851,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       InterestRateInterest.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      InterestRateInterest.setText(Number);
     }//GEN-LAST:event_InterestRateInterestKeyReleased
 
     private void InterestRateInvestmentLengthYearsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InterestRateInvestmentLengthYearsKeyReleased
@@ -4764,96 +4862,90 @@ String aboutMessage = "<html>"
           String strippedInput = input.replaceAll("\\s", "");
           // Set the text field with the stripped input (without spaces)
           InterestRateInvestmentLengthYears.setText(strippedInput);
-        if (!Helper.isWholeNumber(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""))){
-            
-            Helper.InputValidation(InterestRateInvestmentLengthYears.getText().replaceAll("\\s", ""));
-        }
+          String Number = Helper.extractWholePositiveNumbers(input);
+          InterestRateInvestmentLengthYears.setText(Number);
     }//GEN-LAST:event_InterestRateInvestmentLengthYearsKeyReleased
 
     private void InterestRateCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterestRateCalculatorCalculateBTNActionPerformed
         try{
-         // Retrieve the selected item from the InterestRateCompoundPeriods combo box
-        String selectedOption = (String) InterestRateCompoundPeriods.getSelectedItem();
-        
-        Helper.InputValidation(InterestRateInitialInvestment.getText());
-        Helper.InputValidation(InterestRateAnnualContribution.getText());
-        Helper.InputValidation(InterestRateMonthlyContribution.getText());
-        Helper.InputValidation(InterestRateInterest.getText());
-        Helper.InputValidation(InterestRateInterest.getText());
-        Helper.InputValidation(InterestRateInvestmentLengthYears.getText());
-        
+            
+            // Retrieve the selected item from the InterestRateCompoundPeriods combo box
+           String selectedOption = (String) InterestRateCompoundPeriods.getSelectedItem();
 
-        double PI = Double.parseDouble(InterestRateInitialInvestment.getText());
-        double Ca = Double.parseDouble(InterestRateAnnualContribution.getText());
-        double Cm = Double.parseDouble(InterestRateMonthlyContribution.getText());
-        double r = Double.parseDouble(InterestRateInterest.getText())/100;
-        int a = 1;   
-        int n = Helper.selectionPeriod(selectedOption);
-        double t = Double.parseDouble(InterestRateInvestmentLengthYears.getText());
-        
-        double FV_year = 0;
-        String outputText="";
 
-        if (InterestRateBeggnning.isSelected()) {
-            if ("Continuously".equals(selectedOption)){
-                FV_year =Helper.future_valueBeginning(PI, Ca, Cm, r, t);
-                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
-                outputText = "<html>"
-                          + "<b>Investment Calculations:</b><br>"
-                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
-                          + "Total Principal: $" + extraCalculations[0] + "<br>"
-                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
-                          + "Total Interest: $" + extraCalculations[2] + "<br>"
-                          + "</html>";
-            }else{
-                FV_year = Helper.interestRateBegining(PI, Ca, Cm, r, a, n, t);}
-                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
-                outputText = "<html>"
-                          + "<b>Investment Calculations:</b><br>"
-                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
-                          + "Total Principal: $" + extraCalculations[0] + "<br>"
-                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
-                          + "Total Interest: $" + extraCalculations[2] + "<br>"
-                          + "</html>";
+
+           double PI = Double.parseDouble(InterestRateInitialInvestment.getText());
+           double Ca = Double.parseDouble(InterestRateAnnualContribution.getText());
+           double Cm = Double.parseDouble(InterestRateMonthlyContribution.getText());
+           double r = Double.parseDouble(InterestRateInterest.getText())/100;
+           int a = 1;   
+           int n = Helper.selectionPeriod(selectedOption);
+           double t = Double.parseDouble(InterestRateInvestmentLengthYears.getText());
+
+           double FV_year = 0;
+           String outputText="";
+
+           if (InterestRateBeggnning.isSelected()) {
+               if ("Continuously".equals(selectedOption)){
+                   FV_year =Helper.future_valueBeginning(PI, Ca, Cm, r, t);
+                   double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                   outputText = "<html>"
+                             + "<b>Investment Calculations:</b><br>"
+                             + "Ending Balance: " +  currencyFormat.format(extraCalculations[3]) + "<br>"
+                             + "Total Principal: " + currencyFormat.format(extraCalculations[0]) + "<br>"
+                             + "Total Contributions: " + currencyFormat.format(extraCalculations[1]) + "<br>"
+                             + "Total Interest: " + currencyFormat.format(extraCalculations[2]) + "<br>"
+                             + "</html>";
+               }else{
+                   FV_year = Helper.interestRateBegining(PI, Ca, Cm, r, a, n, t);}
+                   double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                   outputText = "<html>"
+                             + "<b>Investment Calculations:</b><br>"
+                             + "Ending Balance: " + currencyFormat.format(extraCalculations[3]) + "<br>"
+                             + "Total Principal: " + currencyFormat.format(extraCalculations[0]) + "<br>"
+                             + "Total Contributions: " + currencyFormat.format(extraCalculations[1]) + "<br>"
+                             + "Total Interest: " + currencyFormat.format(extraCalculations[2]) + "<br>"
+                             + "</html>";
+           }
+
+           // Check if InterestRateEnd is selected
+           if (InterestRateEnd.isSelected()) {
+                if ("Continuously".equals(selectedOption)){
+                    FV_year =Helper.future_valueEnd(PI, Ca, Cm, r, t);
+                   double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                   outputText = "<html>"
+                             + "<b>Investment Calculations:</b><br>"
+                             + "Ending Balance: " + currencyFormat.format(extraCalculations[3]) + "<br>"
+                             + "Total Principal: " + currencyFormat.format(extraCalculations[0]) + "<br>"
+                             + "Total Contributions: " + currencyFormat.format(extraCalculations[1]) + "<br>"
+                             + "Total Interest: " + currencyFormat.format(extraCalculations[2]) + "<br>"
+                             + "</html>";
+                }
+                else{
+                // Calculate future value using nominal interest rate and contributions
+                   FV_year = Helper.interestrateEND(PI, Ca, Cm, r, a, n, t);
+                   double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
+                   outputText = "<html>"
+                             + "<b>Investment Calculations:</b><br>"
+                             + "Ending Balance: " + currencyFormat.format(extraCalculations[3]) + "<br>"
+                             + "Total Principal: " + currencyFormat.format(extraCalculations[0]) + "<br>"
+                             + "Total Contributions: " + currencyFormat.format(extraCalculations[1]) + "<br>"
+                             + "Total Interest: " + currencyFormat.format(extraCalculations[2]) + "<br>"
+                             + "</html>";
+                }
+           }
+
+           InterestRateOutput.setText(outputText);
         }
 
-        // Check if InterestRateEnd is selected
-        if (InterestRateEnd.isSelected()) {
-             if ("Continuously".equals(selectedOption)){
-                 FV_year =Helper.future_valueEnd(PI, Ca, Cm, r, t);
-                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
-                outputText = "<html>"
-                          + "<b>Investment Calculations:</b><br>"
-                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
-                          + "Total Principal: $" + extraCalculations[0] + "<br>"
-                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
-                          + "Total Interest: $" + extraCalculations[2] + "<br>"
-                          + "</html>";
-             }
-             else{
-             // Calculate future value using nominal interest rate and contributions
-                FV_year = Helper.interestrateEND(PI, Ca, Cm, r, a, n, t);
-                double[] extraCalculations = Helper.interestRateCalculatorExtraCalculations(FV_year, PI, Ca, Cm, t);
-                outputText = "<html>"
-                          + "<b>Investment Calculations:</b><br>"
-                          + "Ending Balance: $" + extraCalculations[3] + "<br>"
-                          + "Total Principal: $" + extraCalculations[0] + "<br>"
-                          + "Total Contributions: $" + extraCalculations[1] + "<br>"
-                          + "Total Interest: $" + extraCalculations[2] + "<br>"
-                          + "</html>";
-             }
-        }
-        
-        InterestRateOutput.setText(outputText);
-
-   
-        }
         catch(Exception e){
+            InterestRateOutput.setText("Error404");
             JOptionPane.showMessageDialog(null, "Empty fields!");
+          
         }
        
     }//GEN-LAST:event_InterestRateCalculatorCalculateBTNActionPerformed
-//--------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator Pedro
+//------------------------------------------------------------------------------------------------------------------------------------------------------------Roth IRA calculator Pedro
     private void RothIRACalculatorCurrentBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorCurrentBalanceKeyReleased
         // TODO add your handling code here:
        // Get the input from the text field
@@ -4862,7 +4954,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RothIRACalculatorCurrentBalance.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      RothIRACalculatorCurrentBalance.setText(Number);
     }//GEN-LAST:event_RothIRACalculatorCurrentBalanceKeyReleased
 
     private void RothIRAAnualContributionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRAAnualContributionKeyReleased
@@ -4873,14 +4966,17 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RothIRAAnualContribution.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      RothIRAAnualContribution.setText(Number);
     }//GEN-LAST:event_RothIRAAnualContributionKeyReleased
 
     private void RothIRACalculatorExpectedReturnRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RothIRACalculatorExpectedReturnRateKeyReleased
-        String input = RothIRACalculatorExpectedReturnRate.getText();
+      String input = RothIRACalculatorExpectedReturnRate.getText();
       String strippedInput = input.replaceAll("\\s", "");
       RothIRACalculatorExpectedReturnRate.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      RothIRACalculatorExpectedReturnRate.setText(Number);
+
             int input2 = Integer.valueOf(input);
             double hp = 0;
             String selectedOptionDownPayment = "%";
@@ -4895,12 +4991,9 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RothIRACurrentAge.setText(strippedInput);
-     
-          if (!Helper.isWholeNumber(RothIRACurrentAge.getText().replaceAll("\\s", ""))){
-            
-            Helper.InputValidation(RothIRACurrentAge.getText().replaceAll("\\s", ""));
-            
-        }
+      String Number = Helper.extractWholePositiveNumbers(input);
+      RothIRACurrentAge.setText(Number);
+
           
           if (RothIRACurrentAge.getText().isEmpty()){
           }
@@ -4915,10 +5008,8 @@ String aboutMessage = "<html>"
         // Strip all spaces from the input as the user types
         String strippedInput = input.replaceAll("\\s", "");
         RothIRaRetirementAge.setText(strippedInput);
-        if (!Helper.isWholeNumber(RothIRaRetirementAge.getText().replaceAll("\\s", ""))){
-
-            Helper.InputValidation(RothIRaRetirementAge.getText().replaceAll("\\s", ""));
-        }
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RothIRaRetirementAge.setText(Number);
 
          if (RothIRaRetirementAge.getText().isEmpty()){}
          else{Helper.checkAge(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
@@ -4928,8 +5019,9 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         if (RothIRAMaximizeYes.isSelected()) {
         // If selected, uncheck InterestRateEnd
+       RothIRAAnualContributionSpace = RothIRAAnualContribution.getText();
        RothIRAMaximizeNO.setSelected(false);
-        RothIRAAnualContribution.setText("0");
+       RothIRAAnualContribution.setText("0");
        RothIRAAnualContribution.setVisible(false);
        LabelAnnualContribution.setText("Annual Contributions Max Out");
         }    
@@ -4940,7 +5032,8 @@ String aboutMessage = "<html>"
         if (RothIRAMaximizeNO.isSelected()) {
         // If selected, uncheck InterestRateEnd
         RothIRAMaximizeYes.setSelected(false);
-         RothIRAAnualContribution.setText("0");
+        RothIRAAnualContribution.setText(RothIRAAnualContributionSpace);
+        RothIRAAnualContributionSpace =null;
         RothIRAAnualContribution.setVisible(true);
         LabelAnnualContribution.setText("Anual Contribution           $");
         }
@@ -4948,24 +5041,37 @@ String aboutMessage = "<html>"
 
     private void RothIRAclearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRAclearBTNActionPerformed
         // TODO add your handling code here:
-       RothIRACalculatorCurrentBalance.setText("");
-       RothIRAAnualContribution.setText("");
-       RothIRACalculatorExpectedReturnRate.setText("");
-       RothIRACurrentAge.setText("");
-       RothIRaRetirementAge.setText("");
-       RothIRAMaximizeYes.setSelected(false);
-       RothIRAMaximizeNO.setSelected(false);
+        RothIRACalculatorCurrentBalance.setText("");
+
+        RothIRACalculatorExpectedReturnRate.setText("");
+        RothIRACurrentAge.setText("");
+        RothIRaRetirementAge.setText("");
+
+        RothIRAMaximizeNO.setSelected(true);
+        RothIRAoutput.setText("");
+        RothIRAAnualContributionSpace =null;
+        RothIRAMaximizeYes.setSelected(false);
+        RothIRAAnualContribution.setText("0");
+        RothIRAAnualContribution.setVisible(true);
+        LabelAnnualContribution.setText("Anual Contribution           $");
+        RentOutput.setText("");
     }//GEN-LAST:event_RothIRAclearBTNActionPerformed
 
     private void RothIRACalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRACalculateBTNActionPerformed
         // TODO add your handling code here:
         try{
         double rate = Double.parseDouble(RothIRACalculatorExpectedReturnRate.getText());
+        String input = RothIRACalculatorExpectedReturnRate.getText();
+        int input2 = Integer.valueOf(input);
+        double hp = 0;
+        String selectedOptionDownPayment = "%";
+            
         
         if (
             Helper.InputValidation(RothIRACalculatorCurrentBalance.getText()) &&
             Helper.InputValidation(RothIRAAnualContribution.getText()) &&
             Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText()) &&
+            Helper.validateInput(input2, hp, selectedOptionDownPayment)&&
             Helper.InputValidation(RothIRACurrentAge.getText()) &&
             Helper.InputValidation(RothIRaRetirementAge.getText()) &&
             Helper.validateInput(rate, 0.0, "%") &&
@@ -5016,24 +5122,26 @@ String aboutMessage = "<html>"
 
                 String outputText = "<html><body style='width: 300px;'>"
                                   + "Roth IRA Calculation Results"
-                                  + "<p><b>Your balance at age " + R_age + ":</b> $" + String.format("%.2f", balance) + "</p>"
-                                  + "<p><b>Total principal:</b> $" + String.format("%.2f", totalPrinciple) + "</p>"
-                                  + "<p><b>Total Interest:</b> $" + String.format("%.2f", totalInterest) + "</p>"
+                                  + "<p><b>Your balance at age " + R_age + ":</b> " +  currencyFormat.format(balance) + "</p>"
+                                  + "<p><b>Total principal:</b> " +  currencyFormat.format(totalPrinciple) + "</p>"
+                                  + "<p><b>Total Interest:</b> " +  currencyFormat.format(totalInterest) + "</p>"
                                   + "</body></html>";
 
 
 
                 RothIRAoutput.setText(outputText);
         } else {
-            JOptionPane.showMessageDialog(null, "One or more inputs are invalid. Please check your entries.", "Validation Error", JOptionPane.WARNING_MESSAGE);
+            RothIRAoutput.setText("Error404");
+           
         }
   
         }
         catch(Exception e){
+            RothIRAoutput.setText("Error404");
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
     }//GEN-LAST:event_RothIRACalculateBTNActionPerformed
-//---------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator Pedro
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------Rent Calculator Pedro
     private void RentPretaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentPretaxIncomeKeyReleased
         // TODO add your handling code here:
       String input = RentPretaxIncome.getText();
@@ -5041,7 +5149,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RentPretaxIncome.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      RentPretaxIncome.setText(Number);
     }//GEN-LAST:event_RentPretaxIncomeKeyReleased
 
     private void RentMonthlyDebtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RentMonthlyDebtKeyReleased
@@ -5051,28 +5160,34 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       RentMonthlyDebt.setText(strippedInput);
-      Helper.InputValidation(strippedInput); 
+      String Number = Helper.extractNumbers(input);
+      RentMonthlyDebt.setText(Number);
     }//GEN-LAST:event_RentMonthlyDebtKeyReleased
 
     private void RentClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentClearBTNActionPerformed
         // TODO add your handling code here:
        RentPretaxIncome.setText("");
-       RentMonthlyDebt.setText("");
+       RentMonthlyDebt.setText("0");
     }//GEN-LAST:event_RentClearBTNActionPerformed
 
     private void RentCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentCalculateBTNActionPerformed
         // TODO add your handling code here:
         try{
             String selectedOption = (String) RentComboboxYearandMonth.getSelectedItem();
-            Helper.InputValidation(RentPretaxIncome.getText());
-            Helper.InputValidation(RentMonthlyDebt.getText());
             
+                if (RentMonthlyDebt.getText().trim().isEmpty()) {
+                RentMonthlyDebt.setText("0");
+            }
    
             double incomeYearlyOrMonthly = Double.parseDouble(RentPretaxIncome.getText());
             double monthlyDebt = Double.parseDouble(RentMonthlyDebt.getText());
             
             
+
+           
             String outputText = "";
+            
+          
             
    
             
@@ -5080,12 +5195,14 @@ String aboutMessage = "<html>"
                 String optionSelected = "year";
                 long[] affordableRent = Helper.calculateAffordableRent(incomeYearlyOrMonthly, monthlyDebt, optionSelected);
                 if (affordableRent != null) {
-                    outputText = "<html>You can afford up to $" + affordableRent[0] 
+                    outputText = "<html>You can afford up to " + currencyFormat.format(affordableRent[0]) 
                                 + " per month on a rental payment.<br>"
-                                + "It is recommended to keep your rental payment below $" 
-                                + affordableRent[1] + " per month</html>";
+                                + "It is recommended to keep your rental payment below " 
+                                + currencyFormat.format(affordableRent[1]) + " per month</html>";
                 } else {
-                    outputText = "<html>Hard to meet payment requirement</html>";
+                    outputText = "<html>"
+                            + "At your level of income and debt, "
+                            + "It will be hard to meet rent payments</html>";
                 }
             }
 
@@ -5093,12 +5210,14 @@ String aboutMessage = "<html>"
                 String optionSelected = "monthly";
                 long[] affordableRent = Helper.calculateAffordableRent(incomeYearlyOrMonthly, monthlyDebt, optionSelected);
                 if (affordableRent != null) {
-                    outputText = "<html>You can afford up to $" + affordableRent[0] 
+                    outputText = "<html>You can afford up to " + currencyFormat.format(affordableRent[0]) 
                                 + " per month on a rental payment.<br>"
-                                + "It is recommended to keep your rental payment below $" 
-                                + affordableRent[1] + " per month</html>";
+                                + "It is recommended to keep your rental payment below " 
+                                + currencyFormat.format(affordableRent[1]) + " per month</html>";
                 } else {
-                    outputText = "<html>Hard to meet payment requirement</html>";
+                    outputText = "<html>"
+                            + "At your level of income and debt, "
+                            + "It will be hard to meet rent payments</html>";
                 }
             }
 
@@ -5109,11 +5228,12 @@ String aboutMessage = "<html>"
 
         }
         catch(Exception e){
+            RentOutput.setText("Error404");
             JOptionPane.showMessageDialog(null, "Empty fields!");
         }
         
     }//GEN-LAST:event_RentCalculateBTNActionPerformed
-//---------------------------------------------------------------------------------------------------------------------------------------------------------Down Payment Calculator
+//-------------------------------------------------------------------------------------------------------------------------------------------------------Down Payment Calculator
     private void DownPaymentUpfrontCashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentUpfrontCashKeyReleased
 
       String input = DownPaymentUpfrontCash.getText();
@@ -5121,16 +5241,18 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentUpfrontCash.setText(strippedInput);
-      Helper.InputValidation(strippedInput);    
+      String Number = Helper.extractNumbers(input);
+      DownPaymentUpfrontCash.setText(Number);
     }//GEN-LAST:event_DownPaymentUpfrontCashKeyReleased
 
     private void DownPaymentClosingCOstKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentClosingCOstKeyReleased
-       String input = DownPaymentClosingCOst.getText();
+      String input = DownPaymentClosingCOst.getText();
       // Strip all spaces from the input as the user types
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentClosingCOst.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      DownPaymentClosingCOst.setText(Number);
     }//GEN-LAST:event_DownPaymentClosingCOstKeyReleased
 
     private void DownPaymentInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentInterestRateKeyReleased
@@ -5139,7 +5261,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentInterestRate.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      DownPaymentInterestRate.setText(Number);
     }//GEN-LAST:event_DownPaymentInterestRateKeyReleased
 
     private void DownPaymentLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentLoanTermKeyReleased
@@ -5148,8 +5271,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentLoanTerm.setText(strippedInput);
-      if (Helper.isWholeNumber(DownPaymentLoanTerm.getText())){
-      Helper.InputValidation(DownPaymentLoanTerm.getText());}
+      String Number = Helper.extractWholePositiveNumbers(input);
+      DownPaymentLoanTerm.setText(Number);
     }//GEN-LAST:event_DownPaymentLoanTermKeyReleased
 
     private void DownPaymentClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentClearBTNActionPerformed
@@ -5159,6 +5282,8 @@ String aboutMessage = "<html>"
         DownPaymentClosingCOst.setText("");
         DownPaymentInterestRate.setText("");
         DownPaymentLoanTerm.setText("");
+        DownPaymnentCheckboxClosingCost.setSelected(false);
+        DownPaymentOuput.setText("");
     }//GEN-LAST:event_DownPaymentClearBTNActionPerformed
 
     private void DownPaymentDownPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DownPaymentDownPaymentKeyReleased
@@ -5167,7 +5292,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       DownPaymentDownPayment.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      DownPaymentDownPayment.setText(Number);
     }//GEN-LAST:event_DownPaymentDownPaymentKeyReleased
 
     private void DownPaymentCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownPaymentCalculateBTNActionPerformed
@@ -5175,52 +5301,54 @@ String aboutMessage = "<html>"
                 
         try{
             
-        double upfrontCash = Double.parseDouble( DownPaymentUpfrontCash.getText());
-        double downpayment = Double.parseDouble(DownPaymentDownPayment.getText());
-        double includeClosingCosts = Double.parseDouble(DownPaymentClosingCOst.getText());
-        double interestRate = Double.parseDouble(DownPaymentInterestRate.getText());
-        double loanTerm = Double.parseDouble(DownPaymentLoanTerm.getText());
-        
-        String outputText="";
-       
-       
-
-        if (DownPaymnentCheckboxClosingCost.isSelected()) {
-            
-            String selectedOption = (String) DownPaymentComboBox.getSelectedItem();
-            if ("%".equals(selectedOption)) {
-                 if (includeClosingCosts+1>100){
-                    JOptionPane.showMessageDialog(null, "Closing costs percentage should not be so high.");
-                     }
-                 else{
-                double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);     
-                outputText = "<html>You can afford up to $" + result1[0] + " for the home price.<br>"
-                          + "Your loan amount is $" + result1[1] + ".<br>"
-                          + "Your monthly payment will be $" + result1[2] + ".</html>";
-                }
-                
-                
-                
-            } if ("$".equals(selectedOption)){
-                 if (includeClosingCosts>upfrontCash){
-                        JOptionPane.showMessageDialog(null, "Closing costs should not be more than the cash amount you plan to put in.");
-                    }
-                 else{
-                double[] result2 = Helper.downpaymentYesClosingCostandMoney(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);
-                outputText = "<html>You can afford up to $" + result2[0] + " for the home price.<br>"
-                           + "Your loan amount is $" + result2[1] + ".<br>"
-                           + "Your monthly payment will be $" + result2[2] + ".</html>";}
+            if (DownPaymentClosingCOst.getText().trim().isEmpty()) {
+                DownPaymentClosingCOst.setText("0");
             }
-        } else {
-           double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts=0);     
-           outputText = "<html>You can afford up to $" + result1[0] + " for the home price.<br>"
-                          + "Your loan amount is $" + result1[1] + ".<br>"
-                          + "Your monthly payment will be $" + result1[2] + ".</html>";
-        }
-        DownPaymentOuput.setText(outputText);
+            double upfrontCash = Double.parseDouble( DownPaymentUpfrontCash.getText());
+            double downpayment = Double.parseDouble(DownPaymentDownPayment.getText());
+            double includeClosingCosts = Double.parseDouble(DownPaymentClosingCOst.getText());
+            double interestRate = Double.parseDouble(DownPaymentInterestRate.getText());
+            double loanTerm = Double.parseDouble(DownPaymentLoanTerm.getText());
+
+            String outputText="";
+
+
+            if (DownPaymnentCheckboxClosingCost.isSelected()) {
+
+                String selectedOption = (String) DownPaymentComboBox.getSelectedItem();
+                if ("%".equals(selectedOption)) {
+                     if (includeClosingCosts+1>100){
+                        JOptionPane.showMessageDialog(null, "Closing costs percentage should not be so high. It should between 0 and 99%");
+                         }
+                     else{
+                    double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);     
+                    outputText = "<html>You can afford up to " + currencyFormat.format(result1[0]) + " for the home price.<br>"
+                              + "Your loan amount is " + currencyFormat.format(result1[1]) + ".<br>"
+                              + "Your monthly payment will be " + currencyFormat.format(result1[2]) + ".</html>";
+                    }
+
+
+
+                } if ("$".equals(selectedOption)){
+                     if (includeClosingCosts>upfrontCash){
+                            JOptionPane.showMessageDialog(null, "Closing costs should not be more than the cash amount you plan to put in.");
+                        }
+                     else{
+                    double[] result2 = Helper.downpaymentYesClosingCostandMoney(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts);
+                    outputText = "<html>You can afford up to " + currencyFormat.format(result2[0]) + " for the home price.<br>"
+                               + "Your loan amount is " + currencyFormat.format(result2[1]) + ".<br>"
+                               + "Your monthly payment will be " + currencyFormat.format(result2[2]) + ".</html>";}
+                }
+            } else {
+               double[] result1 = Helper.downpaymentNOClosingCostandPercent(upfrontCash, downpayment, interestRate, loanTerm, includeClosingCosts=0);     
+               outputText = "<html>You can afford up to " + currencyFormat.format(result1[0]) + " for the home price.<br>"
+                              + "Your loan amount is " + currencyFormat.format(result1[1]) + ".<br>"
+                              + "Your monthly payment will be " + currencyFormat.format(result1[2]) + ".</html>";
+            }
+            DownPaymentOuput.setText(outputText);
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Empty fields!");
+            JOptionPane.showMessageDialog(null, "Empty fields!");DownPaymentOuput.setText("Error404");
         }
     }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
 
@@ -5242,7 +5370,7 @@ String aboutMessage = "<html>"
         String salesTaxValue = ALSalesTaxInput.getText();
         String otherFeesValue = ALOtherFeesInput.getText();
         
-            clearErrorHighlights();
+        clearErrorHighlights();
 
         // Initialize a flag to track if there are any errors
         boolean hasErrors = false;
@@ -5369,7 +5497,7 @@ String aboutMessage = "<html>"
         ALResultOutput.setText("");
         clearErrorHighlights();
     }//GEN-LAST:event_ALClearButtonActionPerformed
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
+//---------------------------------------------------------------------------------------------------------------------------------------------Mortgage Calculator Pedro
     private void hideComponentsMortgageCalculator() {
         MortgageCalculatorPropertyTaxes.setVisible(false);
         MortgageCalculatorPropertyTaxesLabel.setVisible(false);
@@ -5395,7 +5523,8 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       MorgageCalculatorHomePrice.setText(strippedInput);
-      Helper.InputValidation(strippedInput);  
+      String Number = Helper.extractNumbers(input);
+      MorgageCalculatorHomePrice.setText(Number);  
     }//GEN-LAST:event_MorgageCalculatorHomePriceKeyReleased
 
     private void MortgateCalculatorDownPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgateCalculatorDownPaymentKeyReleased
@@ -5404,13 +5533,26 @@ String aboutMessage = "<html>"
       String strippedInput = input.replaceAll("\\s", "");
       // Set the text field with the stripped input (without spaces)
       MortgateCalculatorDownPayment.setText(strippedInput);
-      Helper.InputValidation(strippedInput);
+      String Number = Helper.extractNumbers(input);
+      MortgateCalculatorDownPayment.setText(Number);  
       
       try {
             String selectedOptionDownPayment = (String) MortgageCalculatorDownPaymentCBox.getSelectedItem();
             double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
             double downpayment = Double.parseDouble( MortgateCalculatorDownPayment.getText());
-            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+            if (!Helper.validateInput(downpayment, hp, selectedOptionDownPayment)){
+                if("%".equals(selectedOptionDownPayment)){
+                    MortgateCalculatorDownPayment.setText("99");
+                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 99%");
+                }
+                if("$".equals(selectedOptionDownPayment)){
+                    double homeprice = hp-1;
+                    String homepriceString = String.valueOf(homeprice);
+                    MortgateCalculatorDownPayment.setText(homepriceString);
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price (" + currencyFormat.format(hp) + ")");
+                }
+                
+                        }
  
 
 
@@ -5427,10 +5569,9 @@ String aboutMessage = "<html>"
         String input =  MortgageCalculatorLoanTerm.getText(); 
         String strippedInput = input.replaceAll("\\s", "");
         MortgageCalculatorLoanTerm.setText(strippedInput);
- 
-        if (!Helper.isWholeNumber(input)){
-            Helper.InputValidation(input);
-        }
+        String Number = Helper.extractWholePositiveNumbers(input);
+        MortgageCalculatorLoanTerm.setText(Number); 
+
     }//GEN-LAST:event_MortgageCalculatorLoanTermKeyReleased
 
     private void MortgageCalculatorInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorInterestRateKeyReleased
@@ -5439,32 +5580,46 @@ String aboutMessage = "<html>"
         String strippedInput = input.replaceAll("\\s", "");
               // Set the text field with the stripped input (without spaces)
         MortgageCalculatorInterestRate.setText(strippedInput);
-        Helper.InputValidation(strippedInput);  
+        String Number = Helper.extractNumbers(input);
+        MortgageCalculatorInterestRate.setText(Number); 
+         
     }//GEN-LAST:event_MortgageCalculatorInterestRateKeyReleased
 
     private void MortgateCalculatorYearKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgateCalculatorYearKeyReleased
         String input = MortgateCalculatorYear.getText();
         String strippedInput = input.replaceAll("\\s", "");    
         MortgateCalculatorYear.setText(strippedInput);
-        if (!Helper.isWholeNumber(input)){
-            Helper.InputValidation(input);
-        }
+        String Number = Helper.extractWholePositiveNumbers(input);
+        MortgateCalculatorYear.setText(Number);
+
     }//GEN-LAST:event_MortgateCalculatorYearKeyReleased
 
     private void MortgageCalculatorPropertyTaxesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorPropertyTaxesKeyReleased
-          String input = MortgageCalculatorPropertyTaxes.getText();
-          // Strip all spaces from the input as the user types
-          String strippedInput = input.replaceAll("\\s", "");
-          // Set the text field with the stripped input (without spaces)
-         MortgageCalculatorPropertyTaxes.setText(strippedInput);
-          Helper.InputValidation(strippedInput); 
-          
-        
+
         try {
+            String input = MortgageCalculatorPropertyTaxes.getText();
+          // Strip all spaces from the input as the user types
+            String strippedInput = input.replaceAll("\\s", "");
+          // Set the text field with the stripped input (without spaces)
+            MortgageCalculatorPropertyTaxes.setText(strippedInput);
+
+            String Number = Helper.extractNumbers(input);
+            MortgageCalculatorPropertyTaxes.setText(Number); 
             String selectedOptionDownPayment = (String) MortgageCalculatorPropertyTaxesCbox.getSelectedItem();
             double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
             double downpayment = Double.parseDouble( MortgageCalculatorPropertyTaxes.getText());
-            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+            if (!Helper.validateInput(downpayment, hp, selectedOptionDownPayment)){
+                if("%".equals(selectedOptionDownPayment)){
+                        MortgageCalculatorPropertyTaxes.setText("99");
+                        JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 99%");
+                    }
+                if("$".equals(selectedOptionDownPayment)){
+                    double homeprice = hp-1;
+                    String homepriceString = String.valueOf(homeprice);
+                    MortgageCalculatorPropertyTaxes.setText(homepriceString);
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price (" + currencyFormat.format(hp) + ")");
+                }
+            }
 
 
         } catch (NumberFormatException e) {
@@ -5474,19 +5629,32 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_MortgageCalculatorPropertyTaxesKeyReleased
 
     private void MortgageCalculatorHomeInsuranceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorHomeInsuranceKeyReleased
-        String input = MortgageCalculatorHomeInsurance.getText();
-          // Strip all spaces from the input as the user types
-        String strippedInput = input.replaceAll("\\s", "");
-        // Set the text field with the stripped input (without spaces)
-        MortgageCalculatorHomeInsurance.setText(strippedInput);
-        Helper.InputValidation(strippedInput);
-        
-        
+
         try {
+            String input = MortgageCalculatorHomeInsurance.getText();
+              // Strip all spaces from the input as the user types
+            String strippedInput = input.replaceAll("\\s", "");
+            // Set the text field with the stripped input (without spaces)
+            MortgageCalculatorHomeInsurance.setText(strippedInput);
+
+            String Number = Helper.extractNumbers(input);
+            MortgageCalculatorHomeInsurance.setText(Number);  
+            
             String selectedOptionDownPayment = (String)MortgageCalculatorHomeInsuranceCBox.getSelectedItem();
             double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
             double downpayment = Double.parseDouble(MortgageCalculatorHomeInsurance.getText());
-            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+            if(!Helper.validateInput(downpayment, hp, selectedOptionDownPayment)){
+                if("%".equals(selectedOptionDownPayment)){
+                    MortgageCalculatorHomeInsurance.setText("99");
+                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 99%");
+                    }
+                if("$".equals(selectedOptionDownPayment)){
+                    double homeprice = hp-1;
+                    String homepriceString = String.valueOf(homeprice);
+                    MortgageCalculatorHomeInsurance.setText(homepriceString);
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price (" + currencyFormat.format(hp) + ")");
+                }
+            }
 
 
         } catch (NumberFormatException e) {
@@ -5496,20 +5664,31 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_MortgageCalculatorHomeInsuranceKeyReleased
 
     private void MortgageCalculatorHOAFeeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorHOAFeeKeyReleased
+ 
+        try {
         String input = MortgageCalculatorHOAFee.getText();
           // Strip all spaces from the input as the user types
         String strippedInput = input.replaceAll("\\s", "");
         // Set the text field with the stripped input (without spaces)
         MortgageCalculatorHOAFee.setText(strippedInput);
-        Helper.InputValidation(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        MortgageCalculatorHOAFee.setText(Number);  
         
-       
-        try {
-            
         String selectedOptionDownPayment = (String)MortgageCalculatorHoaFeeCBox.getSelectedItem();
         double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
         double downpayment = Double.parseDouble(MortgageCalculatorHOAFee.getText());
-        Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+        if (!Helper.validateInput(downpayment, hp, selectedOptionDownPayment)){
+            if("%".equals(selectedOptionDownPayment)){
+                MortgageCalculatorHOAFee.setText("99");
+                JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 99%");
+                }
+            if("$".equals(selectedOptionDownPayment)){
+                double homeprice = hp-1;
+                String homepriceString = String.valueOf(homeprice);
+                MortgageCalculatorHOAFee.setText(homepriceString);
+                JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price (" + currencyFormat.format(hp) + ")");
+            }
+        }
 
 
         } catch (NumberFormatException e) {
@@ -5519,19 +5698,31 @@ String aboutMessage = "<html>"
     }//GEN-LAST:event_MortgageCalculatorHOAFeeKeyReleased
 
     private void MortgageCalculatorOtherCostKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgageCalculatorOtherCostKeyReleased
-        String input = MortgageCalculatorOtherCost.getText();
-          // Strip all spaces from the input as the user types
-        String strippedInput = input.replaceAll("\\s", "");
-        // Set the text field with the stripped input (without spaces)
-        MortgageCalculatorOtherCost.setText(strippedInput);
-        Helper.InputValidation(strippedInput); 
-        
-       
+    
         try {
+            String input = MortgageCalculatorOtherCost.getText();
+            // Strip all spaces from the input as the user types
+            String strippedInput = input.replaceAll("\\s", "");
+          // Set the text field with the stripped input (without spaces)
+            MortgageCalculatorOtherCost.setText(strippedInput);
+            String Number = Helper.extractNumbers(input);
+            MortgageCalculatorOtherCost.setText(Number);
+            
             String selectedOptionDownPayment = (String) MortgageCalculatorOtherCostCBox.getSelectedItem();
             double hp = Double.parseDouble(MorgageCalculatorHomePrice.getText());
             double downpayment = Double.parseDouble(MortgageCalculatorOtherCost.getText());
-            Helper.validateInput(downpayment, hp, selectedOptionDownPayment);
+            if(!Helper.validateInput(downpayment, hp, selectedOptionDownPayment)){
+                if("%".equals(selectedOptionDownPayment)){
+                    MortgageCalculatorOtherCost.setText("99");
+                    JOptionPane.showMessageDialog(null, "Error: Percentage must be between 0 and 99%");
+                    }
+                if("$".equals(selectedOptionDownPayment)){
+                    double homeprice = hp-1;
+                    String homepriceString = String.valueOf(homeprice);
+                    MortgageCalculatorOtherCost.setText(homepriceString);
+                    JOptionPane.showMessageDialog(null, "Error: Dollar amount must be less than the house price (" + currencyFormat.format(hp) + ")");
+                }
+            }
 
 
         } catch (NumberFormatException e) {
@@ -5551,6 +5742,9 @@ String aboutMessage = "<html>"
        MortgageCalculatorHomeInsurance.setText(strippedInput);
        MortgageCalculatorHOAFee.setText(strippedInput);
        MortgageCalculatorOtherCost.setText(strippedInput);
+       MortgageCalculatorIncudeTaxesandMOre.setSelected(false);
+       hideComponentsMortgageCalculator();
+       MortgageCalculatorOUtput.setText("");
     }//GEN-LAST:event_MortgateCalculatorClearBTNActionPerformed
 
     private void MortgageCalculatorIncudeTaxesandMOreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageCalculatorIncudeTaxesandMOreActionPerformed
@@ -5663,20 +5857,31 @@ String aboutMessage = "<html>"
             String outputText="";
             if (MortgageCalculatorIncudeTaxesandMOre.isSelected()) {
                 double[] mortgageResult = Helper.mortgageCalculator(hp, dp, loanTerm, rate, startDate, propertyTaxes, homeInsurance, hoaFee, otherCost);
+                int endDate = startDate + loanTerm;
                 outputText = "<html>"
                     +"<b>Monthly Payment:</b><br>"
-                    + "Your monthly payment will be $" + mortgageResult[1] + ".<br>"
-                    + "Monthly Property Tax: $" + mortgageResult[2] + "<br>"
-                    + "Monthly Home Insurance: $" + mortgageResult[3] + "<br>"
-                    + "Monthly HOA Fee: $" + mortgageResult[4] + "<br>"
-                    + "Monthly Other Cost: $" + mortgageResult[5] + "<br>"
-                    + "Total Out-of-Pocket: $" + mortgageResult[9] + "<br><br>"
+                    + "Your monthly payment will be " + currencyFormat.format(mortgageResult[1]) + ".<br>"
+                    + "Monthly Property Tax: " + currencyFormat.format(mortgageResult[2]) + "<br>"
+                    + "Monthly Home Insurance: " + currencyFormat.format(mortgageResult[3]) + "<br>"
+                    + "Monthly HOA Fee: " + currencyFormat.format(mortgageResult[4]) + "<br>"
+                    + "Monthly Other Cost: " + currencyFormat.format(mortgageResult[5]) + "<br>"
+                    + "Total Out-of-Pocket: " + currencyFormat.format(mortgageResult[9]) + "<br><br>"
+                        
+                    +"<b>Total Payment over " + loanTerm + " years:</b><br>"
+                    + "Your total payment will be " + currencyFormat.format(mortgageResult[1] * loanTerm * 12) + ".<br>" // Multiply by loanTerm * 12 for total payment
+                    + "Total Property Tax: " + currencyFormat.format(mortgageResult[2] * loanTerm * 12) + "<br>"
+                    + "Total Home Insurance: " + currencyFormat.format(mortgageResult[3] * loanTerm * 12) + "<br>"
+                    + "Total HOA Fee: " + currencyFormat.format(mortgageResult[4] * loanTerm * 12) + "<br>"
+                    + "Total Other Cost: " + currencyFormat.format(mortgageResult[5] * loanTerm * 12) + "<br>"
+                    + "Final Out-of-Pocket Expense: " + currencyFormat.format(mortgageResult[9] * loanTerm * 12) + "<br><br>"
+                    + "Loan term start date: " + selectedOptionMonth + " " + startDate + "<br>"
+                    + "Loan term end date: " + selectedOptionMonth + " " + endDate + "<br><br>"
 
-                    + "\"<b>House Price:</b> $" + hp + ".<br>"
-                    + "Your down payment is $" + dp + ".<br>"
-                    + "Your loan amount is $" + mortgageResult[0] + ".<br>"
-                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: $" + mortgageResult[6] + "<br>"
-                    + "Total Interest Paid: $" + mortgageResult[7] + "<br>"
+                    + "<b>House Price:</b> " + currencyFormat.format(hp) + ".<br>"
+                    + "Your down payment is " + currencyFormat.format(dp) + ".<br>"
+                    + "Your loan amount is " + currencyFormat.format(mortgageResult[0]) + ".<br>"
+                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: " + currencyFormat.format(mortgageResult[6]) + "<br>"
+                    + "Total Interest Paid: " + currencyFormat.format(mortgageResult[7]) + "<br>"
                     +  "Mortgage Payoff Date: " +selectedOptionMonth+" "+ (int) mortgageResult[8]
                     + "</html>";
             }   
@@ -5684,14 +5889,19 @@ String aboutMessage = "<html>"
                 double[] mortgageResult = Helper.mortgageCalculator(hp, dp, loanTerm, rate, startDate, propertyTaxes=0, homeInsurance=0, hoaFee=0, otherCost=0);
                 outputText = "<html>"
                     +"<b>Monthly Payment:</b><br>"
-                    + "Your monthly payment will be $" + mortgageResult[1] + ".<br>"
-                    + "Total Out-of-Pocket: $" + mortgageResult[9] + "<br><br>"
+                    + "Your monthly payment will be " + currencyFormat.format(mortgageResult[1]) + ".<br>"
+                    + "Total Out-of-Pocket: " + currencyFormat.format(mortgageResult[9]) + "<br><br>"
+                    
+                    +"<b>Total Payment over " + loanTerm + " years:</b><br>"
+                    + "Your total payment will be " + currencyFormat.format(mortgageResult[1] * loanTerm * 12) + ".<br>" // Total monthly payment over the loan term
+                    + "Total Out-of-Pocket: " + currencyFormat.format(mortgageResult[9] * loanTerm * 12) + "<br><br>" 
+                        
 
-                    + "\"<b>House Price:</b> $" + hp + ".<br>"
-                    + "Your down payment is $" + dp + ".<br>"
-                    + "Your loan amount is $" + mortgageResult[0] + ".<br>"
-                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: $" + mortgageResult[6] + "<br>"
-                    + "Total Interest Paid: $" + mortgageResult[7] + "<br>"
+                    + "\"<b>House Price:</b> " + currencyFormat.format(hp) + ".<br>"
+                    + "Your down payment is " + currencyFormat.format(dp) + ".<br>"
+                    + "Your loan amount is " + currencyFormat.format(mortgageResult[0]) + ".<br>"
+                    + "Total Mortgage Payments over " + (12 * loanTerm) + " months: " + currencyFormat.format(mortgageResult[6]) + "<br>"
+                    + "Total Interest Paid: " + currencyFormat.format(mortgageResult[7]) + "<br>"
                     +  "Mortgage Payoff Date: " +selectedOptionMonth+" "+ (int) mortgageResult[8]
                     + "</html>";
                     
@@ -5700,10 +5910,10 @@ String aboutMessage = "<html>"
             MortgageCalculatorOUtput.setText(outputText);
                 }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Empty fields!");
+            JOptionPane.showMessageDialog(null, "Empty fields!");MortgageCalculatorOUtput.setText("Error404");
         }
     }//GEN-LAST:event_MortgateCalculatorCaculateBTNActionPerformed
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Payoff Calculator Pedro 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------Mortgage Payoff Calculator Pedro 
     private void MortgagepayoffCalculatorOriginalLoanAmountKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgagepayoffCalculatorOriginalLoanAmountKeyReleased
        
         String input = MortgagepayoffCalculatorOriginalLoanAmount.getText();
@@ -5711,7 +5921,8 @@ String aboutMessage = "<html>"
         String strippedInput = input.replaceAll("\\s", "");
         // Set the text field with the stripped input (without spaces)
         MortgagepayoffCalculatorOriginalLoanAmount.setText(strippedInput);
-        Helper.InputValidation(strippedInput);     
+        String Number = Helper.extractNumbers(input);
+        MortgagepayoffCalculatorOriginalLoanAmount.setText(Number);     
     }//GEN-LAST:event_MortgagepayoffCalculatorOriginalLoanAmountKeyReleased
 
     private void MortgagePayoffOriginalLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortgagePayoffOriginalLoanTermKeyReleased
@@ -5721,9 +5932,8 @@ String aboutMessage = "<html>"
         String strippedInput = input.replaceAll("\\s", "");
         // Set the text field with the stripped input (without spaces)
         MortgagePayoffOriginalLoanTerm.setText(strippedInput);
-        if (!Helper.isWholeNumber(input)){
-            Helper.InputValidation(input);
-        }  
+        String Number = Helper.extractWholePositiveNumbers(input);
+        MortgagePayoffOriginalLoanTerm.setText(Number);  
     }//GEN-LAST:event_MortgagePayoffOriginalLoanTermKeyReleased
 
     private void MorgagePayoffCalculatorInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgagePayoffCalculatorInterestRateKeyReleased
@@ -5732,17 +5942,9 @@ String aboutMessage = "<html>"
         String strippedInput = input.replaceAll("\\s", "");
         // Set the text field with the stripped input (without spaces)
         MorgagePayoffCalculatorInterestRate.setText(strippedInput);
-        Helper.InputValidation(strippedInput);
-        
-        try {
-            String selectedOptionDownPayment = "%";
-           double hp=0.0;
-           double downpayment = Double.parseDouble(MorgagePayoffCalculatorInterestRate.getText());
-           Helper.validateInput(downpayment, hp=0, selectedOptionDownPayment);
-         
-        } catch (NumberFormatException e) {
-            // This block will execute if parsing fails, for example if input is "abc"
-        }    
+        String Number = Helper.extractNumbers(input);
+        MorgagePayoffCalculatorInterestRate.setText(Number); 
+           
     }//GEN-LAST:event_MorgagePayoffCalculatorInterestRateKeyReleased
 
     private void MortGagePayoffRemainingTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermKeyReleased
@@ -5751,9 +5953,8 @@ String aboutMessage = "<html>"
         String strippedInput = input.replaceAll("\\s", "");
         // Set the text field with the stripped input (without spaces)
         MortGagePayoffRemainingTerm.setText(strippedInput);
-        if (!Helper.isWholeNumber(input)){
-            Helper.InputValidation(input);
-        }
+        String Number = Helper.extractWholePositiveNumbers(input);
+        MortGagePayoffRemainingTerm.setText(Number);
     }//GEN-LAST:event_MortGagePayoffRemainingTermKeyReleased
 
     private void MortgagePayoffPayAlltogetherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffPayAlltogetherActionPerformed
@@ -5812,7 +6013,12 @@ String aboutMessage = "<html>"
         MorgagePayoffCalculatorInterestRate.setText("");
         MortGagePayoffRemainingTerm.setText("");
         MortGagePayoffRemainingTermMonths.setText("");
+        
         hideComponents();
+        MortgagePayoffPayAlltogether.setSelected(false); 
+        MortgagePayoffRepaymentWithExtraPayments.setSelected(false);
+        MortgagePayoffBiweeklyRepayment.setSelected(false);
+        MortgagePayoffCalculatorNormalPayment.setSelected(true);
     }//GEN-LAST:event_MortgagePayOffClearBTNActionPerformed
 
     private void MortgagePayoffCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculateBTNActionPerformed
@@ -5831,15 +6037,15 @@ String aboutMessage = "<html>"
 
                 outputText = "<html>"
                                   + "<b>If Payoff Together:</b><br>"
-                                  + "Total Payment: $" + mortgagePayoff[0] + "<br>"
-                                  + "Total Interest: $" + mortgagePayoff[1] + "<br><br>"
+                                  + "Total Payment: " + currencyFormat.format(mortgagePayoff[0]) + "<br>"
+                                  + "Total Interest: " + currencyFormat.format(mortgagePayoff[1]) + "<br><br>"
                                   + "<b>Normal Repayment:</b><br>"
-                                  + "Monthly Pay: $" + mortgagePayoff[2] + "<br>"
-                                  + "Total Payment on Original Schedule: $" + mortgagePayoff[3] + "<br>"
-                                  + "Total Interest on Original Schedule: $" + mortgagePayoff[4] + "<br>"
-                                  + "Remaining Balance: $" + mortgagePayoff[5] + "<br>"
-                                  + "Remaining Interest Savings: $" + mortgagePayoff[6] + "<br>"
-                                  + "Remaining Balance to Pay Off Loan: $" + mortgagePayoff[7] + "<br>"
+                                  + "Monthly Pay: " + currencyFormat.format(mortgagePayoff[2]) + "<br>"
+                                  + "Total Payment on Original Schedule: " + currencyFormat.format(mortgagePayoff[3]) + "<br>"
+                                  + "Total Interest on Original Schedule: " + currencyFormat.format(mortgagePayoff[4]) + "<br>"
+                                  + "Remaining Balance: $" + currencyFormat.format(mortgagePayoff[5]) + "<br>"
+                                  + "Remaining Interest Savings: " + currencyFormat.format(mortgagePayoff[6]) + "<br>"
+                                  + "Remaining Balance to Pay Off Loan: " + currencyFormat.format(mortgagePayoff[7]) + "<br>"
                                   + "</html>";} 
 
             if (MortgagePayoffCalculatorNormalPayment.isSelected()) {
@@ -5849,15 +6055,15 @@ String aboutMessage = "<html>"
                 outputText = "<html>"
 
                                   + "<b>Normal Repayment:</b><br>"
-                                  + "Monthly Pay: $" + mortgagePayoff[2] + "<br>"
-                                  + "Total Payment on Original Schedule: $" + mortgagePayoff[3] + "<br>"
-                                  + "Total Interest on Original Schedule: $" + mortgagePayoff[4] + "<br>"
-                                  + "Remaining Balance: $" + mortgagePayoff[5] + "<br>"
-                                  + "Remaining Interest Savings: $" + mortgagePayoff[6] + "<br>"
-                                  + "Remaining Balance to Pay Off Loan: $" + mortgagePayoff[7] + "<br>"
+                                  + "Monthly Pay: " + currencyFormat.format(mortgagePayoff[2]) + "<br>"
+                                  + "Total Payment on Original Schedule: " + currencyFormat.format(mortgagePayoff[3]) + "<br>"
+                                  + "Total Interest on Original Schedule: " + currencyFormat.format(mortgagePayoff[4]) + "<br>"
+                                  + "Remaining Balance: " + currencyFormat.format(mortgagePayoff[5]) + "<br>"
+                                  + "Remaining Interest Savings: " + currencyFormat.format(mortgagePayoff[6]) + "<br>"
+                                  + "Remaining Balance to Pay Off Loan: " + currencyFormat.format(mortgagePayoff[7]) + "<br>"
                                   + "</html>";} 
             MortgagePayoffOutput.setText(outputText);}
-        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");MortgagePayoffOutput.setText("Error404");}
         
 
 
@@ -5899,14 +6105,29 @@ String aboutMessage = "<html>"
         MorgagePayoffRePayementExtraOneTimeLabel2.setVisible(true);
     }
    
-   //-------------------------------------------------------------------------------------------------------------------------------Retirement Calculator Pedro
+
     
     
     
     private void MortGagePayoffRemainingTermMonthsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MortGagePayoffRemainingTermMonthsKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+        String input = MortGagePayoffRemainingTermMonths.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MortGagePayoffRemainingTermMonths.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        MortGagePayoffRemainingTermMonths.setText(Number);
+        int months = Integer.parseInt(Number);
 
+    // Check if the number of months is within the valid range
+    if (months >= 0 && months <= 11) {
+    } else {
+      
+        JOptionPane.showMessageDialog(null,"Invalid number of months. Please enter a value between 0 and 11.");
+        MortGagePayoffRemainingTermMonths.setText("0");   
+    }
+    }//GEN-LAST:event_MortGagePayoffRemainingTermMonthsKeyReleased
+   //-------------------------------------------------------------------------------------------------------------------------------Retirement Calculator Pedro
     private void RetirementCalculatorClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorClearBTNActionPerformed
         RetirementCalculatorCurrentAge.setText("");
         RetirementCalculatorRetirementAge.setText("");
@@ -5916,78 +6137,172 @@ String aboutMessage = "<html>"
         RetirementCalculatorAverageInvestmentReturn.setText("0");
         RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
         RetirementCalculatorYourCurrentRetirementSavings.setText("0");
+        RetirementCalculatorOutput.setText("");
     }//GEN-LAST:event_RetirementCalculatorClearBTNActionPerformed
 
     private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
         try{
-            int cAge = Integer.parseInt(RetirementCalculatorCurrentAge.getText());
-            int rAge = Integer.parseInt(RetirementCalculatorRetirementAge.getText());
-            int lifeExpectancy = Integer.parseInt(RetirementCalculatorLifeExpectancy.getText());
-            double preTaxIncome =Double.parseDouble(RetirementCalculatorPreTaxIncome.getText());
-            double incomeNeededAfterRetirement =Double.parseDouble(RetirementCalculatorIncomeNeededAfterRetirement.getText());
-            double returnInvestmentRate = Double.parseDouble(RetirementCalculatorAverageInvestmentReturn.getText());
-
-            double otherIncomeAfterRetirement = Double.parseDouble(RetirementCalculatorOtherIncomeAfterRetirement.getText());
-            double currentIncomeSaving = Double.parseDouble(RetirementCalculatorYourCurrentRetirementSavings.getText());
-          
-            
-            String selectedOptionRetirementCalculator = (String) RetirementCalculatorNeededAfterRetirementCbox.getSelectedItem();  
-            if ("%".equals(selectedOptionRetirementCalculator)) {
-                incomeNeededAfterRetirement = preTaxIncome * (returnInvestmentRate/100);         
-            } 
-            if ("$".equals(selectedOptionRetirementCalculator)){
-                incomeNeededAfterRetirement = incomeNeededAfterRetirement;    
-             }
-            
-            
-            if (otherIncomeAfterRetirement == 0) {
-                incomeNeededAfterRetirement = incomeNeededAfterRetirement;
-            } else {
-                incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
+            boolean check = false;
+            double AgeRetiremtn =Double.parseDouble(RetirementCalculatorPreTaxIncome.getText());
+            double lifeExpectancyage =Double.parseDouble(RetirementCalculatorIncomeNeededAfterRetirement.getText());
+            if(AgeRetiremtn<=lifeExpectancyage){
+                check = true;
+            }
+            else{check=false;JOptionPane.showMessageDialog(null, "Your life expectancy age must be greater than or equal your retirement age");
             }
             
-            
-            String outputText = "";
+            if(Helper.validateAges(RetirementCalculatorCurrentAge.getText(), RetirementCalculatorRetirementAge.getText()) && check){              
 
-            if (returnInvestmentRate > 0) {
-                double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
-                String retirement_savingMsg = "";
-                if (retirementCalculator1[4] < retirementCalculator1[0]) {
-                    retirement_savingMsg = "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
-                                + " at age " + rAge + ", which is less than what you need for your retirement.<br>";
-                } else {
-                   retirement_savingMsg = "Based on your current retirement savings, you will have about $" + retirementCalculator1[4]
-                                + " at age " + rAge + ", which exceeds what you need for your retirement.<br>";
+                if (RetirementCalculatorAverageInvestmentReturn.getText().trim().isEmpty()) {
+                RetirementCalculatorAverageInvestmentReturn.setText("0");
                 }
-                
-                outputText = "<html>"
-                                  + "To save $" + retirementCalculator1[0] + " at age " + rAge + ", you can either:<br>"
-                                  + "- Save $" + retirementCalculator1[1]+ " per month<br>"
-                                  + "- Save $" + retirementCalculator1[2] + " per year<br>"
-                                  + "- Save " + retirementCalculator1[3] + "% of your income every year.<br>"
-                                  + retirement_savingMsg
-                                  + "</html>";
-                  
-            } else {
-                double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
-                outputText = "<html>"
-                    + "You will need about $" + retirementCalculator1[0]+ " at age " + rAge + " to retire.<br>"
-                    + "If you save $" + retirementCalculator1[0] + ", you can withdraw $" + retirementCalculator1[1] + " per month.<br><br>"
-                    + "How can you save $" + retirementCalculator1[0] + " at age " + rAge + "?<br>"
-                    + "To save $" + retirementCalculator1[0] + " at age " + rAge + ", you can either:<br>"
-                    + "- Save $" + retirementCalculator1[2]+ " per month<br>"
-                    + "- Save $" + retirementCalculator1[3] + " per year<br>"
-                    + "- Save " + retirementCalculator1[4] + "% of your income every year.<br>"
-                    + "</html>";
-                
-            }
-            
-            RetirementCalculatorOutput.setText(outputText);
-                   
+                if (RetirementCalculatorOtherIncomeAfterRetirement.getText().trim().isEmpty()) {
+                RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
+                }
+                if (RetirementCalculatorYourCurrentRetirementSavings.getText().trim().isEmpty()) {
+                RetirementCalculatorYourCurrentRetirementSavings.setText("0");
+                }
+                int cAge = Integer.parseInt(RetirementCalculatorCurrentAge.getText());
+                int rAge = Integer.parseInt(RetirementCalculatorRetirementAge.getText());
+                int lifeExpectancy = Integer.parseInt(RetirementCalculatorLifeExpectancy.getText());
+                double preTaxIncome =Double.parseDouble(RetirementCalculatorPreTaxIncome.getText());
+                double incomeNeededAfterRetirement =Double.parseDouble(RetirementCalculatorIncomeNeededAfterRetirement.getText());
+                double returnInvestmentRate = Double.parseDouble(RetirementCalculatorAverageInvestmentReturn.getText());
 
+                double otherIncomeAfterRetirement = Double.parseDouble(RetirementCalculatorOtherIncomeAfterRetirement.getText());
+                double currentIncomeSaving = Double.parseDouble(RetirementCalculatorYourCurrentRetirementSavings.getText());
+
+                 double incomeNeededAfterRetirement2 =  0;
+
+                String selectedOptionRetirementCalculator = (String) RetirementCalculatorNeededAfterRetirementCbox.getSelectedItem();  
+                if ("%".equals(selectedOptionRetirementCalculator)) {
+                    incomeNeededAfterRetirement = preTaxIncome * (incomeNeededAfterRetirement/100);
+                    incomeNeededAfterRetirement2 =incomeNeededAfterRetirement;
+                } 
+                if ("$".equals(selectedOptionRetirementCalculator)){
+                    incomeNeededAfterRetirement = incomeNeededAfterRetirement; 
+                    incomeNeededAfterRetirement2=incomeNeededAfterRetirement;
+                 }
+
+
+                if (otherIncomeAfterRetirement == 0) {
+                    incomeNeededAfterRetirement = incomeNeededAfterRetirement;
+                } else {
+                    incomeNeededAfterRetirement = incomeNeededAfterRetirement - (otherIncomeAfterRetirement * 12);
+                }
+
+
+                String outputText = "";
+
+                if (incomeNeededAfterRetirement2>otherIncomeAfterRetirement){
+                    if (returnInvestmentRate > 0) {
+                        double[] retirementCalculator1= Helper.retirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, returnInvestmentRate, currentIncomeSaving);
+                        double[] retirementCalculator2 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                        String retirement_savingMsg = "";
+                        if(currentIncomeSaving ==0){
+                            retirement_savingMsg = "";
+                        }
+                        else{
+                            if (retirementCalculator1[4] < retirementCalculator1[0]) {
+                                retirement_savingMsg = "<html>"
+                                        +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
+                                            + " at age " + rAge + ", which is less than what you need for your retirement.<br>"
+                                                + "</html>";
+                            } else {
+                               retirement_savingMsg = "<html>"
+                                       +"Based on your current retirement savings, you will have about " + currencyFormat.format(retirementCalculator1[4])
+                                            + " at age " + rAge + ", which exceeds what you need for your retirement.<br>"
+                                       + "</html>";
+                            }
+                        }
+
+                        String otherIncomeMsg = "";
+                        if (otherIncomeAfterRetirement>0){
+                           otherIncomeMsg =  "<html>"
+
+
+                                + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
+                                + currencyFormat.format(retirementCalculator2[1]) 
+                                + " per month after your retirement. Together with your other income of " + currencyFormat.format(otherIncomeAfterRetirement)+" per month,<br>"
+                                + "you will have an income " + currencyFormat.format(retirementCalculator2[1]+ otherIncomeAfterRetirement) +" per month after your retirement"
+                                + "</html>";
+                        }else{
+                            otherIncomeMsg =  "<html>"
+                                + "If saved " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " 
+                                + currencyFormat.format(retirementCalculator2[1]) 
+                                + " per month after your retirement."
+                                + "</html>";
+
+                        }
+
+
+                        if (retirementCalculator1[0]>= retirementCalculator1[4]){
+
+
+                            outputText = "<html>"
+                                + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
+                                +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
+                                + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
+                                + "<ul>"
+                                + "    <li>Save " + currencyFormat.format(retirementCalculator1[1]) + " per month</li>"
+                                + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per year</li>"
+                                + "    <li>Save " + retirementCalculator1[3] + "% of your income every year</li>"
+                                + "</ul>"
+                                + "<br>"
+                                + retirement_savingMsg + "<br><br>"
+                                + otherIncomeMsg
+                                + "</html>";
+                        }
+                        else{
+
+                            outputText = "<html>"
+                                + "If you are planning to withdraw "+currencyFormat.format(incomeNeededAfterRetirement2)+ " or " + (incomeNeededAfterRetirement2/preTaxIncome)*100 +"% of your income<br>"
+                                +"after your retirement, then you will need about "+ currencyFormat.format(retirementCalculator1[0])+ " before you retire. <br><br>"
+
+                                + "<br>"
+                                + retirement_savingMsg + "<br><br>"
+
+                                + "</html>";}
+
+
+
+
+
+                    } else {
+                        double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
+                        outputText = "<html>"
+                                + "You will need about " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + " to retire.<br>"
+                                + "If you save " + currencyFormat.format(retirementCalculator1[0]) + ", you can withdraw " + currencyFormat.format(retirementCalculator1[1]) + " per month after your retirement.<br><br>"
+                                + "How can you save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + "?<br>"
+                                + "To save " + currencyFormat.format(retirementCalculator1[0]) + " at age " + rAge + ", you can either:<br>"
+                                + "<ul>"
+                                + "    <li>Save " + currencyFormat.format(retirementCalculator1[2]) + " per month</li>"
+                                + "    <li>Save " + currencyFormat.format(retirementCalculator1[3]) + " per year</li>"
+                                + "    <li>Save " + retirementCalculator1[4] + "% of your income every year</li>"
+                                + "</ul>"
+                                + "</html>";
+
+
+                    }
+
+
+                }else {
+                    outputText = "<html>"
+                                + "You do not need to save for you retirement!<br>"
+                                + "Your other income after retirement is sufficient to <br>"
+                                + "support you desired lifestyle after retirement.<br>"
+
+                                + "</html>";
+
+
+                }
+
+                RetirementCalculatorOutput.setText(outputText);
+            }
+            else {RetirementCalculatorOutput.setText("Error404");}
         
         }
-        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");}
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");RetirementCalculatorOutput.setText("Error404");}
                                                                    
 
     }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
@@ -6005,6 +6320,17 @@ String aboutMessage = "<html>"
     
     }
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
         //----------------------------------------------------------------------------------------------------------------------------Label- Display Name of the Calculator when is click 
     private void MortgagePayoffCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculatorAncestorAdded
         CalculatorNameLBL.setText("Mortgage Payoff Calculator");
@@ -6041,6 +6367,86 @@ String aboutMessage = "<html>"
     private void retirementCalculator3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_retirementCalculator3AncestorAdded
         CalculatorNameLBL.setText("Retirement Calculator");
     }//GEN-LAST:event_retirementCalculator3AncestorAdded
+//----------------------------------------------------------------------------------------------------------------------------------COntinuation of the Retirement Calculator Pedro
+    private void RetirementCalculatorCurrentAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorCurrentAgeKeyReleased
+        String input = RetirementCalculatorCurrentAge.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorCurrentAge.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RetirementCalculatorCurrentAge.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorCurrentAgeKeyReleased
+
+    private void RetirementCalculatorRetirementAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorRetirementAgeKeyReleased
+        String input = RetirementCalculatorRetirementAge.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorRetirementAge.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RetirementCalculatorRetirementAge.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorRetirementAgeKeyReleased
+
+    private void RetirementCalculatorLifeExpectancyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorLifeExpectancyKeyReleased
+        String input = RetirementCalculatorLifeExpectancy.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorLifeExpectancy.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RetirementCalculatorLifeExpectancy.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorLifeExpectancyKeyReleased
+
+    private void RetirementCalculatorPreTaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorPreTaxIncomeKeyReleased
+        String input = RetirementCalculatorPreTaxIncome.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorPreTaxIncome.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RetirementCalculatorPreTaxIncome.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorPreTaxIncomeKeyReleased
+
+    private void RetirementCalculatorIncomeNeededAfterRetirementKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorIncomeNeededAfterRetirementKeyReleased
+        String input = RetirementCalculatorIncomeNeededAfterRetirement.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorIncomeNeededAfterRetirement.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RetirementCalculatorIncomeNeededAfterRetirement.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorIncomeNeededAfterRetirementKeyReleased
+
+    private void RetirementCalculatorAverageInvestmentReturnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorAverageInvestmentReturnKeyReleased
+        String input = RetirementCalculatorAverageInvestmentReturn.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorAverageInvestmentReturn.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RetirementCalculatorAverageInvestmentReturn.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorAverageInvestmentReturnKeyReleased
+
+    private void RetirementCalculatorOtherIncomeAfterRetirementKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorOtherIncomeAfterRetirementKeyReleased
+        String input =  RetirementCalculatorOtherIncomeAfterRetirement.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+         RetirementCalculatorOtherIncomeAfterRetirement.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+         RetirementCalculatorOtherIncomeAfterRetirement.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorOtherIncomeAfterRetirementKeyReleased
+
+    private void RetirementCalculatorYourCurrentRetirementSavingsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorYourCurrentRetirementSavingsKeyReleased
+        String input =  RetirementCalculatorYourCurrentRetirementSavings.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RetirementCalculatorYourCurrentRetirementSavings.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RetirementCalculatorYourCurrentRetirementSavings.setText(Number);
+    }//GEN-LAST:event_RetirementCalculatorYourCurrentRetirementSavingsKeyReleased
 
 
 
@@ -6674,7 +7080,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox21;
     private javax.swing.JComboBox<String> jComboBox29;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -6688,6 +7093,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
@@ -6702,6 +7108,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
@@ -6710,6 +7117,8 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel141;
