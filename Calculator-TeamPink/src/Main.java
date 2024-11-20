@@ -2732,7 +2732,7 @@ String aboutMessage = "<html>"
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2745,7 +2745,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2759,7 +2759,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel25Layout.createSequentialGroup()
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2787,7 +2787,7 @@ String aboutMessage = "<html>"
                             .addComponent(RefinanceCalculatorClear)
                             .addComponent(RefinanceCalculatorCalculateBTN))
                         .addGap(44, 44, 44)
-                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(140, Short.MAX_VALUE))
         );
 
@@ -6770,9 +6770,9 @@ String aboutMessage = "<html>"
                                         + "New loan<br>"
                                         + "<ul>"
                                         + "    <li>Principal/loan amount " + currencyFormat.format(result[4]) + " </li>"
-                                        + "    <li>Monthly pay " + currencyFormat.format(result[7]) + " </li>"
-                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[8]) + "</li>"
-                                        + "    <li>Total interest" +  currencyFormat.format(result[9]) + "</li>"
+                                        + "    <li>Monthly pay " + currencyFormat.format(result[5]) + " </li>"
+                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[6]) + "</li>"
+                                        + "    <li>Total interest" +  currencyFormat.format(result[7]) + "</li>"
                                         + "</ul><br><br>"
 
                                         + "</html>";
