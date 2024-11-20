@@ -130,6 +130,10 @@ public class Main extends javax.swing.JFrame {
         RetirementCalculatorAverageInvestmentReturn.setText("0");
         RetirementCalculatorOtherIncomeAfterRetirement.setText("0");
         RetirementCalculatorYourCurrentRetirementSavings.setText("0");
+        
+        //--------------------------------------------------Refinance Calculator
+        refinanceCalculatorShowUp();
+
    
     }
     
@@ -453,30 +457,32 @@ String aboutMessage = "<html>"
         RefinanceCalculatorCurrentLoan = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         RefinanceCalculatorRemainingBalanceLabel = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        RefinanceCalculatorMonthlyPaymentLbl = new javax.swing.JLabel();
         RefinanceCalculatorRemainingBalance = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        RefinanceCalculatorInterestRate = new javax.swing.JTextField();
+        RefinanceCalculatorInterestRatelbl = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel122 = new javax.swing.JLabel();
+        RefinanceCalculatorYearsPayment = new javax.swing.JTextField();
+        RefinanceCalculatorMonthsPayment = new javax.swing.JTextField();
+        RefinanceCalculatorYearsandMonth = new javax.swing.JLabel();
+        RefinanceCalculatorLoanTerm = new javax.swing.JLabel();
+        RefinanceCalculatorLoanTermtext = new javax.swing.JTextField();
         jPanel24 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        RefinanceCalculatorNewLoanTerm = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        RefinancecalculatorInterestRateNewLoan = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        RefinanceCalculatorPoints = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        RefinanceCalculatorCostandFees = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        RefinanceCalculatorCashout = new javax.swing.JTextField();
+        RefinanceCalculatorCalculateBTN = new javax.swing.JButton();
+        RefinanceCalculatorClear = new javax.swing.JButton();
         jPanel38 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
+        RefinanceCalculatorOutput = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
         InstructionsRefinanceCalculator = new javax.swing.JTextPane();
@@ -2452,44 +2458,74 @@ String aboutMessage = "<html>"
 
         RefinanceCalculatorCurrentLoan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         RefinanceCalculatorCurrentLoan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "I know my remaining balance", "I know the orginal loan amount" }));
+        RefinanceCalculatorCurrentLoan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefinanceCalculatorCurrentLoanActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Current Loan");
 
         RefinanceCalculatorRemainingBalanceLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        RefinanceCalculatorRemainingBalanceLabel.setText("Remaining Balance");
+        RefinanceCalculatorRemainingBalanceLabel.setText("Remaining Balance $");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel14.setText("Monthly Payment");
+        RefinanceCalculatorMonthlyPaymentLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorMonthlyPaymentLbl.setText("Monthly Payment $");
 
         RefinanceCalculatorRemainingBalance.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+        RefinanceCalculatorRemainingBalance.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorRemainingBalanceKeyReleased(evt);
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel15.setText("Interest Rate");
-
-        jTextField10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+        RefinanceCalculatorInterestRate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorInterestRateKeyReleased(evt);
             }
         });
 
-        jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+        RefinanceCalculatorInterestRatelbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorInterestRatelbl.setText("Interest Rate %");
+
+        RefinanceCalculatorYearsPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorYearsPayment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorYearsPaymentKeyReleased(evt);
             }
         });
 
-        jLabel122.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel122.setText("years                      months");
+        RefinanceCalculatorMonthsPayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorMonthsPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefinanceCalculatorMonthsPaymentActionPerformed(evt);
+            }
+        });
+        RefinanceCalculatorMonthsPayment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorMonthsPaymentKeyReleased(evt);
+            }
+        });
+
+        RefinanceCalculatorYearsandMonth.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorYearsandMonth.setText("years                      months");
+
+        RefinanceCalculatorLoanTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorLoanTerm.setText("Loan term");
+        RefinanceCalculatorLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorLoanTermKeyReleased(evt);
+            }
+        });
+
+        RefinanceCalculatorLoanTermtext.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorLoanTermtext.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorLoanTermtextKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -2500,17 +2536,19 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RefinanceCalculatorRemainingBalanceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RefinanceCalculatorMonthlyPaymentLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RefinanceCalculatorRemainingBalance)
-                    .addComponent(jTextField4)
+                    .addComponent(RefinanceCalculatorInterestRate)
                     .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RefinanceCalculatorCurrentLoan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(jTextField10)
+                        .addComponent(RefinanceCalculatorYearsPayment)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField11))
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel122, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(RefinanceCalculatorMonthsPayment))
+                    .addComponent(RefinanceCalculatorInterestRatelbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RefinanceCalculatorYearsandMonth, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RefinanceCalculatorLoanTerm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RefinanceCalculatorLoanTermtext))
                 .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
@@ -2524,20 +2562,24 @@ String aboutMessage = "<html>"
                 .addComponent(RefinanceCalculatorRemainingBalanceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RefinanceCalculatorRemainingBalance)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RefinanceCalculatorLoanTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(RefinanceCalculatorLoanTermtext)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
+                .addComponent(RefinanceCalculatorMonthlyPaymentLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10)
-                    .addComponent(jTextField11))
+                    .addComponent(RefinanceCalculatorYearsPayment)
+                    .addComponent(RefinanceCalculatorMonthsPayment))
                 .addGap(1, 1, 1)
-                .addComponent(jLabel122)
+                .addComponent(RefinanceCalculatorYearsandMonth)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RefinanceCalculatorInterestRatelbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4)
+                .addComponent(RefinanceCalculatorInterestRate)
                 .addGap(37, 37, 37))
         );
 
@@ -2547,34 +2589,59 @@ String aboutMessage = "<html>"
         jLabel17.setText("New Loan");
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel18.setText("New Loan Term");
+        jLabel18.setText("New Loan Term (Years)");
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        RefinanceCalculatorNewLoanTerm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorNewLoanTerm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                RefinanceCalculatorNewLoanTermActionPerformed(evt);
+            }
+        });
+        RefinanceCalculatorNewLoanTerm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorNewLoanTermKeyReleased(evt);
             }
         });
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel22.setText("Interest Rate");
+        jLabel22.setText("Interest Rate %");
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinancecalculatorInterestRateNewLoan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinancecalculatorInterestRateNewLoan.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinancecalculatorInterestRateNewLoanKeyReleased(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel24.setText("Points");
 
-        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorPoints.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorPoints.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorPointsKeyReleased(evt);
+            }
+        });
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel25.setText("Costs and Fees");
+        jLabel25.setText("Costs and Fees $");
 
-        jTextField8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorCostandFees.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorCostandFees.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorCostandFeesKeyReleased(evt);
+            }
+        });
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel26.setText("Cashout");
+        jLabel26.setText("Cashout Amount $");
 
-        jTextField9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorCashout.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorCashout.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                RefinanceCalculatorCashoutKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -2588,22 +2655,22 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6))
+                            .addComponent(RefinanceCalculatorNewLoanTerm, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RefinancecalculatorInterestRateNewLoan))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RefinanceCalculatorCashout, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                            .addComponent(RefinanceCalculatorCostandFees, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RefinanceCalculatorPoints, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel24Layout.createSequentialGroup()
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(10, 10, 10))
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(115, Short.MAX_VALUE))))
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2613,38 +2680,48 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5)
+                .addComponent(RefinanceCalculatorNewLoanTerm)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(3, 3, 3)
-                .addComponent(jTextField6)
+                .addComponent(RefinancecalculatorInterestRateNewLoan)
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7)
+                .addComponent(RefinanceCalculatorPoints)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField8)
+                .addComponent(RefinanceCalculatorCostandFees)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField9)
+                .addComponent(RefinanceCalculatorCashout)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton3.setBackground(new java.awt.Color(179, 246, 179));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton3.setText("Calculate");
+        RefinanceCalculatorCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        RefinanceCalculatorCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorCalculateBTN.setText("Calculate");
+        RefinanceCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefinanceCalculatorCalculateBTNActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(179, 246, 179));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton4.setText("Clear");
+        RefinanceCalculatorClear.setBackground(new java.awt.Color(179, 246, 179));
+        RefinanceCalculatorClear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorClear.setText("Clear");
+        RefinanceCalculatorClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefinanceCalculatorClearActionPerformed(evt);
+            }
+        });
 
         jPanel38.setBackground(new java.awt.Color(255, 224, 255));
         jPanel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
 
-        jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RefinanceCalculatorOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel88.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel88.setText("Results");
@@ -2655,7 +2732,7 @@ String aboutMessage = "<html>"
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2668,7 +2745,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RefinanceCalculatorOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -2686,11 +2763,11 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel25Layout.createSequentialGroup()
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(RefinanceCalculatorCalculateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(RefinanceCalculatorClear, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
@@ -2707,8 +2784,8 @@ String aboutMessage = "<html>"
                             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3))
+                            .addComponent(RefinanceCalculatorClear)
+                            .addComponent(RefinanceCalculatorCalculateBTN))
                         .addGap(44, 44, 44)
                         .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(140, Short.MAX_VALUE))
@@ -4721,17 +4798,9 @@ String aboutMessage = "<html>"
         
     }//GEN-LAST:event_btnfinancialCalculatorActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void RefinanceCalculatorNewLoanTermActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorNewLoanTermActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_RefinanceCalculatorNewLoanTermActionPerformed
 
     private void MortgageandRealEstateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageandRealEstateBTNActionPerformed
         // TODO add your handling code here:
@@ -6468,18 +6537,267 @@ String aboutMessage = "<html>"
         RetirementCalculatorYourCurrentRetirementSavings.setText(Number);
     }//GEN-LAST:event_RetirementCalculatorYourCurrentRetirementSavingsKeyReleased
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-
-
     
+    //--------------------------------------------------------------------------------------------------------------------------------Refinance Calculator
+    private void RefinanceCalculatorMonthsPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorMonthsPaymentActionPerformed
+        
+    }//GEN-LAST:event_RefinanceCalculatorMonthsPaymentActionPerformed
 
-   
+    private void RefinanceCalculatorCurrentLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorCurrentLoanActionPerformed
+       String selectedItem = (String) RefinanceCalculatorCurrentLoan.getSelectedItem();
+
+    // Toggle visibility based on selection
+    if ("I know the orginal loan amount".equals(selectedItem)) {
+        RefinanceCalculatorMonthsPayment.setVisible(true);
+        RefinanceCalculatorYearsandMonth.setVisible(true);
+        RefinanceCalculatorLoanTerm.setVisible(true);
+        RefinanceCalculatorLoanTermtext.setVisible(true);
+        
+        RefinanceCalculatorRemainingBalanceLabel.setText("Original loan amount $");
+        RefinanceCalculatorLoanTerm.setText("Loan term (Years)");
     
-   
+        RefinanceCalculatorMonthlyPaymentLbl.setText("Time remaining");
+ 
+    } else {
+        refinanceCalculatorShowUp();
+        RefinanceCalculatorRemainingBalanceLabel.setText("Remaining Balance $");
+  
     
+        RefinanceCalculatorMonthlyPaymentLbl.setText("Monthly Payment $");
+        
+       
+    }
+    
+    }//GEN-LAST:event_RefinanceCalculatorCurrentLoanActionPerformed
+        public void refinanceCalculatorShowUp(){
+
+        RefinanceCalculatorMonthsPayment.setVisible(false);
+        RefinanceCalculatorYearsandMonth.setVisible(false);
+        RefinanceCalculatorLoanTerm.setVisible(false);
+        RefinanceCalculatorLoanTermtext.setVisible(false);
+    }
+
+    private void RefinanceCalculatorLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorLoanTermKeyReleased
+        String input = RefinanceCalculatorLoanTerm.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorLoanTerm.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorLoanTerm.setText(Number); 
+    }//GEN-LAST:event_RefinanceCalculatorLoanTermKeyReleased
+
+    private void RefinanceCalculatorRemainingBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorRemainingBalanceKeyReleased
+        String input = RefinanceCalculatorRemainingBalance.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorRemainingBalance.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorRemainingBalance.setText(Number); 
+    }//GEN-LAST:event_RefinanceCalculatorRemainingBalanceKeyReleased
+
+    private void RefinanceCalculatorLoanTermtextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorLoanTermtextKeyReleased
+         String input = RefinanceCalculatorLoanTermtext.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorLoanTermtext.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RefinanceCalculatorLoanTermtext.setText(Number); 
+    }//GEN-LAST:event_RefinanceCalculatorLoanTermtextKeyReleased
+
+    private void RefinanceCalculatorYearsPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorYearsPaymentKeyReleased
+         String input = RefinanceCalculatorYearsPayment.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorYearsPayment.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RefinanceCalculatorYearsPayment.setText(Number); 
+    }//GEN-LAST:event_RefinanceCalculatorYearsPaymentKeyReleased
+
+    private void RefinanceCalculatorMonthsPaymentKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorMonthsPaymentKeyReleased
+         String input = RefinanceCalculatorMonthsPayment.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorMonthsPayment.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RefinanceCalculatorMonthsPayment.setText(Number);
+        int months = Integer.parseInt(Number);
+
+    // Check if the number of months is within the valid range
+        if (months >= 0 && months <= 11) {
+        } else {
+
+            JOptionPane.showMessageDialog(null,"Invalid number of months. Please enter a value between 0 and 11.");
+            RefinanceCalculatorMonthsPayment.setText("0");   
+        }
+    }//GEN-LAST:event_RefinanceCalculatorMonthsPaymentKeyReleased
+
+    private void RefinanceCalculatorInterestRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorInterestRateKeyReleased
+         String input = RefinanceCalculatorInterestRate.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorInterestRate.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorInterestRate.setText(Number);
+        double rate = Double.parseDouble(Number);
+
+    // Check if the number of months is within the valid range
+        if (rate>= 0 && rate <= 199) {
+        } else {
+
+            JOptionPane.showMessageDialog(null,"Please provide a positive interest rate that less than 200%");
+            RefinanceCalculatorMonthsPayment.setText("0");   
+        }
+    }//GEN-LAST:event_RefinanceCalculatorInterestRateKeyReleased
+
+    private void RefinanceCalculatorNewLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorNewLoanTermKeyReleased
+         String input = RefinanceCalculatorNewLoanTerm.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorNewLoanTerm.setText(strippedInput);
+        String Number = Helper.extractWholePositiveNumbers(input);
+        RefinanceCalculatorNewLoanTerm.setText(Number);
+ 
+    }//GEN-LAST:event_RefinanceCalculatorNewLoanTermKeyReleased
+
+    private void RefinancecalculatorInterestRateNewLoanKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinancecalculatorInterestRateNewLoanKeyReleased
+         String input = RefinancecalculatorInterestRateNewLoan.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinancecalculatorInterestRateNewLoan.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinancecalculatorInterestRateNewLoan.setText(Number);
+        double rate = Double.parseDouble(Number);
+
+    // Check if the number of months is within the valid range
+        if (rate>= 0 && rate <= 199) {
+        } else {
+
+            JOptionPane.showMessageDialog(null,"Please provide a positive interest rate that less than 200%");
+            RefinanceCalculatorMonthsPayment.setText("0");   }
+    }//GEN-LAST:event_RefinancecalculatorInterestRateNewLoanKeyReleased
+
+    private void RefinanceCalculatorPointsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorPointsKeyReleased
+        String input = RefinanceCalculatorPoints.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorPoints.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorPoints.setText(Number);
+      
+
+    }//GEN-LAST:event_RefinanceCalculatorPointsKeyReleased
+
+    private void RefinanceCalculatorCostandFeesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorCostandFeesKeyReleased
+        String input = RefinanceCalculatorCostandFees.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorCostandFees.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorCostandFees.setText(Number);
+    }//GEN-LAST:event_RefinanceCalculatorCostandFeesKeyReleased
+
+    private void RefinanceCalculatorCashoutKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorCashoutKeyReleased
+        String input = RefinanceCalculatorCashout.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        RefinanceCalculatorCashout.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        RefinanceCalculatorCashout.setText(Number);
+    }//GEN-LAST:event_RefinanceCalculatorCashoutKeyReleased
+
+    private void RefinanceCalculatorClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorClearActionPerformed
+        RefinanceCalculatorRemainingBalance.setText("");
+        RefinanceCalculatorYearsPayment.setText("");
+        RefinanceCalculatorMonthsPayment.setText("");
+        RefinanceCalculatorInterestRate.setText("");
+        RefinanceCalculatorLoanTermtext.setText("");
+        
+        RefinanceCalculatorNewLoanTerm.setText("");
+        RefinancecalculatorInterestRateNewLoan.setText("");
+        RefinanceCalculatorPoints.setText("");
+        RefinanceCalculatorCostandFees.setText("");
+        RefinanceCalculatorCashout.setText("");
+
+    }//GEN-LAST:event_RefinanceCalculatorClearActionPerformed
+
+    private void RefinanceCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorCalculateBTNActionPerformed
+        try{    
+            String outputText = "";
+            String selectedItem = (String) RefinanceCalculatorCurrentLoan.getSelectedItem();            
+            if ("I know the orginal loan amount".equals(selectedItem)) {
+               
+                double currentLoan = Double.parseDouble(RefinanceCalculatorRemainingBalance.getText());
+                int originalTime =Integer.parseInt(RefinanceCalculatorLoanTermtext.getText());
+                int oTimeLeftYears = Integer.parseInt(RefinanceCalculatorYearsPayment.getText());
+                int oTimeLeftMonths = Integer.parseInt(RefinanceCalculatorMonthsPayment.getText());
+                int timeLeft = oTimeLeftYears * 12 + oTimeLeftMonths;
+                int timePaid = originalTime * 12 - timeLeft;
+                double interest = Double.parseDouble(RefinanceCalculatorInterestRate.getText());
+
+                int newLoanTime = Integer.parseInt(RefinanceCalculatorNewLoanTerm.getText());
+                double newInterest = Double.parseDouble(RefinancecalculatorInterestRateNewLoan.getText());
+                double points = Double.parseDouble(RefinanceCalculatorPoints.getText());
+                double costs = Double.parseDouble(RefinanceCalculatorCostandFees.getText());
+                double cashOut = Double.parseDouble(RefinanceCalculatorCashout.getText());
+
+                double timeRamining = oTimeLeftYears + (oTimeLeftMonths/12);
+                if (timeRamining<=originalTime){
+
+                // Call the function
+                     double[] result = Helper.originalLoanAmount(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
+                                                     timeLeft, timePaid, interest, newLoanTime, newInterest,
+                                                     points, costs, cashOut);
+                     outputText ="<html>"
+
+                                        + "Current loan (remaining)<br>"
+                                        + "<ul>"
+                                        + "    <li>Principal/loan amount " + currencyFormat.format(result[0]) + " </li>"
+                                        + "    <li>Monthly pay " + currencyFormat.format(result[1]) + " </li>"
+                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[2]) + "</li>"
+                                        + "    <li>Total interest" +  currencyFormat.format(result[3]) + "</li>"
+                                        + "</ul><br><br>"
+                                        + "New loan<br>"
+                                        + "<ul>"
+                                        + "    <li>Principal/loan amount " + currencyFormat.format(result[4]) + " </li>"
+                                        + "    <li>Monthly pay " + currencyFormat.format(result[7]) + " </li>"
+                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[8]) + "</li>"
+                                        + "    <li>Total interest" +  currencyFormat.format(result[9]) + "</li>"
+                                        + "</ul><br><br>"
+
+                                        + "</html>";
+
+
+
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Time remaining must be less than or equal to Loan term");
+
+            
+                }
+            }
+            else{outputText = "UnderConstruction";}
+     
+        
+        
+        
+            RefinanceCalculatorOutput.setText(outputText);
+        
+        }
+        catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");RefinanceCalculatorOutput.setText("Error404");}
+    }//GEN-LAST:event_RefinanceCalculatorCalculateBTNActionPerformed
+
+
     
     
     
@@ -7047,9 +7365,25 @@ private void setMessage4() {
     private javax.swing.JPanel OtherCalculator;
     private javax.swing.JButton OtherCalculatorsBTN1;
     private javax.swing.JPanel RefinanceCalculator;
+    private javax.swing.JButton RefinanceCalculatorCalculateBTN;
+    private javax.swing.JTextField RefinanceCalculatorCashout;
+    private javax.swing.JButton RefinanceCalculatorClear;
+    private javax.swing.JTextField RefinanceCalculatorCostandFees;
     private javax.swing.JComboBox<String> RefinanceCalculatorCurrentLoan;
+    private javax.swing.JTextField RefinanceCalculatorInterestRate;
+    private javax.swing.JLabel RefinanceCalculatorInterestRatelbl;
+    private javax.swing.JLabel RefinanceCalculatorLoanTerm;
+    private javax.swing.JTextField RefinanceCalculatorLoanTermtext;
+    private javax.swing.JLabel RefinanceCalculatorMonthlyPaymentLbl;
+    private javax.swing.JTextField RefinanceCalculatorMonthsPayment;
+    private javax.swing.JTextField RefinanceCalculatorNewLoanTerm;
+    private javax.swing.JLabel RefinanceCalculatorOutput;
+    private javax.swing.JTextField RefinanceCalculatorPoints;
     private javax.swing.JTextField RefinanceCalculatorRemainingBalance;
     private javax.swing.JLabel RefinanceCalculatorRemainingBalanceLabel;
+    private javax.swing.JTextField RefinanceCalculatorYearsPayment;
+    private javax.swing.JLabel RefinanceCalculatorYearsandMonth;
+    private javax.swing.JTextField RefinancecalculatorInterestRateNewLoan;
     private javax.swing.JButton RentCalculateBTN;
     private javax.swing.JPanel RentCalculator;
     private javax.swing.JButton RentClearBTN;
@@ -7097,8 +7431,6 @@ private void setMessage4() {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JComboBox<String> jComboBox15;
@@ -7136,7 +7468,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel132;
@@ -7146,7 +7477,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
@@ -7155,7 +7485,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel146;
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel150;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel162;
@@ -7189,7 +7518,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -7330,8 +7658,6 @@ private void setMessage4() {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField115;
     private javax.swing.JTextField jTextField116;
     private javax.swing.JTextField jTextField117;
@@ -7351,13 +7677,11 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
     private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField44;
     private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField51;
     private javax.swing.JTextField jTextField52;
@@ -7365,17 +7689,13 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField54;
     private javax.swing.JTextField jTextField55;
     private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField70;
     private javax.swing.JTextField jTextField76;
     private javax.swing.JTextField jTextField77;
     private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField90;
     private javax.swing.JLabel jorge;
     private javax.swing.JLabel osvaldo;
