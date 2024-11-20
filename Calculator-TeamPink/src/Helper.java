@@ -759,7 +759,58 @@ public class Helper {
             Math.round(proportionSaveToRetirement * 100.0) / 100.0,     
             };
     }
+    
+    
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------Refinance Calculator
+    
+    public static double[] originalLoanAmount(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths,
+                                              int timeLeft, int timePaid, double interest, int newLoanTime,
+                                              double newInterest, double points, double costs, double cashOut) {
+        double monthlyInterest = interest / 12 / 100;
 
+        // Calculate monthly payment
+        double monthlyPay = (currentLoan * (monthlyInterest * Math.pow(1 + monthlyInterest, originalTime * 12))) /
+                            (Math.pow(1 + monthlyInterest, originalTime * 12) - 1);
+        double finalMonthly = monthlyPay;
+
+        // Calculate remaining loan details
+        int lengthLeft = oTimeLeftYears * 12 + oTimeLeftMonths;
+        double totalPaymentLeft = monthlyPay * timeLeft;
+        double finalPaymentLeft = totalPaymentLeft;
+
+        double principalLeft = currentLoan;
+
+        // Calculate principal left after payments made
+        for (int i = 0; i < timePaid; i++) {
+            double interestPaid = principalLeft * monthlyInterest;
+            double monthlyPrincipal = monthlyPay - interestPaid;
+            principalLeft -= monthlyPrincipal;
+        }
+        double finalPrincipalLeft = principalLeft;
+
+        double interestLeft = totalPaymentLeft - principalLeft;
+        double finalInterestLeft = interestLeft;
+
+        // Calculate new loan details
+        double newMonthlyInt = newInterest / 12 / 100;
+        int newTimeLeft = 12 * newLoanTime;
+
+        double newMonthlyPay = (principalLeft * (newMonthlyInt * Math.pow(1 + newMonthlyInt, newLoanTime * 12))) /
+                               (Math.pow(1 + newMonthlyInt, newLoanTime * 12) - 1);
+        double finalNewMonthly = newMonthlyPay;
+
+        double totalNew = newMonthlyPay * newTimeLeft;
+        double finalTotalNew = totalNew;
+
+        double newInterestPayment = totalNew - principalLeft;
+        double newIntPayment = newInterestPayment;
+
+        // Return results in a double array
+        return new double[] {
+            finalPrincipalLeft, finalMonthly, finalPaymentLeft, finalInterestLeft,
+            principalLeft, finalNewMonthly, finalTotalNew, newIntPayment
+        };
+    }
         
     
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
