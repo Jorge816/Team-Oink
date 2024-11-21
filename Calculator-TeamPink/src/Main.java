@@ -3541,6 +3541,11 @@ String aboutMessage = "<html>"
 
         jComboBox4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("Amount");
@@ -3571,7 +3576,7 @@ String aboutMessage = "<html>"
             }
         });
 
-        jLabel13.setText("jLabel13");
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -3595,9 +3600,9 @@ String aboutMessage = "<html>"
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel30Layout.createSequentialGroup()
-                        .addGap(0, 71, Short.MAX_VALUE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(0, 65, Short.MAX_VALUE)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -3633,8 +3638,6 @@ String aboutMessage = "<html>"
 
         jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel91.setText("Results");
-
-        jLabel14.setText("jLabel14");
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -6434,7 +6437,7 @@ String aboutMessage = "<html>"
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextField2.setText("");
-        jLabel30.setText("");
+        jLabel14.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
         public void DefaultRetirementCalculator(){
@@ -6917,6 +6920,16 @@ private class CurrencyInfo {
        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+         String selectedCurrency = (String) jComboBox4.getSelectedItem();
+    if (selectedCurrency != null && currencyDataMap.containsKey(selectedCurrency)) {
+        CurrencyInfo info = currencyDataMap.get(selectedCurrency);
+        jLabel13.setText(info.currencySymbol);
+        // Additional processing using info as needed
+    }
+        // Additional processing using info as needed  
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
 
     private void populateComboBoxes() {
         DefaultComboBoxModel<String> model1 = new DefaultComboBoxModel<>();
@@ -6943,7 +6956,7 @@ private class CurrencyInfo {
                 currencyDataMap.put(displayName, new CurrencyInfo(currencySymbol, decimalSeparator, symbolPosition, exchangeRate));
                 model1.addElement(country + " " + currencySymbol + " " + exchangeRate);
                 model2.addElement(country + " " + currencySymbol + " " + exchangeRate);
-                //model1.addElement(country + " " + currencyName);
+                model1.addElement(country + " " + currencyName);
                 //model2.addElement(country + " " + currencyName);
             }
         }
@@ -6958,16 +6971,6 @@ private double extractRate(String currencyString) {
     String[] parts = currencyString.split(" ");
     return Double.parseDouble(parts[parts.length - 1]);
 }
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
-       String selectedCurrency = (String) jComboBox4.getSelectedItem();
-    if (selectedCurrency != null && currencyDataMap.containsKey(selectedCurrency)) {
-        CurrencyInfo info = currencyDataMap.get(selectedCurrency);
-        jLabel55.setText(info.currencySymbol);
-        // Additional processing using info as needed
-    }
-        // Additional processing using info as needed  
-    }  
-    
     //Text field 
      // Method to display the first message in jTextPane1
 

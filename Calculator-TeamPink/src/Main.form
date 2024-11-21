@@ -5113,9 +5113,9 @@
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="71" max="32767" attributes="0"/>
-                                          <Component id="jLabel13" min="-2" pref="43" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
+                                          <Component id="jLabel13" min="-2" pref="55" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jTextField2" min="-2" pref="301" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -5178,6 +5178,9 @@
                               </StringArray>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox4ActionPerformed"/>
+                          </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
@@ -5243,7 +5246,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel13">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="jLabel13"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="14" style="0"/>
+                            </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -5315,9 +5320,6 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel14">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jLabel14"/>
-                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
