@@ -2561,11 +2561,11 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(RefinanceCalculatorRemainingBalanceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RefinanceCalculatorRemainingBalance)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RefinanceCalculatorRemainingBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RefinanceCalculatorLoanTerm, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(RefinanceCalculatorLoanTermtext)
+                .addComponent(RefinanceCalculatorLoanTermtext, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RefinanceCalculatorMonthlyPaymentLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2580,7 +2580,7 @@ String aboutMessage = "<html>"
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RefinanceCalculatorInterestRate)
-                .addGap(37, 37, 37))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jPanel24.setBackground(new java.awt.Color(255, 224, 255));
@@ -6575,6 +6575,7 @@ String aboutMessage = "<html>"
         RefinanceCalculatorYearsandMonth.setVisible(false);
         RefinanceCalculatorLoanTerm.setVisible(false);
         RefinanceCalculatorLoanTermtext.setVisible(false);
+        RefinanceCalculatorMonthsPayment.setText("0");
     }
 
     private void RefinanceCalculatorLoanTermKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RefinanceCalculatorLoanTermKeyReleased
@@ -6719,7 +6720,7 @@ String aboutMessage = "<html>"
     private void RefinanceCalculatorClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefinanceCalculatorClearActionPerformed
         RefinanceCalculatorRemainingBalance.setText("");
         RefinanceCalculatorYearsPayment.setText("");
-        RefinanceCalculatorMonthsPayment.setText("");
+        RefinanceCalculatorMonthsPayment.setText("0");
         RefinanceCalculatorInterestRate.setText("");
         RefinanceCalculatorLoanTermtext.setText("");
         
@@ -6758,24 +6759,42 @@ String aboutMessage = "<html>"
                      double[] result = Helper.originalLoanAmount(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
                                                      timeLeft, timePaid, interest, newLoanTime, newInterest,
                                                      points, costs, cashOut);
-                     outputText ="<html>"
 
-                                        + "Current loan (remaining)<br>"
-                                        + "<ul>"
-                                        + "    <li>Principal/loan amount " + currencyFormat.format(result[0]) + " </li>"
-                                        + "    <li>Monthly pay " + currencyFormat.format(result[1]) + " </li>"
-                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[2]) + "</li>"
-                                        + "    <li>Total interest" +  currencyFormat.format(result[3]) + "</li>"
-                                        + "</ul><br><br>"
-                                        + "New loan<br>"
-                                        + "<ul>"
-                                        + "    <li>Principal/loan amount " + currencyFormat.format(result[4]) + " </li>"
-                                        + "    <li>Monthly pay " + currencyFormat.format(result[5]) + " </li>"
-                                        + "    <li>Total monthly payments" +  currencyFormat.format(result[6]) + "</li>"
-                                        + "    <li>Total interest" +  currencyFormat.format(result[7]) + "</li>"
-                                        + "</ul><br><br>"
+                    outputText = "<html>"
+                                      + "<table border='1' style='border-collapse:collapse; text-align:left; width:100%;'>"
+                                      + "    <thead>"
+                                      + "        <tr>"
+                                      + "            <th></th>" // Empty header for the row labels
+                                      + "            <th>Current Loan (Remaining)</th>"
+                                      + "            <th>New Loan</th>"
+                                      + "        </tr>"
+                                      + "    </thead>"
+                                      + "    <tbody>"
+                                      + "        <tr>"
+                                      + "            <th>Principal/Loan Amount</th>"
+                                      + "            <td>" + currencyFormat.format(result[0]) + "</td>"
+                                      + "            <td>" + currencyFormat.format(result[4]) + "</td>"
+                                      + "        </tr>"
+                                      + "        <tr>"
+                                      + "            <th>Monthly Pay</th>"
+                                      + "            <td>" + currencyFormat.format(result[1]) + "</td>"
+                                      + "            <td>" + currencyFormat.format(result[5]) + "</td>"
+                                      + "        </tr>"
+                                      + "        <tr>"
+                                      + "            <th>Total Monthly Payments</th>"
+                                      + "            <td>" + currencyFormat.format(result[2]) + "</td>"
+                                      + "            <td>" + currencyFormat.format(result[6]) + "</td>"
+                                      + "        </tr>"
+                                      + "        <tr>"
+                                      + "            <th>Total Interest</th>"
+                                      + "            <td>" + currencyFormat.format(result[3]) + "</td>"
+                                      + "            <td>" + currencyFormat.format(result[7]) + "</td>"
+                                      + "        </tr>"
+                                      + "    </tbody>"
+                                      + "</table>"
+                                      + "</html>";
 
-                                        + "</html>";
+
 
 
 
