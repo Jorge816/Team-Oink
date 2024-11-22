@@ -588,7 +588,7 @@ String aboutMessage = "<html>"
         jLabel13 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel91 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        CurrencyCalculatorOuput = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         instructionCurrencyCalculator = new javax.swing.JTextPane();
         InterestRate = new javax.swing.JPanel();
@@ -3556,6 +3556,11 @@ String aboutMessage = "<html>"
         jLabel8.setText("Amount");
 
         CurrencyCalculatatorAmount.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatatorAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CurrencyCalculatatorAmountKeyReleased(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("From");
@@ -3581,7 +3586,7 @@ String aboutMessage = "<html>"
             }
         });
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -3641,13 +3646,15 @@ String aboutMessage = "<html>"
         jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel91.setText("Results");
 
+        CurrencyCalculatorOuput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addGap(126, 126, 126)
-                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                .addComponent(CurrencyCalculatorOuput, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                 .addGap(167, 167, 167))
             .addGroup(jPanel31Layout.createSequentialGroup()
                 .addGap(177, 177, 177)
@@ -3659,8 +3666,8 @@ String aboutMessage = "<html>"
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CurrencyCalculatorOuput, javax.swing.GroupLayout.DEFAULT_SIZE, 11, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3685,9 +3692,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanel29Layout.createSequentialGroup()
                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -6894,11 +6899,11 @@ String aboutMessage = "<html>"
         }
         if ("left".equalsIgnoreCase(info2.symbolPosition)) {
                 //formattedAmount = currencySymbol + " " + formattedAmount;
-                jLabel14.setText(info2.currencySymbol+ formattedAmount);
+                CurrencyCalculatorOuput.setText(info2.currencySymbol+ formattedAmount);
 
         } else if ("right".equalsIgnoreCase(info2.symbolPosition)) {
             //formattedAmount = formattedAmount + " " + currencySymbol;
-            jLabel14.setText(formattedAmount +  info2.currencySymbol);
+            CurrencyCalculatorOuput.setText(formattedAmount +  info2.currencySymbol);
         }   
     }//GEN-LAST:event_CurrencyCalculatorCalculateBTNActionPerformed
 
@@ -6914,8 +6919,18 @@ String aboutMessage = "<html>"
 
     private void CurrencyCalculatorClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrencyCalculatorClearActionPerformed
        CurrencyCalculatatorAmount.setText("");
-       jLabel14.setText("");
+       CurrencyCalculatorOuput.setText("");
     }//GEN-LAST:event_CurrencyCalculatorClearActionPerformed
+
+    private void CurrencyCalculatatorAmountKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CurrencyCalculatatorAmountKeyReleased
+        String input = CurrencyCalculatatorAmount.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        CurrencyCalculatatorAmount.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        CurrencyCalculatatorAmount.setText(Number);
+    }//GEN-LAST:event_CurrencyCalculatatorAmountKeyReleased
 
 
     private void populateComboBoxes() {
@@ -7430,6 +7445,7 @@ private void setMessage4() {
     private javax.swing.JButton CurrencyCalculatorCalculateBTN;
     private javax.swing.JButton CurrencyCalculatorClear;
     private javax.swing.JComboBox<String> CurrencyCalculatorFrom;
+    private javax.swing.JLabel CurrencyCalculatorOuput;
     private javax.swing.JComboBox<String> CurrencyCalculatorTO;
     private javax.swing.JButton DownPaymentCalculateBTN;
     private javax.swing.JButton DownPaymentClearBTN;
@@ -7634,7 +7650,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
