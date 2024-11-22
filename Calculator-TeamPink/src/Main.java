@@ -34,6 +34,12 @@ public class Main extends javax.swing.JFrame {
     private int currentIndex = 0;
     private int currentIndexLabel3 = 0;
     private String RothIRAAnualContributionSpace = "";
+    
+    private String decimalSeparator;
+    private String currencySymbol2;
+    private Map<String, String> decimalSeparatorMap = new HashMap<>();
+    private Map<String, CurrencyInfo> currencyMap = new HashMap<>();
+    private Map<String, CurrencyInfo> currencyDataMap = new HashMap<>();
  
 
     public Main() {
@@ -571,17 +577,16 @@ String aboutMessage = "<html>"
         jScrollPane21 = new javax.swing.JScrollPane();
         jPanel29 = new javax.swing.JPanel();
         jPanel30 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        CurrencyCalculatorTO = new javax.swing.JComboBox<>();
+        CurrencyCalculatorFrom = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        CurrencyCalculatatorAmount = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        CurrencyCalculatorCalculateBTN = new javax.swing.JButton();
+        CurrencyCalculatorClear = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -904,7 +909,7 @@ String aboutMessage = "<html>"
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -3536,21 +3541,21 @@ String aboutMessage = "<html>"
 
         jPanel30.setBackground(new java.awt.Color(255, 224, 255));
 
-        jComboBox3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
+        CurrencyCalculatorTO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatorTO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
 
-        jComboBox4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        CurrencyCalculatorFrom.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatorFrom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "get value from a dictionary" }));
+        CurrencyCalculatorFrom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                CurrencyCalculatorFromActionPerformed(evt);
             }
         });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("Amount");
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatatorAmount.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("From");
@@ -3558,21 +3563,21 @@ String aboutMessage = "<html>"
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setText("To");
 
-        jButton1.setBackground(new java.awt.Color(179, 246, 179));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Calculate");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        CurrencyCalculatorCalculateBTN.setBackground(new java.awt.Color(179, 246, 179));
+        CurrencyCalculatorCalculateBTN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatorCalculateBTN.setText("Calculate");
+        CurrencyCalculatorCalculateBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CurrencyCalculatorCalculateBTNActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(179, 246, 179));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setText("Clear");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        CurrencyCalculatorClear.setBackground(new java.awt.Color(179, 246, 179));
+        CurrencyCalculatorClear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        CurrencyCalculatorClear.setText("Clear");
+        CurrencyCalculatorClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CurrencyCalculatorClearActionPerformed(evt);
             }
         });
 
@@ -3587,12 +3592,12 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel30Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CurrencyCalculatorTO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CurrencyCalculatorFrom, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel30Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CurrencyCalculatorCalculateBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(CurrencyCalculatorClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel30Layout.createSequentialGroup()
                                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3603,7 +3608,7 @@ String aboutMessage = "<html>"
                         .addGap(0, 65, Short.MAX_VALUE)
                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CurrencyCalculatatorAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel30Layout.setVerticalGroup(
@@ -3613,28 +3618,25 @@ String aboutMessage = "<html>"
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CurrencyCalculatatorAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addGap(2, 2, 2)
-                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CurrencyCalculatorFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel10)
                 .addGap(2, 2, 2)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CurrencyCalculatorTO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(CurrencyCalculatorCalculateBTN)
+                    .addComponent(CurrencyCalculatorClear))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel31.setBackground(new java.awt.Color(255, 224, 255));
         jPanel31.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 3, true));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel11.setText("Display Output");
 
         jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel91.setText("Results");
@@ -3644,26 +3646,21 @@ String aboutMessage = "<html>"
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel91)))
+                .addGap(126, 126, 126)
+                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                 .addGap(167, 167, 167))
+            .addGroup(jPanel31Layout.createSequentialGroup()
+                .addGap(177, 177, 177)
+                .addComponent(jLabel91)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(jLabel14)
                 .addContainerGap())
         );
 
@@ -3686,14 +3683,16 @@ String aboutMessage = "<html>"
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane2)
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel29Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel29Layout.createSequentialGroup()
                         .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 217, Short.MAX_VALUE))
+                        .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(349, 349, 349))))
         );
 
         jScrollPane21.setViewportView(jPanel29);
@@ -6434,12 +6433,6 @@ String aboutMessage = "<html>"
 
     }//GEN-LAST:event_RetirementCalculatorCalculateBTNActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        jTextField2.setText("");
-        jLabel14.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
         public void DefaultRetirementCalculator(){
 
         RetirementCalculatorAverageInvestmentReturn.setText("0");
@@ -6449,16 +6442,6 @@ String aboutMessage = "<html>"
     }
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
         //----------------------------------------------------------------------------------------------------------------------------Label- Display Name of the Calculator when is click 
     private void MortgagePayoffCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_MortgagePayoffCalculatorAncestorAdded
         CalculatorNameLBL.setText("Mortgage Payoff Calculator");
@@ -6854,81 +6837,85 @@ String aboutMessage = "<html>"
         }
         catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");RefinanceCalculatorOutput.setText("Error404");}
     }//GEN-LAST:event_RefinanceCalculatorCalculateBTNActionPerformed
-private String decimalSeparator;
-private String currencySymbol2;
-private Map<String, String> decimalSeparatorMap = new HashMap<>();
-private Map<String, CurrencyInfo> currencyMap = new HashMap<>();
-private Map<String, CurrencyInfo> currencyDataMap = new HashMap<>();
-private class CurrencyInfo {
-    String currencySymbol;
-    String decimalSeparator;
-    String symbolPosition;
-    double exchangeRate;
-
-    CurrencyInfo(String symbol, String separator, String position, double rate) {
-        this.currencySymbol = symbol;
-        this.decimalSeparator = separator;
-        this.symbolPosition = position;
-        this.exchangeRate = rate;
-    }
-}
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-                    String amountText = jTextField2.getText();
-    // Validate the input
-    double amount;
-    try {
-        amount = Double.parseDouble(amountText);
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Please enter numbers only!",  "Invalid Input", JOptionPane.WARNING_MESSAGE);
-        jTextField2.setText("");
-        return;
-    }
-
-    // Get the selected items from the combo boxes
-    String selectedCurrency1 = (String) jComboBox4.getSelectedItem();
-    String selectedCurrency2 = (String) jComboBox3.getSelectedItem();
+//-----------------------------------------------------------------------------------------------------------------------------------Currency Calculator
     
-    // Extract rates from the selected currency strings
-    double rate1 = extractRate(selectedCurrency1);
-    double rate2 = extractRate(selectedCurrency2);
 
-    // Calculate the conversion
-    double convertedAmount = amount * (rate2 / rate1);
-    String[] parts = selectedCurrency2.split(" ");
-    String currencyKey = parts[0] + " " + parts[1];
-    String decimalSeparator = decimalSeparatorMap.getOrDefault(currencyKey, "dot");
-    String thousandSeparator = decimalSeparatorMap.getOrDefault(currencyKey + " thousand", ",");
-    String symbolPosition = decimalSeparatorMap.getOrDefault(currencyKey + " symbol", "left");
-    String currencySymbol = parts[1];
-    // Format the result accordingly
-    CurrencyInfo info1 = currencyDataMap.get(selectedCurrency1);
-    CurrencyInfo info2 = currencyDataMap.get(selectedCurrency2);
-    //System.out.println(CurrencyInfo);
+    private class CurrencyInfo {
+        String currencySymbol;
+        String decimalSeparator;
+        String symbolPosition;
+        double exchangeRate;
 
-    String formattedAmount = String.format("%,.2f", convertedAmount);
-    if ("comma".equals(info2.decimalSeparator)) {
-        formattedAmount = formattedAmount.replace(",", "#").replace(".", ",").replace("#", ".");
+        CurrencyInfo(String symbol, String separator, String position, double rate) {
+            this.currencySymbol = symbol;
+            this.decimalSeparator = separator;
+            this.symbolPosition = position;
+            this.exchangeRate = rate;
+        }
     }
-    if ("left".equalsIgnoreCase(info2.symbolPosition)) {
-            //formattedAmount = currencySymbol + " " + formattedAmount;
-            jLabel14.setText(info2.currencySymbol+ formattedAmount);
+
+    private void CurrencyCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrencyCalculatorCalculateBTNActionPerformed
+        // TODO add your handling code here:
+        String amountText = CurrencyCalculatatorAmount.getText();
+        // Validate the input
+        double amount;
+        try {
+            amount = Double.parseDouble(amountText);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter numbers only!",  "Invalid Input", JOptionPane.WARNING_MESSAGE);
+            CurrencyCalculatatorAmount.setText("");
+            return;
+        }
+
+        // Get the selected items from the combo boxes
+        String selectedCurrency1 = (String) CurrencyCalculatorFrom.getSelectedItem();
+        String selectedCurrency2 = (String) CurrencyCalculatorTO.getSelectedItem();
+
+        // Extract rates from the selected currency strings
+        double rate1 = extractRate(selectedCurrency1);
+        double rate2 = extractRate(selectedCurrency2);
+
+        // Calculate the conversion
+        double convertedAmount = amount * (rate2 / rate1);
+        String[] parts = selectedCurrency2.split(" ");
+        String currencyKey = parts[0] + " " + parts[1];
+        String decimalSeparator = decimalSeparatorMap.getOrDefault(currencyKey, "dot");
+        String thousandSeparator = decimalSeparatorMap.getOrDefault(currencyKey + " thousand", ",");
+        String symbolPosition = decimalSeparatorMap.getOrDefault(currencyKey + " symbol", "left");
+        String currencySymbol = parts[1];
+        // Format the result accordingly
+        CurrencyInfo info1 = currencyDataMap.get(selectedCurrency1);
+        CurrencyInfo info2 = currencyDataMap.get(selectedCurrency2);
+        //System.out.println(CurrencyInfo);
+
+        String formattedAmount = String.format("%,.2f", convertedAmount);
+        if ("comma".equals(info2.decimalSeparator)) {
+            formattedAmount = formattedAmount.replace(",", "#").replace(".", ",").replace("#", ".");
+        }
+        if ("left".equalsIgnoreCase(info2.symbolPosition)) {
+                //formattedAmount = currencySymbol + " " + formattedAmount;
+                jLabel14.setText(info2.currencySymbol+ formattedAmount);
 
         } else if ("right".equalsIgnoreCase(info2.symbolPosition)) {
             //formattedAmount = formattedAmount + " " + currencySymbol;
             jLabel14.setText(formattedAmount +  info2.currencySymbol);
-       }
-    }//GEN-LAST:event_jButton1ActionPerformed
+        }   
+    }//GEN-LAST:event_CurrencyCalculatorCalculateBTNActionPerformed
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-         String selectedCurrency = (String) jComboBox4.getSelectedItem();
-    if (selectedCurrency != null && currencyDataMap.containsKey(selectedCurrency)) {
-        CurrencyInfo info = currencyDataMap.get(selectedCurrency);
-        jLabel13.setText(info.currencySymbol);
-        // Additional processing using info as needed
-    }
+    private void CurrencyCalculatorFromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrencyCalculatorFromActionPerformed
+        String selectedCurrency = (String) CurrencyCalculatorFrom.getSelectedItem();
+        if (selectedCurrency != null && currencyDataMap.containsKey(selectedCurrency)) {
+            CurrencyInfo info = currencyDataMap.get(selectedCurrency);
+            jLabel13.setText(info.currencySymbol);
+            // Additional processing using info as needed
+        }
         // Additional processing using info as needed  
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_CurrencyCalculatorFromActionPerformed
+
+    private void CurrencyCalculatorClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrencyCalculatorClearActionPerformed
+       CurrencyCalculatatorAmount.setText("");
+       jLabel14.setText("");
+    }//GEN-LAST:event_CurrencyCalculatorClearActionPerformed
 
 
     private void populateComboBoxes() {
@@ -6936,41 +6923,41 @@ private class CurrencyInfo {
         DefaultComboBoxModel<String> model2 = new DefaultComboBoxModel<>();
         try (BufferedReader br = new BufferedReader(new InputStreamReader(
             getClass().getClassLoader().getResourceAsStream("currency_dictionary.txt")))) {
-        jLabel13.setText("$");
-        String line;
-        while ((line = br.readLine()) != null) {
-            String[] parts = line.split(", ");
-            if (parts.length >= 6) {
-                String country = parts[0];
-                String currencyName = parts[1];
-                String currencySymbol = parts[2];
-                double exchangeRate = Double.parseDouble(parts[3]);
-                String decimalSeparator = parts[4];
-                String symbolPosition = parts[5];
-               // currencySymbolMap.put(currencySymbol, symbolPosition);
-                String displayName = country + " " + currencySymbol+" " + exchangeRate;
-                String currencyKey = country + " " + currencyName;
-                decimalSeparatorMap.put(currencyKey, decimalSeparator);
-                decimalSeparatorMap.put(currencyKey + " thousand", decimalSeparator);
-                decimalSeparatorMap.put(currencyKey + " symbol", symbolPosition);
-                currencyDataMap.put(displayName, new CurrencyInfo(currencySymbol, decimalSeparator, symbolPosition, exchangeRate));
-                model1.addElement(country + " " + currencySymbol + " " + exchangeRate);
-                model2.addElement(country + " " + currencySymbol + " " + exchangeRate);
-                model1.addElement(country + " " + currencyName);
-                //model2.addElement(country + " " + currencyName);
-            }
+            jLabel13.setText("$");
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(", ");
+                if (parts.length >= 6) {
+                    String country = parts[0];
+                    String currencyName = parts[1];
+                    String currencySymbol = parts[2];
+                    double exchangeRate = Double.parseDouble(parts[3]);
+                    String decimalSeparator = parts[4];
+                    String symbolPosition = parts[5];
+                   // currencySymbolMap.put(currencySymbol, symbolPosition);
+                    String displayName = country + " " + currencySymbol+" " + exchangeRate;
+                    String currencyKey = country + " " + currencyName;
+                    decimalSeparatorMap.put(currencyKey, decimalSeparator);
+                    decimalSeparatorMap.put(currencyKey + " thousand", decimalSeparator);
+                    decimalSeparatorMap.put(currencyKey + " symbol", symbolPosition);
+                    currencyDataMap.put(displayName, new CurrencyInfo(currencySymbol, decimalSeparator, symbolPosition, exchangeRate));
+                    model1.addElement(country + " " + currencySymbol + " " + exchangeRate);
+                    model2.addElement(country + " " + currencySymbol + " " + exchangeRate);
+                    model1.addElement(country + " " + currencyName);
+                    //model2.addElement(country + " " + currencyName);
+                }
         }
-        jComboBox4.setModel(model1);
-        jComboBox3.setModel(model2);
+        CurrencyCalculatorFrom.setModel(model1);
+        CurrencyCalculatorTO.setModel(model2);
         } catch (IOException e) {
         e.printStackTrace(); // Print the error for debugging purposes
     }
     }
     
-private double extractRate(String currencyString) {
-    String[] parts = currencyString.split(" ");
-    return Double.parseDouble(parts[parts.length - 1]);
-}
+    private double extractRate(String currencyString) {
+        String[] parts = currencyString.split(" ");
+        return Double.parseDouble(parts[parts.length - 1]);
+    }
     //Text field 
      // Method to display the first message in jTextPane1
 
@@ -7439,6 +7426,11 @@ private void setMessage4() {
     private javax.swing.JPanel AutoLoan;
     private javax.swing.JLabel CalculatorNameLBL;
     private javax.swing.JPanel Currency;
+    private javax.swing.JTextField CurrencyCalculatatorAmount;
+    private javax.swing.JButton CurrencyCalculatorCalculateBTN;
+    private javax.swing.JButton CurrencyCalculatorClear;
+    private javax.swing.JComboBox<String> CurrencyCalculatorFrom;
+    private javax.swing.JComboBox<String> CurrencyCalculatorTO;
     private javax.swing.JButton DownPaymentCalculateBTN;
     private javax.swing.JButton DownPaymentClearBTN;
     private javax.swing.JTextField DownPaymentClosingCOst;
@@ -7593,11 +7585,9 @@ private void setMessage4() {
     private javax.swing.JButton dashboard;
     private javax.swing.JPanel downpaymentCalculator;
     private javax.swing.JTextPane instructionCurrencyCalculator;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton9;
@@ -7608,8 +7598,6 @@ private void setMessage4() {
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox29;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -7623,7 +7611,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -7836,7 +7823,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField119;
     private javax.swing.JTextField jTextField120;
     private javax.swing.JTextField jTextField121;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
