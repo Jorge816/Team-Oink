@@ -20,6 +20,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;
+
+
+
 public class Helper {
     //----------------------------------------------------------------------------------------------------------------------------------General Input Validation 
     //-------------------------------------------------------------------------------Checking age 
@@ -811,8 +828,249 @@ public class Helper {
             principalLeft, finalNewMonthly, finalTotalNew, newIntPayment
         };
     }
+       
+    //----------------------------------------------------------------------------------------------------------------------------------------------Currency Calculator 
         
-    
+    public static Map<String, String[]> currency() { 
+          
+        Map<String, String[]> currencyDetails = new HashMap<>();
+
+            currencyDetails.put("US Dollar", new String[]{"United States", "$", "dot", "left", "1.0", "1.0"});
+            currencyDetails.put("Argentine Peso", new String[]{"Argentina", "$A", "comma", "right"});
+            currencyDetails.put("Australian Dollar", new String[]{"Australia", "A$", "dot", "left"});
+            currencyDetails.put("Euro", new String[]{"Italy", "€", "comma", "right"});
+            currencyDetails.put("Bahraini Dinar", new String[]{"Bahrain", "BD", "dot", "left"});
+            currencyDetails.put("Botswana Pula", new String[]{"Botswana", "P", "dot", "left"});
+            currencyDetails.put("Brazilian Real", new String[]{"Brazil", "R$", "dot", "left"});
+            currencyDetails.put("Bruneian Dollar", new String[]{"Brunei", "B$", "dot", "left"});
+            currencyDetails.put("Bulgarian Lev", new String[]{"Bulgaria", "лв", "comma", "right"});
+            currencyDetails.put("Canadian Dollar", new String[]{"Canada", "C$", "dot", "left"});
+            currencyDetails.put("Chilean Peso", new String[]{"Chile", "$CLP", "comma", "right"});
+            currencyDetails.put("Chinese Yuan Renminbi", new String[]{"China", "¥", "dot", "left"});
+            currencyDetails.put("Colombian Peso", new String[]{"Colombia", "$COP", "comma", "right"});
+            currencyDetails.put("Czech Koruna", new String[]{"Czech Republic", "Kč", "comma", "right"});
+            currencyDetails.put("Danish Krone", new String[]{"Denmark", "kr", "dot", "right"});
+            currencyDetails.put("Hong Kong Dollar", new String[]{"Hong Kong", "HK$", "comma", "left"});
+            currencyDetails.put("Hungarian Forint", new String[]{"Hungary", "Ft", "comma", "right"});
+            currencyDetails.put("Icelandic Krona", new String[]{"Iceland", "kr", "dot", "right"});
+            currencyDetails.put("Indian Rupee", new String[]{"India", "₹", "comma", "left"});
+            currencyDetails.put("Indonesian Rupiah", new String[]{"Indonesia", "Rp", "comma", "left"});
+            currencyDetails.put("Iranian Rial", new String[]{"Iran", "﷼", "comma", "right"});
+            currencyDetails.put("Israeli Shekel", new String[]{"Israel", "₪", "dot", "left"});
+            currencyDetails.put("Japanese Yen", new String[]{"Japan", "¥", "dot", "left"});
+            currencyDetails.put("Kazakhstani Tenge", new String[]{"Kazakhstan", "₸", "dot", "left"});
+            currencyDetails.put("Kuwaiti Dinar", new String[]{"Kuwait", "د.ك", "dot", "left"});
+            currencyDetails.put("Libyan Dinar", new String[]{"Libya", "ل.د", "comma", "left"});
+            currencyDetails.put("Malaysian Ringgit", new String[]{"Malaysia", "RM", "dot", "left"});
+            currencyDetails.put("Mexican Peso", new String[]{"Mexico", "$MXN", "dot", "right"});
+            currencyDetails.put("Mauritian Rupee", new String[]{"Mauritius", "Rs", "comma", "left"});
+            currencyDetails.put("Nepalese Rupee", new String[]{"Nepal", "₨", "dot", "left"});
+            currencyDetails.put("New Zealand Dollar", new String[]{"New Zealand", "NZ$", "dot", "left"});
+            currencyDetails.put("Norwegian Krone", new String[]{"Norway", "kr", "dot", "left"});
+            currencyDetails.put("Omani Rial", new String[]{"Oman", "﷼", "dot", "left"});
+            currencyDetails.put("Pakistani Rupee", new String[]{"Pakistan", "₨", "comma", "left"});
+            currencyDetails.put("Philippine Peso", new String[]{"Philippines", "₱", "dot", "right"});
+            currencyDetails.put("Polish Zloty", new String[]{"Poland", "zł", "comma", "right"});
+            currencyDetails.put("Qatari Riyal", new String[]{"Qatar", "ر.ق", "dot", "left"});
+            currencyDetails.put("Romanian New Leu", new String[]{"Romania", "lei", "comma", "right"});
+            currencyDetails.put("Russian Ruble", new String[]{"Russia", "₽", "comma", "left"});
+            currencyDetails.put("Saudi Arabian Riyal", new String[]{"Saudi Arabia", "ر.س", "dot", "left"});
+            currencyDetails.put("Singapore Dollar", new String[]{"Singapore", "S$", "dot", "left"});
+            currencyDetails.put("South African Rand", new String[]{"South Africa", "R", "dot", "left"});
+            currencyDetails.put("South Korean Won", new String[]{"South Korea", "₩", "dot", "left"});
+            currencyDetails.put("Sri Lankan Rupee", new String[]{"Sri Lanka", "රු", "comma", "right"});
+            currencyDetails.put("Swedish Krona", new String[]{"Sweden", "kr", "dot", "left"});
+            currencyDetails.put("Swiss Franc", new String[]{"Switzerland", "CHF", "comma", "left"});
+            currencyDetails.put("Taiwan New Dollar", new String[]{"Taiwan", "NT$", "dot", "left"});
+            currencyDetails.put("Thai Baht", new String[]{"Thailand", "฿", "comma", "right"});
+            currencyDetails.put("Trinidadian Dollar", new String[]{"Trinidad and Tobago", "TT$", "dot", "left"});
+            currencyDetails.put("Turkish Lira", new String[]{"Turkey", "₺", "comma", "left"});
+            currencyDetails.put("Emirati Dirham", new String[]{"United Arab Emirates", "د.إ", "dot", "left"});
+            currencyDetails.put("British Pound", new String[]{"United Kingdom", "£", "comma", "left"});
+            currencyDetails.put("Venezuelan Bolivar", new String[]{"Venezuela", "Bs.S", "comma", "right"});
+
+        String s = "success";
+        String url = "http://www.x-rates.com/table/?from=USD&amount=1";
+
+        try {
+            Document doc = Jsoup.connect(url).get();
+            Elements rows = doc.select("table.ratesTable>tbody>tr");
+            for (Element row : rows) {
+                Elements tds = row.select("td");
+                String currency = tds.get(0).text();
+                Double rate1 = Double.valueOf(tds.get(1).text());
+                Double rate2 = Double.valueOf(tds.get(2).text());
+
+                // Update the dictionary if the currency exists
+                if (currencyDetails.containsKey(currency)) {
+                    // Get the existing details
+                    String[] details = currencyDetails.get(currency);
+
+                    // Create a new array with updated rates
+                    String[] updatedDetails = new String[details.length + 2];
+                    System.arraycopy(details, 0, updatedDetails, 0, details.length);
+                    updatedDetails[details.length] = rate1.toString(); // Convert Double to String
+                    updatedDetails[details.length + 1] = rate2.toString(); // Convert Double to String
+
+                    // Put the updated array back into the map
+                    currencyDetails.put(currency, updatedDetails);
+                }
+            }
+
+            return currencyDetails;
+
+        } 
+         catch (IOException ex){
+                 s= "fail";
+         }
+
+            System.out.printf("%s",s);
+
+            return null;
+    }
+        
+        
+        
+        
+   //----------------------------------------------------------------------------------------------------------------ConvertsTheCurency
+ 
+    public static String[] convertingCurrencyFromTo(double amount, String currencyNameFrom, String currencyNameTo) {
+        Map<String, String[]> loadingCurrencyDetails = currency();
+
+        double rate2From = 0;
+        double rate1To = 0;
+        double rateVenezuela = 0;
+        String punctuation = "";
+        String position = "";
+        String symbol = "";
+        String originalAmount = "";
+
+        if (loadingCurrencyDetails.containsKey(currencyNameFrom)) {
+            String[] values = loadingCurrencyDetails.get(currencyNameFrom);
+            rate2From = Double.parseDouble(values[5]);
+            rateVenezuela = Double.parseDouble(values[4]);
+            String punctuationFrom = values[2];
+            String positionFrom = values[3];
+            String symbolFrom = values[1];
+
+
+
+            String resultStr = String.format("%,.2f", amount);
+
+            
+            if ("dot".equals(punctuationFrom)) {
+                resultStr = resultStr.replace(".", ",").replace(",", ".");
+                String reversed = new StringBuilder(resultStr).reverse().toString();
+                reversed = reversed.replaceFirst("\\.", ",");
+                resultStr = new StringBuilder(reversed).reverse().toString();
+                }
+
+          
+            if ("left".equals(positionFrom)) {
+                originalAmount = symbolFrom + resultStr;
+               
+            } 
+            if ("right".equals(positionFrom)) {
+                originalAmount = resultStr + symbolFrom;
+                
+            }
+
+        }
+        if (loadingCurrencyDetails.containsKey(currencyNameTo)) {
+            String[] values = loadingCurrencyDetails.get(currencyNameTo);
+            rate1To = Double.parseDouble(values[4]);
+            punctuation = values[2];
+            position = values[3];
+            symbol = values[1];
+       
+
+            }
+                    
+        if (currencyNameFrom.equals(currencyNameTo)) {
+            return new String[]{originalAmount, originalAmount} ;
+        }
+        if(currencyNameFrom.equals("Venezuelan Bolivar")){
+            
+            
+            double result = (amount / rateVenezuela) * rate1To;
+
+
+
+            String resultStr = String.format("%,.2f", result);
+            if ("dot".equals(punctuation)) {
+                resultStr = resultStr.replace(".", ",").replace(",", ".");
+                String reversed = new StringBuilder(resultStr).reverse().toString();
+                reversed = reversed.replaceFirst("\\.", ",");
+                resultStr = new StringBuilder(reversed).reverse().toString();
+            }
+            if ("left".equals(position)) {
+                resultStr = symbol + resultStr;
+            } else if ("right".equals(position)) {
+                resultStr = resultStr + symbol;
+            }
+
+            return new String[]{originalAmount, resultStr};
+        
+        
+        }
+        else{
+
+
+
+            double result = (amount * rate2From) * rate1To;
+
+
+
+            String resultStr = String.format("%,.2f", result);
+            if ("dot".equals(punctuation)) {
+                resultStr = resultStr.replace(".", ",").replace(",", ".");
+                String reversed = new StringBuilder(resultStr).reverse().toString();
+                reversed = reversed.replaceFirst("\\.", ",");
+                resultStr = new StringBuilder(reversed).reverse().toString();
+            }
+            if ("left".equals(position)) {
+                resultStr = symbol + resultStr;
+            } else if ("right".equals(position)) {
+                resultStr = resultStr + symbol;
+            }
+
+            return new String[]{originalAmount, resultStr};
+
+        }
+    }
+    //------------------------------------------------------------------------------------------LoadALlTheCurrency
+     public static String currencyLoader() {
+        Map<String, String[]> loadCurrenty = currency();
+        StringBuilder fromandToSelection = new StringBuilder();
+
+        // Sort the entries by country name
+        List<Map.Entry<String, String[]>> sortedEntries = new ArrayList<>(loadCurrenty.entrySet());
+        sortedEntries.sort(Comparator.comparing(entry -> entry.getValue()[0]));
+
+        // Build the sorted string
+        for (Map.Entry<String, String[]> entry : sortedEntries) {
+            String countryname = entry.getValue()[0];
+            String currencyName = entry.getKey();
+            String symbol = entry.getValue()[1];
+            fromandToSelection.append(countryname).append(":").append(currencyName).append("-").append(symbol).append("\n");
+        }
+
+        return fromandToSelection.toString();
+    }
+    //-------------------------------------------------------------------------PopulatingLabelsCurrencyCalculator
+    public static String[] currencySelectedFrom(String currencyNameFrom) {
+        Map<String, String[]> loadCurrency = currency();
+        String positionFrom = "";
+        String symbolFrom = "";
+
+        if (loadCurrency.containsKey(currencyNameFrom)) {
+            String[] values = loadCurrency.get(currencyNameFrom);
+            positionFrom = values[3];
+            symbolFrom = values[1];
+        }
+
+        return new String[]{positionFrom, symbolFrom};
+    }
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
         try{
