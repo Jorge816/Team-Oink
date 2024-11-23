@@ -3630,9 +3630,8 @@ String aboutMessage = "<html>"
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(CurrencyCalculatatorAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CurrencyCalculatatorAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
@@ -6593,6 +6592,8 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLoanTerm.setText("Loan term (Years)");
     
         RefinanceCalculatorMonthlyPaymentLbl.setText("Time remaining");
+        InstructionsRefinanceCalculator.setText("");
+        setMessage112();
  
     } else {
         refinanceCalculatorShowUp();
@@ -6600,7 +6601,8 @@ String aboutMessage = "<html>"
   
     
         RefinanceCalculatorMonthlyPaymentLbl.setText("Monthly Payment $");
-        
+        InstructionsRefinanceCalculator.setText("");
+        setMessage11();
        
     }
     
@@ -6829,25 +6831,15 @@ String aboutMessage = "<html>"
                                       + "    </tbody>"
                                       + "</table>"
                                       + "</html>";
-
-
-
-
-
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Time remaining must be less than or equal to Loan term");
 
-            
                 }
             }
             else{outputText = "UnderConstruction";}
-     
-        
-        
-        
+
             RefinanceCalculatorOutput.setText(outputText);
-        
         }
         catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");RefinanceCalculatorOutput.setText("Error404");}
     }//GEN-LAST:event_RefinanceCalculatorCalculateBTNActionPerformed
@@ -7068,8 +7060,6 @@ String aboutMessage = "<html>"
         + "Enter the value of your current vehicle that you are trading in.<br><br>"
         + "<b>Amount Owed on Trade-in:</b><br>"
         + "If you still owe money on your current vehicle, enter that amount here.<br><br>"
-        + "<b>Your State:</b><br>"
-        + "Select the state where you are purchasing the vehicle. Sales tax will be calculated based on this.<br><br>"
         + "<b>Sales Tax:</b><br>"
         + "Enter the sales tax rate in your state (if not calculated automatically).<br><br>"
         + "<b>Title, Registration, and Other Fees:</b><br>"
@@ -7101,8 +7091,6 @@ String aboutMessage = "<html>"
            + "Enter the value of your current vehicle that you are trading in.<br><br>"
            + "<b>Amount Owed on Trade-in:</b><br>"
            + "If you still owe money on your current vehicle, enter the amount here.<br><br>"
-           + "<b>Your State:</b><br>"
-           + "Select the state where you are purchasing the vehicle. Sales tax will be calculated based on this.<br><br>"
            + "<b>Sales Tax:</b><br>"
            + "Enter the sales tax rate for your state (if not automatically calculated).<br><br>"
            + "<b>Title, Registration, and Other Fees:</b><br>"
@@ -7154,23 +7142,22 @@ private void setMessage4() {
         + "<b>Your Life Expectancy:</b><br>"
         + "Estimate how long you expect to live post-retirement.<br><br>"
         + "<b>Your Current Pre-tax Income:</b><br>"
-        + "Enter your current yearly income before taxes.<br><br>"
-        + "<b>Assumptions:</b><br>"
-        + "<b>Your Current Income Increase:</b><br>"
-        + "Enter the rate at which you expect your income to grow annually (as a percentage).<br><br>"
+        + "Enter your current yearly income before taxes.<br><br><br>"
+        + "<b>Assumptions:</b><br><br>"
+       
         + "<b>Income Needed After Retirement:</b><br>"
-        + "Enter the percentage of your current income that you expect to need after retirement.<br><br>"
+        + "Enter the percentage of your <b>pretax income</b> that you expect to need after retirement, or specify a fixed amount.<br><br>"
+      
+
         + "<b>Average Investment Return:</b><br>"
-        + "Enter the average annual return you expect from your investments (as a percentage).<br><br>"
-        + "<b>Inflation Rate:</b><br>"
-        + "Enter the expected annual inflation rate (as a percentage).<br><br>"
+        + "Enter the average annual return you expect from your investments (as a percentage).<br><br><br>"
+       
         + "<b>Optional:</b><br>"
         + "<b>Other Income After Retirement:</b><br>"
         + "Enter any additional income you expect to receive after retirement, such as pensions or social security.<br><br>"
         + "<b>Your Current Retirement Savings:</b><br>"
         + "Enter the amount you currently have saved for retirement.<br><br>"
-        + "<b>Future Retirement Savings:</b><br>"
-        + "Enter the percentage of your income you plan to save each year going forward.<br><br>"
+        
         + "<b>Calculate Button:</b><br>"
         + "After entering all relevant information, click 'Calculate' to estimate your retirement savings and needs.<br><br>"
         + "<b>Clear Button:</b><br>"
@@ -7189,14 +7176,17 @@ private void setMessage4() {
           + "Enter the amount you contribute to your Roth IRA each year.<br><br>"
           + "<b>Maximize Contribution?</b><br>"
           + "Select 'Yes' if you plan to maximize your contributions according to IRS limits, or 'No' if you do not.<br><br>"
+          + "If you select 'Yes':<br>"
+            + "- The maximum contribution limit is $7,000 for individuals under the age of 50.<br>"
+            + "- Once you turn 50, the limit increases to $8,000 to allow for additional 'catch-up' contributions as per IRS guidelines.<br><br>"
+            + "For example, if you are currently 32 and plan to retire at 65, you can contribute up to $7,000 annually until you turn 50. After that, starting at age 50, you can contribute up to $8,000 annually until you retire.<br><br>"
+            + "If you select 'No', you can specify a custom contribution amount.<br><br>"
           + "<b>Expected Rate of Return:</b><br>"
           + "Enter the expected annual rate of return on your Roth IRA investments (as a percentage).<br><br>"
           + "<b>Current Age:</b><br>"
           + "Enter your current age.<br><br>"
           + "<b>Retirement Age:</b><br>"
           + "Enter the age at which you plan to retire.<br><br>"
-          + "<b>Marginal Tax Rate:</b><br>"
-          + "Enter your marginal tax rate, which is the tax rate that applies to your last dollar of income (as a percentage).<br><br>"
           + "<b>Calculate Button:</b><br>"
           + "Once you’ve filled out all fields, click 'Calculate' to estimate your Roth IRA growth and future balance.<br><br>"
           + "<b>Clear Button:</b><br>"
@@ -7207,39 +7197,42 @@ private void setMessage4() {
 
     }
 
-    private void setMessage7(){
-      String mortgagePayoffCalculatorInstructions = "<html>"
-          + "<b>Original Loan Amount:</b><br>"
-          + "Enter the original amount of the mortgage loan when it was first taken out.<br><br>"
-          + "<b>Original Loan Term:</b><br>"
-          + "Enter the original duration of the loan in months or years (e.g., 30 years).<br><br>"
-          + "<b>Interest Rate:</b><br>"
-          + "Enter the annual interest rate for the mortgage (as a percentage).<br><br>"
-          + "<b>Remaining Term:</b><br>"
-          + "Enter the number of months or years remaining on your mortgage.<br><br>"
-          + "<b>Repayment Options:</b><br>"
-          + "Select one of the repayment options:<br>"
-          + "- <b>Payback Altogether:</b> Choose this option if you plan to repay the loan in full at once.<br>"
-          + "- <b>Repayment With Extra Payments:</b> Select this option if you plan to make extra payments toward the loan.<br><br>"
-          + "<b>Extra Payments:</b><br>"
-          + "If you selected 'Repayment With Extra Payments', enter the extra amount you plan to pay:<br>"
-          + "- Monthly: Enter the extra amount you plan to pay each month.<br>"
-          + "- Yearly: Enter the extra amount you plan to pay each year.<br>"
-          + "- One-time: Enter any one-time payment you plan to make.<br><br>"
-          + "<b>Payment Frequency:</b><br>"
-          + "Select the payment schedule for your loan repayment:<br>"
-          + "- <b>Biweekly Repayment:</b> Choose this option if you plan to make biweekly payments.<br>"
-          + "- <b>Normal Payment:</b> Choose this option if you plan to make regular monthly payments.<br><br>"
-          + "<b>Calculate Button:</b><br>"
-          + "After entering all the required information, click 'Calculate' to estimate how your extra payments will affect the payoff time of your mortgage.<br><br>"
-          + "<b>Clear Button:</b><br>"
-          + "Click 'Clear' to reset the fields and start a new calculation."
-          + "</html>";
-      InstructionsMortgagePayoffCalculator.setContentType("text/html");
-      InstructionsMortgagePayoffCalculator.setText(mortgagePayoffCalculatorInstructions);
+    private void setMessage7() {
+        String mortgagePayoffCalculatorInstructions = "<html>"
+            + "<b>Mortgage Payoff Calculator Instructions:</b><br><br>"
+            + "<ul>"
+            + "   <li><b>Original Loan Amount:</b> Enter the initial amount borrowed for the mortgage loan when it was first taken out.</li><br>"
+            + "   <li><b>Original Loan Term:</b> Enter the original duration of the loan in months or years (e.g., 30 years).</li><br>"
+            + "   <li><b>Interest Rate:</b> Enter the annual interest rate for the mortgage (as a percentage).</li><br>"
+            + "   <li><b>Remaining Term:</b> Enter the number of months or years left on your mortgage.</li><br>"
+            + "   <li><b>Repayment Options:</b> Choose one of the following repayment options:"
+            + "       <ul>"
+            + "           <li><b>Payback Altogether:</b> Choose this if you plan to repay the loan in full at once.</li>"
+            + "           <li><b>Repayment With Extra Payments:</b> Select this if you plan to make additional payments toward the loan.</li>"
+            + "       </ul>"
+            + "   </li><br>"
+            + "   <li><b>Extra Payments:</b> If 'Repayment With Extra Payments' is selected, enter the extra amounts you plan to pay:"
+            + "       <ul>"
+            + "           <li><b>Monthly:</b> Enter the extra amount you plan to pay each month.</li>"
+            + "           <li><b>Yearly:</b> Enter the extra amount you plan to pay each year.</li>"
+            + "           <li><b>One-time:</b> Enter any one-time payment you plan to make.</li>"
+            + "       </ul>"
+            + "   </li><br>"
+            + "   <li><b>Payment Frequency:</b> Select the payment schedule for your loan repayment:"
+            + "       <ul>"
+            + "           <li><b>Biweekly Repayment:</b> Choose this option if you plan to make biweekly payments.</li>"
+            + "           <li><b>Normal Payment:</b> Choose this option for regular monthly payments.</li>"
+            + "       </ul>"
+            + "   </li><br>"
+            + "   <li><b>Calculate Button:</b> Click 'Calculate' after entering all the required information to estimate how extra payments will affect your mortgage payoff timeline.</li><br>"
+            + "   <li><b>Clear Button:</b> Click 'Clear' to reset all fields and start a new calculation.</li><br>"
+            + "</ul>"
+            + "</html>";
 
-
+        InstructionsMortgagePayoffCalculator.setContentType("text/html");
+        InstructionsMortgagePayoffCalculator.setText(mortgagePayoffCalculatorInstructions);
     }
+
 
     private void setMessage8(){
       String mortgageCalculatorInstructions = "<html>"
@@ -7254,17 +7247,15 @@ private void setMessage4() {
           + "<b>Start Date:</b><br>"
           + "Select the start date of the loan. You can choose the month and enter the year.<br><br>"
           + "<b>Include Taxes & Costs Below:</b><br>"
-          + "Check this box if you want to include additional costs such as taxes, insurance, and other fees in the calculation.<br><br>"
-          + "<b>Property Taxes Increase:</b><br>"
-          + "Enter the percentage by which property taxes are expected to increase annually.<br><br>"
-          + "<b>Home Insurance:</b><br>"
-          + "Enter the expected cost of home insurance as a percentage of the home price.<br><br>"
-          + "<b>PMI Insurance:</b><br>"
-          + "Enter the percentage for private mortgage insurance (PMI) if applicable. This typically applies when your down payment is less than 20%.<br><br>"
-          + "<b>HOA Fee:</b><br>"
-          + "Enter the expected amount for homeowners' association (HOA) fees as a percentage of the home price.<br><br>"
-          + "<b>Other Costs:</b><br>"
-          + "Enter any other additional costs, such as maintenance or repairs, as a percentage.<br><br>"
+          + "Check this box if you want to include additional costs such property taxes, home insurance, HOA fee and other costs in the calculation.<br><br>"
+          + "<b>Details (if checkbox is selected):</b><br>"
+          + "<ul>"
+            + "   <li><b>Property Taxes Increase:</b> Enter the percentage by which property taxes are expected to increase annually.</li><br>"
+            + "   <li><b>Home Insurance:</b> Enter the expected cost of home insurance as a percentage of the home price.</li><br>"
+            + "   <li><b>PMI Insurance:</b> Enter the percentage for private mortgage insurance (PMI) if applicable. This typically applies when your down payment is less than 20%.</li><br>"
+            + "   <li><b>HOA Fee:</b> Enter the expected amount for homeowners' association (HOA) fees as a percentage of the home price.</li><br>"
+            + "   <li><b>Other Costs:</b> Enter any other additional costs, such as maintenance or repairs, as a percentage of the home price.</li><br>"
+          + "</ul>"
           + "<b>Calculate Button:</b><br>"
           + "After entering all relevant information, click 'Calculate' to determine your estimated mortgage payments.<br><br>"
           + "<b>Clear Button:</b><br>"
@@ -7334,6 +7325,7 @@ private void setMessage4() {
             + "Enter your current monthly payment if you selected that option above.<br><br>"
             + "<b>Interest Rate (Current Loan):</b><br>"
             + "Enter the interest rate on your current loan.<br><br>"
+            + "-----------------------------------------<br><br>"
             + "<b>New Loan Term:</b><br>"
             + "Enter the number of years for the new loan term.<br><br>"
             + "<b>Interest Rate (New Loan):</b><br>"
@@ -7351,8 +7343,42 @@ private void setMessage4() {
             + "</html>";
         InstructionsRefinanceCalculator.setContentType("text/html");
         InstructionsRefinanceCalculator.setText(refinanceCalculatorInstructions);
+    }
+    private void setMessage112(){
+        String refinanceCalculatorInstructions = "<html>"
+            + "<b>Current Loan:</b><br>"
+            + "1. <b>I know the original loan amount:</b><br>"
+            + "   Select whether you know the original loan amount for your current loan.<br><br>"
+            + "2. <b>Original Loan Amount ($):</b><br>"
+            + "   Enter the original amount borrowed for your current loan.<br><br>"
+            + "3. <b>Loan Term (Years):</b><br>"
+            + "   Enter the total number of years for the term of your current loan.<br><br>"
+            + "4. <b>Time Remaining:</b><br>"
+            + "   Enter the remaining time left to pay off your current loan in years and months.<br><br>"
+            + "5. <b>Interest Rate (%):</b><br>"
+            + "   Enter the interest rate applied to your current loan.<br><br>"
+            + "-----------------------------------------<br><br>"
+            + "<b>New Loan:</b><br>"
+            + "1. <b>New Loan Term (Years):</b><br>"
+            + "   Enter the total number of years for the term of the new loan.<br><br>"
+            + "2. <b>Interest Rate (%):</b><br>"
+            + "   Enter the interest rate for the new loan.<br><br>"
+            + "3. <b>Points:</b><br>"
+            + "   Enter the number of points you are paying for the new loan. Points are prepaid interest, with 1 point equal to 1% of the loan amount.<br><br>"
+            + "4. <b>Costs and Fees ($):</b><br>"
+            + "   Enter the costs and fees associated with the new loan.<br><br>"
+            + "5. <b>Cashout Amount ($):</b><br>"
+            + "   Enter the amount of cash you want to take out as part of refinancing.<br><br>"
+            + "-----------------------------------------<br><br>"
+            + "<b>Buttons:</b><br>"
+            + "1. <b>Calculate:</b><br>"
+            + "   After entering all details for your current and new loan, click 'Calculate' to estimate the savings and monthly payment of refinancing.<br><br>"
+            + "2. <b>Clear:</b><br>"
+            + "   Click 'Clear' to reset all fields and start over.<br>"
+            + "</html>";
 
-
+        InstructionsRefinanceCalculator.setContentType("text/html");
+        InstructionsRefinanceCalculator.setText(refinanceCalculatorInstructions);
     }
     private void setMessage12(){
         String downPaymentCalculatorInstructions = "<html>"

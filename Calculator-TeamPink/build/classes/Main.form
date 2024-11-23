@@ -5129,10 +5129,8 @@
                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="CurrencyCalculatatorAmount" alignment="1" max="-2" attributes="0"/>
-                                          <Component id="jLabel13" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="CurrencyCalculatatorAmount" alignment="1" max="-2" attributes="0"/>
+                                      <Component id="jLabel13" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
                                       <Component id="jLabel14" min="-2" pref="26" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
