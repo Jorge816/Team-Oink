@@ -4861,7 +4861,7 @@ String aboutMessage = "<html>"
         restoreTab("Rent Calculator");
         restoreTab("Refinance Calculator");
         restoreTab("Down Payment Calculator");
-        restoreTab("Rent vs Buy Calculator");
+        //restoreTab("Rent vs Buy Calculator");---pending
     }//GEN-LAST:event_MortgageandRealEstateBTNActionPerformed
 
     private void OtherCalculatorsBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OtherCalculatorsBTN1ActionPerformed

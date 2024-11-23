@@ -838,7 +838,7 @@ public class Helper {
             currencyDetails.put("US Dollar", new String[]{"United States", "$", "dot", "left", "1.0", "1.0"});
             currencyDetails.put("Argentine Peso", new String[]{"Argentina", "$A", "comma", "right"});
             currencyDetails.put("Australian Dollar", new String[]{"Australia", "A$", "dot", "left"});
-            currencyDetails.put("Euro", new String[]{"Italy", "€", "comma", "right"});
+            currencyDetails.put("Euro", new String[]{"Austria", "€", "comma", "right"});
             currencyDetails.put("Bahraini Dinar", new String[]{"Bahrain", "BD", "dot", "left"});
             currencyDetails.put("Botswana Pula", new String[]{"Botswana", "P", "dot", "left"});
             currencyDetails.put("Brazilian Real", new String[]{"Brazil", "R$", "dot", "left"});
@@ -848,8 +848,13 @@ public class Helper {
             currencyDetails.put("Chilean Peso", new String[]{"Chile", "$CLP", "comma", "right"});
             currencyDetails.put("Chinese Yuan Renminbi", new String[]{"China", "¥", "dot", "left"});
             currencyDetails.put("Colombian Peso", new String[]{"Colombia", "$COP", "comma", "right"});
-            currencyDetails.put("Czech Koruna", new String[]{"Czech Republic", "Kč", "comma", "right"});
+            currencyDetails.put("Czech Koruna", new String[]{"Czech Republic", "Kč", "comma", "right"});  
             currencyDetails.put("Danish Krone", new String[]{"Denmark", "kr", "dot", "right"});
+            currencyDetails.put("Euro", new String[]{"European Union", "€", "comma", "right"});    
+            currencyDetails.put("Euro", new String[]{"Finland", "€", "comma", "right"});
+            currencyDetails.put("Euro", new String[]{"France", "€", "comma", "right"});
+            currencyDetails.put("Euro", new String[]{"Germany", "€", "comma", "right"});
+            currencyDetails.put("Euro", new String[]{"Italy", "€", "comma", "right"});
             currencyDetails.put("Hong Kong Dollar", new String[]{"Hong Kong", "HK$", "comma", "left"});
             currencyDetails.put("Hungarian Forint", new String[]{"Hungary", "Ft", "comma", "right"});
             currencyDetails.put("Icelandic Krona", new String[]{"Iceland", "kr", "dot", "right"});
@@ -868,8 +873,8 @@ public class Helper {
             currencyDetails.put("New Zealand Dollar", new String[]{"New Zealand", "NZ$", "dot", "left"});
             currencyDetails.put("Norwegian Krone", new String[]{"Norway", "kr", "dot", "left"});
             currencyDetails.put("Omani Rial", new String[]{"Oman", "﷼", "dot", "left"});
-            currencyDetails.put("Pakistani Rupee", new String[]{"Pakistan", "₨", "comma", "left"});
             currencyDetails.put("Philippine Peso", new String[]{"Philippines", "₱", "dot", "right"});
+            currencyDetails.put("Pakistani Rupee", new String[]{"Pakistan", "₨", "comma", "left"});
             currencyDetails.put("Polish Zloty", new String[]{"Poland", "zł", "comma", "right"});
             currencyDetails.put("Qatari Riyal", new String[]{"Qatar", "ر.ق", "dot", "left"});
             currencyDetails.put("Romanian New Leu", new String[]{"Romania", "lei", "comma", "right"});
@@ -945,15 +950,6 @@ public class Helper {
             String punctuationFrom = values[2];
             String positionFrom = values[3];
             String symbolFrom = values[1];
-            System.out.println("From:");
-            System.out.println("Rate 2 From: " + rate2From);
-            System.out.println("Rate Venezuela: " + rateVenezuela);
-            System.out.println("Punctuation From: " + punctuationFrom);
-            System.out.println("Position From: " + positionFrom);
-            System.out.println("Symbol From: " + symbolFrom);
-
-
-
             String resultStr = String.format("%,.2f", amount);
 
             
@@ -982,12 +978,6 @@ public class Helper {
             punctuation = values[2];
             position = values[3];
             symbol = values[1];
-            System.out.println("To:");
-            System.out.println("Rate 1 To: " + rate1To);
-            System.out.println("Second Rate: " + secondRate);
-            System.out.println("Punctuation: " + punctuation);
-            System.out.println("Position: " + position);
-            System.out.println("Symbol: " + symbol);
 
         }
                     
