@@ -6927,24 +6927,14 @@ String aboutMessage = "<html>"
         String[] result = Helper.convertingCurrencyFromTo(currencyAmount, currencyNameFrom, currencyNameTo);
 
         String outputText = "<html>"
-            + "<table border='1' style='border-collapse:visible; text-align:left; width:400%;'>"
-            + "    <thead>"
-            + "        <tr>"
-            + "            <th>Detail</th>"
-            + "            <th>Value</th>"
-            + "        </tr>"
-            + "    </thead>"
-            + "    <tbody>"
-            + "        <tr>"
-            + "            <td>Original Amount: "+currencyNameFrom+" </td>"
-            + "            <td>" + result[0] + "</td>"
-            + "        </tr>"
-            + "        <tr>"
-            + "            <td>Converted Amount: "+currencyNameTo+"</td>"
-            + "            <td>" + result[1] + "</td>"
-            + "        </tr>"
-            + "    </tbody>"
-            + "</table>"
+            + "<table border='1' style='border-collapse:visible; text-align:left;'>"
+
+            + " <td><b>Original Amount:</b> "+currencyNameFrom+":<br><br>"
+            + " " + result[0] + "</td>"
+
+            + "<td><b>Converted Amount:</b> "+currencyNameTo+":<br><br>"
+            + "" + result[1] + "</td>"
+
             + "</html>";
         CurrencyCalculatorOuput.setText(outputText);
     }//GEN-LAST:event_CurrencyCalculatorCalculateBTNActionPerformed

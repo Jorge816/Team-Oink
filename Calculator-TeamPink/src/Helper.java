@@ -778,7 +778,7 @@ public class Helper {
     }
     
     
-    //------------------------------------------------------------------------------------------------------------------------------------------------------------Refinance Calculator
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------Refinance Calculator Azusena and Pedro
     
     public static double[] originalLoanAmount(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths,
                                               int timeLeft, int timePaid, double interest, int newLoanTime,
@@ -829,7 +829,7 @@ public class Helper {
         };
     }
        
-    //----------------------------------------------------------------------------------------------------------------------------------------------Currency Calculator 
+    //----------------------------------------------------------------------------------------------------------------------------------------------Currency Calculator Osvaldo and Pedro
         
     public static Map<String, String[]> currency() { 
           
@@ -916,22 +916,15 @@ public class Helper {
                     currencyDetails.put(currency, updatedDetails);
                 }
             }
-
             return currencyDetails;
-
         } 
          catch (IOException ex){
                  s= "fail";
          }
-
             System.out.printf("%s",s);
-
             return null;
     }
-        
-        
-        
-        
+ 
    //----------------------------------------------------------------------------------------------------------------ConvertsTheCurency
  
     public static String[] convertingCurrencyFromTo(double amount, String currencyNameFrom, String currencyNameTo) {
@@ -952,6 +945,12 @@ public class Helper {
             String punctuationFrom = values[2];
             String positionFrom = values[3];
             String symbolFrom = values[1];
+            System.out.println("From:");
+            System.out.println("Rate 2 From: " + rate2From);
+            System.out.println("Rate Venezuela: " + rateVenezuela);
+            System.out.println("Punctuation From: " + punctuationFrom);
+            System.out.println("Position From: " + positionFrom);
+            System.out.println("Symbol From: " + symbolFrom);
 
 
 
@@ -979,23 +978,26 @@ public class Helper {
         if (loadingCurrencyDetails.containsKey(currencyNameTo)) {
             String[] values = loadingCurrencyDetails.get(currencyNameTo);
             rate1To = Double.parseDouble(values[4]);
+            double secondRate = Double.parseDouble(values[5]);
             punctuation = values[2];
             position = values[3];
             symbol = values[1];
-       
+            System.out.println("To:");
+            System.out.println("Rate 1 To: " + rate1To);
+            System.out.println("Second Rate: " + secondRate);
+            System.out.println("Punctuation: " + punctuation);
+            System.out.println("Position: " + position);
+            System.out.println("Symbol: " + symbol);
 
-            }
+        }
                     
         if (currencyNameFrom.equals(currencyNameTo)) {
             return new String[]{originalAmount, originalAmount} ;
         }
         if(currencyNameFrom.equals("Venezuelan Bolivar")){
-            
-            
+ 
             double result = (amount / rateVenezuela) * rate1To;
 
-
-
             String resultStr = String.format("%,.2f", result);
             if ("dot".equals(punctuation)) {
                 resultStr = resultStr.replace(".", ",").replace(",", ".");
@@ -1008,18 +1010,10 @@ public class Helper {
             } else if ("right".equals(position)) {
                 resultStr = resultStr + symbol;
             }
-
             return new String[]{originalAmount, resultStr};
-        
-        
         }
         else{
-
-
-
             double result = (amount * rate2From) * rate1To;
-
-
 
             String resultStr = String.format("%,.2f", result);
             if ("dot".equals(punctuation)) {
@@ -1033,9 +1027,7 @@ public class Helper {
             } else if ("right".equals(position)) {
                 resultStr = resultStr + symbol;
             }
-
             return new String[]{originalAmount, resultStr};
-
         }
     }
     //------------------------------------------------------------------------------------------LoadALlTheCurrency
