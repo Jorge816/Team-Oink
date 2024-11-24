@@ -1,58 +1,52 @@
 United States, US Dollar, $, 1, dot , left
-Argentina, Argentine Peso, $A, 993.771531, comma, right
-Australia, Australian Dollar, A$, 1.523631, dot, left
-Austria, Euro, €, 0.924586, comma, right
+Argentina, Argentine Peso, $A, 1004.003729, comma, right
+Australia, Australian Dollar, A$, 1.538045, dot, left
 Bahrain, Bahraini Dinar, BD, 0.376, dot, left
-Botswana, Botswana Pula, P, 13.40619, dot, left
-Brazil, Brazilian Real, R$, 5.693828, dot, left
-Brunei, Bruneian Dollar, B$, 1.322721, dot, left
-Bulgaria, Bulgarian Lev, лв, 1.808332, comma, right
-Canada, Canadian Dollar, C$, 1.389372, dot, left
-Chile, Chilean Peso, $CLP, 948.260727, comma, right
-China, Chinese Yuan Renminbi, ¥, 7.12618, dot, left
-Colombia, Colombian Peso, $COP, 4333.470452, comma, right
-Czech Republic, Czech Koruna, Kč, 23.447559, comma, right
-Denmark, Danish Krone, kr, 6.896088, dot, right
-European Union, Euro, €, 0.924586, comma, right
-Finland, Euro, €, 0.924586, comma, right
-France, Euro, €, 0.924586, comma, right
-Germany, Euro, €, 0.924586, comma, right
-Hong Kong, Hong Kong Dollar, HK$, 7.771535, dot, left
-Hungary, Hungarian Forint, Ft, 374.129533, comma, right
-Iceland, Icelandic Krona, kr, 137.648142, dot, right
-India, Indian Rupee, ₹, 84.068096, comma, left
-Indonesia, Indonesian Rupiah, Rp, 15725.77391, comma, left
-Iran, Iranian Rial, ﷼, 41885.8971, comma, right
-Israel, Israeli Shekel, ₪, 3.729307, dot, left
-Italy, Euro, €, 0.924586, comma, right
-Japan, Japanese Yen, ¥, 153.276785, dot, left
-Kazakhstan, Kazakhstani Tenge, ₸, 490.57, dot, left
-Kuwait, Kuwaiti Dinar, د.ك, 0.306678, dot, left
-Libya, Libyan Dinar, ل.د, 4.819962, comma, left
-Malaysia, Malaysian Ringgit, RM, 4.349841, dot, left
-Mexico, Mexican Peso, $MXN, 19.985682, dot, right
-Mauritius, Mauritian Rupee, Rs, 46.204489, comma, left
-Nepal, Nepalese Rupee, ₨, 134.572005, dot, left
-New Zealand, New Zealand Dollar, NZ$, 1.673225, dot, left
-Norway, Norwegian Krone, kr, 10.988784, dot, left
-Oman, Omani Rial, ﷼, 0.384963, dot, left
-Pakistan, Pakistani Rupee, ₨, 277.991734, comma, left
-Philippines, Philippine Peso, ₱, 58.219252, dot, right
-Poland, Polish Zloty, zł, 4.022547, comma, right
+Botswana, Botswana Pula, P, 13.636318, dot, left
+Brazil, Brazilian Real, R$, 5.811329, dot, left
+Britain, British Pound, €, 0.797687. comma, right
+Brunei, Bruneian Dollar, B$, 1.346518, dot, left
+Bulgaria, Bulgarian Lev, лв, 1.876986, comma, right
+Canada, Canadian Dollar, C$, 1.398070, dot, left
+Chile, Chilean Peso, $CLP, 985.373959, comma, right
+China, Chinese Yuan Renminbi, ¥, 7.245438	, dot, left
+Colombia, Colombian Peso, $COP, 4418.502184, comma, right
+Czech Republic, Czech Koruna, Kč, 24.316490, comma, right
+Denmark, Danish Krone, kr, 7.158264, dot, right
+European Union, Euro, €, 0.959688, comma, right
+Hong Kong, Hong Kong Dollar, HK$, 7.784192, dot, left
+Hungary, Hungarian Forint, Ft, 394.922546, comma, right
+Iceland, Icelandic Krona, kr, 139.702471, dot, right
+India, Indian Rupee, ₹, 84.431185, comma, left
+Indonesia, Indonesian Rupiah, Rp, 15878.205681, comma, left
+Iran, Iranian Rial, ﷼, 42002.568353, comma, right
+Israel, Israeli Shekel, ₪, 3.706216, dot, left
+Japan, Japanese Yen, ¥, 154.757473, dot, left
+Kazakhstan, Kazakhstani Tenge, ₸, 499.020607, dot, left
+Kuwait, Kuwaiti Dinar, د.ك, 0.308549	, dot, left
+Libya, Libyan Dinar, ل.د, 4.882300, comma, left
+Malaysia, Malaysian Ringgit, RM, 4.467775, dot, left
+Mauritius, Mauritian Rupee, Rs, 46.500289, comma, left
+Mexico, Mexican Peso, $MXN, 20.417148, dot, right
+Nepal, Nepalese Rupee, ₨, 135.153220, dot, left
+New Zealand, New Zealand Dollar, NZ$, 1.713658, dot, left
+Norway, Norwegian Krone, kr, 11.072297, dot, left
+Oman, Omani Rial, ﷼,0.384899, dot, left
+Pakistan, Pakistani Rupee, ₨, 277.687312, comma, left
+Philippines, Philippine Peso, ₱, 58.967258, dot, right
+Poland, Polish Zloty, zł, 4.159029, comma, right
 Qatar, Qatari Riyal, ر.ق, 3.64, dot, left
-Romania, Romanian New Leu, lei, 4.59896, comma, right
-Russia, Russian Ruble, ₽, 97.168051, comma, left
+Romania, Romanian New Leu, lei, 4.777638, comma, right
+Russia, Russian Ruble, ₽, 104.253193, comma, left
 Saudi Arabia, Saudi Arabian Riyal, ر.س, 3.75, dot, left
-Singapore, Singapore Dollar, S$, 1.322721, dot, left
-South Africa, South African Rand, R, 17.685977, dot, left
-South Korea, South Korean Won, ₩, 1383.308134, dot, left
-Sri Lanka, Sri Lankan Rupee, රු, 293.456948, comma, right
-Sweden, Swedish Krona, kr, 10.639884, dot, left
-Switzerland, Swiss Franc, CHF, 0.865283, comma, left
-Taiwan, Taiwan New Dollar, NT$, 32.119937, dot, left
-Thailand, Thai Baht, ฿, 33.784819, comma, right
-Trinidad and Tobago, Trinidadian Dollar, TT$, 6.77936, dot, left
-Turkey, Turkish Lira, ₺, 34.293016, comma, left
-United Arab Emirates, Emirati Dirham, د.إ, 3.6725, dot, left
-United Kingdom, British Pound, £, 0.770609, comma, left
-Venezuela, Venezuelan Bolivar, Bs.S, 4099092.659818, comma, right
+Singapore, Singapore Dollar, S$, 1.346518, dot, left
+South Africa, South African Rand, R, 18.122952, dot, left
+South Korea, South Korean Won, ₩, 1402.698201, dot, left
+Sri Lanka, Sri Lankan Rupee, රු, 291.269997, comma, right
+Sweden, Swedish Krona, kr, 11.037108, dot, left
+Switzerland, Swiss Franc, CHF, 0.893921, comma, left
+Taiwan, Taiwan New Dollar, NT$, 32.608171, dot, left
+Thailand, Thai Baht, ฿, 34.445863, comma, right
+Trinidad and Tobago, Trinidadian Dollar, TT$, 6.786556, dot, left
+Turkey, Turkish Lira, ₺, 34.543116, comma, left
+Venezuela, Venezuelan Bolivar, Bs.S, 4651309.945010, comma, right
