@@ -152,8 +152,6 @@ public class Main extends javax.swing.JFrame {
         populateComboBoxesCurrencyCalculator();
 
 
-
-   
     }
     
     //showing about 
@@ -6201,6 +6199,41 @@ String aboutMessage = "<html>"
                                   + "Remaining Interest Savings: " + currencyFormat.format(mortgagePayoff[6]) + "<br>"
                                   + "Remaining Balance to Pay Off Loan: " + currencyFormat.format(mortgagePayoff[7]) + "<br>"
                                   + "</html>";} 
+            
+            
+            if (MortgagePayoffBiweeklyRepayment.isSelected()) {
+                double currentLoan = 400000;
+                int originalTime = 30;
+                double interest = 6;
+                int oTimeLeftYears = 25;
+                int oTimeLeftMonths = 0;
+
+                String[] results = Helper.mortgagePayoffByweekly(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths, interest);
+
+                for (String summary : results) {
+                    System.out.println(summary);
+                }
+                     }        
+                    
+             if (MortgagePayoffRepaymentWithExtraPayments.isSelected()) {
+                 double currentLoan = 400000;
+                    int originalTime = 30;
+                    int oTimeLeftYears = 25;
+                    int oTimeLeftMonths = 0;
+                    double interest = 6;
+                    double perMonth = 1000;
+                    double perYear = 12000;
+                    double oneTime = 5000;
+
+                    Object[] results = Helper.mortgagePayoffCustom(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
+                            interest, perMonth, perYear, oneTime);
+
+                    // Print results
+                    for (Object result : results) {
+                        System.out.println(result);
+                    }
+            }  
+                    
             MortgagePayoffOutput.setText(outputText);}
         catch(Exception e){JOptionPane.showMessageDialog(null, "Empty fields!");MortgagePayoffOutput.setText("Error404");}
         
