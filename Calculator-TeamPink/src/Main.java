@@ -227,16 +227,16 @@ String aboutMessage = "<html>"
             //seting every tab invisible 
         public void removeAllTabs() {
             // Loop backwards to avoid indexing issues when removing tabs
-            for (int i = panelCalculator.getTabCount() - 1; i >= 0; i--) {
+            for (int i = Calculators.getTabCount() - 1; i >= 0; i--) {
                 // Get the tab title and content before removing it
-                String tabTitle = panelCalculator.getTitleAt(i);
-                Component tabContent = panelCalculator.getComponentAt(i);
+                String tabTitle = Calculators.getTitleAt(i);
+                Component tabContent = Calculators.getComponentAt(i);
 
                 // Store the tab title and content in the map
                 storedTabs.put(tabTitle, tabContent);
 
                 // Remove the tab
-                panelCalculator.removeTabAt(i);
+                Calculators.removeTabAt(i);
             }
             
             jTabbedPane1.remove(jPanel68);
@@ -248,7 +248,7 @@ String aboutMessage = "<html>"
              Component tabContent = storedTabs.get(title);
              if (tabContent != null) {
                 // System.out.println("Restoring tab: " + title);  // Debugging message
-                 panelCalculator.addTab(title, tabContent);  // Restore the tab
+                 Calculators.addTab(title, tabContent);  // Restore the tab
              } else {
                  //System.out.println("Tab content for '" + title + "' not found in storedTabs.");
              }
@@ -286,7 +286,7 @@ String aboutMessage = "<html>"
         InvestmentCalculatorBTN3 = new javax.swing.JButton();
         autoCalculatorBTN4 = new javax.swing.JButton();
         pinkPanterCbtn = new javax.swing.JLabel();
-        panelCalculator = new javax.swing.JTabbedPane();
+        Calculators = new javax.swing.JTabbedPane();
         rentandbuy = new javax.swing.JPanel();
         jPanel35 = new javax.swing.JPanel();
         jPanel36 = new javax.swing.JPanel();
@@ -718,6 +718,9 @@ String aboutMessage = "<html>"
         jLabel103 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         InstructionsRothIRACalculator = new javax.swing.JTextPane();
+        paceCalculator = new javax.swing.JPanel();
+        deepThoughts = new javax.swing.JPanel();
+        ekinator2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         quitBnt = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -948,16 +951,16 @@ String aboutMessage = "<html>"
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelCalculator.setBackground(new java.awt.Color(253, 178, 253));
-        panelCalculator.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255)));
-        panelCalculator.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        panelCalculator.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        panelCalculator.setAutoscrolls(true);
-        panelCalculator.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panelCalculator.setDoubleBuffered(true);
-        panelCalculator.setFocusCycleRoot(true);
-        panelCalculator.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        panelCalculator.setOpaque(true);
+        Calculators.setBackground(new java.awt.Color(253, 178, 253));
+        Calculators.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255)));
+        Calculators.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        Calculators.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        Calculators.setAutoscrolls(true);
+        Calculators.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Calculators.setDoubleBuffered(true);
+        Calculators.setFocusCycleRoot(true);
+        Calculators.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Calculators.setOpaque(true);
 
         rentandbuy.setBackground(new java.awt.Color(255, 237, 255));
         rentandbuy.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -1287,7 +1290,7 @@ String aboutMessage = "<html>"
 
         rentandbuy.add(jPanel35);
 
-        panelCalculator.addTab("Rent vs Buy Calculator", rentandbuy);
+        Calculators.addTab("Rent vs Buy Calculator", rentandbuy);
 
         MortgageCalculator2.setBackground(new java.awt.Color(255, 143, 255));
         MortgageCalculator2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -1662,7 +1665,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane17)
         );
 
-        panelCalculator.addTab("Mortgage Calculator", MortgageCalculator2);
+        Calculators.addTab("Mortgage Calculator", MortgageCalculator2);
 
         retirementCalculator3.setBackground(new java.awt.Color(255, 143, 255));
         retirementCalculator3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -1975,7 +1978,7 @@ String aboutMessage = "<html>"
                 .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE))
         );
 
-        panelCalculator.addTab("Retirement Calculator", retirementCalculator3);
+        Calculators.addTab("Retirement Calculator", retirementCalculator3);
 
         HouseAffordabilityCalculator.setBackground(new java.awt.Color(255, 143, 255));
         HouseAffordabilityCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -2264,7 +2267,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
-        panelCalculator.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
+        Calculators.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
 
         RentCalculator.setBackground(new java.awt.Color(255, 143, 255));
         RentCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -2456,7 +2459,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        panelCalculator.addTab("Rent Calculator", RentCalculator);
+        Calculators.addTab("Rent Calculator", RentCalculator);
 
         RefinanceCalculator.setBackground(new java.awt.Color(255, 143, 255));
         RefinanceCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -2828,7 +2831,7 @@ String aboutMessage = "<html>"
                 .addContainerGap())
         );
 
-        panelCalculator.addTab("Refinance Calculator", RefinanceCalculator);
+        Calculators.addTab("Refinance Calculator", RefinanceCalculator);
 
         downpaymentCalculator.setBackground(new java.awt.Color(255, 143, 255));
         downpaymentCalculator.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255)));
@@ -3077,7 +3080,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
-        panelCalculator.addTab("Down Payment Calculator", downpaymentCalculator);
+        Calculators.addTab("Down Payment Calculator", downpaymentCalculator);
 
         MortgagePayoffCalculator.setBackground(new java.awt.Color(255, 237, 255));
         MortgagePayoffCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3443,7 +3446,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
-        panelCalculator.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
+        Calculators.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
 
         MathCalculator.setBackground(new java.awt.Color(255, 237, 255));
         MathCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3474,7 +3477,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(219, Short.MAX_VALUE))
         );
 
-        panelCalculator.addTab("Math Calculator", MathCalculator);
+        Calculators.addTab("Math Calculator", MathCalculator);
 
         FitnessAndHealthCalculator.setBackground(new java.awt.Color(255, 237, 255));
         FitnessAndHealthCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3505,7 +3508,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(229, Short.MAX_VALUE))
         );
 
-        panelCalculator.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
+        Calculators.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
 
         OtherCalculator.setBackground(new java.awt.Color(255, 237, 255));
         OtherCalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3536,7 +3539,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(229, Short.MAX_VALUE))
         );
 
-        panelCalculator.addTab("Other Calculators", OtherCalculator);
+        Calculators.addTab("Other Calculators", OtherCalculator);
 
         Currency.setBackground(new java.awt.Color(255, 143, 255));
         Currency.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3719,7 +3722,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
-        panelCalculator.addTab("Currency Calculator", Currency);
+        Calculators.addTab("Currency Calculator", Currency);
 
         InterestRate.setBackground(new java.awt.Color(255, 143, 255));
         InterestRate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -3992,7 +3995,7 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        panelCalculator.addTab("Interest Rate Calculator", InterestRate);
+        Calculators.addTab("Interest Rate Calculator", InterestRate);
 
         jPanel19.setBackground(new java.awt.Color(255, 237, 255));
         jPanel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 2, true));
@@ -4117,7 +4120,7 @@ String aboutMessage = "<html>"
                 .addGap(164, 164, 164))
         );
 
-        panelCalculator.addTab("+", jPanel19);
+        Calculators.addTab("+", jPanel19);
 
         AutoLoan.setBackground(new java.awt.Color(255, 143, 255));
 
@@ -4482,7 +4485,7 @@ String aboutMessage = "<html>"
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
-        panelCalculator.addTab("Auto Loan Calculator", AutoLoan);
+        Calculators.addTab("Auto Loan Calculator", AutoLoan);
 
         RothIRACalculator.setBackground(new java.awt.Color(255, 143, 255));
         RothIRACalculator.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 255), 1, true));
@@ -4753,7 +4756,79 @@ String aboutMessage = "<html>"
             .addComponent(jScrollPane23)
         );
 
-        panelCalculator.addTab("Roth IRA Calculator", RothIRACalculator);
+        Calculators.addTab("Roth IRA Calculator", RothIRACalculator);
+
+        paceCalculator.setBackground(new java.awt.Color(255, 143, 255));
+        paceCalculator.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                paceCalculatorAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        javax.swing.GroupLayout paceCalculatorLayout = new javax.swing.GroupLayout(paceCalculator);
+        paceCalculator.setLayout(paceCalculatorLayout);
+        paceCalculatorLayout.setHorizontalGroup(
+            paceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 995, Short.MAX_VALUE)
+        );
+        paceCalculatorLayout.setVerticalGroup(
+            paceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 771, Short.MAX_VALUE)
+        );
+
+        Calculators.addTab("Pace Calculator", paceCalculator);
+
+        deepThoughts.setBackground(new java.awt.Color(255, 143, 255));
+        deepThoughts.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                deepThoughtsAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        javax.swing.GroupLayout deepThoughtsLayout = new javax.swing.GroupLayout(deepThoughts);
+        deepThoughts.setLayout(deepThoughtsLayout);
+        deepThoughtsLayout.setHorizontalGroup(
+            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 995, Short.MAX_VALUE)
+        );
+        deepThoughtsLayout.setVerticalGroup(
+            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 771, Short.MAX_VALUE)
+        );
+
+        Calculators.addTab("Deep Thought", deepThoughts);
+
+        ekinator2.setBackground(new java.awt.Color(255, 143, 255));
+        ekinator2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                ekinator2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        javax.swing.GroupLayout ekinator2Layout = new javax.swing.GroupLayout(ekinator2);
+        ekinator2.setLayout(ekinator2Layout);
+        ekinator2Layout.setHorizontalGroup(
+            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 995, Short.MAX_VALUE)
+        );
+        ekinator2Layout.setVerticalGroup(
+            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 771, Short.MAX_VALUE)
+        );
+
+        Calculators.addTab("Ekinator 2", ekinator2);
 
         quitBnt.setText("Quit");
         quitBnt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -4784,7 +4859,7 @@ String aboutMessage = "<html>"
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelCalculator, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(Calculators, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4792,11 +4867,11 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelCalculator)
+                    .addComponent(Calculators)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)))
         );
 
-        panelCalculator.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
+        Calculators.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -4812,15 +4887,19 @@ String aboutMessage = "<html>"
         // TODO add your handling code here:
         removeAllTabs();
        
-       restoreTab("Fitness & Health Calculator");
-       CalculatorNameLBL.setText("Fitness & Health Calculator");       
+       //restoreTab("Fitness & Health Calculator");
+       CalculatorNameLBL.setText("Pace Calculator");
+        restoreTab("Pace Calculator");
+       
     }//GEN-LAST:event_btnfitnessCalculatorActionPerformed
 
     private void btnOtherCalculatorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOtherCalculatorsActionPerformed
         // TODO add your handling code here:
         removeAllTabs();
-        restoreTab("Other Calculators");
+        //restoreTab("Other Calculators");
         CalculatorNameLBL.setText("Other Calculator");
+            restoreTab("Deep Thought");
+            restoreTab("Ekinator 2");
 
     }//GEN-LAST:event_btnOtherCalculatorsActionPerformed
 
@@ -4867,6 +4946,8 @@ String aboutMessage = "<html>"
             removeAllTabs();
             restoreTab("Currency Calculator");//needs to be change according to the name of the tab
             CalculatorNameLBL.setText("Currency Calculator");
+
+            
 
     }//GEN-LAST:event_OtherCalculatorsBTN1ActionPerformed
 
@@ -6227,43 +6308,43 @@ String aboutMessage = "<html>"
                         
                         
                         + "<body style='font-family: Arial; font-size: 14px;'>"
-                        + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
-                        + "<thead style='background-color: #004080; color: white;'>"
-                        + "<tr>"
-                        + "<th></th>"
-                        + "<th>Original</th>"
-                        + "<th>With payoff</th>"
-                        + "</tr>"
-                        + "</thead>"
-                        + "<tbody>"
-                        + "<tr>"
-                        + "<td>Total payments</td>"
-                        + "<td>$863,352.76</td>"
-                        + "<td>$801,483.70</td>"
-                        + "</tr>"
-                        + "<tr>"
-                        + "<td>Total interest</td>"
-                        + "<td>$463,352.76</td>"
-                        + "<td>$401,483.70</td>"
-                        + "</tr>"
-                        + "<tr>"
-                        + "<td>Remaining payments</td>"
-                        + "<td>$719,460.63</td>"
-                        + "<td>$657,591.57</td>"
-                        + "</tr>"
-                        + "<tr style='background-color: #f2f2f2;'>"
-                        + "<td>Remaining interest</td>"
-                        + "<td>$347,243.20</td>"
-                        + "<td>$285,374.14</td>"
-                        + "</tr>"
-                        + "<tr>"
-                        + "<td>Payoff in</td>"
-                        + "<td>25 yrs</td>"
-                        + "<td>21 yrs, 2 mos</td>"
-                        + "</tr>"
-                        + "</tbody>"
-                        + "</table>"
-                        + "</body>"
+                    + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
+                    + "<thead style='background-color: #004080; color: white;'>"
+                    + "<tr>"
+                    + "<th></th>"
+                    + "<th>Original</th>"
+                    + "<th>With payoff</th>"
+                    + "</tr>"
+                    + "</thead>"
+                    + "<tbody>"
+                    + "<tr>"
+                    + "<td>Total payments</td>"
+                    + "<td>$863,352.76</td>"
+                    + "<td>$801,483.70</td>"
+                    + "</tr>"
+                    + "<tr>"
+                    + "<td>Total interest</td>"
+                    + "<td>$463,352.76</td>"
+                    + "<td>$401,483.70</td>"
+                    + "</tr>"
+                    + "<tr>"
+                    + "<td>Remaining payments</td>"
+                    + "<td>$719,460.63</td>"
+                    + "<td>$657,591.57</td>"
+                    + "</tr>"
+                    + "<tr style='background-color: #f2f2f2;'>"
+                    + "<td>Remaining interest</td>"
+                    + "<td>$347,243.20</td>"
+                    + "<td>$285,374.14</td>"
+                    + "</tr>"
+                    + "<tr>"
+                    + "<td>Payoff in</td>"
+                    + "<td>25 yrs</td>"
+                    + "<td>21 yrs, 2 mos</td>"
+                    + "</tr>"
+                    + "</tbody>"
+                    + "</table>"
+                    + "</body>"
 
                   + "</html>";
             
@@ -7058,6 +7139,18 @@ String aboutMessage = "<html>"
         String Number = Helper.extractNumbers(input);
         CurrencyCalculatatorAmount.setText(Number);
     }//GEN-LAST:event_CurrencyCalculatatorAmountKeyReleased
+
+    private void paceCalculatorAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_paceCalculatorAncestorAdded
+        CalculatorNameLBL.setText("Pace Calculator");
+    }//GEN-LAST:event_paceCalculatorAncestorAdded
+
+    private void deepThoughtsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_deepThoughtsAncestorAdded
+        CalculatorNameLBL.setText("Deep Thoughts");
+    }//GEN-LAST:event_deepThoughtsAncestorAdded
+
+    private void ekinator2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ekinator2AncestorAdded
+        CalculatorNameLBL.setText("Ekinator 2");
+    }//GEN-LAST:event_ekinator2AncestorAdded
     
     
     
@@ -7612,6 +7705,7 @@ private void setMessage4() {
     private javax.swing.JTextField ALTradeInValueInput;
     private javax.swing.JPanel AutoLoan;
     private javax.swing.JLabel CalculatorNameLBL;
+    private javax.swing.JTabbedPane Calculators;
     private javax.swing.JPanel Currency;
     private javax.swing.JTextField CurrencyCalculatatorAmount;
     private javax.swing.JButton CurrencyCalculatorCalculateBTN;
@@ -7771,7 +7865,9 @@ private void setMessage4() {
     private javax.swing.JButton btnfitnessCalculator;
     private javax.swing.JButton btnmathCalculator;
     private javax.swing.JButton dashboard;
+    private javax.swing.JPanel deepThoughts;
     private javax.swing.JPanel downpaymentCalculator;
+    private javax.swing.JPanel ekinator2;
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton17;
@@ -8044,7 +8140,7 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField90;
     private javax.swing.JLabel jorge;
     private javax.swing.JLabel osvaldo;
-    private javax.swing.JTabbedPane panelCalculator;
+    private javax.swing.JPanel paceCalculator;
     private javax.swing.JLabel pedro;
     private javax.swing.JLabel pinkIcon;
     private javax.swing.JLabel pinkPanterCbtn;
