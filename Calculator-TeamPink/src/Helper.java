@@ -35,9 +35,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Comparator;
 
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Helper {
+    private static List<String> messages = new ArrayList<>();
     //----------------------------------------------------------------------------------------------------------------------------------General Input Validation 
     //-------------------------------------------------------------------------------Checking age 
     public static boolean checkAge(String ageInput) {
@@ -650,7 +654,7 @@ public class Helper {
         };
     }
     
-    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator 
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator PEdro and Azusena 
         public static double[] mortgagePayoffCalculator(double ola, int olt, double r, int rt, int m) {
         // Convert annual interest rate from percentage to decimal
         r = r / 100;
@@ -1029,6 +1033,68 @@ public class Helper {
             principalLeft, finalNewMonthly, finalTotalNew, newIntPayment
         };
     }
+    
+    
+    public static double[] refinanceCalculatorRemaining(
+        double original, double monthlyPay, double interestRate, double newLoanTime, 
+        double newInterest, double points, double costs, double cashOut) {
+
+        // Convert the annual interest rate to the monthly interest rate
+        double monthlyInterest = (interestRate / 100) / 12;
+        double remainingLoanAmount = original;
+
+        double totalIntPaid = 0;
+        int i = 0;
+
+        // Calculate the number of months remaining using the amortization formula
+        while (remainingLoanAmount >= 0) {
+            double intPaid = remainingLoanAmount * monthlyInterest;
+            totalIntPaid += intPaid;
+            double principalLeft = monthlyPay - intPaid;
+            remainingLoanAmount -= principalLeft;
+            i++;
+        }
+
+        int months = i - 1;
+        double totalPayments = months * monthlyPay;
+        double totalInt = totalPayments - original;
+
+        // New loan info
+        double remainingPrincipal = original;
+        if (cashOut != 0) {
+            remainingPrincipal += cashOut;
+        }
+
+        // Monthly interest for the new loan
+        double newMonthlyInt = newInterest / 12 / 100;
+        double newTimeLeft = newLoanTime * 12;
+
+        // Monthly payment for the new loan
+        double newMonthlyPay = remainingPrincipal * (newMonthlyInt * Math.pow(1 + newMonthlyInt, newTimeLeft)) / 
+                               (Math.pow(1 + newMonthlyInt, newTimeLeft) - 1);
+
+        // Total payment for the new loan
+        double totalNew = newMonthlyPay * newTimeLeft;
+
+        // Calculating interest to be paid on the new loan
+        double newPrincipalLeft = remainingPrincipal;
+        double newInterestPayment = totalNew - newPrincipalLeft;
+
+        // Points discount and upfront costs
+        double discountUsed = (points / 100) * remainingPrincipal;
+        double finalCost = costs + discountUsed;
+
+        // Final take-home after costs and points
+        double takeHome = -finalCost + cashOut;
+
+
+
+        return new double[]{
+            original, monthlyPay, months, totalPayments, totalInt, 
+            newPrincipalLeft, newMonthlyPay, newTimeLeft, totalNew, 
+            newInterestPayment, finalCost, cashOut, takeHome
+        };
+    }
        
     //----------------------------------------------------------------------------------------------------------------------------------------------Currency Calculator Osvaldo and Pedro
         
@@ -1253,6 +1319,95 @@ public class Helper {
         }
 
         return new String[]{positionFrom, symbolFrom};
+        
+        
+  
+    }
+    
+    //----------------------------------------------------------------------------------------------------Math Calculator Pedro
+    
+     public static void loadMessages(String filePath) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                messages.add(line.trim());
+            }
+        }
+    }
+
+    // Perform calculation or generate random responses
+    public static String funCalculator(String firstInput, String secondInput, String operator) {
+        // Check if inputs contain letters
+        if (!isNumeric(firstInput) || !isNumeric(secondInput)) {
+            
+            return getRandomResponse(); // Return random message or number
+        }
+
+        try {
+            // Parse inputs as numbers
+            double num1 = Double.parseDouble(firstInput);
+            double num2 = Double.parseDouble(secondInput);
+
+            // Perform calculation
+            double result;
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num2 != 0 ? num1 / num2 : Double.POSITIVE_INFINITY;
+                    break;
+                default:
+                    return "Invalid operator.";
+            }
+
+            // Randomly decide between a message or a result
+            if (randomBoolean()) {
+                return getRandomMessage();
+            } else if (num1 == num2) {
+                return "Hooray! Both numbers are the same!";
+            } else {
+                return "Your result is: " + result+". I got this one right. I am smart.";
+            }
+
+        } catch (NumberFormatException e) {
+            // If parsing fails (shouldn't happen due to isNumeric check)
+            return getRandomResponse();
+        }
+    }
+
+    // Check if a string is numeric
+    private static boolean isNumeric(String str) {
+        return str != null && str.matches("-?\\d+(\\.\\d+)?");
+    }
+
+    // Get a random response (message or number)
+    private static String getRandomResponse() {
+        if (randomBoolean()) {
+            // Return a random message
+            return getRandomMessage();
+        } else {
+            // Return a random number
+            int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
+            return "Your result is: " + randomNumber + ", maybe!";
+        }
+    }
+
+    // Generate a random boolean
+    private static boolean randomBoolean() {
+        return ThreadLocalRandom.current().nextBoolean();
+    }
+
+    // Get a random message from the loaded list
+    private static String getRandomMessage() {
+        int index = ThreadLocalRandom.current().nextInt(messages.size());
+        return messages.get(index);
     }
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){
