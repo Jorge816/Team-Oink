@@ -35,9 +35,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Comparator;
 
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Helper {
+    private static List<String> messages = new ArrayList<>();
     //----------------------------------------------------------------------------------------------------------------------------------General Input Validation 
     //-------------------------------------------------------------------------------Checking age 
     public static boolean checkAge(String ageInput) {
@@ -650,7 +654,7 @@ public class Helper {
         };
     }
     
-    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator 
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Calculator PEdro and Azusena 
         public static double[] mortgagePayoffCalculator(double ola, int olt, double r, int rt, int m) {
         // Convert annual interest rate from percentage to decimal
         r = r / 100;
@@ -1083,26 +1087,7 @@ public class Helper {
         // Final take-home after costs and points
         double takeHome = -finalCost + cashOut;
 
-        // Current Loan Output
-        System.out.printf("Principal/loan amount: %.2f%n", original);
-        System.out.printf("Monthly pay: %.2f%n", monthlyPay);
-        System.out.printf("Length: %d months%n", months);
-        System.out.printf("Total monthly payments: %.2f%n", totalPayments);
-        System.out.printf("Total interest: %.2f%n", totalInt);
-        System.out.printf("Cost + points (upfront): 0%n");
-        System.out.printf("Cash out: 0%n");
-        System.out.printf("Take home amount after cost/point: 0%n");
-        System.out.println();
 
-        // New Loan Output
-        System.out.printf("Principal/loan amount: %.2f%n", newPrincipalLeft);
-        System.out.printf("Monthly pay: %.2f%n", newMonthlyPay);
-        System.out.printf("Length: %.0f months%n", newTimeLeft);
-        System.out.printf("Total monthly payments: %.2f%n", totalNew);
-        System.out.printf("Total interest: %.2f%n", newInterestPayment);
-        System.out.printf("Cost + points (upfront): %.2f%n", finalCost);
-        System.out.printf("Cash out: %.2f%n", cashOut);
-        System.out.printf("Take home amount after cost/point: %.2f%n", takeHome);
 
         return new double[]{
             original, monthlyPay, months, totalPayments, totalInt, 
@@ -1334,6 +1319,95 @@ public class Helper {
         }
 
         return new String[]{positionFrom, symbolFrom};
+        
+        
+  
+    }
+    
+    //----------------------------------------------------------------------------------------------------Math Calculator Pedro
+    
+     public static void loadMessages(String filePath) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                messages.add(line.trim());
+            }
+        }
+    }
+
+    // Perform calculation or generate random responses
+    public static String funCalculator(String firstInput, String secondInput, String operator) {
+        // Check if inputs contain letters
+        if (!isNumeric(firstInput) || !isNumeric(secondInput)) {
+            
+            return getRandomResponse(); // Return random message or number
+        }
+
+        try {
+            // Parse inputs as numbers
+            double num1 = Double.parseDouble(firstInput);
+            double num2 = Double.parseDouble(secondInput);
+
+            // Perform calculation
+            double result;
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num2 != 0 ? num1 / num2 : Double.POSITIVE_INFINITY;
+                    break;
+                default:
+                    return "Invalid operator.";
+            }
+
+            // Randomly decide between a message or a result
+            if (randomBoolean()) {
+                return getRandomMessage();
+            } else if (num1 == num2) {
+                return "Hooray! Both numbers are the same!";
+            } else {
+                return "Your result is: " + result+". I got this one right. I am smart.";
+            }
+
+        } catch (NumberFormatException e) {
+            // If parsing fails (shouldn't happen due to isNumeric check)
+            return getRandomResponse();
+        }
+    }
+
+    // Check if a string is numeric
+    private static boolean isNumeric(String str) {
+        return str != null && str.matches("-?\\d+(\\.\\d+)?");
+    }
+
+    // Get a random response (message or number)
+    private static String getRandomResponse() {
+        if (randomBoolean()) {
+            // Return a random message
+            return getRandomMessage();
+        } else {
+            // Return a random number
+            int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
+            return "Your result is: " + randomNumber + ", maybe!";
+        }
+    }
+
+    // Generate a random boolean
+    private static boolean randomBoolean() {
+        return ThreadLocalRandom.current().nextBoolean();
+    }
+
+    // Get a random message from the loaded list
+    private static String getRandomMessage() {
+        int index = ThreadLocalRandom.current().nextInt(messages.size());
+        return messages.get(index);
     }
     //------------------------------------------------------------------------------------------------------------------------------------------------------------Jorge
     public static boolean isPositiveNumber(String num){

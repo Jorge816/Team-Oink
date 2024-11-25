@@ -24,6 +24,9 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.io.BufferedReader;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 
 public class Main extends javax.swing.JFrame {
 
@@ -32,6 +35,7 @@ public class Main extends javax.swing.JFrame {
      */
     private HashMap<String, Component> storedTabs = new HashMap<>(); // To store removed tabs
     private int currentIndex = 0;
+    String messageMathCalculator ="";
     private int currentIndexLabel3 = 0;
     private String RothIRAAnualContributionSpace = "";
     
@@ -40,6 +44,8 @@ public class Main extends javax.swing.JFrame {
     private Map<String, String> decimalSeparatorMap = new HashMap<>();
     private Map<String, CurrencyInfo> currencyMap = new HashMap<>();
     private Map<String, CurrencyInfo> currencyDataMap = new HashMap<>();
+    
+
  
 
     public Main() {
@@ -150,9 +156,13 @@ public class Main extends javax.swing.JFrame {
         
         //-------------------------------------------------currency Calculator 
         populateComboBoxesCurrencyCalculator();
-
+        
+        //chasing mouse
+       
 
     }
+    
+   
     
     //showing about 
     // Method to show the About pop-up using JOptionPane
@@ -175,14 +185,14 @@ String aboutMessage = "<html>"
     //Displaying message under cosntruction
     private void startAnimation() {
         // Create a Timer to update the labels at fixed intervals
-        String message = "Under Construction";
+        messageMathCalculator = "Please enter your numbers, and I'll calculate the answer for you!";
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 // If the currentIndex is less than the length of the message, keep adding letters
-                if (currentIndex < message.length()) {
-                    String textToShow = message.substring(0, currentIndex + 1);
+                if (currentIndex < messageMathCalculator.length()) {
+                    String textToShow = messageMathCalculator.substring(0, currentIndex + 1);
                     // Update only jLabel46, jLabel39, and jLabel37 with the same text
                     jLabel46.setText(textToShow);
                     jLabel39.setText(textToShow);
@@ -197,7 +207,7 @@ String aboutMessage = "<html>"
                     jLabel37.setText("");
                 }
             }
-        }, 0, 200); // 200ms delay between updates
+        }, 0, 150); // 200ms delay between updates
 
         // Set a static message for jLabel3 (Team Pink, Software Development)
     
@@ -570,6 +580,12 @@ String aboutMessage = "<html>"
         MathCalculator = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        firstNumber = new javax.swing.JTextField();
+        operator = new javax.swing.JComboBox<>();
+        secondNumber = new javax.swing.JTextField();
+        btnChaseMe = new javax.swing.JButton();
+        btnChaseMe1 = new javax.swing.JButton();
         FitnessAndHealthCalculator = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
@@ -3453,28 +3469,81 @@ String aboutMessage = "<html>"
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pinkPanterUnderConstruction.gif"))); // NOI18N
 
-        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel39.setText("Under Construction");
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel39.setText("Please enter your numbers, and I'll calculate the answer for you!");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setText("Experience the power of our advanced math calculator!");
+
+        firstNumber.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+
+        operator.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        operator.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-", "*", "/" }));
+
+        secondNumber.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+
+        btnChaseMe.setBackground(new java.awt.Color(179, 246, 179));
+        btnChaseMe.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnChaseMe.setText("Calculate");
+        btnChaseMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChaseMeActionPerformed(evt);
+            }
+        });
+
+        btnChaseMe1.setBackground(new java.awt.Color(179, 246, 179));
+        btnChaseMe1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnChaseMe1.setText("Clear");
+        btnChaseMe1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChaseMe1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MathCalculatorLayout = new javax.swing.GroupLayout(MathCalculator);
         MathCalculator.setLayout(MathCalculatorLayout);
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(299, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(MathCalculatorLayout.createSequentialGroup()
+                .addGap(291, 291, 291)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(MathCalculatorLayout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addComponent(firstNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(operator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(secondNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnChaseMe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnChaseMe1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(239, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(operator, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(firstNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(secondNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnChaseMe)
+                    .addComponent(btnChaseMe1))
+                .addGap(91, 91, 91)
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Math Calculator", MathCalculator);
@@ -6575,8 +6644,6 @@ String aboutMessage = "<html>"
 
 
 
-
-
                     } else {
                         double[] retirementCalculator1 = Helper.fixedRetirementCalculator(cAge, rAge, lifeExpectancy, preTaxIncome, incomeNeededAfterRetirement, currentIncomeSaving);
                         outputText = "<html>"
@@ -6590,7 +6657,6 @@ String aboutMessage = "<html>"
                                 + "    <li>Save " + retirementCalculator1[4] + "% of your income every year</li>"
                                 + "</ul>"
                                 + "</html>";
-
 
                     }
 
@@ -6937,6 +7003,7 @@ String aboutMessage = "<html>"
         RefinanceCalculatorPoints.setText("");
         RefinanceCalculatorCostandFees.setText("");
         RefinanceCalculatorCashout.setText("");
+        RefinanceCalculatorOutput.setText("");
 
     }//GEN-LAST:event_RefinanceCalculatorClearActionPerformed
 
@@ -7232,6 +7299,44 @@ String aboutMessage = "<html>"
     private void ekinator2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ekinator2AncestorAdded
         CalculatorNameLBL.setText("Ekinator 2");
     }//GEN-LAST:event_ekinator2AncestorAdded
+
+    //-------------------------------------------------------------------------------------------------Math Calculator
+    private void btnChaseMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChaseMeActionPerformed
+       String selectedOperator = (String) operator.getSelectedItem();
+    try {
+        String firstInput = firstNumber.getText();
+        String secondInput = secondNumber.getText();
+        if (firstInput.isEmpty() || secondInput.isEmpty()) {
+            messageMathCalculator ="Don’t try to trick me!";
+        
+        }else{
+        // Get the file path from the resources folder
+        String filePath = Helper.class.getResource("/playful_messages_only.txt").getPath();
+
+        // Load messages using the absolute file path
+        Helper.loadMessages(filePath);
+
+       
+
+        // Get inputs from the text fields
+
+
+        // Call the Helper function
+        String result = Helper.funCalculator(firstInput, secondInput, selectedOperator);
+        messageMathCalculator =result;
+
+        // Display the result
+        }
+    } catch (IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error loading messages: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_btnChaseMeActionPerformed
+
+    private void btnChaseMe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChaseMe1ActionPerformed
+        messageMathCalculator = "Please enter your numbers, and I'll calculate the answer for you!";
+        firstNumber.setText("");
+        secondNumber.setText("");
+    }//GEN-LAST:event_btnChaseMe1ActionPerformed
     
     
     
@@ -7941,6 +8046,8 @@ private void setMessage4() {
     private javax.swing.JTextField RothIRaRetirementAge;
     private javax.swing.JButton autoCalculatorBTN4;
     private javax.swing.JLabel azusena;
+    private javax.swing.JButton btnChaseMe;
+    private javax.swing.JButton btnChaseMe1;
     private javax.swing.JButton btnOtherCalculators;
     private javax.swing.JButton btnfinancialCalculator;
     private javax.swing.JButton btnfitnessCalculator;
@@ -7949,6 +8056,7 @@ private void setMessage4() {
     private javax.swing.JPanel deepThoughts;
     private javax.swing.JPanel downpaymentCalculator;
     private javax.swing.JPanel ekinator2;
+    private javax.swing.JTextField firstNumber;
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton17;
@@ -7976,6 +8084,7 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -8220,6 +8329,7 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField86;
     private javax.swing.JTextField jTextField90;
     private javax.swing.JLabel jorge;
+    private javax.swing.JComboBox<String> operator;
     private javax.swing.JLabel osvaldo;
     private javax.swing.JPanel paceCalculator;
     private javax.swing.JLabel pedro;
@@ -8228,5 +8338,6 @@ private void setMessage4() {
     private javax.swing.JMenu quitBnt;
     private javax.swing.JPanel rentandbuy;
     private javax.swing.JPanel retirementCalculator3;
+    private javax.swing.JTextField secondNumber;
     // End of variables declaration//GEN-END:variables
 }
