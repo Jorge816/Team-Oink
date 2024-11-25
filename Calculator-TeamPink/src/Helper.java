@@ -1029,6 +1029,87 @@ public class Helper {
             principalLeft, finalNewMonthly, finalTotalNew, newIntPayment
         };
     }
+    
+    
+    public static double[] refinanceCalculatorRemaining(
+        double original, double monthlyPay, double interestRate, double newLoanTime, 
+        double newInterest, double points, double costs, double cashOut) {
+
+        // Convert the annual interest rate to the monthly interest rate
+        double monthlyInterest = (interestRate / 100) / 12;
+        double remainingLoanAmount = original;
+
+        double totalIntPaid = 0;
+        int i = 0;
+
+        // Calculate the number of months remaining using the amortization formula
+        while (remainingLoanAmount >= 0) {
+            double intPaid = remainingLoanAmount * monthlyInterest;
+            totalIntPaid += intPaid;
+            double principalLeft = monthlyPay - intPaid;
+            remainingLoanAmount -= principalLeft;
+            i++;
+        }
+
+        int months = i - 1;
+        double totalPayments = months * monthlyPay;
+        double totalInt = totalPayments - original;
+
+        // New loan info
+        double remainingPrincipal = original;
+        if (cashOut != 0) {
+            remainingPrincipal += cashOut;
+        }
+
+        // Monthly interest for the new loan
+        double newMonthlyInt = newInterest / 12 / 100;
+        double newTimeLeft = newLoanTime * 12;
+
+        // Monthly payment for the new loan
+        double newMonthlyPay = remainingPrincipal * (newMonthlyInt * Math.pow(1 + newMonthlyInt, newTimeLeft)) / 
+                               (Math.pow(1 + newMonthlyInt, newTimeLeft) - 1);
+
+        // Total payment for the new loan
+        double totalNew = newMonthlyPay * newTimeLeft;
+
+        // Calculating interest to be paid on the new loan
+        double newPrincipalLeft = remainingPrincipal;
+        double newInterestPayment = totalNew - newPrincipalLeft;
+
+        // Points discount and upfront costs
+        double discountUsed = (points / 100) * remainingPrincipal;
+        double finalCost = costs + discountUsed;
+
+        // Final take-home after costs and points
+        double takeHome = -finalCost + cashOut;
+
+        // Current Loan Output
+        System.out.printf("Principal/loan amount: %.2f%n", original);
+        System.out.printf("Monthly pay: %.2f%n", monthlyPay);
+        System.out.printf("Length: %d months%n", months);
+        System.out.printf("Total monthly payments: %.2f%n", totalPayments);
+        System.out.printf("Total interest: %.2f%n", totalInt);
+        System.out.printf("Cost + points (upfront): 0%n");
+        System.out.printf("Cash out: 0%n");
+        System.out.printf("Take home amount after cost/point: 0%n");
+        System.out.println();
+
+        // New Loan Output
+        System.out.printf("Principal/loan amount: %.2f%n", newPrincipalLeft);
+        System.out.printf("Monthly pay: %.2f%n", newMonthlyPay);
+        System.out.printf("Length: %.0f months%n", newTimeLeft);
+        System.out.printf("Total monthly payments: %.2f%n", totalNew);
+        System.out.printf("Total interest: %.2f%n", newInterestPayment);
+        System.out.printf("Cost + points (upfront): %.2f%n", finalCost);
+        System.out.printf("Cash out: %.2f%n", cashOut);
+        System.out.printf("Take home amount after cost/point: %.2f%n", takeHome);
+
+        return new double[]{
+            original, monthlyPay, months, totalPayments, totalInt, 
+            newPrincipalLeft, newMonthlyPay, newTimeLeft, totalNew, 
+            newInterestPayment, finalCost, cashOut, takeHome
+        };
+    }
        
     //----------------------------------------------------------------------------------------------------------------------------------------------Currency Calculator Osvaldo and Pedro
         

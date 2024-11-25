@@ -877,7 +877,7 @@ String aboutMessage = "<html>"
                         .addGroup(FCcontrolBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(InvestmentCalculatorBTN3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(RetirementCalculatorBTN2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(MortgageandRealEstateBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                             .addComponent(OtherCalculatorsBTN1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(autoCalculatorBTN4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -1470,7 +1470,7 @@ String aboutMessage = "<html>"
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MortgageCalculatorPropertyTaxesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MortgageCalculatorPropertyTaxesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorHomeInsuranceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorHoaFeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MortgageCalculatorOtherCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1552,7 +1552,7 @@ String aboutMessage = "<html>"
                         .addGap(10, 10, 10))
                     .addGroup(jPanel42Layout.createSequentialGroup()
                         .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                             .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel87, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel95, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1658,7 +1658,7 @@ String aboutMessage = "<html>"
         MortgageCalculator2.setLayout(MortgageCalculator2Layout);
         MortgageCalculator2Layout.setHorizontalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         MortgageCalculator2Layout.setVerticalGroup(
             MortgageCalculator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1803,7 +1803,7 @@ String aboutMessage = "<html>"
                     .addGroup(jPanel45Layout.createSequentialGroup()
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel99, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
                         .addGap(1, 1, 1)
                         .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(RetirementCalculatorIncomeNeededAfterRetirement, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
@@ -1969,7 +1969,7 @@ String aboutMessage = "<html>"
         retirementCalculator3.setLayout(retirementCalculator3Layout);
         retirementCalculator3Layout.setHorizontalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         retirementCalculator3Layout.setVerticalGroup(
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2123,13 +2123,13 @@ String aboutMessage = "<html>"
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabel109, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                                 .addComponent(jLabel86, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel100, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel102, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel101, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel111, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2260,7 +2260,7 @@ String aboutMessage = "<html>"
         HouseAffordabilityCalculator.setLayout(HouseAffordabilityCalculatorLayout);
         HouseAffordabilityCalculatorLayout.setHorizontalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         HouseAffordabilityCalculatorLayout.setVerticalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2452,7 +2452,7 @@ String aboutMessage = "<html>"
         RentCalculator.setLayout(RentCalculatorLayout);
         RentCalculatorLayout.setHorizontalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         RentCalculatorLayout.setVerticalGroup(
             RentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2820,7 +2820,7 @@ String aboutMessage = "<html>"
         RefinanceCalculatorLayout.setHorizontalGroup(
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RefinanceCalculatorLayout.createSequentialGroup()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
                 .addContainerGap())
         );
         RefinanceCalculatorLayout.setVerticalGroup(
@@ -3073,7 +3073,7 @@ String aboutMessage = "<html>"
         downpaymentCalculator.setLayout(downpaymentCalculatorLayout);
         downpaymentCalculatorLayout.setHorizontalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3439,7 +3439,7 @@ String aboutMessage = "<html>"
         MortgagePayoffCalculator.setLayout(MortgagePayoffCalculatorLayout);
         MortgagePayoffCalculatorLayout.setHorizontalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3461,11 +3461,11 @@ String aboutMessage = "<html>"
         MathCalculatorLayout.setHorizontalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MathCalculatorLayout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
+                .addContainerGap(299, Short.MAX_VALUE)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
         MathCalculatorLayout.setVerticalGroup(
             MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3492,11 +3492,11 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setHorizontalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(289, Short.MAX_VALUE)
+                .addContainerGap(290, Short.MAX_VALUE)
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3523,11 +3523,11 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setHorizontalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap(267, Short.MAX_VALUE)
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(267, Short.MAX_VALUE))
         );
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3715,7 +3715,7 @@ String aboutMessage = "<html>"
         Currency.setLayout(CurrencyLayout);
         CurrencyLayout.setHorizontalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3988,7 +3988,7 @@ String aboutMessage = "<html>"
         InterestRate.setLayout(InterestRateLayout);
         InterestRateLayout.setHorizontalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         InterestRateLayout.setVerticalGroup(
             InterestRateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4749,7 +4749,7 @@ String aboutMessage = "<html>"
         RothIRACalculator.setLayout(RothIRACalculatorLayout);
         RothIRACalculatorLayout.setHorizontalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE)
+            .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
         );
         RothIRACalculatorLayout.setVerticalGroup(
             RothIRACalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4773,7 +4773,7 @@ String aboutMessage = "<html>"
         paceCalculator.setLayout(paceCalculatorLayout);
         paceCalculatorLayout.setHorizontalGroup(
             paceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 995, Short.MAX_VALUE)
+            .addGap(0, 998, Short.MAX_VALUE)
         );
         paceCalculatorLayout.setVerticalGroup(
             paceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4797,7 +4797,7 @@ String aboutMessage = "<html>"
         deepThoughts.setLayout(deepThoughtsLayout);
         deepThoughtsLayout.setHorizontalGroup(
             deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 995, Short.MAX_VALUE)
+            .addGap(0, 998, Short.MAX_VALUE)
         );
         deepThoughtsLayout.setVerticalGroup(
             deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4821,7 +4821,7 @@ String aboutMessage = "<html>"
         ekinator2.setLayout(ekinator2Layout);
         ekinator2Layout.setHorizontalGroup(
             ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 995, Short.MAX_VALUE)
+            .addGap(0, 998, Short.MAX_VALUE)
         );
         ekinator2Layout.setVerticalGroup(
             ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6969,45 +6969,126 @@ String aboutMessage = "<html>"
                                                      points, costs, cashOut);
 
                     outputText = "<html>"
-                                      + "<table border='1' style='border-collapse:collapse; text-align:left; width:100%;'>"
-                                      + "    <thead>"
-                                      + "        <tr>"
-                                      + "            <th></th>" // Empty header for the row labels
-                                      + "            <th>Current Loan (Remaining)</th>"
-                                      + "            <th>New Loan</th>"
-                                      + "        </tr>"
-                                      + "    </thead>"
-                                      + "    <tbody>"
-                                      + "        <tr>"
-                                      + "            <th>Principal/Loan Amount</th>"
-                                      + "            <td>" + currencyFormat.format(result[0]) + "</td>"
-                                      + "            <td>" + currencyFormat.format(result[4]) + "</td>"
-                                      + "        </tr>"
-                                      + "        <tr>"
-                                      + "            <th>Monthly Pay</th>"
-                                      + "            <td>" + currencyFormat.format(result[1]) + "</td>"
-                                      + "            <td>" + currencyFormat.format(result[5]) + "</td>"
-                                      + "        </tr>"
-                                      + "        <tr>"
-                                      + "            <th>Total Monthly Payments</th>"
-                                      + "            <td>" + currencyFormat.format(result[2]) + "</td>"
-                                      + "            <td>" + currencyFormat.format(result[6]) + "</td>"
-                                      + "        </tr>"
-                                      + "        <tr>"
-                                      + "            <th>Total Interest</th>"
-                                      + "            <td>" + currencyFormat.format(result[3]) + "</td>"
-                                      + "            <td>" + currencyFormat.format(result[7]) + "</td>"
-                                      + "        </tr>"
-                                      + "    </tbody>"
-                                      + "</table>"
-                                      + "</html>";
-                }
-                else{
-                    JOptionPane.showMessageDialog(null, "Time remaining must be less than or equal to Loan term");
-
-                }
+                            + "<body style='font-family: Arial; font-size: 14px;'>"
+                            + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
+                            + "<thead style='background-color: #004080; color: white;'>"
+                            + "    <tr>"
+                            + "        <th></th>" // Empty header for the row labels
+                            + "        <th>Current Loan (Remaining)</th>"
+                            + "        <th>New Loan</th>"
+                            + "    </tr>"
+                            + "</thead>"
+                            + "<tbody>"
+                            + "    <tr>"
+                            + "        <td>Principal/Loan Amount</td>"
+                            + "        <td>" + currencyFormat.format(result[0]) + "</td>"
+                            + "        <td>" + currencyFormat.format(result[4]) + "</td>"
+                            + "    </tr>"
+                            + "    <tr>"
+                            + "        <td>Monthly Pay</td>"
+                            + "        <td>" + currencyFormat.format(result[1]) + "</td>"
+                            + "        <td>" + currencyFormat.format(result[5]) + "</td>"
+                            + "    </tr>"
+                            + "    <tr>"
+                            + "        <td>Total Monthly Payments</td>"
+                            + "        <td>" + currencyFormat.format(result[2]) + "</td>"
+                            + "        <td>" + currencyFormat.format(result[6]) + "</td>"
+                            + "    </tr>"
+                            + "    <tr>"
+                            + "        <td>Total Interest</td>"
+                            + "        <td>" + currencyFormat.format(result[3]) + "</td>"
+                            + "        <td>" + currencyFormat.format(result[7]) + "</td>"
+                            + "    </tr>"
+                            + "</tbody>"
+                            + "</table>"
+                            + "</body>"
+                            + "</html>";
+                }else{JOptionPane.showMessageDialog(null, "Loan term must be greater than or equal to time ramaining!");}
             }
-            else{outputText = "UnderConstruction";}
+            if ("I know my remaining balance".equals(selectedItem)){
+                double currentLoan = Double.parseDouble(RefinanceCalculatorRemainingBalance.getText());
+                int originalTime =Integer.parseInt(RefinanceCalculatorYearsPayment.getText());
+               
+                
+                double interest = Double.parseDouble(RefinanceCalculatorInterestRate.getText());
+                outputText= String.valueOf(originalTime);
+                double newLoanTime = Double.parseDouble(RefinanceCalculatorNewLoanTerm.getText());
+                double newInterest = Double.parseDouble(RefinancecalculatorInterestRateNewLoan.getText());
+                double points = Double.parseDouble(RefinanceCalculatorPoints.getText());
+                double costs = Double.parseDouble(RefinanceCalculatorCostandFees.getText());
+                double cashOut = Double.parseDouble(RefinanceCalculatorCashout.getText());
+                
+                
+                double original = currentLoan;
+                double monthlyPay = Double.valueOf(originalTime);
+                double interestRate =interest;
+                double upfrontCost = 0.00;
+                double cashOutoriginal = 0.00;
+                double takeHomeAfterCost = 0.00;
+
+
+                double[] remaining =Helper.refinanceCalculatorRemaining(original, monthlyPay, interestRate, newLoanTime, newInterest, points, costs, cashOut);
+                for (double value : remaining) {
+                    System.out.printf("%.2f%n", value);
+                    outputText = "<html>"
+                        + "<body style='font-family: Arial; font-size: 14px;'>"
+                        + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
+                        + "<thead style='background-color: #004080; color: white;'>"
+                        + "    <tr>"
+                        + "        <th></th>"
+                        + "        <th>Current Loan</th>"
+                        + "        <th>New Loan</th>"
+                        + "    </tr>"
+                        + "</thead>"
+                        + "<tbody>"
+                        + "    <tr>"
+                        + "        <td>Principal/Loan Amount</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[0]) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[5]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Monthly Pay</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[1]) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[6]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Length</td>"
+                        + "        <td>" +String.format("%,.0f", remaining[2])  + " months</td>"
+                        + "        <td>" + String.format("%,.0f", remaining[7]) + " months</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Total Monthly Payments</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[3]) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[8]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Total Interest</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[4]) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[9]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Cost + Points (Upfront)</td>"
+                        + "        <td>" + String.format("$%,.2f", upfrontCost) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[10]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Cash Out</td>"
+                        + "        <td>" + String.format("$%,.2f", cashOutoriginal) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[11]) + "</td>"
+                        + "    </tr>"
+                        + "    <tr>"
+                        + "        <td>Take Home Amount After Cost/Point</td>"
+                        + "        <td>" + String.format("$%,.2f", takeHomeAfterCost) + "</td>"
+                        + "        <td>" + String.format("$%,.2f", remaining[12]) + "</td>"
+                        + "    </tr>"
+                        + "</tbody>"
+                        + "</table>"
+                        + "</body>"
+                        + "</html>";
+                }
+
+
+            }
 
             RefinanceCalculatorOutput.setText(outputText);
         }
