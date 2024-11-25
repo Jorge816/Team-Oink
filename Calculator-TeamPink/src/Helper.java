@@ -769,9 +769,11 @@ public class Helper {
         String savingsInInterest = df.format(totalIntPaid - (biTotalInterest + beforeInterestPaid));
 
         return new String[]{
-                "Biweekly Payment: " + byweeklyPay,
-                "Time Early: " + timeEarly,
-                "Savings in Interest: " + savingsInInterest,
+                String.valueOf(payoffYearsEarly),//0
+                String.valueOf(payoffMonthsEarly),//1
+                byweeklyPay,//2
+                timeEarly,//3
+                savingsInInterest,//4
                 totalPaymentsSummary, totalInterestSummary, remainingPaymentsSummary,
                 remainingInterestSummary, payoffTimeSummary,
                 totalBiPaymentsSummary, totalBiInterestSummary,
