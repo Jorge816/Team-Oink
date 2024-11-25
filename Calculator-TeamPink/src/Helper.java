@@ -690,11 +690,193 @@ public class Helper {
             Math.round(b * 100.0) / 100.0                      // Remaining Balance to Pay Off Loan
         };
     }
+        
+        
+       //-------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Byweekly
+            public static String[] mortgagePayoffByweekly(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths, double interest) {
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        // Loan terms and initial setup
+        double monthlyInterest = interest / 12 / 100;
+        int timeLeft = oTimeLeftYears * 12 + oTimeLeftMonths; // Total remaining months
+        int totalMonths = originalTime * 12; // Total original months
+
+        // Calculate original monthly payment
+        double monthlyPay = (currentLoan * (monthlyInterest * Math.pow(1 + monthlyInterest, totalMonths))) /
+                (Math.pow(1 + monthlyInterest, totalMonths) - 1);
+
+        double totalIntPaid = 0;
+        double original = currentLoan;
+
+        // Calculate original total interest and principal
+        for (int i = 0; i < totalMonths; i++) {
+            double originalInterestPaid = original * monthlyInterest;
+            totalIntPaid += originalInterestPaid;
+            double principal = monthlyPay - originalInterestPaid;
+            original -= principal;
+        }
+
+        double beforeInterestPaid = 0;
+        // Remaining principal calculation
+        double principalLeft = currentLoan;
+        int timePaid = totalMonths - timeLeft; // Time already paid
+        for (int i = 0; i < timePaid; i++) {
+            double interestPaid = principalLeft * monthlyInterest;
+            beforeInterestPaid += interestPaid;
+            double monthlyPrincipal = monthlyPay - interestPaid;
+            principalLeft -= monthlyPrincipal;
+        }
+
+        double totalPaymentLeft = monthlyPay * timeLeft;
+
+        // Biweekly calculations
+        double remainingPrincipal = principalLeft;
+        double biweeklyPayment = monthlyPay / 2;
+        int i = 0;
+        double biTotalInterest = 0;
+
+        while (remainingPrincipal > 0) {
+            if ((i % 6 == 0 || i % 12 == 0) && i != 0) {
+                remainingPrincipal -= biweeklyPayment;
+            }
+            double biInterestPaid = remainingPrincipal * monthlyInterest;
+            biTotalInterest += biInterestPaid;
+            double biPrincipal = monthlyPay - biInterestPaid;
+            remainingPrincipal -= biPrincipal;
+            i++;
+        }
+
+        // Summaries
+        String totalPaymentsSummary = "Total Total Payments: " + df.format(totalIntPaid + currentLoan);
+        String totalInterestSummary = "Total Interest Paid: " + df.format(totalIntPaid);
+        String remainingPaymentsSummary = "Remaining Payments: " + df.format(totalPaymentLeft);
+        String remainingInterestSummary = "Remaining Interest: " + df.format(totalIntPaid - beforeInterestPaid);
+        String payoffTimeSummary = "Payoff In: " + oTimeLeftYears + " years and " + oTimeLeftMonths + " months";
+
+        String totalBiPaymentsSummary = "Total Total Payments: " + df.format(biTotalInterest + currentLoan + beforeInterestPaid);
+        String totalBiInterestSummary = "Total Interest Paid: " + df.format(biTotalInterest + beforeInterestPaid);
+        String remainingBiPaymentsSummary = "Remaining Payments: " + df.format(biTotalInterest + principalLeft);
+        String remainingBiInterestSummary = "Remaining Interest: " + df.format(biTotalInterest);
+        String biPayoffTimeSummary = "Payoff In: " + (i / 12) + " years and " + (i % 12) + " months";
+
+        String byweeklyPay = df.format(monthlyPay / 2);
+
+        int payoffIn = (oTimeLeftYears * 12 + oTimeLeftMonths) - (((i / 12) * 12) + (i % 12));
+        int payoffYearsEarly = payoffIn / 12;
+        int payoffMonthsEarly = payoffIn % 12;
+        String timeEarly = payoffYearsEarly + " years and " + payoffMonthsEarly + " months earlier";
+
+        String savingsInInterest = df.format(totalIntPaid - (biTotalInterest + beforeInterestPaid));
+
+        return new String[]{
+                "Biweekly Payment: " + byweeklyPay,
+                "Time Early: " + timeEarly,
+                "Savings in Interest: " + savingsInInterest,
+                totalPaymentsSummary, totalInterestSummary, remainingPaymentsSummary,
+                remainingInterestSummary, payoffTimeSummary,
+                totalBiPaymentsSummary, totalBiInterestSummary,
+                remainingBiPaymentsSummary, remainingBiInterestSummary, biPayoffTimeSummary
+        };
+    }
+            
+    //--------------------------------------------------------------------------------------------------------------------------MortgageCalculatorCustom 
+        public static Object[] mortgagePayoffCustom(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths,
+                                                double interest, double perMonth, double perYear, double oneTime) {
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        // Loan terms and initial setup
+        double monthlyInterest = interest / 12 / 100;
+        int timeLeft = oTimeLeftYears * 12 + oTimeLeftMonths; // Total remaining months
+        int totalMonths = originalTime * 12; // Total original months
+
+        // Calculate original monthly payment
+        double monthlyPay = (currentLoan * (monthlyInterest * Math.pow(1 + monthlyInterest, totalMonths))) /
+                (Math.pow(1 + monthlyInterest, totalMonths) - 1);
+
+        double totalIntPaid = 0;
+        double original = currentLoan;
+
+        // Calculate original total interest and principal
+        for (int i = 0; i < totalMonths; i++) {
+            double originalInterestPaid = original * monthlyInterest;
+            totalIntPaid += originalInterestPaid;
+            double principal = monthlyPay - originalInterestPaid;
+            original -= principal;
+        }
+
+        double beforeInterestPaid = 0;
+        // Remaining principal calculation
+        double principalLeft = currentLoan;
+        int timePaid = totalMonths - timeLeft; // Time already paid
+        for (int i = 0; i < timePaid; i++) {
+            double interestPaid = principalLeft * monthlyInterest;
+            beforeInterestPaid += interestPaid;
+            double monthlyPrincipal = monthlyPay - interestPaid;
+            principalLeft -= monthlyPrincipal;
+        }
+
+        double totalPaymentLeft = monthlyPay * timeLeft;
+        double finalPaymentLeft = totalPaymentLeft;
+
+        // Custom Repayment
+        double remainingPrincipal = principalLeft;
+        double customTotalInt = 0;
+        int months = 0;
+
+        while (remainingPrincipal > 0) {
+            if (months % 12 == 0 && months != 0) {
+                remainingPrincipal -= perYear;
+            }
+            double cInterestPaid = remainingPrincipal * monthlyInterest;
+            customTotalInt += cInterestPaid;
+            double cPrincipal = monthlyPay - cInterestPaid;
+            remainingPrincipal -= cPrincipal;
+            if (months == 0) {
+                remainingPrincipal -= oneTime;
+            }
+            remainingPrincipal -= perMonth;
+            months++;
+        }
+
+        // Custom summaries
+        String totalPaymentsSummaryCustom = "Total Payments: " + df.format(customTotalInt + currentLoan + beforeInterestPaid);
+        String totalInterestSummaryCustom = "Total Interest: " + df.format(customTotalInt + beforeInterestPaid);
+        String remainingPaymentsSummaryCustom = "Remaining Payments: " + df.format(customTotalInt + principalLeft);
+        String remainingInterestSummaryCustom = "Remaining Interest: " + df.format(customTotalInt);
+        String payoffTimeSummaryCustom = "Payoff In: " + (months / 12) + " years and " + (months % 12) + " months";
+
+        // Original summaries
+        String totalPaymentsSummary = "Total Total Payments: " + df.format(totalIntPaid + currentLoan);
+        String totalInterestSummary = "Total Interest Paid: " + df.format(totalIntPaid);
+        String remainingPaymentsSummary = "Remaining Payments: " + df.format(finalPaymentLeft);
+        String remainingInterestSummary = "Remaining Interest: " + df.format(totalIntPaid - beforeInterestPaid);
+        String payoffTimeSummary = "Payoff In: " + oTimeLeftYears + " years and " + oTimeLeftMonths + " months";
+
+        // Time saved
+        int payoffIn = (oTimeLeftYears * 12 + oTimeLeftMonths) - months;
+        int payoffYearsEarly = payoffIn / 12;
+        int payoffMonthsEarly = payoffIn % 12;
+        String timeEarly = payoffYearsEarly + " years and " + payoffMonthsEarly + " months earlier";
+
+        // Savings
+        String savingsInInterest = df.format(totalIntPaid - (customTotalInt + beforeInterestPaid));
+
+        // Monthly payment with custom addition
+        double monthlyPayment = monthlyPay + perMonth;
+
+        // Return all results as an array of objects
+        return new Object[]{
+                monthlyPayment, timeEarly, savingsInInterest,
+                totalPaymentsSummary, totalInterestSummary, remainingPaymentsSummary, remainingInterestSummary, payoffTimeSummary,
+                totalPaymentsSummaryCustom, totalInterestSummaryCustom, remainingPaymentsSummaryCustom, remainingInterestSummaryCustom,
+                payoffTimeSummaryCustom
+        };
+    }
    
         //-----------------------------------------------------------------------------------------------------------------------------------------Retirement Calculator 
-        public static double effectiveInterestRateRetirement(double m, double r) {
-        r = r / 100;
-        return m * (Math.pow((1 + r), (1 / m)) - 1);
+    public static double effectiveInterestRateRetirement(double m, double r) {
+    r = r / 100;
+    return m * (Math.pow((1 + r), (1 / m)) - 1);
     }
 
     public static double averageReturnInvestment(double incomeNeededAfterRetirement, double m, double returnInvestmentRate, double n) {
