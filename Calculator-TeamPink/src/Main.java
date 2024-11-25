@@ -47,10 +47,10 @@ public class Main extends javax.swing.JFrame {
         populateComboBoxes();
                 
         this.setMinimumSize(new Dimension(1400, 350)); 
-     
   
         //--------------------------------------------------------------------------------------------------------------------
          // Set the icon
+        CalculatorNameLBL.setText("Welcome...");
         
         Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("Images/logo.jpg"));
         setIconImage(icon);
