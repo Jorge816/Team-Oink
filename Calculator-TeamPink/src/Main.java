@@ -6166,6 +6166,7 @@ String aboutMessage = "<html>"
             double interestRate =Double.parseDouble( MorgagePayoffCalculatorInterestRate.getText());
             int remainingTerm = Integer.parseInt(MortGagePayoffRemainingTerm.getText());
             int months =Integer.parseInt(MortGagePayoffRemainingTermMonths.getText());
+            double morgagePayoffRemainingBalance =0;
 
             String outputText="";
             if (MortgagePayoffPayAlltogether.isSelected()) {
@@ -6188,6 +6189,7 @@ String aboutMessage = "<html>"
             if (MortgagePayoffCalculatorNormalPayment.isSelected()) {
 
                 double[] mortgagePayoff = Helper.mortgagePayoffCalculator(originalLoanAmount, originalLoanTerm, interestRate, remainingTerm, months);
+                morgagePayoffRemainingBalance = mortgagePayoff[5];
 
                 outputText = "<html>"
 
@@ -6202,31 +6204,51 @@ String aboutMessage = "<html>"
             
             
             if (MortgagePayoffBiweeklyRepayment.isSelected()) {
-                double currentLoan = 400000;
-                int originalTime = 30;
-                double interest = 6;
-                int oTimeLeftYears = 25;
-                int oTimeLeftMonths = 0;
+                double currentLoan = originalLoanAmount;
+                int originalTime = originalLoanTerm;
+                double interest = interestRate;
+                int oTimeLeftYears = remainingTerm;
+                int oTimeLeftMonths = months;
 
                 String[] results = Helper.mortgagePayoffByweekly(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths, interest);
+                double[] mortgagePayoff = Helper.mortgagePayoffCalculator(originalLoanAmount, originalLoanTerm, interestRate, remainingTerm, months);
+                morgagePayoffRemainingBalance = mortgagePayoff[5];
+                
 
                 for (String summary : results) {
                     System.out.println(summary);
                 }
-                     }        
+                outputText = "<html>"
+                     + "<b>Payoff in "+ results[0]+ " years and " + results[1]+" months</b><br>"
+                     + "The remaining balance is <b>"+currencyFormat.format(morgagePayoffRemainingBalance)+".<br>"
+                     + "By making biweekly payments of <b>"+results[2]+"</b> starting now, the loan will be fully paid off in <b>"+results[0]+" years and "+results[1]+" months</b>,<br>"
+                     + "which is <b>"+results[3]+"</b> than the original schedule.<br>"
+                     + "This adjustment results in an interest savings of <b>"+results[4]+"</b>." 
+                  + "<b>Normal Repayment:</b><br>"
+                  + "Monthly Pay: " + currencyFormat.format(mortgagePayoff[2]) + "<br>"
+                  + "Total Payment on Original Schedule: " + currencyFormat.format(mortgagePayoff[3]) + "<br>"
+                  + "Total Interest on Original Schedule: " + currencyFormat.format(mortgagePayoff[4]) + "<br>"
+                  + "Remaining Balance: " + currencyFormat.format(mortgagePayoff[5]) + "<br>"
+                  + "Remaining Interest Savings: " + currencyFormat.format(mortgagePayoff[6]) + "<br>"
+                  + "Remaining Balance to Pay Off Loan: " + currencyFormat.format(mortgagePayoff[7]) + "<br>"
+                  + "</html>";
+            
+            } 
+                
                     
-             if (MortgagePayoffRepaymentWithExtraPayments.isSelected()) {
-                 double currentLoan = 400000;
-                    int originalTime = 30;
-                    int oTimeLeftYears = 25;
-                    int oTimeLeftMonths = 0;
-                    double interest = 6;
-                    double perMonth = 1000;
-                    double perYear = 12000;
-                    double oneTime = 5000;
+                    
+            if (MortgagePayoffRepaymentWithExtraPayments.isSelected()) {
+                double currentLoan = 400000;
+                int originalTime = 30;
+                int oTimeLeftYears = 25;
+                int oTimeLeftMonths = 0;
+                double interest = 6;
+                double perMonth = 1000;
+                double perYear = 12000;
+                double oneTime = 5000;
 
-                    Object[] results = Helper.mortgagePayoffCustom(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
-                            interest, perMonth, perYear, oneTime);
+                Object[] results = Helper.mortgagePayoffCustom(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
+                        interest, perMonth, perYear, oneTime);
 
                     // Print results
                     for (Object result : results) {
