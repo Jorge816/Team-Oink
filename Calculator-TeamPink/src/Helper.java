@@ -747,11 +747,16 @@ public class Helper {
         }
 
         // Summaries
-        String totalPaymentsSummary = "Total Total Payments: " + df.format(totalIntPaid + currentLoan);
-        String totalInterestSummary = "Total Interest Paid: " + df.format(totalIntPaid);
-        String remainingPaymentsSummary = "Remaining Payments: " + df.format(totalPaymentLeft);
-        String remainingInterestSummary = "Remaining Interest: " + df.format(totalIntPaid - beforeInterestPaid);
+        //Original
+        String totalPaymentsSummary = df.format(totalIntPaid + currentLoan);//"Total Payments: " + 
+        String totalInterestSummary = df.format(totalIntPaid);//"Total Interest Paid: " + 
+        String remainingPaymentsSummary = df.format(totalPaymentLeft);//"Remaining Payments: " + 
+        String remainingInterestSummary =  df.format(totalIntPaid - beforeInterestPaid);//"Remaining Interest: " +
         String payoffTimeSummary = "Payoff In: " + oTimeLeftYears + " years and " + oTimeLeftMonths + " months";
+        String yearsLeft = String.valueOf(oTimeLeftYears);
+        String monthsLeft = String.valueOf(oTimeLeftMonths);
+        
+        //Biweekly
 
         String totalBiPaymentsSummary = "Total Total Payments: " + df.format(biTotalInterest + currentLoan + beforeInterestPaid);
         String totalBiInterestSummary = "Total Interest Paid: " + df.format(biTotalInterest + beforeInterestPaid);
@@ -774,10 +779,22 @@ public class Helper {
                 byweeklyPay,//2
                 timeEarly,//3
                 savingsInInterest,//4
-                totalPaymentsSummary, totalInterestSummary, remainingPaymentsSummary,
-                remainingInterestSummary, payoffTimeSummary,
-                totalBiPaymentsSummary, totalBiInterestSummary,
-                remainingBiPaymentsSummary, remainingBiInterestSummary, biPayoffTimeSummary
+                //orginal
+                totalPaymentsSummary, //5
+                totalInterestSummary,//6
+                remainingPaymentsSummary,//7
+                remainingInterestSummary,//8
+                payoffTimeSummary,//9
+                yearsLeft,//10
+                monthsLeft,//11
+                
+                //custom
+                
+                totalBiPaymentsSummary, //12
+                totalBiInterestSummary,//13
+                remainingBiPaymentsSummary,//14
+                remainingBiInterestSummary,//15
+                biPayoffTimeSummary//16
         };
     }
             
