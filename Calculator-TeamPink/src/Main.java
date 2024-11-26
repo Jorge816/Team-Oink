@@ -2153,7 +2153,7 @@ String aboutMessage = "<html>"
         haDownPaymentBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%" }));
 
         haPropertyTaxBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        haPropertyTaxBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
+        haPropertyTaxBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year" }));
 
         haHOABox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         haHOABox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
