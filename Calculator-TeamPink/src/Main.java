@@ -757,8 +757,15 @@ String aboutMessage = "<html>"
         jLabel128 = new javax.swing.JLabel();
         jScrollPane25 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        deepThoughts = new javax.swing.JPanel();
         ekinator2 = new javax.swing.JPanel();
+        deepThoughts = new javax.swing.JPanel();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel129 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         quitBnt = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -5028,30 +5035,6 @@ String aboutMessage = "<html>"
 
         Calculators.addTab("Pace Calculator", paceCalculator);
 
-        deepThoughts.setBackground(new java.awt.Color(255, 143, 255));
-        deepThoughts.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                deepThoughtsAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-
-        javax.swing.GroupLayout deepThoughtsLayout = new javax.swing.GroupLayout(deepThoughts);
-        deepThoughts.setLayout(deepThoughtsLayout);
-        deepThoughtsLayout.setHorizontalGroup(
-            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 990, Short.MAX_VALUE)
-        );
-        deepThoughtsLayout.setVerticalGroup(
-            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 771, Short.MAX_VALUE)
-        );
-
-        Calculators.addTab("Deep Thought", deepThoughts);
-
         ekinator2.setBackground(new java.awt.Color(255, 143, 255));
         ekinator2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
@@ -5075,6 +5058,89 @@ String aboutMessage = "<html>"
         );
 
         Calculators.addTab("Ekinator 2", ekinator2);
+
+        deepThoughts.setBackground(new java.awt.Color(255, 143, 255));
+        deepThoughts.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                deepThoughtsAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Good evening\n\nI am Deep thought.\n\nI have an answer for you.\n\nTHE answer\n\nI really have it\n\nI am ready to give it to you\n\nNOW\n\nYou will not like it ");
+        jScrollPane24.setViewportView(jTextArea1);
+
+        jLabel123.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel123.setText("Deep Thought");
+
+        jLabel127.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel127.setText("What is the answer to the great question of life ");
+
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jButton1.setText("I Sumbit my answer to the universe");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        javax.swing.GroupLayout deepThoughtsLayout = new javax.swing.GroupLayout(deepThoughts);
+        deepThoughts.setLayout(deepThoughtsLayout);
+        deepThoughtsLayout.setHorizontalGroup(
+            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(deepThoughtsLayout.createSequentialGroup()
+                .addGroup(deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(deepThoughtsLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(deepThoughtsLayout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(deepThoughtsLayout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addGroup(deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                                    .addComponent(jLabel129, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(deepThoughtsLayout.createSequentialGroup()
+                                .addGap(139, 139, 139)
+                                .addComponent(jButton1))))
+                    .addGroup(deepThoughtsLayout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(201, Short.MAX_VALUE))
+        );
+        deepThoughtsLayout.setVerticalGroup(
+            deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(deepThoughtsLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(deepThoughtsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(deepThoughtsLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(deepThoughtsLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel127)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton1)
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel129, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(206, Short.MAX_VALUE))
+        );
+
+        Calculators.addTab("Deep Thought", deepThoughts);
 
         quitBnt.setText("Quit");
         quitBnt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -7635,6 +7701,38 @@ private static final String[] DISTANCES = {
         MileLabel.setText("");
         jTextArea2.setText("");
     }//GEN-LAST:event_ClearForPacecalcActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String input = jTextField1.getText();
+    
+    // Check if the input is "42"
+    if ("42".equals(input)) {
+        // Show "Correct" message in the label
+        jLabel129.setText("Correct Oh wise one, you have unlocked the secret of universe");
+    } else {
+        // Clear the input field and show "Incorrect" message
+String[] responses = {
+    "<html>Segmentation fault:<br>Your logic is out of bounds.</html>",
+    "<html>Error 404:<br>Ultimate Answer Not Found.</html>",
+    "<html>Warning:<br>Your input may cause undefined behavior<br>in the universe.</html>",
+    "<html>Looks like you’re stuck<br>in an infinite loop of wrong guesses.</html>",
+    "<html>Stack overflow detected—<br>too many guesses.</html>",
+    "<html>This guess needs debugging.<br>Have you tried stepping through it?</html>",
+    "<html>Access denied.<br>You don’t have permission<br>to reveal the ultimate answer.</html>",
+    "<html>Error: Guess value is null.<br>Please try again with meaningful input.</html>",
+    "<html>That input is like using <i>goto</i>—<br>technically valid, but still wrong.</html>",
+    "<html>Hmm, your guess doesn’t compile<br>with the laws of the universe.</html>",
+    "<html>Logical error detected:<br>Did you forget to initialize <i>UltimateAnswer</i>?</html>",
+    "<html>Off by one?<br>Nope. Off by infinity.</html>",
+    "<html>You’re running on a deprecated version<br>of universal knowledge.<br>Update required.</html>"
+};
+
+int randomIndex = (int) (Math.random() * responses.length);
+jLabel129.setText(responses[randomIndex]);
+
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     
     
@@ -8373,6 +8471,7 @@ private void setMessage4() {
     private javax.swing.JTextField getdistance;
     private javax.swing.JTextField gettime;
     private javax.swing.JTextPane instructionCurrencyCalculator;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -8416,10 +8515,13 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel133;
@@ -8606,6 +8708,7 @@ private void setMessage4() {
     private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane3;
@@ -8616,7 +8719,9 @@ private void setMessage4() {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField115;
     private javax.swing.JTextField jTextField116;
     private javax.swing.JTextField jTextField117;
