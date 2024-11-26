@@ -27,8 +27,79 @@ import java.io.BufferedReader;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.sound.sampled.*;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+
+import java.io.*;
+
 
 public class Main extends javax.swing.JFrame {
+   private Clip backgroundMusic;
+
+    
+
+    private void playBackgroundMusic() {
+        try {
+            // Use getResourceAsStream to load from classpath
+            InputStream audioSrc = getClass().getResourceAsStream("/Music/Pink Panther.wav");
+            
+            if (audioSrc == null) {
+                System.err.println("Audio file not found!");
+                return;
+            }
+            
+            // Wrap in BufferedInputStream for better performance
+            InputStream bufferedAudio = new BufferedInputStream(audioSrc);
+            
+            // Load the audio input stream
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(bufferedAudio);
+            
+            // Create a music clip
+            backgroundMusic = AudioSystem.getClip();
+            backgroundMusic.open(audioInput);
+            
+            // Optional: Set volume
+            FloatControl gainControl = 
+                (FloatControl) backgroundMusic.getControl(FloatControl.Type.MASTER_GAIN);
+            gainControl.setValue(-20.0f); // Reduce volume by 20 decibels
+            
+            // Ensure continuous looping
+            backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (Exception e) {
+            // Important: Handle potential errors gracefully
+            System.err.println("Error playing background music: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    // Method to stop music if needed
+    private void stopBackgroundMusic() {
+        if (backgroundMusic != null && backgroundMusic.isRunning()) {
+            backgroundMusic.stop();
+            backgroundMusic.close();
+        }
+    }
+
+    // Optional: Method to toggle music on/off
+    private void toggleBackgroundMusic() {
+        if (backgroundMusic != null) {
+            if (backgroundMusic.isRunning()) {
+                stopBackgroundMusic();
+            } else {
+                playBackgroundMusic();
+            }
+        }
+    }
+
+    // You might want to add a cleanup method
+    @Override
+    public void dispose() {
+        stopBackgroundMusic();
+        super.dispose();
+    }
+
+    
+    
 
     /**
      * Creates new form Main
@@ -50,6 +121,7 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        playBackgroundMusic();
         populateComboBoxes();
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(DISTANCES));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(PREDEFINED_DISTANCES));
@@ -210,7 +282,7 @@ String aboutMessage = "<html>"
                     jLabel37.setText("");
                 }
             }
-        }, 0, 150); // 200ms delay between updates
+        }, 0, 120); // 200ms delay between updates
 
         // Set a static message for jLabel3 (Team Pink, Software Development)
     
