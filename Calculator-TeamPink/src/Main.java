@@ -6779,43 +6779,42 @@ String aboutMessage = "<html>"
                         
                         
                         + "<body style='font-family: Arial; font-size: 14px;'>"
-                    + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
-                    + "<thead style='background-color: #004080; color: white;'>"
-                    + "<tr>"
-                    + "<th></th>"
-                    + "<th>Original</th>"
-                    + "<th>With payoff</th>"
-                    + "</tr>"
-                    + "</thead>"
-                    + "<tbody>"
-                    + "<tr>"
-                    + "<td>Total payments</td>"
-                    + "<td>$863,352.76</td>"
-                    + "<td>$801,483.70</td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Total interest</td>"
-                    + "<td>$463,352.76</td>"
-                    + "<td>$401,483.70</td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Remaining payments</td>"
-                    + "<td>$719,460.63</td>"
-                    + "<td>$657,591.57</td>"
-                    + "</tr>"
-                    + "<tr style='background-color: #f2f2f2;'>"
-                    + "<td>Remaining interest</td>"
-                    + "<td>$347,243.20</td>"
-                    + "<td>$285,374.14</td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Payoff in</td>"
-                    + "<td>25 yrs</td>"
-                    + "<td>21 yrs, 2 mos</td>"
-                    + "</tr>"
-                    + "</tbody>"
-                    + "</table>"
-                    + "</body>"
+                        + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
+                        + "<thead style='background-color: #004080; color: white;'>"
+                        + "<tr>"
+                        + "<th></th>"
+                        + "<th>Original</th>"
+                        + "<th>With payoff</th>"
+                        + "</tr>"
+                        + "</thead>"
+                        + "<tbody>"
+                        + "<tr>"
+                        + "<td>Total payments</td>"
+                        + "<td>$"+results[5] +"</td>"
+                        + "<td>$"+results[12]+"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Total interest</td>"
+                        + "<td>$"+results[6] +"</td>"
+                        + "<td>$"+results[13] +"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Remaining payments</td>"
+                        + "<td>$"+results[7] +"</td>"
+                        + "<td>$"+results[14] +"</td>"
+                        + "</tr>"
+                        + "<td>Remaining interest</td>"
+                        + "<td>$"+results[8] +"</td>"
+                        + "<td>$"+results[15] +"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Payoff in</td>"
+                        + "<td>"+results[10] +" years and " +results[11]+ " months</td>"
+                        + "<td>"+results[16] +"</td>"
+                        + "</tr>"
+                        + "</tbody>"
+                        + "</table>"
+                        + "</body>"
 
                   + "</html>";
             
@@ -6836,23 +6835,74 @@ String aboutMessage = "<html>"
             // Set it to "0"
                     MorgagePayoffRePayementExtraOneTime.setText("0");
                 }
-                
-                double currentLoan = 400000;
-                int originalTime = 30;
-                int oTimeLeftYears = 25;
-                int oTimeLeftMonths = 0;
-                double interest = 6;
-                double perMonth = 1000;
-                double perYear = 12000;
-                double oneTime = 5000;
+double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getText());
+                double extra_yearly = Double.parseDouble(MorgagePayoffRePayementExtraYear.getText());
+                double extra_once = Double.parseDouble(MorgagePayoffRePayementExtraOneTime.getText());
+                double currentLoan = originalLoanAmount;
+                int originalTime = originalLoanTerm;
+                int oTimeLeftYears = remainingTerm;
+                int oTimeLeftMonths = months;
+                double interest = interestRate;
+                double perMonth = extra_monthly;
+                double perYear = extra_yearly;
+                double oneTime = extra_once;
 
-                Object[] results = Helper.mortgagePayoffCustom(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
+                
+                String[] results = Helper.mortgagePayoffCustom(currentLoan, originalTime, oTimeLeftYears, oTimeLeftMonths,
                         interest, perMonth, perYear, oneTime);
+                double[] mortgagePayoff = Helper.mortgagePayoffCalculator(originalLoanAmount, originalLoanTerm, interestRate, remainingTerm, months);
+                morgagePayoffRemainingBalance = mortgagePayoff[5];
 
                     // Print results
-                    for (Object result : results) {
+                    for (String result : results) {
                         System.out.println(result);
                     }
+                    outputText = "<html>"
+                     + "By making extra monthly payments of <b>"+currencyFormat.format(Double.parseDouble(results[2]))+"</b>,<br> extra yearly payments of <b>"+currencyFormat.format(Double.parseDouble(results[3]))+"</b>,<br> and a one-time payment of <b>"+currencyFormat.format(Double.parseDouble(results[4]))+ "</b> starting now, <br>"
+                     +"the loan will be fully paid off in <b>"+results[12]+"</b>,<br>"
+                     + "which is <b>"+results[6]+"</b> than the original schedule.<br>"
+                     + "This adjustment results in an interest savings of <b>"+currencyFormat.format(Double.parseDouble(results[7]))+"</b>." 
+                        
+                        
+                        + "<body style='font-family: Arial; font-size: 14px;'>"
+                        + "<table border='1' cellspacing='0' cellpadding='8' style='border-collapse: collapse; width: 100%; text-align: center;'>"
+                        + "<thead style='background-color: #004080; color: white;'>"
+                        + "<tr>"
+                        + "<th></th>"
+                        + "<th>Original</th>"
+                        + "<th>With payoff</th>"
+                        + "</tr>"
+                        + "</thead>"
+                        + "<tbody>"
+                        + "<tr>"
+                        + "<td>Total payments</td>"
+                        + "<td>$"+results[13] +"</td>"
+                        + "<td>$"+results[8]+"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Total interest</td>"
+                        + "<td>$"+results[14] +"</td>"
+                        + "<td>$"+results[9] +"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Remaining payments</td>"
+                        + "<td>$"+results[15] +"</td>"
+                        + "<td>$"+results[10] +"</td>"
+                        + "</tr>"
+                        + "<td>Remaining interest</td>"
+                        + "<td>$"+results[16] +"</td>"
+                        + "<td>$"+results[11] +"</td>"
+                        + "</tr>"
+                        + "<tr>"
+                        + "<td>Payoff in</td>"
+                        + "<td>"+results[17]+ " </td>"
+                        + "<td>"+results[12] +"</td>"
+                        + "</tr>"
+                        + "</tbody>"
+                        + "</table>"
+                        + "</body>"
+
+                  + "</html>";
             }  
                     
             MortgagePayoffOutput.setText(outputText);}

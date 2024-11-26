@@ -699,7 +699,7 @@ public class Helper {
         
         
        //-------------------------------------------------------------------------------------------------------------------------------------MortgagePayoff Byweekly
-            public static String[] mortgagePayoffByweekly(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths, double interest) {
+public static String[] mortgagePayoffByweekly(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths, double interest) {
         DecimalFormat df = new DecimalFormat("#.00");
 
         // Loan terms and initial setup
@@ -764,11 +764,11 @@ public class Helper {
         
         //Biweekly
 
-        String totalBiPaymentsSummary = "Total Total Payments: " + df.format(biTotalInterest + currentLoan + beforeInterestPaid);
-        String totalBiInterestSummary = "Total Interest Paid: " + df.format(biTotalInterest + beforeInterestPaid);
-        String remainingBiPaymentsSummary = "Remaining Payments: " + df.format(biTotalInterest + principalLeft);
-        String remainingBiInterestSummary = "Remaining Interest: " + df.format(biTotalInterest);
-        String biPayoffTimeSummary = "Payoff In: " + (i / 12) + " years and " + (i % 12) + " months";
+        String totalBiPaymentsSummary =  df.format(biTotalInterest + currentLoan + beforeInterestPaid);
+        String totalBiInterestSummary =  df.format(biTotalInterest + beforeInterestPaid);
+        String remainingBiPaymentsSummary =  df.format(biTotalInterest + principalLeft);
+        String remainingBiInterestSummary = df.format(biTotalInterest);
+        String biPayoffTimeSummary = (i / 12) + " years and " + (i % 12) + " months";
 
         String byweeklyPay = df.format(monthlyPay / 2);
 
@@ -802,10 +802,9 @@ public class Helper {
                 remainingBiInterestSummary,//15
                 biPayoffTimeSummary//16
         };
-    }
-            
+    }     
     //--------------------------------------------------------------------------------------------------------------------------MortgageCalculatorCustom 
-        public static Object[] mortgagePayoffCustom(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths,
+public static String[] mortgagePayoffCustom(double currentLoan, int originalTime, int oTimeLeftYears, int oTimeLeftMonths,
                                                 double interest, double perMonth, double perYear, double oneTime) {
         DecimalFormat df = new DecimalFormat("#.00");
 
@@ -864,18 +863,18 @@ public class Helper {
         }
 
         // Custom summaries
-        String totalPaymentsSummaryCustom = "Total Payments: " + df.format(customTotalInt + currentLoan + beforeInterestPaid);
-        String totalInterestSummaryCustom = "Total Interest: " + df.format(customTotalInt + beforeInterestPaid);
-        String remainingPaymentsSummaryCustom = "Remaining Payments: " + df.format(customTotalInt + principalLeft);
-        String remainingInterestSummaryCustom = "Remaining Interest: " + df.format(customTotalInt);
-        String payoffTimeSummaryCustom = "Payoff In: " + (months / 12) + " years and " + (months % 12) + " months";
+        String totalPaymentsSummaryCustom = df.format(customTotalInt + currentLoan + beforeInterestPaid);
+        String totalInterestSummaryCustom =  df.format(customTotalInt + beforeInterestPaid);
+        String remainingPaymentsSummaryCustom = df.format(customTotalInt + principalLeft);
+        String remainingInterestSummaryCustom =  df.format(customTotalInt);
+        String payoffTimeSummaryCustom =  (months / 12) + " years and " + (months % 12) + " months";
 
         // Original summaries
-        String totalPaymentsSummary = "Total Total Payments: " + df.format(totalIntPaid + currentLoan);
-        String totalInterestSummary = "Total Interest Paid: " + df.format(totalIntPaid);
-        String remainingPaymentsSummary = "Remaining Payments: " + df.format(finalPaymentLeft);
-        String remainingInterestSummary = "Remaining Interest: " + df.format(totalIntPaid - beforeInterestPaid);
-        String payoffTimeSummary = "Payoff In: " + oTimeLeftYears + " years and " + oTimeLeftMonths + " months";
+        String totalPaymentsSummary = df.format(totalIntPaid + currentLoan);
+        String totalInterestSummary =  df.format(totalIntPaid);
+        String remainingPaymentsSummary =  df.format(finalPaymentLeft);
+        String remainingInterestSummary =  df.format(totalIntPaid - beforeInterestPaid);
+        String payoffTimeSummary =  oTimeLeftYears + " years and " + oTimeLeftMonths + " months";
 
         // Time saved
         int payoffIn = (oTimeLeftYears * 12 + oTimeLeftMonths) - months;
@@ -890,11 +889,26 @@ public class Helper {
         double monthlyPayment = monthlyPay + perMonth;
 
         // Return all results as an array of objects
-        return new Object[]{
-                monthlyPayment, timeEarly, savingsInInterest,
-                totalPaymentsSummary, totalInterestSummary, remainingPaymentsSummary, remainingInterestSummary, payoffTimeSummary,
-                totalPaymentsSummaryCustom, totalInterestSummaryCustom, remainingPaymentsSummaryCustom, remainingInterestSummaryCustom,
-                payoffTimeSummaryCustom
+        return new String[]{
+            String.valueOf(payoffYearsEarly),
+            String.valueOf(payoffMonthsEarly),
+            String.valueOf(perMonth),
+            String.valueOf(perYear),
+            String.valueOf(oneTime),
+            String.valueOf(monthlyPayment),
+            timeEarly,
+            savingsInInterest, 
+            totalPaymentsSummaryCustom,
+            totalInterestSummaryCustom,
+            remainingPaymentsSummaryCustom,
+            remainingInterestSummaryCustom,
+            payoffTimeSummaryCustom, 
+            totalPaymentsSummary,
+            totalInterestSummary,
+            remainingPaymentsSummary,
+            remainingInterestSummary,
+            payoffTimeSummary
+            
         };
     }
    
