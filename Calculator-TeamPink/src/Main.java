@@ -430,36 +430,36 @@ String aboutMessage = "<html>"
         jScrollPane18 = new javax.swing.JScrollPane();
         jPanel49 = new javax.swing.JPanel();
         jPanel50 = new javax.swing.JPanel();
-        jLabel85 = new javax.swing.JLabel();
+        haResultOutput = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
         jPanel51 = new javax.swing.JPanel();
         jLabel86 = new javax.swing.JLabel();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField70 = new javax.swing.JTextField();
+        haIncomeInput = new javax.swing.JTextField();
+        haDebtInput = new javax.swing.JTextField();
         jLabel100 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
-        jTextField76 = new javax.swing.JTextField();
+        haPropertyTaxInput = new javax.swing.JTextField();
         jLabel108 = new javax.swing.JLabel();
-        jTextField77 = new javax.swing.JTextField();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
+        haInterestInput = new javax.swing.JTextField();
+        haCalcButton = new javax.swing.JButton();
+        haClearButton = new javax.swing.JButton();
         jLabel109 = new javax.swing.JLabel();
-        jTextField33 = new javax.swing.JTextField();
+        haLoanTermInput = new javax.swing.JTextField();
         jLabel110 = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
-        jTextField78 = new javax.swing.JTextField();
-        jTextField85 = new javax.swing.JTextField();
+        haInsuranceInput = new javax.swing.JTextField();
+        haHOAInput = new javax.swing.JTextField();
         jLabel112 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
-        jTextField90 = new javax.swing.JTextField();
+        haDownPaymentInput = new javax.swing.JTextField();
         jLabel113 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
-        jComboBox15 = new javax.swing.JComboBox<>();
-        jComboBox16 = new javax.swing.JComboBox<>();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
-        jComboBox19 = new javax.swing.JComboBox<>();
+        haDownPaymentBox = new javax.swing.JComboBox<>();
+        haPropertyTaxBox = new javax.swing.JComboBox<>();
+        haHOABox = new javax.swing.JComboBox<>();
+        haInsuranceBox = new javax.swing.JComboBox<>();
+        haDTIBox = new javax.swing.JComboBox<>();
         jScrollPane9 = new javax.swing.JScrollPane();
         InstructionsHouseAffordabilityCalculator = new javax.swing.JTextPane();
         RentCalculator = new javax.swing.JPanel();
@@ -2050,7 +2050,7 @@ String aboutMessage = "<html>"
         jPanel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 255), 3));
         jPanel50.setEnabled(false);
 
-        jLabel85.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haResultOutput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel72.setText("Results");
@@ -2064,7 +2064,7 @@ String aboutMessage = "<html>"
                 .addComponent(jLabel72)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel50Layout.createSequentialGroup()
-                .addComponent(jLabel85, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(haResultOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel50Layout.setVerticalGroup(
@@ -2073,7 +2073,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addComponent(jLabel72)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel85, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                .addComponent(haResultOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2082,9 +2082,9 @@ String aboutMessage = "<html>"
         jLabel86.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel86.setText("Interest rate");
 
-        jTextField32.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haIncomeInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField70.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haDebtInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel100.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel100.setText("Monthly debt payback");
@@ -2092,25 +2092,35 @@ String aboutMessage = "<html>"
         jLabel102.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel102.setText("Property Tax ");
 
-        jTextField76.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haPropertyTaxInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel108.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel108.setText("Annual Household Income");
 
-        jTextField77.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haInterestInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jButton17.setBackground(new java.awt.Color(179, 246, 179));
-        jButton17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton17.setText("Calculate");
+        haCalcButton.setBackground(new java.awt.Color(179, 246, 179));
+        haCalcButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haCalcButton.setText("Calculate");
+        haCalcButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                haCalcButtonActionPerformed(evt);
+            }
+        });
 
-        jButton18.setBackground(new java.awt.Color(179, 246, 179));
-        jButton18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton18.setText("Clear");
+        haClearButton.setBackground(new java.awt.Color(179, 246, 179));
+        haClearButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haClearButton.setText("Clear");
+        haClearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                haClearButtonActionPerformed(evt);
+            }
+        });
 
         jLabel109.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel109.setText("Mortgage loan term");
 
-        jTextField33.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haLoanTermInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel110.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel110.setText("HOA or co-op fee");
@@ -2118,9 +2128,9 @@ String aboutMessage = "<html>"
         jLabel111.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel111.setText("Insurance ");
 
-        jTextField78.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haInsuranceInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jTextField85.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haHOAInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel112.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel112.setText("Debt-to-income (DTI) ratio");
@@ -2128,7 +2138,7 @@ String aboutMessage = "<html>"
         jLabel101.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel101.setText("Down Payment ");
 
-        jTextField90.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haDownPaymentInput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         jLabel113.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel113.setText("salary + other income (before tax)");
@@ -2139,20 +2149,20 @@ String aboutMessage = "<html>"
         jLabel115.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel115.setText("long-term debs, car, student loan, etc");
 
-        jComboBox15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        haDownPaymentBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haDownPaymentBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
 
-        jComboBox16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
+        haPropertyTaxBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haPropertyTaxBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
-        jComboBox17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
+        haHOABox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haHOABox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
-        jComboBox18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
+        haInsuranceBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haInsuranceBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
 
-        jComboBox19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conventional loan (28/36 rule)", "FHA loan (31% front-end", "43% back-end)", "VA loan (41%)", "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%" }));
+        haDTIBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        haDTIBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conventional loan (28/36 rule)", "FHA loan (31% front-end", "43% back-end)", "VA loan (41%)", "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%" }));
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
@@ -2163,9 +2173,9 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel51Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(haCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
-                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(haClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel51Layout.createSequentialGroup()
                         .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2183,26 +2193,26 @@ String aboutMessage = "<html>"
                             .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(haDTIBox, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel51Layout.createSequentialGroup()
                                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel51Layout.createSequentialGroup()
                                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField70, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-                                            .addComponent(jTextField33, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField77, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField76)
-                                            .addComponent(jTextField90, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addComponent(haDebtInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(haIncomeInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                                            .addComponent(haLoanTermInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(haInterestInput, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(haPropertyTaxInput)
+                                            .addComponent(haDownPaymentInput, javax.swing.GroupLayout.Alignment.LEADING))
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
                                         .addGap(0, 1, Short.MAX_VALUE)
-                                        .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextField78))
+                                        .addComponent(haHOAInput, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(haInsuranceInput))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel51Layout.createSequentialGroup()
-                                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(haInsuranceBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(125, 125, 125))
                                     .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel51Layout.createSequentialGroup()
@@ -2211,12 +2221,12 @@ String aboutMessage = "<html>"
                                                 .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGroup(jPanel51Layout.createSequentialGroup()
                                                     .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(haDownPaymentBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(haPropertyTaxBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                     .addGap(0, 0, Short.MAX_VALUE)))
                                             .addGap(18, 18, 18))
                                         .addGroup(jPanel51Layout.createSequentialGroup()
-                                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(haHOABox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
         );
@@ -2226,50 +2236,50 @@ String aboutMessage = "<html>"
                 .addGap(9, 9, 9)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField32)
+                    .addComponent(haIncomeInput)
                     .addComponent(jLabel113, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel109, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField33)
+                    .addComponent(haLoanTermInput)
                     .addComponent(jLabel114, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel86)
-                    .addComponent(jTextField77))
+                    .addComponent(haInterestInput))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel100)
-                    .addComponent(jTextField70)
+                    .addComponent(haDebtInput)
                     .addComponent(jLabel115, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel101)
-                    .addComponent(jTextField90)
-                    .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(haDownPaymentInput)
+                    .addComponent(haDownPaymentBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel102)
-                    .addComponent(jTextField76)
-                    .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(haPropertyTaxInput)
+                    .addComponent(haPropertyTaxBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel110)
-                    .addComponent(jTextField85)
-                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(haHOAInput)
+                    .addComponent(haHOABox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel111)
-                    .addComponent(jTextField78)
-                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(haInsuranceInput)
+                    .addComponent(haInsuranceBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel112)
-                    .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(haDTIBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(haCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(haClearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2416,7 +2426,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RentComboboxYearandMonth)
-                    .addComponent(RentPretaxIncome, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(RentPretaxIncome)
                     .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
                 .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3446,8 +3456,8 @@ String aboutMessage = "<html>"
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addComponent(MortgagePayoffOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE))
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
                     .addContainerGap()
@@ -4048,7 +4058,7 @@ String aboutMessage = "<html>"
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addGap(0, 39, Short.MAX_VALUE)
+                .addGap(0, 45, Short.MAX_VALUE)
                 .addComponent(InterestRateOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
@@ -5242,7 +5252,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Calculators)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)))
         );
 
         Calculators.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -7811,6 +7821,93 @@ jLabel129.setText(responses[randomIndex]);
         jLabel140.setText("Invalid input! Please enter a valid age");
     }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void haCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_haCalcButtonActionPerformed
+        // TODO add your handling code here:
+        try {
+            // Retrieve input values from the UI
+            String haIncomeValue = haIncomeInput.getText().replace("$", "").replace(",", ""); 
+            String haLoanTermValue = haLoanTermInput.getText();
+            String haInterestValue = haInterestInput.getText();
+
+            // Get values and their corresponding options (% or $ per year)
+            String haDownPaymentValue = haDownPaymentInput.getText();
+            String haDownPaymentOption = (String) haDownPaymentBox.getSelectedItem();
+
+            String haPropertyTaxValue = haPropertyTaxInput.getText();
+            String haPropertyTaxOption = (String) haPropertyTaxBox.getSelectedItem();
+
+            String haHOAValue = haHOAInput.getText();
+            String haHOAOption = (String) haHOABox.getSelectedItem();
+
+            String haInsuranceValue = haInsuranceInput.getText();
+            String haInsuranceOption = (String) haInsuranceBox.getSelectedItem();
+
+            String selectDTIOption = (String) haDTIBox.getSelectedItem();
+
+            // Validate required fields
+            if (haIncomeValue.isEmpty() || haLoanTermValue.isEmpty() || haInterestValue.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Income, Loan Term, and Interest Rate are required.", 
+                    "Input Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // Convert required inputs to numeric types
+            double annualIncome = Double.parseDouble(haIncomeValue);
+            double loanTerm = Double.parseDouble(haLoanTermValue);
+            double interestRate = Double.parseDouble(haInterestValue);
+
+            // Create an instance of Helper
+            Helper helper = new Helper();
+
+            // Perform the calculation with all options
+            String message = helper.calculateHouseAffordability(
+                annualIncome, loanTerm, interestRate,
+                haHOAOption, haHOAValue,
+                haInsuranceOption, haInsuranceValue,
+                haPropertyTaxOption, haPropertyTaxValue,
+                haDownPaymentOption, haDownPaymentValue,
+                selectDTIOption
+            );
+
+            // Display the result
+            haResultOutput.setText(message);
+            System.out.println(message);
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Please enter valid numeric values.", 
+                "Input Error", JOptionPane.ERROR_MESSAGE);
+        } catch (IllegalArgumentException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), 
+                "Input Error", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "An error occurred: " + e.getMessage(), 
+                "Calculation Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_haCalcButtonActionPerformed
+
+    private void haClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_haClearButtonActionPerformed
+        // TODO add your handling code here:
+        // Clear all input fields
+        haIncomeInput.setText("");
+        haLoanTermInput.setText("");
+        haInterestInput.setText("");
+        haDebtInput.setText("");
+        haDownPaymentInput.setText("");
+        haPropertyTaxInput.setText("");
+        haHOAInput.setText("");
+        haInsuranceInput.setText("");
+
+        // Reset dropdown/combo boxes to their default first item
+        haDownPaymentBox.setSelectedIndex(0);
+        haPropertyTaxBox.setSelectedIndex(0);
+        haHOABox.setSelectedIndex(0);
+        haInsuranceBox.setSelectedIndex(0);
+        haDTIBox.setSelectedIndex(0);
+
+        // Clear the result output
+        haResultOutput.setText("");
+    }//GEN-LAST:event_haClearButtonActionPerformed
     
     
     
@@ -8548,22 +8645,31 @@ private void setMessage4() {
     private javax.swing.JTextField firstNumber;
     private javax.swing.JTextField getdistance;
     private javax.swing.JTextField gettime;
+    private javax.swing.JButton haCalcButton;
+    private javax.swing.JButton haClearButton;
+    private javax.swing.JComboBox<String> haDTIBox;
+    private javax.swing.JTextField haDebtInput;
+    private javax.swing.JComboBox<String> haDownPaymentBox;
+    private javax.swing.JTextField haDownPaymentInput;
+    private javax.swing.JComboBox<String> haHOABox;
+    private javax.swing.JTextField haHOAInput;
+    private javax.swing.JTextField haIncomeInput;
+    private javax.swing.JComboBox<String> haInsuranceBox;
+    private javax.swing.JTextField haInsuranceInput;
+    private javax.swing.JTextField haInterestInput;
+    private javax.swing.JTextField haLoanTermInput;
+    private javax.swing.JComboBox<String> haPropertyTaxBox;
+    private javax.swing.JTextField haPropertyTaxInput;
+    private javax.swing.JLabel haResultOutput;
     private javax.swing.JTextPane instructionCurrencyCalculator;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
-    private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox29;
     private javax.swing.JComboBox<String> jComboBox5;
@@ -8710,7 +8816,6 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
@@ -8817,8 +8922,6 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
@@ -8837,13 +8940,7 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField55;
     private javax.swing.JTextField jTextField56;
     private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField77;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField90;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel jorge;
     private javax.swing.JComboBox<String> operator;

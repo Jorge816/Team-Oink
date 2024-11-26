@@ -38,6 +38,8 @@ import java.util.Comparator;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 
 public class Helper {
@@ -1616,4 +1618,145 @@ public static double parseWithValidation(String value, String fieldName, StringB
         }
 //-------------------------------------------------------------------------------------------------------------------------------------------------END OF AUTO LOAN
         
+//-------------------------------------------------------------------------------------------------------------------------------------------------Start of House Affordability calc (Jorge)
+        // Parse value based on whether it's a percentage or fixed amount
+     public double parseValue(String option, String value, double housePrice) {  
+        try {  
+          if (value.isEmpty()) return 0.0;  
+          if (option.contains("%")) {  
+             double percentage = Double.parseDouble(value.replace("%", "").trim());  
+             return (percentage / 100.0) * housePrice;  
+          } else {  
+             return Double.parseDouble(value.replace("$", "").trim());  
+          }  
+        } catch (NumberFormatException e) {  
+          System.out.println("Invalid input: " + e.getMessage());  
+          return 0.0;  
+        }  
+     }  
+    
+     private double[] getDtiRatios(String selectedOption) {  
+        return switch (selectedOption) {  
+          case "Conventional loan (28/36 rule)" -> new double[]{0.28, 0.36};  
+          case "FHA loan (31% front-end, 43% back-end)" -> new double[]{0.31, 0.43};
+          case "VA loan (41%)" -> new double[]{0.41, 0.41};
+          case "10%" -> new double[]{0.10, 0.10};  
+          case "15%" -> new double[]{0.15, 0.15};  
+          case "20%" -> new double[]{0.20, 0.20};  
+          case "25%" -> new double[]{0.25, 0.25};  
+          case "30%" -> new double[]{0.30, 0.30};  
+          case "35%" -> new double[]{0.35, 0.35};  
+          case "40%" -> new double[]{0.40, 0.40};  
+          default -> throw new IllegalArgumentException("Invalid DTI ratio selection");  
+        };  
+     }  
+    
+     private double calculateMonthlyMortgage(double principal, double annualRate, int years) {  
+        double monthlyRate = annualRate / 1200.0;  
+        int months = years * 12;  
+        return principal * monthlyRate * Math.pow(1 + monthlyRate, months)  
+            / (Math.pow(1 + monthlyRate, months) - 1);  
+     }  
+    
+     public String calculateHouseAffordability(  
+          double annualIncome, double loanTerm, double interestRate,  
+          String hoaOption, String hoaValue,  
+          String insuranceOption, String insuranceValue,  
+          String propertyTaxOption, String propertyTaxValue,  
+          String downPaymentOption, String downPaymentValue,  
+          String dtiRule) {  
+    
+        double monthlyIncome = annualIncome / 12.0;  
+        double frontEndRatio = getDtiRatios(dtiRule)[0];  
+        double maxMonthlyPayment = monthlyIncome * frontEndRatio;  
+    
+        // Initial house price estimation  
+        double housePrice = annualIncome * 4;  
+        double previousHousePrice;  
+        int iterations = 0;  
+    
+        do {  
+          previousHousePrice = housePrice;  
+    
+          // Calculate monthly expenses  
+          double monthlyPropertyTax = parseValue(propertyTaxOption, propertyTaxValue, housePrice) / 12.0;  
+          double monthlyHOA = parseValue(hoaOption, hoaValue, housePrice) / 12.0;  
+          double monthlyInsurance = parseValue(insuranceOption, insuranceValue, housePrice) / 12.0;  
+          double monthlyExpenses = monthlyPropertyTax + monthlyHOA + monthlyInsurance;  
+    
+          // Available for P&I  
+          double availableForPI = maxMonthlyPayment - monthlyExpenses;  
+    
+          if (availableForPI <= 0) {  
+             return "Your monthly expenses exceed your affordability.";  
+          }  
+    
+          // Calculate down payment  
+          double downPayment;  
+          if (downPaymentOption.contains("$")) {  
+             downPayment = Double.parseDouble(downPaymentValue.replace("$", "").trim());  
+          } else {  
+             double downPaymentPercent = Double.parseDouble(downPaymentValue.replace("%", "").trim()) / 100.0;  
+             downPayment = housePrice * downPaymentPercent;  
+          }  
+    
+          // Calculate required loan amount  
+          double loanAmount = previousHousePrice - downPayment;  
+    
+          // Calculate monthly P&I for this loan amount  
+          double monthlyPI = calculateMonthlyMortgage(loanAmount, interestRate, (int) loanTerm);  
+    
+          // Adjust house price based on available payment  
+          double adjustmentFactor = availableForPI / monthlyPI;  
+          housePrice = previousHousePrice * adjustmentFactor;  
+    
+          iterations++;  
+        } while (Math.abs(housePrice - previousHousePrice) > 1.0 && iterations < 50);  
+    
+        // Final calculations  
+        double finalDownPayment;  
+        if (downPaymentOption.contains("$")) {  
+          finalDownPayment = Double.parseDouble(downPaymentValue.replace("$", "").trim());  
+        } else {  
+          double downPaymentPercent = Double.parseDouble(downPaymentValue.replace("%", "").trim()) / 100.0;  
+          finalDownPayment = housePrice * downPaymentPercent;  
+        }  
+    
+        // Use BigDecimal to perform calculations with higher precision  
+        BigDecimal housePriceBD = BigDecimal.valueOf(housePrice);  
+        BigDecimal finalDownPaymentBD = BigDecimal.valueOf(finalDownPayment);  
+        BigDecimal finalLoanAmountBD = housePriceBD.subtract(finalDownPaymentBD);  
+    
+        // Round the results to the nearest integer  
+        int finalHousePrice = housePriceBD.setScale(0, RoundingMode.HALF_UP).intValue();  
+        int finalLoanAmount = finalLoanAmountBD.setScale(0, RoundingMode.HALF_UP).intValue();  
+        int finalDownPaymentAmount = finalDownPaymentBD.setScale(0, RoundingMode.HALF_UP).intValue();  
+    
+        double downPaymentPercentage = (finalDownPayment / housePrice) * 100;  
+    
+        String result;  
+        if (dtiRule.equals("Conventional loan (28/36 rule)")) {  
+          result = String.format(  
+                "You can afford a house up to $%,d according to the 28/36 rule, " +  
+                     "within which $%,d is the loan and $%,d is the down payment",  
+                finalHousePrice, finalLoanAmount, finalDownPaymentAmount);  
+    
+          if (downPaymentOption.contains("$")) {  
+             result += String.format(", which is %.1f%% of the house price", downPaymentPercentage);  
+          }  
+    
+        } else {  
+          result = String.format(  
+                "You can afford a house up to $%,d according to the %s, " +  
+                     "within which $%,d is the loan and $%,d is the down payment",  
+                finalHousePrice, dtiRule, finalLoanAmount, finalDownPaymentAmount);  
+    
+          if (downPaymentOption.contains("$")) {  
+             result += String.format(", which is %.1f%% of the house price", downPaymentPercentage);  
+          }  
+        }  
+    
+        return result;  
+     }
+//-------------------------------------------------------------------------------------------------------------------------------------------------End of House Affordability calc (Jorge)
 }

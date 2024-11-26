@@ -74,7 +74,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Calculators" max="32767" attributes="0"/>
-                  <Component id="jPanel7" pref="821" max="32767" attributes="0"/>
+                  <Component id="jPanel7" pref="847" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -2364,7 +2364,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel85" max="32767" attributes="0"/>
+                                  <Component id="haResultOutput" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -2375,14 +2375,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel72" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel85" pref="129" max="32767" attributes="0"/>
+                                  <Component id="haResultOutput" pref="129" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel85">
+                        <Component class="javax.swing.JLabel" name="haResultOutput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2414,9 +2414,9 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                          <Component id="jButton17" min="-2" pref="133" max="-2" attributes="0"/>
+                                          <Component id="haCalcButton" min="-2" pref="133" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jButton18" min="-2" pref="141" max="-2" attributes="0"/>
+                                          <Component id="haClearButton" min="-2" pref="141" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -2438,30 +2438,30 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jComboBox19" min="-2" pref="262" max="-2" attributes="0"/>
+                                              <Component id="haDTIBox" min="-2" pref="262" max="-2" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                              <Component id="jTextField70" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="jTextField32" alignment="0" pref="167" max="32767" attributes="0"/>
-                                                              <Component id="jTextField33" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="jTextField77" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="jTextField76" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="jTextField90" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="haDebtInput" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="haIncomeInput" alignment="0" pref="167" max="32767" attributes="0"/>
+                                                              <Component id="haLoanTermInput" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="haInterestInput" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="haPropertyTaxInput" alignment="1" max="32767" attributes="0"/>
+                                                              <Component id="haDownPaymentInput" alignment="0" max="32767" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="1" attributes="0">
                                                           <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
-                                                          <Component id="jTextField85" min="-2" pref="167" max="-2" attributes="0"/>
+                                                          <Component id="haHOAInput" min="-2" pref="167" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jTextField78" max="32767" attributes="0"/>
+                                                      <Component id="haInsuranceInput" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
-                                                          <Component id="jComboBox18" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="haInsuranceBox" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -2471,8 +2471,8 @@
                                                                   <Component id="jLabel114" max="32767" attributes="0"/>
                                                                   <Group type="102" attributes="0">
                                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="jComboBox15" min="-2" pref="50" max="-2" attributes="0"/>
-                                                                          <Component id="jComboBox16" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="haDownPaymentBox" min="-2" pref="50" max="-2" attributes="0"/>
+                                                                          <Component id="haPropertyTaxBox" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
                                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                                   </Group>
@@ -2480,7 +2480,7 @@
                                                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" attributes="0">
-                                                              <Component id="jComboBox17" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="haHOABox" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="32767" attributes="0"/>
                                                           </Group>
                                                           <Component id="jLabel115" min="-2" pref="238" max="-2" attributes="0"/>
@@ -2499,59 +2499,59 @@
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel108" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jTextField32" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haIncomeInput" alignment="3" max="32767" attributes="0"/>
                                       <Component id="jLabel113" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel109" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jTextField33" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haLoanTermInput" alignment="3" max="32767" attributes="0"/>
                                       <Component id="jLabel114" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel86" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField77" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haInterestInput" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel100" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField70" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haDebtInput" alignment="3" max="32767" attributes="0"/>
                                       <Component id="jLabel115" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel101" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField90" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="haDownPaymentInput" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haDownPaymentBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel102" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField76" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="haPropertyTaxInput" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haPropertyTaxBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel110" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField85" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="haHOAInput" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haHOABox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField78" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jComboBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="haInsuranceInput" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haInsuranceBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel112" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jComboBox19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="haDTIBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jButton17" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="jButton18" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haCalcButton" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="haClearButton" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -2567,14 +2567,14 @@
                             <Property name="text" type="java.lang.String" value="Interest rate"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField32">
+                        <Component class="javax.swing.JTextField" name="haIncomeInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField70">
+                        <Component class="javax.swing.JTextField" name="haDebtInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2597,7 +2597,7 @@
                             <Property name="text" type="java.lang.String" value="Property Tax "/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField76">
+                        <Component class="javax.swing.JTextField" name="haPropertyTaxInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2612,14 +2612,14 @@
                             <Property name="text" type="java.lang.String" value="Annual Household Income"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField77">
+                        <Component class="javax.swing.JTextField" name="haInterestInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton17">
+                        <Component class="javax.swing.JButton" name="haCalcButton">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="b3" green="f6" red="b3" type="rgb"/>
@@ -2629,8 +2629,11 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Calculate"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="haCalcButtonActionPerformed"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton18">
+                        <Component class="javax.swing.JButton" name="haClearButton">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="b3" green="f6" red="b3" type="rgb"/>
@@ -2640,6 +2643,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="haClearButtonActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel109">
                           <Properties>
@@ -2649,7 +2655,7 @@
                             <Property name="text" type="java.lang.String" value="Mortgage loan term"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField33">
+                        <Component class="javax.swing.JTextField" name="haLoanTermInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2672,14 +2678,14 @@
                             <Property name="text" type="java.lang.String" value="Insurance "/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField78">
+                        <Component class="javax.swing.JTextField" name="haInsuranceInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField85">
+                        <Component class="javax.swing.JTextField" name="haHOAInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2702,7 +2708,7 @@
                             <Property name="text" type="java.lang.String" value="Down Payment "/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField90">
+                        <Component class="javax.swing.JTextField" name="haDownPaymentInput">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2733,7 +2739,7 @@
                             <Property name="text" type="java.lang.String" value="long-term debs, car, student loan, etc"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox15">
+                        <Component class="javax.swing.JComboBox" name="haDownPaymentBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2749,7 +2755,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox16">
+                        <Component class="javax.swing.JComboBox" name="haPropertyTaxBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2765,7 +2771,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox17">
+                        <Component class="javax.swing.JComboBox" name="haHOABox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2781,7 +2787,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox18">
+                        <Component class="javax.swing.JComboBox" name="haInsuranceBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2797,7 +2803,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox19">
+                        <Component class="javax.swing.JComboBox" name="haDTIBox">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="0"/>
@@ -2981,7 +2987,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="RentComboboxYearandMonth" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="RentPretaxIncome" alignment="3" pref="29" max="32767" attributes="0"/>
+                                      <Component id="RentPretaxIncome" alignment="3" max="32767" attributes="0"/>
                                       <Component id="jLabel34" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -4756,8 +4762,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="MortgagePayoffOutput" pref="121" max="32767" attributes="0"/>
-                                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                                  <Component id="MortgagePayoffOutput" pref="124" max="32767" attributes="0"/>
+                                  <EmptySpace pref="34" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -5859,7 +5865,7 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
                                   <Component id="InterestRateOutput" min="-2" pref="197" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
