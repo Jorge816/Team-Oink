@@ -7461,7 +7461,7 @@ if (fractionalDistance > 0) {
     }
     }//GEN-LAST:event_jComboBox2ActionPerformed
     
-     private double getRaceDistance(String raceDistanceStr) {
+    /* private double getRaceDistance(String raceDistanceStr) {
         // Convert the race distance string to its numerical value
         switch (raceDistanceStr) {
             case "5K":
@@ -7477,8 +7477,8 @@ if (fractionalDistance > 0) {
             default:
                 return 0.0; // Invalid input
         }
-    }
-    private double convertDistance(double distanceInMiles, String unit) {
+    }*/
+   /* private double convertDistance(double distanceInMiles, String unit) {
     // Convert miles to other units
     switch (unit) {
         case "Miles":
@@ -7492,7 +7492,7 @@ if (fractionalDistance > 0) {
         default:
             return 0.0;
     }
-}
+}*/
     
     private void populateComboBoxesCurrencyCalculator(){
       String[] currencies = Helper.currencyLoader().split("\n");
