@@ -2159,7 +2159,7 @@ String aboutMessage = "<html>"
         haHOABox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year" }));
 
         haInsuranceBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        haInsuranceBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
+        haInsuranceBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year" }));
 
         haDTIBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         haDTIBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conventional loan (28/36 rule)", "FHA loan (31% front-end", "43% back-end)", "VA loan (41%)", "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%" }));
