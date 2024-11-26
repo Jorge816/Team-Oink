@@ -2150,7 +2150,7 @@ String aboutMessage = "<html>"
         jLabel115.setText("long-term debs, car, student loan, etc");
 
         haDownPaymentBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        haDownPaymentBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%", "$" }));
+        haDownPaymentBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "%" }));
 
         haPropertyTaxBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         haPropertyTaxBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "% per year", "$ per year" }));
