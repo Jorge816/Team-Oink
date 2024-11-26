@@ -1039,7 +1039,7 @@ String aboutMessage = "<html>"
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -3298,10 +3298,25 @@ String aboutMessage = "<html>"
         jLabel121.setText("Repayment Options ");
 
         MorgagePayoffRePayementExtraMonth.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraMonth.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MorgagePayoffRePayementExtraMonthKeyReleased(evt);
+            }
+        });
 
         MorgagePayoffRePayementExtraYear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraYear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MorgagePayoffRePayementExtraYearKeyReleased(evt);
+            }
+        });
 
         MorgagePayoffRePayementExtraOneTime.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MorgagePayoffRePayementExtraOneTime.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                MorgagePayoffRePayementExtraOneTimeKeyReleased(evt);
+            }
+        });
 
         jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel125.setText("Interest Rate");
@@ -6809,6 +6824,19 @@ String aboutMessage = "<html>"
                     
                     
             if (MortgagePayoffRepaymentWithExtraPayments.isSelected()) {
+                if (MorgagePayoffRePayementExtraMonth.getText().trim().isEmpty()) {
+            // Set it to "0"
+                    MorgagePayoffRePayementExtraMonth.setText("0");
+                }
+                if (MorgagePayoffRePayementExtraYear.getText().trim().isEmpty()) {
+            // Set it to "0"
+                    MorgagePayoffRePayementExtraYear.setText("0");
+                }
+                if (MorgagePayoffRePayementExtraOneTime.getText().trim().isEmpty()) {
+            // Set it to "0"
+                    MorgagePayoffRePayementExtraOneTime.setText("0");
+                }
+                
                 double currentLoan = 400000;
                 int originalTime = 30;
                 int oTimeLeftYears = 25;
@@ -7980,6 +8008,38 @@ jLabel129.setText(responses[randomIndex]);
         // Clear the result output
         haResultOutput.setText("");
     }//GEN-LAST:event_haClearButtonActionPerformed
+//-----------------------------------------------------------------------------------------------------------MortgagePayoff Validation Fields - 
+    private void MorgagePayoffRePayementExtraMonthKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgagePayoffRePayementExtraMonthKeyReleased
+        String input = MorgagePayoffRePayementExtraMonth.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MorgagePayoffRePayementExtraMonth.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        MorgagePayoffRePayementExtraMonth.setText(Number);
+    }//GEN-LAST:event_MorgagePayoffRePayementExtraMonthKeyReleased
+
+    private void MorgagePayoffRePayementExtraYearKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgagePayoffRePayementExtraYearKeyReleased
+        String input = MorgagePayoffRePayementExtraYear.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MorgagePayoffRePayementExtraYear.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        MorgagePayoffRePayementExtraYear.setText(Number);
+    }//GEN-LAST:event_MorgagePayoffRePayementExtraYearKeyReleased
+
+    private void MorgagePayoffRePayementExtraOneTimeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MorgagePayoffRePayementExtraOneTimeKeyReleased
+        String input = MorgagePayoffRePayementExtraOneTime.getText();
+          // Strip all spaces from the input as the user types
+        String strippedInput = input.replaceAll("\\s", "");
+        // Set the text field with the stripped input (without spaces)
+        MorgagePayoffRePayementExtraOneTime.setText(strippedInput);
+        String Number = Helper.extractNumbers(input);
+        MorgagePayoffRePayementExtraOneTime.setText(Number);
+    }//GEN-LAST:event_MorgagePayoffRePayementExtraOneTimeKeyReleased
+
+   //----------------------------------------------------------------------------------
     
     
     
