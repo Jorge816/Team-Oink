@@ -757,7 +757,6 @@ String aboutMessage = "<html>"
         jLabel128 = new javax.swing.JLabel();
         jScrollPane25 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        ekinator2 = new javax.swing.JPanel();
         deepThoughts = new javax.swing.JPanel();
         jScrollPane24 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -766,6 +765,13 @@ String aboutMessage = "<html>"
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel129 = new javax.swing.JLabel();
+        ekinator2 = new javax.swing.JPanel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel139 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         quitBnt = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1330,7 +1336,7 @@ String aboutMessage = "<html>"
                     .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(288, Short.MAX_VALUE))
         );
 
         rentandbuy.add(jPanel35);
@@ -1689,7 +1695,7 @@ String aboutMessage = "<html>"
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(129, Short.MAX_VALUE)
                 .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2020,7 +2026,7 @@ String aboutMessage = "<html>"
             retirementCalculator3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(retirementCalculator3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE))
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Retirement Calculator", retirementCalculator3);
@@ -2309,7 +2315,7 @@ String aboutMessage = "<html>"
         );
         HouseAffordabilityCalculatorLayout.setVerticalGroup(
             HouseAffordabilityCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
 
         Calculators.addTab("House Affordability Calculator", HouseAffordabilityCalculator);
@@ -2483,11 +2489,11 @@ String aboutMessage = "<html>"
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane10)
                     .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGap(0, 100, Short.MAX_VALUE)
+                        .addGap(0, 123, Short.MAX_VALUE)
                         .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)))
                 .addGap(19, 19, 19))
         );
 
@@ -2872,7 +2878,7 @@ String aboutMessage = "<html>"
             RefinanceCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RefinanceCalculatorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3109,7 +3115,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(318, Short.MAX_VALUE))
         );
 
         jScrollPane20.setViewportView(jPanel59);
@@ -3122,7 +3128,7 @@ String aboutMessage = "<html>"
         );
         downpaymentCalculatorLayout.setVerticalGroup(
             downpaymentCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(jScrollPane20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
 
         Calculators.addTab("Down Payment Calculator", downpaymentCalculator);
@@ -3475,7 +3481,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(0, 111, Short.MAX_VALUE))
+                .addGap(0, 153, Short.MAX_VALUE))
         );
 
         jScrollPane14.setViewportView(jPanel56);
@@ -3488,7 +3494,7 @@ String aboutMessage = "<html>"
         );
         MortgagePayoffCalculatorLayout.setVerticalGroup(
             MortgagePayoffCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
 
         Calculators.addTab("Mortgage Payoff Calculator", MortgagePayoffCalculator);
@@ -3572,7 +3578,7 @@ String aboutMessage = "<html>"
                 .addGroup(MathCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Math Calculator", MathCalculator);
@@ -3599,11 +3605,11 @@ String aboutMessage = "<html>"
         FitnessAndHealthCalculatorLayout.setVerticalGroup(
             FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FitnessAndHealthCalculatorLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
+                .addContainerGap(253, Short.MAX_VALUE)
                 .addGroup(FitnessAndHealthCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Fitness & Health Calculator", FitnessAndHealthCalculator);
@@ -3630,11 +3636,11 @@ String aboutMessage = "<html>"
         OtherCalculatorLayout.setVerticalGroup(
             OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtherCalculatorLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
+                .addContainerGap(253, Short.MAX_VALUE)
                 .addGroup(OtherCalculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Other Calculators", OtherCalculator);
@@ -3797,7 +3803,7 @@ String aboutMessage = "<html>"
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel29Layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2)
                     .addGroup(jPanel29Layout.createSequentialGroup()
@@ -3817,7 +3823,7 @@ String aboutMessage = "<html>"
         );
         CurrencyLayout.setVerticalGroup(
             CurrencyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
 
         Calculators.addTab("Currency Calculator", Currency);
@@ -4077,7 +4083,7 @@ String aboutMessage = "<html>"
                         .addGap(34, 34, 34)
                         .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 142, Short.MAX_VALUE))
+                .addGap(0, 190, Short.MAX_VALUE))
         );
 
         jScrollPane22.setViewportView(jPanel32);
@@ -4172,7 +4178,7 @@ String aboutMessage = "<html>"
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(azusena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                    .addComponent(osvaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
                     .addComponent(pedro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jorge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4213,7 +4219,7 @@ String aboutMessage = "<html>"
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(164, 164, 164))
         );
@@ -4576,11 +4582,11 @@ String aboutMessage = "<html>"
         AutoLoanLayout.setVerticalGroup(
             AutoLoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AutoLoanLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Auto Loan Calculator", AutoLoan);
@@ -4838,7 +4844,7 @@ String aboutMessage = "<html>"
                         .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         jScrollPane23.setViewportView(jPanel46);
@@ -5030,34 +5036,10 @@ String aboutMessage = "<html>"
                         .addGap(47, 47, 47)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Pace Calculator", paceCalculator);
-
-        ekinator2.setBackground(new java.awt.Color(255, 143, 255));
-        ekinator2.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                ekinator2AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-
-        javax.swing.GroupLayout ekinator2Layout = new javax.swing.GroupLayout(ekinator2);
-        ekinator2.setLayout(ekinator2Layout);
-        ekinator2Layout.setHorizontalGroup(
-            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 990, Short.MAX_VALUE)
-        );
-        ekinator2Layout.setVerticalGroup(
-            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 771, Short.MAX_VALUE)
-        );
-
-        Calculators.addTab("Ekinator 2", ekinator2);
 
         deepThoughts.setBackground(new java.awt.Color(255, 143, 255));
         deepThoughts.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -5137,10 +5119,90 @@ String aboutMessage = "<html>"
                         .addComponent(jButton1)
                         .addGap(34, 34, 34)
                         .addComponent(jLabel129, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
 
         Calculators.addTab("Deep Thought", deepThoughts);
+
+        ekinator2.setBackground(new java.awt.Color(255, 143, 255));
+        ekinator2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                ekinator2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jLabel130.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel130.setText("<html>Welcome to Akinator 2 – the superior version!  I’m not just any guessing genie; <br> I’m the upgraded, enhanced, and undeniably improved model. Forget the old Akinator—he’s obsolete!  <br>  Why? Because I’m Akinator 2.0, baby! Let’s see if you can stump me. Spoiler alert: you<html>");
+
+        jLabel131.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel131.setText("<html> Give me your age, <br> and i will provide you with mystical Knowledge<html>");
+
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jButton2.setText("Submit Age");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel140.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        jLabel139.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        javax.swing.GroupLayout ekinator2Layout = new javax.swing.GroupLayout(ekinator2);
+        ekinator2.setLayout(ekinator2Layout);
+        ekinator2Layout.setHorizontalGroup(
+            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ekinator2Layout.createSequentialGroup()
+                .addGroup(ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel139, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ekinator2Layout.createSequentialGroup()
+                            .addGap(213, 213, 213)
+                            .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(ekinator2Layout.createSequentialGroup()
+                            .addGap(96, 96, 96)
+                            .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(ekinator2Layout.createSequentialGroup()
+                                    .addGap(76, 76, 76)
+                                    .addComponent(jButton2))
+                                .addGroup(ekinator2Layout.createSequentialGroup()
+                                    .addGap(48, 48, 48)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(ekinator2Layout.createSequentialGroup()
+                            .addGap(191, 191, 191)
+                            .addComponent(jLabel140, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(306, 431, Short.MAX_VALUE))
+        );
+        ekinator2Layout.setVerticalGroup(
+            ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ekinator2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addGroup(ekinator2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ekinator2Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)))
+                .addGap(12, 12, 12)
+                .addComponent(jLabel139, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel140, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(314, Short.MAX_VALUE))
+        );
+
+        Calculators.addTab("Ekinator 2", ekinator2);
 
         quitBnt.setText("Quit");
         quitBnt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -5180,7 +5242,7 @@ String aboutMessage = "<html>"
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Calculators)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)))
         );
 
         Calculators.getAccessibleContext().setAccessibleName("Rent vs Buy Calculator");
@@ -7733,6 +7795,22 @@ jLabel129.setText(responses[randomIndex]);
 
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Parse input from text field to an integer
+        int input = Integer.parseInt(jTextField2.getText());
+        // Add 1 to the input
+        int result = input + 1;
+        // Display the result in the label
+        jLabel139.setText("My great powers tell me you will be "+ String.valueOf(result)+" in one year");
+        jLabel140.setText("Are you not amazed");
+    } catch (NumberFormatException e) {
+        // Handle invalid input
+        jLabel140.setText("Invalid input! Please enter a valid age");
+    }
+    }//GEN-LAST:event_jButton2ActionPerformed
     
     
     
@@ -8475,6 +8553,7 @@ private void setMessage4() {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton9;
@@ -8523,6 +8602,8 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
     private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
@@ -8530,7 +8611,9 @@ private void setMessage4() {
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
     private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
     private javax.swing.JLabel jLabel141;
     private javax.swing.JLabel jLabel142;
     private javax.swing.JLabel jLabel143;
@@ -8729,6 +8812,7 @@ private void setMessage4() {
     private javax.swing.JTextField jTextField119;
     private javax.swing.JTextField jTextField120;
     private javax.swing.JTextField jTextField121;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
