@@ -282,7 +282,7 @@ String aboutMessage = "<html>"
                     jLabel37.setText("");
                 }
             }
-        }, 0, 120); // 200ms delay between updates
+        }, 0, 100); // 200ms delay between updates
 
         // Set a static message for jLabel3 (Team Pink, Software Development)
     
@@ -5748,22 +5748,14 @@ String aboutMessage = "<html>"
 
     private void RothIRACalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRACalculateBTNActionPerformed
         // TODO add your handling code here:
-        try{
-        double rate = Double.parseDouble(RothIRACalculatorExpectedReturnRate.getText());
-        String input = RothIRACalculatorExpectedReturnRate.getText();
-        int input2 = Integer.valueOf(input);
-        double hp = 0;
-        String selectedOptionDownPayment = "%";
-            
+        try{         
         
         if (
             Helper.InputValidation(RothIRACalculatorCurrentBalance.getText()) &&
             Helper.InputValidation(RothIRAAnualContribution.getText()) &&
             Helper.InputValidation(RothIRACalculatorExpectedReturnRate.getText()) &&
-            Helper.validateInput(input2, hp, selectedOptionDownPayment)&&
             Helper.InputValidation(RothIRACurrentAge.getText()) &&
             Helper.InputValidation(RothIRaRetirementAge.getText()) &&
-            Helper.validateInput(rate, 0.0, "%") &&
             Helper.validateAges(RothIRACurrentAge.getText(), RothIRaRetirementAge.getText())
         ) {
                 double PI = Double.parseDouble(RothIRACalculatorCurrentBalance.getText());
@@ -5784,23 +5776,27 @@ String aboutMessage = "<html>"
                         + "which is $7000. As a result, the calculator used the adjusted contribution amount "
                         + "to meet the IRS requirement."
                         + "</p></body></html>");
+                         
+                         
                         Ca = 7000; // Adjust contribution to IRS limit
                         int n = R_age - C_age;
                         balance =Helper.calculate_MaximizeContributionNo(PI, Ca, r, n);
                         totalPrinciple = PI +(Ca*(R_age-C_age));
                         totalInterest = (balance-totalPrinciple)+Ca;
-                     }
+                    }
+                    else{
 
                      int n = R_age - C_age;
                      balance =Helper.calculate_MaximizeContributionNo(PI, Ca, r, n);
                      totalPrinciple = PI +(Ca*(R_age-C_age));
-                     totalInterest = (balance-totalPrinciple)+Ca;
+                     totalInterest = (balance-totalPrinciple)+Ca;}
 
                 }
 
                 // Check if InterestRateEnd is selected
                 if (RothIRAMaximizeYes.isSelected()) {
-                     Ca = 7000;
+                    Ca = 7000;
+                    if (C_age> 50 && R_age >50){Ca = 8000;}
 
                     balance = Helper.calculate_MaximizeContributionYes(PI, Ca, r, C_age, R_age);
                     double[] extraCalculations = Helper.extraCalculationsRothIRACalculatorYES(PI, Ca, C_age, R_age, balance);
@@ -6986,8 +6982,8 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
     private void RetirementCalculatorCalculateBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetirementCalculatorCalculateBTNActionPerformed
         try{
             boolean check = false;
-            double AgeRetiremtn =Double.parseDouble(RetirementCalculatorPreTaxIncome.getText());
-            double lifeExpectancyage =Double.parseDouble(RetirementCalculatorIncomeNeededAfterRetirement.getText());
+            double AgeRetiremtn =Double.parseDouble(RetirementCalculatorRetirementAge.getText());
+            double lifeExpectancyage =Double.parseDouble(RetirementCalculatorLifeExpectancy.getText());
             if(AgeRetiremtn<=lifeExpectancyage){
                 check = true;
             }
@@ -7058,9 +7054,14 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
                                        + "</html>";
                             }
                         }
+                        
+
 
                         String otherIncomeMsg = "";
-                        if (otherIncomeAfterRetirement>0){
+                        if(retirementCalculator1[0]<0){
+                            otherIncomeMsg  ="You don't need to save for your retirement!";
+                        }
+                        else if (otherIncomeAfterRetirement>0){
                            otherIncomeMsg =  "<html>"
 
 
@@ -7078,8 +7079,15 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
 
                         }
 
-
-                        if (retirementCalculator1[0]>= retirementCalculator1[4]){
+                        if(retirementCalculator1[0]<0){
+                            outputText = "<html>"
+                                + "You don't need to save for your retirement!<br>"
+                                + "Your other income after retirement is sufficient "
+                                + "to support your desired lifestyle after retirement."
+                                + "</html>";
+                          
+                        }
+                        else if (retirementCalculator1[0]>= retirementCalculator1[4]){
 
 
                             outputText = "<html>"
