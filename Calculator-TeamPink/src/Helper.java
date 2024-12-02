@@ -1177,6 +1177,7 @@ public static String[] mortgagePayoffCustom(double currentLoan, int originalTime
             currencyDetails.put("British Pound", new String[]{"United Kingdom", "£", "comma", "left"});
             currencyDetails.put("Venezuelan Bolivar", new String[]{"Venezuela", "Bs.S", "comma", "right"});
 
+         
         String s = "success";
         String url = "http://www.x-rates.com/table/?from=USD&amount=1";
 
@@ -1310,6 +1311,19 @@ public static String[] mortgagePayoffCustom(double currentLoan, int originalTime
 
         // Sort the entries by country name
         List<Map.Entry<String, String[]>> sortedEntries = new ArrayList<>(loadCurrenty.entrySet());
+        List<String[]> euroDuplicates = new ArrayList<>();
+        euroDuplicates.add(new String[]{"Austria", "€", "comma", "right"});
+        euroDuplicates.add(new String[]{"European Union", "€", "comma", "right"});
+        euroDuplicates.add(new String[]{"Finland", "€", "comma", "right"});
+        euroDuplicates.add(new String[]{"France", "€", "comma", "right"});
+        euroDuplicates.add(new String[]{"Germany", "€", "comma", "right"});
+
+        for (String[] euroEntry : euroDuplicates) {
+            String countryname = euroEntry[0];
+            String symbol = euroEntry[1];
+            fromandToSelection.append(countryname).append(":Euro-").append(symbol).append("\n");
+        }
+        
         sortedEntries.sort(Comparator.comparing(entry -> entry.getValue()[0]));
 
         // Build the sorted string
@@ -1319,6 +1333,8 @@ public static String[] mortgagePayoffCustom(double currentLoan, int originalTime
             String symbol = entry.getValue()[1];
             fromandToSelection.append(countryname).append(":").append(currencyName).append("-").append(symbol).append("\n");
         }
+        
+
 
         return fromandToSelection.toString();
     }
