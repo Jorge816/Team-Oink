@@ -6112,22 +6112,22 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel19">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Osvaldo Ramirez"/>
+                    <Property name="text" type="java.lang.String" value="Blue Aardvark"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel20">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Pedro Antonio"/>
+                    <Property name="text" type="java.lang.String" value="Big Nose"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel21">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Jorge Tomas"/>
+                    <Property name="text" type="java.lang.String" value="Inspector"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel23">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Azusena Fernandez"/>
+                    <Property name="text" type="java.lang.String" value="Pink Panther"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -7718,7 +7718,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="I Sumbit my answer to the universe"/>
+                <Property name="text" type="java.lang.String" value="I Submit my answer to the universe"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>

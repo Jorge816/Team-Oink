@@ -143,9 +143,9 @@ public class Main extends javax.swing.JFrame {
          //Set image to dashborar
          
          azusena.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
-         jorge.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
-         pedro.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
-         osvaldo.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/logo.jpg")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
+         jorge.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/Inspector.png")).getImage().getScaledInstance(150, 200, Image.SCALE_SMOOTH)));
+         pedro.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/BigNose.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
+         osvaldo.setIcon(new ImageIcon(new javax.swing.ImageIcon(getClass().getResource("Images/BlueAardvark.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
          
          pinkPanterCbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("Images/gifgit.gif")));
 
@@ -1039,7 +1039,7 @@ String aboutMessage = "<html>"
                             .addComponent(btnOtherCalculators, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnfinancialCalculator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, Short.MAX_VALUE)
+                            .addComponent(btnfitnessCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                             .addComponent(btnmathCalculator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -4238,13 +4238,13 @@ String aboutMessage = "<html>"
 
         jPanel5.setBackground(new java.awt.Color(255, 237, 255));
 
-        jLabel19.setText("Osvaldo Ramirez");
+        jLabel19.setText("Blue Aardvark");
 
-        jLabel20.setText("Pedro Antonio");
+        jLabel20.setText("Big Nose");
 
-        jLabel21.setText("Jorge Tomas");
+        jLabel21.setText("Inspector");
 
-        jLabel23.setText("Azusena Fernandez");
+        jLabel23.setText("Pink Panther");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -5163,7 +5163,7 @@ String aboutMessage = "<html>"
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        jButton1.setText("I Sumbit my answer to the universe");
+        jButton1.setText("I Submit my answer to the universe");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
