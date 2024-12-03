@@ -5686,7 +5686,8 @@ String aboutMessage = "<html>"
           
           if (RothIRACurrentAge.getText().isEmpty()){
           }
-          else{Helper.checkAge(RothIRACurrentAge.getText().replaceAll("\\s", ""));}
+          else{Helper.checkAge(RothIRACurrentAge.getText().replaceAll("\\s", ""));
+                RothIRACurrentAge.setText("120");}
   
     }//GEN-LAST:event_RothIRACurrentAgeKeyReleased
 
@@ -5701,7 +5702,8 @@ String aboutMessage = "<html>"
         RothIRaRetirementAge.setText(Number);
 
          if (RothIRaRetirementAge.getText().isEmpty()){}
-         else{Helper.checkAge(RothIRaRetirementAge.getText().replaceAll("\\s", ""));}
+         else{Helper.checkAge(RothIRaRetirementAge.getText().replaceAll("\\s", ""));
+         RothIRaRetirementAge.setText("120");}
     }//GEN-LAST:event_RothIRaRetirementAgeKeyReleased
 
     private void RothIRAMaximizeYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RothIRAMaximizeYesActionPerformed
@@ -7209,6 +7211,9 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
         RetirementCalculatorCurrentAge.setText(strippedInput);
         String Number = Helper.extractWholePositiveNumbers(input);
         RetirementCalculatorCurrentAge.setText(Number);
+        if (RetirementCalculatorCurrentAge.getText().isEmpty()){}
+         else{Helper.checkAge(RetirementCalculatorCurrentAge.getText().replaceAll("\\s", ""));
+         RetirementCalculatorCurrentAge.setText("120");}
     }//GEN-LAST:event_RetirementCalculatorCurrentAgeKeyReleased
 
     private void RetirementCalculatorRetirementAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorRetirementAgeKeyReleased
@@ -7219,6 +7224,10 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
         RetirementCalculatorRetirementAge.setText(strippedInput);
         String Number = Helper.extractWholePositiveNumbers(input);
         RetirementCalculatorRetirementAge.setText(Number);
+        if (RetirementCalculatorRetirementAge.getText().isEmpty()){}
+        else{Helper.checkAge(RetirementCalculatorRetirementAge.getText().replaceAll("\\s", ""));
+         RetirementCalculatorRetirementAge.setText("120");}
+
     }//GEN-LAST:event_RetirementCalculatorRetirementAgeKeyReleased
 
     private void RetirementCalculatorLifeExpectancyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorLifeExpectancyKeyReleased
@@ -7229,6 +7238,9 @@ double extra_monthly = Double.parseDouble(MorgagePayoffRePayementExtraMonth.getT
         RetirementCalculatorLifeExpectancy.setText(strippedInput);
         String Number = Helper.extractWholePositiveNumbers(input);
         RetirementCalculatorLifeExpectancy.setText(Number);
+        if (RetirementCalculatorLifeExpectancy.getText().isEmpty()){}
+        else{Helper.checkAge(RetirementCalculatorLifeExpectancy.getText().replaceAll("\\s", ""));
+         RetirementCalculatorLifeExpectancy.setText("120");}
     }//GEN-LAST:event_RetirementCalculatorLifeExpectancyKeyReleased
 
     private void RetirementCalculatorPreTaxIncomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RetirementCalculatorPreTaxIncomeKeyReleased
