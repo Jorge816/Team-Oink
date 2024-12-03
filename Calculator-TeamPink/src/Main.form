@@ -180,7 +180,7 @@
                               <Component id="btnOtherCalculators" alignment="0" max="32767" attributes="0"/>
                               <Component id="dashboard" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnfinancialCalculator" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btnfitnessCalculator" alignment="1" pref="205" max="32767" attributes="0"/>
+                              <Component id="btnfitnessCalculator" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnmathCalculator" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
