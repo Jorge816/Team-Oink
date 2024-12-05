@@ -796,4 +796,44 @@ public void testCalcMonthlyPaymentInterestRateExceedsMax() {
         double[] ratios = helper.getDtiRatios("Conventional loan (28/36 rule)");
         assertArrayEquals(new double[]{0.28, 0.36}, ratios, 0.01);
     }
+    
+    @Test
+    public void testGetDtiRatiosFHALoan() {
+        double[] ratios = helper.getDtiRatios("FHA loan (31% front-end, 43% back-end)");
+        assertArrayEquals(new double[]{0.31, 0.43}, ratios, 0.01);
+    }
+
+    @Test
+    public void testGetDtiRatiosVALoan() {
+        double[] ratios = helper.getDtiRatios("VA loan (41%)");
+        assertArrayEquals(new double[]{0.41, 0.41}, ratios, 0.01);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testGetDtiRatiosInvalidInput() {
+        helper.getDtiRatios("Invalid Loan");
+    }
+
+    //Tests for calculateMonthlyMortgage method
+    
+    @Test
+    public void testCalculateMonthlyMortgageBasicScenario() {
+        double result = helper.calculateMonthlyMortgage(200000, 5.0, 30);
+        assertEquals(1073.64, result, 0.1);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateMonthlyMortgageNegativePrincipal() {
+        helper.calculateMonthlyMortgage(-200000, 5.0, 30);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateMonthlyMortgageNegativeInterestRate() {
+        helper.calculateMonthlyMortgage(200000, -5.0, 30);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateMonthlyMortgageInvalidLoanTerm() {
+        helper.calculateMonthlyMortgage(200000, 5.0, 0);
+    }
 }
