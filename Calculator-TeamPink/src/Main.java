@@ -6039,7 +6039,7 @@ String aboutMessage = "<html>"
         }
     }//GEN-LAST:event_DownPaymentCalculateBTNActionPerformed
 
-    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------Auto Loan Calculator Jorge 
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------Auto Loan Calculator (Jorge) 
     private void highlightErrorField(JTextField field) {
     field.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
 }
@@ -7991,7 +7991,7 @@ jLabel129.setText(responses[randomIndex]);
         jLabel140.setText("Invalid input! Please enter a valid age");
     }
     }//GEN-LAST:event_jButton2ActionPerformed
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------House Affordability Calculator (Jorge)
     private void haCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_haCalcButtonActionPerformed
         // TODO add your handling code here:
         try {
