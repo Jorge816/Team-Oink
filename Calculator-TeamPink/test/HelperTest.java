@@ -740,6 +740,60 @@ public void testCalcMonthlyPaymentInterestRateExceedsMax() {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------House Affordability calculator validations
+    private Helper helper = new Helper();
+    
+    @Test
+    public void testParseValuePercentageValid() {
+        double housePrice = 100000.0;
+        double result = helper.parseValue("%", "20%", housePrice); // Use the instance method
+        assertEquals(20000.0, result, 0.01);
+    }
+    
+    @Test
+    public void testParseValuePercentageWithSpaces() {
+        double housePrice = 100000.0;
+        double result = helper.parseValue("%", " 25 % ", housePrice);
+        assertEquals(25000.0, result, 0.01);
+    }
+    
+    @Test
+    public void testParseValueDollarAmount() {
+        double housePrice = 100000.0;
+        double result = helper.parseValue("$", "$5000", housePrice);
+        assertEquals(5000.0, result, 0.01);
+    }
 
+    @Test
+    public void testParseValueDollarAmountWithCommas() {
+        double housePrice = 100000.0;
+        double result = helper.parseValue("$", "$5,000", housePrice);
+        assertEquals(5000.0, result, 0.01);
+    }
 
+    @Test
+    public void testParseValueNullInput() {
+        double result = helper.parseValue(null, null, 100000.0);
+        assertEquals(0.0, result, 0.01);
+    }
+
+    @Test
+    public void testParseValueEmptyInput() {
+        double result = helper.parseValue("%", "", 100000.0);
+        assertEquals(0.0, result, 0.01);
+    }
+
+    @Test
+    public void testParseValuePercentageOutOfBounds() {
+        double result = helper.parseValue("%", "150%", 100000.0);
+        assertEquals(0.0, result, 0.01);
+    }
+    
+    //Tests for getDtiRatios method
+    
+    @Test
+    public void testGetDtiRatiosConventionalLoan() {
+        double[] ratios = helper.getDtiRatios("Conventional loan (28/36 rule)");
+        assertArrayEquals(new double[]{0.28, 0.36}, ratios, 0.01);
+    }
 }
