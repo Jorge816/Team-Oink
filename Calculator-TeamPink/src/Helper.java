@@ -1650,14 +1650,7 @@ public static double parseWithValidation(String value, String fieldName, StringB
         
 //-------------------------------------------------------------------------------------------------------------------------------------------------Start of House Affordability calc (Jorge)
         // Parse value based on whether it's a percentage or fixed amount
-     /**
-     * Parses input values with robust validation for percentages and dollar amounts
-     * 
-     * @param option Indicates the type of input (% or $ based)
-     * @param value Input value to parse
-     * @param housePrice Base house price for percentage calculations
-     * @return Parsed numeric value or 0.0 for invalid inputs
-     */
+ 
     public double parseValue(String option, String value, double housePrice) {  
         // Check for null input
         if (option == null || value == null) return 0.0;
@@ -1705,14 +1698,8 @@ public static double parseWithValidation(String value, String fieldName, StringB
         }  
     }
   
-    /**
-     * Returns DTI (Debt-to-Income) ratios based on selected loan type
-     * 
-     * @param selectedOption Loan or down payment type
-     * @return Array of DTI ratios [front-end ratio, back-end ratio]
-     * @throws IllegalArgumentException for invalid selections
-     */
-    private double[] getDtiRatios(String selectedOption) {  
+    
+    public double[] getDtiRatios(String selectedOption) {  
         // Add more comprehensive input validation
         if (selectedOption == null || selectedOption.trim().isEmpty()) {
             throw new IllegalArgumentException("DTI ratio selection cannot be empty");
@@ -1735,14 +1722,7 @@ public static double parseWithValidation(String value, String fieldName, StringB
         };  
     }
   
-    /**
-     * Calculates monthly mortgage payment
-     * 
-     * @param principal Loan principal amount
-     * @param annualRate Annual interest rate
-     * @param years Loan term in years
-     * @return Monthly mortgage payment
-     */
+    
     private double calculateMonthlyMortgage(double principal, double annualRate, int years) {  
         // Validate inputs
         if (principal < 0) {
@@ -1761,23 +1741,7 @@ public static double parseWithValidation(String value, String fieldName, StringB
             / (Math.pow(1 + monthlyRate, months) - 1);  
     }
 
-    /**
-     * Calculates house affordability based on multiple financial parameters
-     * 
-     * @param annualIncome Yearly income
-     * @param loanTerm Loan term in years
-     * @param interestRate Annual interest rate
-     * @param hoaOption HOA fee option
-     * @param hoaValue HOA fee value
-     * @param insuranceOption Insurance option
-     * @param insuranceValue Insurance value
-     * @param propertyTaxOption Property tax option
-     * @param propertyTaxValue Property tax value
-     * @param downPaymentOption Down payment option
-     * @param downPaymentValue Down payment value
-     * @param dtiRule Selected DTI rule
-     * @return Formatted string with house affordability details
-     */
+    
     public String calculateHouseAffordability(  
             double annualIncome, double loanTerm, double interestRate,  
             String hoaOption, String hoaValue,  
@@ -1836,7 +1800,6 @@ public static double parseWithValidation(String value, String fieldName, StringB
     /**
      * Validates critical input parameters
      * 
-     * @throws IllegalArgumentException for invalid inputs
      */
     private void validateInputs(double annualIncome, double loanTerm, 
                                  double interestRate, String dtiRule) {
