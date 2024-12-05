@@ -1723,7 +1723,7 @@ public static double parseWithValidation(String value, String fieldName, StringB
     }
   
     
-    private double calculateMonthlyMortgage(double principal, double annualRate, int years) {  
+    public double calculateMonthlyMortgage(double principal, double annualRate, int years) {  
         // Validate inputs
         if (principal < 0) {
             throw new IllegalArgumentException("Principal amount cannot be negative");
